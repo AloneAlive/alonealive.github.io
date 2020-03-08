@@ -1,1 +1,498 @@
-<!-- build time:Sun Mar 08 2020 19:48:43 GMT+0800 (CST) --><!DOCTYPE html><html><head><meta charset="utf-8"><link rel="canonical" href="true/2019/09/30/2019/190930_nReal_Sample/"><title>nReal搭建Samepl APK | sunwengang blog</title><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="theme-color" content="#3F51B5"><meta name="keywords" content="nReal"><meta name="description" content="概述nrsdk是nreal开发混合现实体验的平台。使用简单的开发过程和高级api，nrsdk提供了一组强大的mr特性，并使nreal眼镜能够了解真实世界。nrsdk为开发者提供了五个核心特性：空间计算使眼镜能够跟踪它们相对于世界的实时位置，并了解周围的环境，例如检测和跟踪平面和图像。优化的渲染自动应用于应用程序并在后端运行，以最小化延迟并减少抖动，增强总体用户体验。多模态交互为不同的用例提供了交互"><meta property="og:type" content="article"><meta property="og:title" content="nReal搭建Samepl APK"><meta property="og:url" content="http://wizzie.top/2019/09/30/2019/190930_nReal_Sample/index.html"><meta property="og:site_name" content="sunwengang blog"><meta property="og:description" content="概述nrsdk是nreal开发混合现实体验的平台。使用简单的开发过程和高级api，nrsdk提供了一组强大的mr特性，并使nreal眼镜能够了解真实世界。nrsdk为开发者提供了五个核心特性：空间计算使眼镜能够跟踪它们相对于世界的实时位置，并了解周围的环境，例如检测和跟踪平面和图像。优化的渲染自动应用于应用程序并在后端运行，以最小化延迟并减少抖动，增强总体用户体验。多模态交互为不同的用例提供了交互"><meta property="og:locale" content="en_US"><meta property="article:published_time" content="2019-09-30T13:52:00.000Z"><meta property="article:modified_time" content="2020-03-08T10:14:08.790Z"><meta property="article:author" content="sunwengang"><meta property="article:tag" content="nReal"><meta name="twitter:card" content="summary"><link rel="alternate" type="application/atom+xml" title="sunwengang blog" href="/atom.xml"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="/css/style.css?v=1.7.2"><script>window.lazyScripts=[]</script><meta name="generator" content="Hexo 4.2.0"></head><body><div id="loading" class="active"></div><aside id="menu" class="hide"><div class="inner flex-row-vertical"><a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off"><i class="icon icon-lg icon-close"></i></a><div class="brand-wrap" style="background-image:url(/img/brand.jpg)"><div class="brand"><a href="/" class="avatar waves-effect waves-circle waves-light"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/img/avatar.jpg"></a><hgroup class="introduce"><h5 class="nickname">sunwengang</h5><a href="mailto:1332963488@qq.com" title="1332963488@qq.com" class="mail">1332963488@qq.com</a></hgroup></div></div><div class="scroll-wrap flex-col"><ul class="nav"><li class="waves-block waves-effect"><a href="/"><i class="icon icon-lg icon-home"></i> Home</a></li><li class="waves-block waves-effect"><a href="/archives"><i class="icon icon-lg icon-archives"></i> Archives</a></li><li class="waves-block waves-effect"><a href="/tags"><i class="icon icon-lg icon-tags"></i> Tags</a></li><li class="waves-block waves-effect"><a href="/categories"><i class="icon icon-lg icon-th-list"></i> Categories</a></li><li class="waves-block waves-effect"><a href="https://www.cnblogs.com/1996swg" target="_blank"><i class="icon icon-lg icon-book"></i> cnblog</a></li><li class="waves-block waves-effect"><a href="https://github.com/AloneAlive" target="_blank"><i class="icon icon-lg icon-github"></i> Github</a></li><li class="waves-block waves-effect"><a href="/html/nav.html" target="_blank"><i class="icon icon-lg icon-external-link-square"></i> nav</a></li><li class="waves-block waves-effect"><a href="/others"><i class="icon icon-lg icon-address-book"></i> friends</a></li></ul></div></div></aside><main id="main"><header class="top-header" id="header"><div class="flex-row"><a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle"><i class="icon icon-lg icon-navicon"></i></a><div class="flex-col header-title ellipsis">nReal搭建Samepl APK</div><div class="search-wrap" id="search-wrap"><a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back"><i class="icon icon-lg icon-chevron-left"></i> </a><input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search"> <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search"><i class="icon icon-lg icon-search"></i></a></div></div></header><header class="content-header post-header"><div class="container fade-scale"><h1 class="title">nReal搭建Samepl APK</h1><h5 class="subtitle"><time datetime="2019-09-30T13:52:00.000Z" itemprop="datePublished" class="page-time">2019-09-30</time><ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/VR/">VR</a></li></ul></h5></div></header><div class="container body-wrap"><aside class="post-widget"><nav class="post-toc-wrap post-toc-shrink" id="post-toc"><h4>TOC</h4><ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#概述"><span class="post-toc-number">1.</span> <span class="post-toc-text">概述</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#开发工具包"><span class="post-toc-number">2.</span> <span class="post-toc-text">开发工具包</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#选择开发平台"><span class="post-toc-number">3.</span> <span class="post-toc-text">选择开发平台</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#与Android本机应用程序兼容"><span class="post-toc-number">4.</span> <span class="post-toc-text">与Android本机应用程序兼容</span></a></li></ol><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#功能"><span class="post-toc-number"></span> <span class="post-toc-text">功能</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#空间计算"><span class="post-toc-number">1.</span> <span class="post-toc-text">空间计算</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#HelloMR-APP"><span class="post-toc-number"></span> <span class="post-toc-text">HelloMR APP</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#硬件清单"><span class="post-toc-number">1.</span> <span class="post-toc-text">硬件清单</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#软件清单"><span class="post-toc-number">2.</span> <span class="post-toc-text">软件清单</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#创建统一项目"><span class="post-toc-number">3.</span> <span class="post-toc-text">创建统一项目</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置生成设置"><span class="post-toc-number">4.</span> <span class="post-toc-text">配置生成设置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#连接到nReal设备-开发工具包"><span class="post-toc-number">5.</span> <span class="post-toc-text">连接到nReal设备(开发工具包)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#建立并运行"><span class="post-toc-number">6.</span> <span class="post-toc-text">建立并运行</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Sample-APP-立体方块"><span class="post-toc-number"></span> <span class="post-toc-text">Sample APP(立体方块)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#scene设置"><span class="post-toc-number">1.</span> <span class="post-toc-text">scene设置</span></a></li></ol></li></nav></aside><article id="post-2019/190930_nReal_Sample" class="post-article article-type-post fade" itemprop="blogPost"><div class="post-card"><h1 class="post-card-title">nReal搭建Samepl APK</h1><div class="post-meta"><time class="post-time" title="2019-09-30 21:52:00" datetime="2019-09-30T13:52:00.000Z" itemprop="datePublished">2019-09-30</time><ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/VR/">VR</a></li></ul><span id="busuanzi_container_page_pv" title="文章总阅读量" style="display:none"><i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span></span></div><div class="post-content" id="post-content" itemprop="postContent"><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>nrsdk是nreal开发混合现实体验的平台。使用简单的开发过程和高级api，nrsdk提供了一组强大的mr特性，并使nreal眼镜能够了解真实世界。</p><p>nrsdk为开发者提供了五个核心特性：</p><ol><li>空间计算使眼镜能够跟踪它们相对于世界的实时位置，并了解周围的环境，例如检测和跟踪平面和图像。</li><li>优化的渲染自动应用于应用程序并在后端运行，以最小化延迟并减少抖动，增强总体用户体验。</li><li>多模态交互为不同的用例提供了交互的直观选择。</li><li>提供了开发工具，以便您可以更好地开发和调试应用程序。</li><li>第三方集成是通过为第三方sdk提供数据来实现的，这允许您充分利用nreal light的硬件功能并构建功能强大的mr/ar应用程序。<a id="more"></a><h2 id="开发工具包"><a href="#开发工具包" class="headerlink" title="开发工具包"></a>开发工具包</h2></li></ol><p>开发混合现实应用程序需要一个nreal开发工具包。开发工具包由一对nreal光学眼镜、nreal计算单元和nreal光学控制器组成。如果没有，请在这里注册nreal开发工具包！<br>到目前为止，你还不能直接在android手机上开发应用程序。安卓手机开发将于2020年初推出。</p><h2 id="选择开发平台"><a href="#选择开发平台" class="headerlink" title="选择开发平台"></a>选择开发平台</h2><p>nrsdk支持许多最流行的开发环境。通过这些功能，您可以构建全新的mr体验，或者使用mr功能增强现有的原生android应用程序。<br>Unity （Support Unity 2018.2.X） Android Native (to be released) Unreal (to be released)</p><h2 id="与Android本机应用程序兼容"><a href="#与Android本机应用程序兼容" class="headerlink" title="与Android本机应用程序兼容"></a>与Android本机应用程序兼容</h2><p>nreal眼镜现在与android原生应用程序兼容，这意味着只要应用程序安装在设备上，用户就可以通过眼镜查看所有应用程序活动。在你这边什么都不需要改变。要使2d应用程序更具沉浸感和三维感，可以使用nrsdk在现有应用程序中添加mr功能或3d虚拟对象。</p><h1 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h1><h2 id="空间计算"><a href="#空间计算" class="headerlink" title="空间计算"></a>空间计算</h2><p>nreal眼镜使用各种传感器和相机，以建立对周围环境和用户本身的复杂理解，创造身临其境的体验，无缝融合数字世界和现实世界。</p><hr><h1 id="HelloMR-APP"><a href="#HelloMR-APP" class="headerlink" title="HelloMR APP"></a>HelloMR APP</h1><h2 id="硬件清单"><a href="#硬件清单" class="headerlink" title="硬件清单"></a>硬件清单</h2><ol><li>一个nreal计算单元（把它想象成一个没有屏幕的android手机，所以所有的开发过程都将非常类似于移动应用程序开发）。</li><li>一副自然光眼镜</li><li>没有nreal设备？注册nreal开发工具包！或者尝试仿真器在没有nreal眼镜和计算单元的情况下引导nreal应用程序功能。</li><li>连接nReal计算单元和PC的USB-C电缆</li><li>不需要Wi-Fi连接。但是，可以使用Wi-Fi Android调试桥（ADB）连接进行调试和测试。</li></ol><h2 id="软件清单"><a href="#软件清单" class="headerlink" title="软件清单"></a>软件清单</h2><ol><li>Unity 2018.2.x或更高版本，支持Android构建</li><li>下载Unity 1.1的nrsdk(sdk作为nrsdkforunity_1.1.unitypackage下载)</li><li>android sdk 7.0（api级别24）或更高版本，使用android studio中的sdk管理器安装</li></ol><h2 id="创建统一项目"><a href="#创建统一项目" class="headerlink" title="创建统一项目"></a>创建统一项目</h2><ol><li>打开Unity并创建一个新的3D项目。</li><li>set player settings&gt;other settings&gt;scriptping runtime version to.net 4.x等效版本</li><li>为unity导入nrsdk</li><li><ol><li>选择“资源&gt;导入包&gt;自定义包”。</li></ol></li><li><ol start="2"><li>选择您下载的nrsdkforunity_1.1.unitypackage。</li></ol></li><li><ol start="3"><li>在“导入包”对话框中，确保选中了所有包选项，然后单击“导入”。</li></ol></li></ol><p>在unity项目窗口中，通过选择assets&gt;nrsk&gt;demos&gt;hellomr找到hellomr示例应用程序。</p><h2 id="配置生成设置"><a href="#配置生成设置" class="headerlink" title="配置生成设置"></a>配置生成设置</h2><ol><li>转到“文件&gt;生成设置”。</li><li>选择android并单击switch platform。</li><li>在“生成设置”窗口中，单击“播放器设置”。</li><li>在Inspector窗口中，按如下方式配置播放机设置：(<a href="https://developer.nreal.ai/develop/unity/android-quickstart" target="_blank" rel="noopener">https://developer.nreal.ai/develop/unity/android-quickstart</a>)</li></ol><h2 id="连接到nReal设备-开发工具包"><a href="#连接到nReal设备-开发工具包" class="headerlink" title="连接到nReal设备(开发工具包)"></a>连接到nReal设备(开发工具包)</h2><p>在计算单元上启用开发人员选项和USB调试。android调试桥（adb）作为默认设置启用，不需要手动设置）。<br>将计算单元连接到Windows PC。</p><h2 id="建立并运行"><a href="#建立并运行" class="headerlink" title="建立并运行"></a>建立并运行</h2><ol><li>在Unity Build设置窗口中，单击Build。在构建成功后，通过wifi android调试桥（adb）安装应用程序。</li><li>断开电脑与电脑的连接，然后将其连接到眼镜上。</li><li>如果这是您第一次运行此应用程序，则需要使用某些工具（如scrcpy）对该应用程序进行身份验证。</li><li>与nReal Light控制器一起启动应用程序。有关如何使用nReal Light控制器的说明，请参阅控制器指南。</li><li>四处移动，直到nrsdk找到一个水平面，检测到的平面将被绿色网格覆盖。</li><li>单击触发器按钮在其上放置nReal徽标对象。</li><li>（可选）使用android logcat查看记录的消息。我们建议使用WiFi Android调试桥（ADB）连接到您的PC，这样您就不必在大多数时间通过数据线连接。</li></ol><hr><h1 id="Sample-APP-立体方块"><a href="#Sample-APP-立体方块" class="headerlink" title="Sample APP(立体方块)"></a>Sample APP(立体方块)</h1><h2 id="scene设置"><a href="#scene设置" class="headerlink" title="scene设置"></a>scene设置</h2><ol><li>在SampleScene删除主摄像头；</li><li>将Assets -&gt; NRSDK -&gt; Prefabs -&gt; NRCameraRig拖拽到SampleScene中；</li><li>将Assets -&gt; NRSDK -&gt; Prefabs -&gt; NRInput拖拽到SampleScene中；</li><li>将Assets -&gt; NRSDK -&gt; Emulator -&gt; Prefabs -&gt; NRTrackableImageTarget拖拽到SampleScene;<br>在其中可以修改场景图像（Image Target）</li><li>在SampleAPP右侧窗口中右击Create -&gt; 3D -&gt; Object -&gt; Cube，创建立方体<br>将Scale均修改成0.25</li><li>右击Create Empty,在Inspector中Add Component<br>(1)Script设置为TrackableFoundTest<br>(2)Observer设置为NRTrackableImageTarget<br>(3)Obj设置为Cube</li><li>打开Assets -&gt; NRSDK -&gt; Emulator -&gt; Scripts -&gt; TrackableFoundTest,编辑源文件C#，添加Update函数，增加每次点击切换立方体颜色</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">using NRKernal;</span><br><span class="line">...</span><br><span class="line">   private void Update()</span><br><span class="line">    &#123;</span><br><span class="line">        if (NRInput.GetButtonDown(ControllerButton.TRIGGER))</span><br><span class="line">            Obj.GetComponent&lt;Renderer&gt;().material.color &#x3D; new Color(Random.value, Random.value, Random.value);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><ol start="8"><li>File -&gt; BuildSettings添加SampleAPP，然后选择Android，最后Building</li><li>生成APK，安装full screen black</li><li>或者在Unity上方点击Play按钮使用Emulator查看，常用按键操作：</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">WASD控制前后左右；</span><br><span class="line">Space+鼠标表示头部旋转；</span><br><span class="line">SHIFT+鼠标移动模拟nReal控制器的旋转（3DOF控制器）；</span><br><span class="line">单击鼠标左键模拟控制器触发器的单击（此处会触发Update函数变化颜色）；</span><br><span class="line">单击鼠标右键以模拟控制器主页按钮的压力；</span><br><span class="line">单击鼠标滚轮按钮以模拟控制器的APP按钮的压力；</span><br><span class="line">使用箭头键模拟在控制器的触摸板上滑动；</span><br></pre></td></tr></table></figure></div><blockquote class="post-copyright"><div class="content"><span class="post-time">Last updated: <time datetime="2020-03-08T10:14:08.790Z" itemprop="dateUpdated">2020-03-08 18:14:08</time></span><br>版权声明:署名-非商用-相同方式共享 4.0 转载请保留原文链接及作者</div><footer><a href="http://wizzie.top"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/img/avatar.jpg" alt="sunwengang"> sunwengang</a></footer></blockquote><div class="page-reward"><a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a></div><div class="post-footer"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nReal/" rel="tag">nReal</a></li></ul></div></div><nav class="post-nav flex-row flex-justify-between"><div class="waves-block waves-effect prev"><a href="/2019/10/12/2019/191012_android_debug1/" id="post-prev" class="post-nav-link"><div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div><h4 class="title">Android Graphics 调试技巧（十月份更新）</h4></a></div><div class="waves-block waves-effect next"><a href="/2019/09/22/2019/190922-android-handler-cpp/" id="post-next" class="post-nav-link"><div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div><h4 class="title">Android Handler消息循环处理机制(例ActivityThread)</h4></a></div></nav></article><div id="reward" class="page-modal reward-lay"><a class="close" href="javascript:;"><i class="icon icon-close"></i></a><h3 class="reward-title"><i class="icon icon-quote-left"></i> 奥利给 <i class="icon icon-quote-right"></i></h3><div class="reward-content"><div class="reward-code"><img id="rewardCode" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/img/wechat.png" alt="打赏二维码"></div><label class="reward-toggle"><input id="rewardToggle" type="checkbox" class="reward-toggle-check" data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg"><div class="reward-toggle-ctrol"><span class="reward-toggle-item wechat">微信</span> <span class="reward-toggle-label"></span> <span class="reward-toggle-item alipay">支付宝</span></div></label></div></div></div><footer class="footer"><div class="top"><p><span id="busuanzi_container_site_uv" style="display:none">站点总访客数：<span id="busuanzi_value_site_uv"></span> </span><span id="busuanzi_container_site_pv" style="display:none">站点总访问量：<span id="busuanzi_value_site_pv"></span></span></p><p><span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span> <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span></p></div><div class="bottom"><p><span>sunwengang &copy; 2019 - 2020</span> <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span></p></div></footer></main><div class="mask" id="mask"></div><a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a><script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script><script>var BLOG={ROOT:"/",SHARE:!1,REWARD:!0}</script><script src="/js/main.min.js?v=1.7.2"></script><div class="search-panel" id="search-panel"><ul class="search-result" id="search-result"></ul></div><template id="search-tpl"><li class="item"><a href="{path}" class="waves-block waves-effect"><div class="title ellipsis" title="{title}">{title}</div><div class="flex-row flex-middle"><div class="tags ellipsis">{tags}</div><time class="flex-col time">{date}</time></div></a></li></template><script src="/js/search.min.js?v=1.7.2" async></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script>!function(){var t,e=document.title;document.addEventListener("visibilitychange",function(){document.hidden?(document.title="",clearTimeout(t)):(document.title="(つェ⊂)咦!又好了!",t=setTimeout(function(){document.title=e},2e3))})}()</script><script>!function(t){function n(){for(var n=0;n<e.length;n++)i=e[n],0<=(o=i.getBoundingClientRect()).bottom&&0<=o.left&&o.top<=(t.innerHeight||document.documentElement.clientHeight)&&function(){var t,i,o,r,c=e[n];t=c,i=function(){e=e.filter(function(t){return c!==t})},o=new Image,r=t.getAttribute("data-original"),o.onload=function(){t.src=r,i&&i()},o.src=r}();var i,o}var e=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));n(),t.addEventListener("scroll",function(){var e,i;e=n,i=t,clearTimeout(e.tId),e.tId=setTimeout(function(){e.call(i)},500)})}(this)</script><script>window.addEventListener("load",function(){var a=/\.(gif|jpg|jpeg|tiff|png)$/i,e=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(t){var r=t.parentNode;"A"===r.tagName&&(r.href.match(a)||r.href.match(e))&&(r.href=t.dataset.original)})})</script></body></html><!-- rebuild by neat -->
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <link rel="canonical" href="true/2019/09/30/2019/190930_nReal_Sample/">
+    
+    
+    <title>nReal搭建Samepl APK | sunwengang blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="nReal">
+    <meta name="description" content="概述nrsdk是nreal开发混合现实体验的平台。使用简单的开发过程和高级api，nrsdk提供了一组强大的mr特性，并使nreal眼镜能够了解真实世界。 nrsdk为开发者提供了五个核心特性：  空间计算使眼镜能够跟踪它们相对于世界的实时位置，并了解周围的环境，例如检测和跟踪平面和图像。 优化的渲染自动应用于应用程序并在后端运行，以最小化延迟并减少抖动，增强总体用户体验。 多模态交互为不同的用例">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nReal搭建Samepl APK">
+<meta property="og:url" content="http://wizzie.top/2019/09/30/2019/190930_nReal_Sample/index.html">
+<meta property="og:site_name" content="sunwengang blog">
+<meta property="og:description" content="概述nrsdk是nreal开发混合现实体验的平台。使用简单的开发过程和高级api，nrsdk提供了一组强大的mr特性，并使nreal眼镜能够了解真实世界。 nrsdk为开发者提供了五个核心特性：  空间计算使眼镜能够跟踪它们相对于世界的实时位置，并了解周围的环境，例如检测和跟踪平面和图像。 优化的渲染自动应用于应用程序并在后端运行，以最小化延迟并减少抖动，增强总体用户体验。 多模态交互为不同的用例">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-09-30T13:52:00.000Z">
+<meta property="article:modified_time" content="2020-03-08T10:14:08.790Z">
+<meta property="article:author" content="sunwengang">
+<meta property="article:tag" content="nReal">
+<meta name="twitter:card" content="summary">
+    
+        <link rel="alternate" type="application/atom+xml" title="sunwengang blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">sunwengang</h5>
+          <a href="mailto:1332963488@qq.com" title="1332963488@qq.com" class="mail">1332963488@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://www.cnblogs.com/1996swg" target="_blank" >
+                <i class="icon icon-lg icon-book"></i>
+                cnblog
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/AloneAlive" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/html/nav.html" target="_blank" >
+                <i class="icon icon-lg icon-external-link-square"></i>
+                nav
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/others"  >
+                <i class="icon icon-lg icon-address-book"></i>
+                friends
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">nReal搭建Samepl APK</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">nReal搭建Samepl APK</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-09-30T13:52:00.000Z" itemprop="datePublished" class="page-time">
+  2019-09-30
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/VR/">VR</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#概述"><span class="post-toc-number">1.</span> <span class="post-toc-text">概述</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#开发工具包"><span class="post-toc-number">2.</span> <span class="post-toc-text">开发工具包</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#选择开发平台"><span class="post-toc-number">3.</span> <span class="post-toc-text">选择开发平台</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#与Android本机应用程序兼容"><span class="post-toc-number">4.</span> <span class="post-toc-text">与Android本机应用程序兼容</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#功能"><span class="post-toc-number"></span> <span class="post-toc-text">功能</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#空间计算"><span class="post-toc-number">1.</span> <span class="post-toc-text">空间计算</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#HelloMR-APP"><span class="post-toc-number"></span> <span class="post-toc-text">HelloMR APP</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#硬件清单"><span class="post-toc-number">1.</span> <span class="post-toc-text">硬件清单</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#软件清单"><span class="post-toc-number">2.</span> <span class="post-toc-text">软件清单</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#创建统一项目"><span class="post-toc-number">3.</span> <span class="post-toc-text">创建统一项目</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置生成设置"><span class="post-toc-number">4.</span> <span class="post-toc-text">配置生成设置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#连接到nReal设备-开发工具包"><span class="post-toc-number">5.</span> <span class="post-toc-text">连接到nReal设备(开发工具包)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#建立并运行"><span class="post-toc-number">6.</span> <span class="post-toc-text">建立并运行</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Sample-APP-立体方块"><span class="post-toc-number"></span> <span class="post-toc-text">Sample APP(立体方块)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#scene设置"><span class="post-toc-number">1.</span> <span class="post-toc-text">scene设置</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-2019/190930_nReal_Sample"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">nReal搭建Samepl APK</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-09-30 21:52:00" datetime="2019-09-30T13:52:00.000Z"  itemprop="datePublished">2019-09-30</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/VR/">VR</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>nrsdk是nreal开发混合现实体验的平台。使用简单的开发过程和高级api，nrsdk提供了一组强大的mr特性，并使nreal眼镜能够了解真实世界。</p>
+<p>nrsdk为开发者提供了五个核心特性：</p>
+<ol>
+<li>空间计算使眼镜能够跟踪它们相对于世界的实时位置，并了解周围的环境，例如检测和跟踪平面和图像。</li>
+<li>优化的渲染自动应用于应用程序并在后端运行，以最小化延迟并减少抖动，增强总体用户体验。</li>
+<li>多模态交互为不同的用例提供了交互的直观选择。</li>
+<li>提供了开发工具，以便您可以更好地开发和调试应用程序。</li>
+<li>第三方集成是通过为第三方sdk提供数据来实现的，这允许您充分利用nreal light的硬件功能并构建功能强大的mr/ar应用程序。<a id="more"></a>
+<h2 id="开发工具包"><a href="#开发工具包" class="headerlink" title="开发工具包"></a>开发工具包</h2></li>
+</ol>
+<p>开发混合现实应用程序需要一个nreal开发工具包。开发工具包由一对nreal光学眼镜、nreal计算单元和nreal光学控制器组成。如果没有，请在这里注册nreal开发工具包！<br>到目前为止，你还不能直接在android手机上开发应用程序。安卓手机开发将于2020年初推出。</p>
+<h2 id="选择开发平台"><a href="#选择开发平台" class="headerlink" title="选择开发平台"></a>选择开发平台</h2><p>nrsdk支持许多最流行的开发环境。通过这些功能，您可以构建全新的mr体验，或者使用mr功能增强现有的原生android应用程序。<br>Unity （Support Unity 2018.2.X） Android Native (to be released) Unreal (to be released)</p>
+<h2 id="与Android本机应用程序兼容"><a href="#与Android本机应用程序兼容" class="headerlink" title="与Android本机应用程序兼容"></a>与Android本机应用程序兼容</h2><p>nreal眼镜现在与android原生应用程序兼容，这意味着只要应用程序安装在设备上，用户就可以通过眼镜查看所有应用程序活动。在你这边什么都不需要改变。要使2d应用程序更具沉浸感和三维感，可以使用nrsdk在现有应用程序中添加mr功能或3d虚拟对象。</p>
+<h1 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h1><h2 id="空间计算"><a href="#空间计算" class="headerlink" title="空间计算"></a>空间计算</h2><p>nreal眼镜使用各种传感器和相机，以建立对周围环境和用户本身的复杂理解，创造身临其境的体验，无缝融合数字世界和现实世界。</p>
+<hr>
+<h1 id="HelloMR-APP"><a href="#HelloMR-APP" class="headerlink" title="HelloMR APP"></a>HelloMR APP</h1><h2 id="硬件清单"><a href="#硬件清单" class="headerlink" title="硬件清单"></a>硬件清单</h2><ol>
+<li>一个nreal计算单元（把它想象成一个没有屏幕的android手机，所以所有的开发过程都将非常类似于移动应用程序开发）。</li>
+<li>一副自然光眼镜</li>
+<li>没有nreal设备？注册nreal开发工具包！或者尝试仿真器在没有nreal眼镜和计算单元的情况下引导nreal应用程序功能。</li>
+<li>连接nReal计算单元和PC的USB-C电缆</li>
+<li>不需要Wi-Fi连接。但是，可以使用Wi-Fi Android调试桥（ADB）连接进行调试和测试。</li>
+</ol>
+<h2 id="软件清单"><a href="#软件清单" class="headerlink" title="软件清单"></a>软件清单</h2><ol>
+<li>Unity 2018.2.x或更高版本，支持Android构建</li>
+<li>下载Unity 1.1的nrsdk(sdk作为nrsdkforunity_1.1.unitypackage下载)</li>
+<li>android sdk 7.0（api级别24）或更高版本，使用android studio中的sdk管理器安装</li>
+</ol>
+<h2 id="创建统一项目"><a href="#创建统一项目" class="headerlink" title="创建统一项目"></a>创建统一项目</h2><ol>
+<li>打开Unity并创建一个新的3D项目。</li>
+<li>set  player settings&gt;other settings&gt;scriptping runtime version to.net 4.x等效版本</li>
+<li>为unity导入nrsdk</li>
+<li><ol>
+<li>选择“资源&gt;导入包&gt;自定义包”。</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>选择您下载的nrsdkforunity_1.1.unitypackage。</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>在“导入包”对话框中，确保选中了所有包选项，然后单击“导入”。</li>
+</ol>
+</li>
+</ol>
+<p>在unity项目窗口中，通过选择assets&gt;nrsk&gt;demos&gt;hellomr找到hellomr示例应用程序。</p>
+<h2 id="配置生成设置"><a href="#配置生成设置" class="headerlink" title="配置生成设置"></a>配置生成设置</h2><ol>
+<li>转到“文件&gt;生成设置”。</li>
+<li>选择android并单击switch platform。</li>
+<li>在“生成设置”窗口中，单击“播放器设置”。</li>
+<li>在Inspector窗口中，按如下方式配置播放机设置：(<a href="https://developer.nreal.ai/develop/unity/android-quickstart" target="_blank" rel="noopener">https://developer.nreal.ai/develop/unity/android-quickstart</a>)</li>
+</ol>
+<h2 id="连接到nReal设备-开发工具包"><a href="#连接到nReal设备-开发工具包" class="headerlink" title="连接到nReal设备(开发工具包)"></a>连接到nReal设备(开发工具包)</h2><p>在计算单元上启用开发人员选项和USB调试。android调试桥（adb）作为默认设置启用，不需要手动设置）。<br>将计算单元连接到Windows PC。</p>
+<h2 id="建立并运行"><a href="#建立并运行" class="headerlink" title="建立并运行"></a>建立并运行</h2><ol>
+<li>在Unity Build设置窗口中，单击Build。在构建成功后，通过wifi android调试桥（adb）安装应用程序。</li>
+<li>断开电脑与电脑的连接，然后将其连接到眼镜上。</li>
+<li>如果这是您第一次运行此应用程序，则需要使用某些工具（如scrcpy）对该应用程序进行身份验证。</li>
+<li>与nReal Light控制器一起启动应用程序。有关如何使用nReal Light控制器的说明，请参阅控制器指南。</li>
+<li>四处移动，直到nrsdk找到一个水平面，检测到的平面将被绿色网格覆盖。</li>
+<li>单击触发器按钮在其上放置nReal徽标对象。</li>
+<li>（可选）使用android logcat查看记录的消息。我们建议使用WiFi Android调试桥（ADB）连接到您的PC，这样您就不必在大多数时间通过数据线连接。</li>
+</ol>
+<hr>
+<h1 id="Sample-APP-立体方块"><a href="#Sample-APP-立体方块" class="headerlink" title="Sample APP(立体方块)"></a>Sample APP(立体方块)</h1><h2 id="scene设置"><a href="#scene设置" class="headerlink" title="scene设置"></a>scene设置</h2><ol>
+<li>在SampleScene删除主摄像头；</li>
+<li>将Assets -&gt; NRSDK -&gt; Prefabs -&gt; NRCameraRig拖拽到SampleScene中；</li>
+<li>将Assets -&gt; NRSDK -&gt; Prefabs -&gt; NRInput拖拽到SampleScene中；</li>
+<li>将Assets -&gt; NRSDK -&gt; Emulator -&gt; Prefabs -&gt; NRTrackableImageTarget拖拽到SampleScene;<br>在其中可以修改场景图像（Image Target）</li>
+<li>在SampleAPP右侧窗口中右击Create -&gt; 3D -&gt; Object -&gt; Cube，创建立方体<br>将Scale均修改成0.25</li>
+<li>右击Create Empty,在Inspector中Add Component<br>(1)Script设置为TrackableFoundTest<br>(2)Observer设置为NRTrackableImageTarget<br>(3)Obj设置为Cube</li>
+<li>打开Assets -&gt; NRSDK -&gt; Emulator -&gt; Scripts -&gt; TrackableFoundTest,编辑源文件C#，添加Update函数，增加每次点击切换立方体颜色</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">using NRKernal;</span><br><span class="line">...</span><br><span class="line">   private void Update()</span><br><span class="line">    &#123;</span><br><span class="line">        if (NRInput.GetButtonDown(ControllerButton.TRIGGER))</span><br><span class="line">            Obj.GetComponent&lt;Renderer&gt;().material.color &#x3D; new Color(Random.value, Random.value, Random.value);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<ol start="8">
+<li>File -&gt; BuildSettings添加SampleAPP，然后选择Android，最后Building</li>
+<li>生成APK，安装full screen black</li>
+<li>或者在Unity上方点击Play按钮使用Emulator查看，常用按键操作：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">WASD控制前后左右；</span><br><span class="line">Space+鼠标表示头部旋转；</span><br><span class="line">SHIFT+鼠标移动模拟nReal控制器的旋转（3DOF控制器）；</span><br><span class="line">单击鼠标左键模拟控制器触发器的单击（此处会触发Update函数变化颜色）；</span><br><span class="line">单击鼠标右键以模拟控制器主页按钮的压力；</span><br><span class="line">单击鼠标滚轮按钮以模拟控制器的APP按钮的压力；</span><br><span class="line">使用箭头键模拟在控制器的触摸板上滑动；</span><br></pre></td></tr></table></figure>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2020-03-08T10:14:08.790Z" itemprop="dateUpdated">2020-03-08 18:14:08</time>
+</span><br>
+
+
+        
+        版权声明:署名-非商用-相同方式共享 4.0 转载请保留原文链接及作者
+        
+    </div>
+    
+    <footer>
+        <a href="http://wizzie.top">
+            <img src="/img/avatar.jpg" alt="sunwengang">
+            sunwengang
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nReal/" rel="tag">nReal</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2019/10/12/2019/191012_android_debug1/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Android Graphics 调试技巧（十月份更新）</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/09/22/2019/190922-android-handler-cpp/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Android Handler消息循环处理机制(例ActivityThread)</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        奥利给
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>sunwengang &copy; 2019 - 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

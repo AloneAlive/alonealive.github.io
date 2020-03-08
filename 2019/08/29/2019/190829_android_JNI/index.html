@@ -1,1 +1,469 @@
-<!-- build time:Sun Mar 08 2020 19:48:44 GMT+0800 (CST) --><!DOCTYPE html><html><head><meta charset="utf-8"><link rel="canonical" href="true/2019/08/29/2019/190829_android_JNI/"><title>Android JNI理解 | sunwengang blog</title><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="theme-color" content="#3F51B5"><meta name="keywords" content="JNI"><meta name="description" content="概述JNI,即Java Native Interface，Java本地调用。通过JNI可以实现：Java程序函数可以调用Natvie语言（C&#x2F;C++）写的函数Natvie程序函数可以调用Java层的函数"><meta property="og:type" content="article"><meta property="og:title" content="Android JNI理解"><meta property="og:url" content="http://wizzie.top/2019/08/29/2019/190829_android_JNI/index.html"><meta property="og:site_name" content="sunwengang blog"><meta property="og:description" content="概述JNI,即Java Native Interface，Java本地调用。通过JNI可以实现：Java程序函数可以调用Natvie语言（C&#x2F;C++）写的函数Natvie程序函数可以调用Java层的函数"><meta property="og:locale" content="en_US"><meta property="article:published_time" content="2019-08-29T15:41:06.000Z"><meta property="article:modified_time" content="2020-03-08T10:11:22.924Z"><meta property="article:author" content="sunwengang"><meta property="article:tag" content="JNI"><meta name="twitter:card" content="summary"><link rel="alternate" type="application/atom+xml" title="sunwengang blog" href="/atom.xml"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="/css/style.css?v=1.7.2"><script>window.lazyScripts=[]</script><meta name="generator" content="Hexo 4.2.0"></head><body><div id="loading" class="active"></div><aside id="menu" class="hide"><div class="inner flex-row-vertical"><a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off"><i class="icon icon-lg icon-close"></i></a><div class="brand-wrap" style="background-image:url(/img/brand.jpg)"><div class="brand"><a href="/" class="avatar waves-effect waves-circle waves-light"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/img/avatar.jpg"></a><hgroup class="introduce"><h5 class="nickname">sunwengang</h5><a href="mailto:1332963488@qq.com" title="1332963488@qq.com" class="mail">1332963488@qq.com</a></hgroup></div></div><div class="scroll-wrap flex-col"><ul class="nav"><li class="waves-block waves-effect"><a href="/"><i class="icon icon-lg icon-home"></i> Home</a></li><li class="waves-block waves-effect"><a href="/archives"><i class="icon icon-lg icon-archives"></i> Archives</a></li><li class="waves-block waves-effect"><a href="/tags"><i class="icon icon-lg icon-tags"></i> Tags</a></li><li class="waves-block waves-effect"><a href="/categories"><i class="icon icon-lg icon-th-list"></i> Categories</a></li><li class="waves-block waves-effect"><a href="https://www.cnblogs.com/1996swg" target="_blank"><i class="icon icon-lg icon-book"></i> cnblog</a></li><li class="waves-block waves-effect"><a href="https://github.com/AloneAlive" target="_blank"><i class="icon icon-lg icon-github"></i> Github</a></li><li class="waves-block waves-effect"><a href="/html/nav.html" target="_blank"><i class="icon icon-lg icon-external-link-square"></i> nav</a></li><li class="waves-block waves-effect"><a href="/others"><i class="icon icon-lg icon-address-book"></i> friends</a></li></ul></div></div></aside><main id="main"><header class="top-header" id="header"><div class="flex-row"><a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle"><i class="icon icon-lg icon-navicon"></i></a><div class="flex-col header-title ellipsis">Android JNI理解</div><div class="search-wrap" id="search-wrap"><a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back"><i class="icon icon-lg icon-chevron-left"></i> </a><input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search"> <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search"><i class="icon icon-lg icon-search"></i></a></div></div></header><header class="content-header post-header"><div class="container fade-scale"><h1 class="title">Android JNI理解</h1><h5 class="subtitle"><time datetime="2019-08-29T15:41:06.000Z" itemprop="datePublished" class="page-time">2019-08-29</time><ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/android/">android</a></li></ul></h5></div></header><div class="container body-wrap"><aside class="post-widget"><nav class="post-toc-wrap post-toc-shrink" id="post-toc"><h4>TOC</h4><ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#概述"><span class="post-toc-number">1.</span> <span class="post-toc-text">概述</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#MediaScanner示例"><span class="post-toc-number">2.</span> <span class="post-toc-text">MediaScanner示例</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Java层的MediaScanner"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Java层的MediaScanner</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JNI层的MediaScanner"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">JNI层的MediaScanner</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#注册JNI函数"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">注册JNI函数</span></a></li></ol></li></ol></li></ol></nav></aside><article id="post-2019/190829_android_JNI" class="post-article article-type-post fade" itemprop="blogPost"><div class="post-card"><h1 class="post-card-title">Android JNI理解</h1><div class="post-meta"><time class="post-time" title="2019-08-29 23:41:06" datetime="2019-08-29T15:41:06.000Z" itemprop="datePublished">2019-08-29</time><ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/android/">android</a></li></ul><span id="busuanzi_container_page_pv" title="文章总阅读量" style="display:none"><i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span></span></div><div class="post-content" id="post-content" itemprop="postContent"><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><blockquote><p>JNI,即Java Native Interface，Java本地调用。通过JNI可以实现：</p><ul><li>Java程序函数可以调用Natvie语言（C/C++）写的函数</li><li>Natvie程序函数可以调用Java层的函数</li></ul></blockquote><a id="more"></a><h2 id="MediaScanner示例"><a href="#MediaScanner示例" class="headerlink" title="MediaScanner示例"></a>MediaScanner示例</h2><blockquote><p>使用Android Xref提供的 <a href="http://androidxref.com/9.0.0_r3/" target="_blank" rel="noopener">Android 9.0.0_r3的源码</a></p></blockquote><h3 id="Java层的MediaScanner"><a href="#Java层的MediaScanner" class="headerlink" title="Java层的MediaScanner"></a>Java层的MediaScanner</h3><p>完成两件事：</p><ol><li>加载JNI库</li><li>Java的native函数</li></ol><figure class="highlight c++"><figcaption><span>frameworks/base/media/java/android/media/MediaScanner.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MediaScanner</span> <span class="title">implements</span> <span class="title">AutoCloseable</span> &#123;</span></span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        System.loadLibrary(<span class="string">"media_jni"</span>);  <span class="comment">//加载对应的JNI库，media_jni是库名，在实际加载动态库的时候会拓展成libmedia_jni.so</span></span><br><span class="line">        native_init();  <span class="comment">//调用函数</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> <span class="keyword">String</span> TAG = <span class="string">"MediaScanner"</span>;</span><br><span class="line">...</span><br><span class="line">    <span class="function"><span class="keyword">private</span> native <span class="keyword">void</span> <span class="title">processDirectory</span><span class="params">(<span class="keyword">String</span> path, MediaScannerClient client)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> native <span class="keyword">boolean</span> <span class="title">processFile</span><span class="params">(<span class="keyword">String</span> path, <span class="keyword">String</span> mimeType, MediaScannerClient client)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> native <span class="keyword">void</span> <span class="title">setLocale</span><span class="params">(<span class="keyword">String</span> locale)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> native <span class="keyword">byte</span>[] extractAlbumArt(FileDescriptor fd);</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> native <span class="keyword">final</span> <span class="keyword">void</span> <span class="title">native_init</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> native <span class="keyword">final</span> <span class="keyword">void</span> <span class="title">native_setup</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> native <span class="keyword">final</span> <span class="keyword">void</span> <span class="title">native_finalize</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure><p>动态库是运行时加载的库。如果Java要调用native函数，必须通过一个位于JNI层的动态库实现。通常是在类的static语句中加载，调用<code>System.loadLibrary</code>方法就可以加载。</p><p>函数名前有Java的关键字<code>native</code>的函数表示将由JNI层实现。</p><p>因而Java层只需要两项工作：<strong>加载对应的JNI库，和声明由关键字native修饰的函数</strong></p><h3 id="JNI层的MediaScanner"><a href="#JNI层的MediaScanner" class="headerlink" title="JNI层的MediaScanner"></a>JNI层的MediaScanner</h3><p>JNI对应的文件是<code>frameworks/base/media/jni/android_media_MediaScanner.cpp</code></p><figure class="highlight c++"><figcaption><span>frameworks/base/media/jni/android_media_MediaScanner.cpp</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// This function gets a field ID, which in turn causes class initialization.</span></span><br><span class="line"><span class="comment">// It is called from a static block in MediaScanner, which won't run until the</span></span><br><span class="line"><span class="comment">// first time an instance of this class is used.</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">void</span></span><br><span class="line">android_media_MediaScanner_native_init(JNIEnv *env)</span><br><span class="line">&#123;</span><br><span class="line">    ALOGV(<span class="string">"native_init"</span>);</span><br><span class="line">    jclass clazz = env-&gt;FindClass(kClassMediaScanner);</span><br><span class="line">    <span class="keyword">if</span> (clazz == <span class="literal">NULL</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    fields.context = env-&gt;GetFieldID(clazz, <span class="string">"mNativeContext"</span>, <span class="string">"J"</span>);</span><br><span class="line">    <span class="keyword">if</span> (fields.context == <span class="literal">NULL</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure><p>java层的native_init函数对应<code>android_media_MediaScanner_native_init</code>。通过文件路径来命名，观察两个文件的路径：</p><ul><li>frameworks/base/media/java/android/media/MediaScanner.java</li><li>frameworks/base/media/jni/android_media_MediaScanner.cpp</li></ul><h4 id="注册JNI函数"><a href="#注册JNI函数" class="headerlink" title="注册JNI函数"></a>注册JNI函数</h4><p>java层的MediaScanner.java函数native_init位于android.media包中，全路径名是：<code>android/media/MediaScanner.java</code>，对应JNI层函数的名字。JNI层将Java函数名称（包含包名）中的<code>.</code>转换成<code>_</code>，通过这种方式，native_init对应JNI的函数。</p><p>JNI函数注册的意思是将java层的native函数和JNI层对应的实现函数关联起来。注册有两种方式：<code>静态方法和动态注册</code></p><ol><li>静态注册</li></ol><blockquote><p>根据函数名来找对应的JNI函数。</p></blockquote><p>（1） 编写Java代码，编译生成.class文件</p><p>（2） 使用Java的工具命令<code>javah -o output packagename.classname</code>，生成一个<code>output.h</code>的JNI头文件，里面声明了对应的JNI函数，只要实现里面的函数即可。</p><ol start="2"><li>动态注册</li></ol><blockquote><p>因为Java native函数和JNI函数是一一对应的，所以存在一种<code>JNINativeMethod</code>的结构记录这种一一对应的关系。</p></blockquote><p>例如frameworks/base/media/jni/android_media_MediaScanner.cpp文件中：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">const</span> JNINativeMethod gMethods[] = &#123;</span><br><span class="line"> ......</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">"native_setup"</span>,</span><br><span class="line">        <span class="string">"()V"</span>,</span><br><span class="line">        (<span class="keyword">void</span> *)android_media_MediaScanner_native_setup</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">"native_finalize"</span>,</span><br><span class="line">        <span class="string">"()V"</span>,</span><br><span class="line">        (<span class="keyword">void</span> *)android_media_MediaScanner_native_finalize</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//注册上面的数组</span></span><br><span class="line"><span class="comment">// This function only registers the native methods, and is called from</span></span><br><span class="line"><span class="comment">// JNI_OnLoad in android_media_MediaPlayer.cpp</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">register_android_media_MediaScanner</span><span class="params">(JNIEnv *env)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> AndroidRuntime::registerNativeMethods(env,</span><br><span class="line">                kClassMediaScanner, gMethods, NELEM(gMethods));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>当Java层通过<code>System.loadLibrary</code>加载完JNI动态库后，会查找该库中<code>JNI_OnLoad</code>函数，然后调用他，之后完成动态注册。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">jint <span class="title">JNI_OnLoad</span><span class="params">(JavaVM* vm, <span class="keyword">void</span>* <span class="comment">/* reserved */</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    JNIEnv* env = <span class="literal">NULL</span>;</span><br><span class="line">    jint result = <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (vm-&gt;GetEnv((<span class="keyword">void</span>**) &amp;env, JNI_VERSION_1_4) != JNI_OK) &#123;</span><br><span class="line">        ALOGE(<span class="string">"ERROR: GetEnv failed\n"</span>);</span><br><span class="line">        <span class="keyword">goto</span> bail;</span><br><span class="line">    &#125;</span><br><span class="line">    assert(env != <span class="literal">NULL</span>);</span><br><span class="line"></span><br><span class="line">......</span><br><span class="line">    <span class="keyword">if</span> (register_android_media_MediaRecorder(env) &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        ALOGE(<span class="string">"ERROR: MediaRecorder native registration failed\n"</span>);</span><br><span class="line">        <span class="keyword">goto</span> bail;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (register_android_media_MediaScanner(env) &lt; <span class="number">0</span>) &#123;   <span class="comment">//此处开始动态注册</span></span><br><span class="line">        ALOGE(<span class="string">"ERROR: MediaScanner native registration failed\n"</span>);</span><br><span class="line">        <span class="keyword">goto</span> bail;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (register_android_media_MediaMetadataRetriever(env) &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        ALOGE(<span class="string">"ERROR: MediaMetadataRetriever native registration failed\n"</span>);</span><br><span class="line">        <span class="keyword">goto</span> bail;</span><br><span class="line">    &#125;</span><br><span class="line">......</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* success -- return valid version number */</span></span><br><span class="line">    result = JNI_VERSION_1_4;</span><br><span class="line"></span><br><span class="line">bail:</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div><blockquote class="post-copyright"><div class="content"><span class="post-time">Last updated: <time datetime="2020-03-08T10:11:22.924Z" itemprop="dateUpdated">2020-03-08 18:11:22</time></span><br>版权声明:署名-非商用-相同方式共享 4.0 转载请保留原文链接及作者</div><footer><a href="http://wizzie.top"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/img/avatar.jpg" alt="sunwengang"> sunwengang</a></footer></blockquote><div class="page-reward"><a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a></div><div class="post-footer"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JNI/" rel="tag">JNI</a></li></ul></div></div><nav class="post-nav flex-row flex-justify-between"><div class="waves-block waves-effect prev"><a href="/2019/09/01/2019/190901_cpp_namespace/" id="post-prev" class="post-nav-link"><div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div><h4 class="title">C++头文件、作用域、内存模型和名称空间</h4></a></div><div class="waves-block waves-effect next"><a href="/2019/08/29/2019/190829_linux_ibus/" id="post-next" class="post-nav-link"><div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div><h4 class="title">ubuntu输入法无法选择候选文字</h4></a></div></nav></article><div id="reward" class="page-modal reward-lay"><a class="close" href="javascript:;"><i class="icon icon-close"></i></a><h3 class="reward-title"><i class="icon icon-quote-left"></i> 奥利给 <i class="icon icon-quote-right"></i></h3><div class="reward-content"><div class="reward-code"><img id="rewardCode" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/img/wechat.png" alt="打赏二维码"></div><label class="reward-toggle"><input id="rewardToggle" type="checkbox" class="reward-toggle-check" data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg"><div class="reward-toggle-ctrol"><span class="reward-toggle-item wechat">微信</span> <span class="reward-toggle-label"></span> <span class="reward-toggle-item alipay">支付宝</span></div></label></div></div></div><footer class="footer"><div class="top"><p><span id="busuanzi_container_site_uv" style="display:none">站点总访客数：<span id="busuanzi_value_site_uv"></span> </span><span id="busuanzi_container_site_pv" style="display:none">站点总访问量：<span id="busuanzi_value_site_pv"></span></span></p><p><span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span> <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span></p></div><div class="bottom"><p><span>sunwengang &copy; 2019 - 2020</span> <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span></p></div></footer></main><div class="mask" id="mask"></div><a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a><script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script><script>var BLOG={ROOT:"/",SHARE:!1,REWARD:!0}</script><script src="/js/main.min.js?v=1.7.2"></script><div class="search-panel" id="search-panel"><ul class="search-result" id="search-result"></ul></div><template id="search-tpl"><li class="item"><a href="{path}" class="waves-block waves-effect"><div class="title ellipsis" title="{title}">{title}</div><div class="flex-row flex-middle"><div class="tags ellipsis">{tags}</div><time class="flex-col time">{date}</time></div></a></li></template><script src="/js/search.min.js?v=1.7.2" async></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script>!function(){var t,e=document.title;document.addEventListener("visibilitychange",function(){document.hidden?(document.title="",clearTimeout(t)):(document.title="(つェ⊂)咦!又好了!",t=setTimeout(function(){document.title=e},2e3))})}()</script><script>!function(t){function n(){for(var n=0;n<e.length;n++)i=e[n],0<=(o=i.getBoundingClientRect()).bottom&&0<=o.left&&o.top<=(t.innerHeight||document.documentElement.clientHeight)&&function(){var t,i,o,r,c=e[n];t=c,i=function(){e=e.filter(function(t){return c!==t})},o=new Image,r=t.getAttribute("data-original"),o.onload=function(){t.src=r,i&&i()},o.src=r}();var i,o}var e=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));n(),t.addEventListener("scroll",function(){var e,i;e=n,i=t,clearTimeout(e.tId),e.tId=setTimeout(function(){e.call(i)},500)})}(this)</script><script>window.addEventListener("load",function(){var a=/\.(gif|jpg|jpeg|tiff|png)$/i,e=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(t){var r=t.parentNode;"A"===r.tagName&&(r.href.match(a)||r.href.match(e))&&(r.href=t.dataset.original)})})</script></body></html><!-- rebuild by neat -->
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <link rel="canonical" href="true/2019/08/29/2019/190829_android_JNI/">
+    
+    
+    <title>Android JNI理解 | sunwengang blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="JNI">
+    <meta name="description" content="概述 JNI,即Java Native Interface，Java本地调用。通过JNI可以实现：    Java程序函数可以调用Natvie语言（C&#x2F;C++）写的函数 Natvie程序函数可以调用Java层的函数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android JNI理解">
+<meta property="og:url" content="http://wizzie.top/2019/08/29/2019/190829_android_JNI/index.html">
+<meta property="og:site_name" content="sunwengang blog">
+<meta property="og:description" content="概述 JNI,即Java Native Interface，Java本地调用。通过JNI可以实现：    Java程序函数可以调用Natvie语言（C&#x2F;C++）写的函数 Natvie程序函数可以调用Java层的函数">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-08-29T15:41:06.000Z">
+<meta property="article:modified_time" content="2020-03-08T10:11:22.924Z">
+<meta property="article:author" content="sunwengang">
+<meta property="article:tag" content="JNI">
+<meta name="twitter:card" content="summary">
+    
+        <link rel="alternate" type="application/atom+xml" title="sunwengang blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">sunwengang</h5>
+          <a href="mailto:1332963488@qq.com" title="1332963488@qq.com" class="mail">1332963488@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://www.cnblogs.com/1996swg" target="_blank" >
+                <i class="icon icon-lg icon-book"></i>
+                cnblog
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/AloneAlive" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/html/nav.html" target="_blank" >
+                <i class="icon icon-lg icon-external-link-square"></i>
+                nav
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/others"  >
+                <i class="icon icon-lg icon-address-book"></i>
+                friends
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Android JNI理解</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Android JNI理解</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-08-29T15:41:06.000Z" itemprop="datePublished" class="page-time">
+  2019-08-29
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/android/">android</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#概述"><span class="post-toc-number">1.</span> <span class="post-toc-text">概述</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#MediaScanner示例"><span class="post-toc-number">2.</span> <span class="post-toc-text">MediaScanner示例</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Java层的MediaScanner"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Java层的MediaScanner</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JNI层的MediaScanner"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">JNI层的MediaScanner</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#注册JNI函数"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">注册JNI函数</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-2019/190829_android_JNI"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Android JNI理解</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-08-29 23:41:06" datetime="2019-08-29T15:41:06.000Z"  itemprop="datePublished">2019-08-29</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/android/">android</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><blockquote>
+<p>JNI,即Java Native Interface，Java本地调用。通过JNI可以实现：  </p>
+<ul>
+<li>Java程序函数可以调用Natvie语言（C/C++）写的函数</li>
+<li>Natvie程序函数可以调用Java层的函数</li>
+</ul>
+</blockquote>
+<a id="more"></a>
+<h2 id="MediaScanner示例"><a href="#MediaScanner示例" class="headerlink" title="MediaScanner示例"></a>MediaScanner示例</h2><blockquote>
+<p>使用Android Xref提供的 <a href="http://androidxref.com/9.0.0_r3/" target="_blank" rel="noopener">Android 9.0.0_r3的源码</a></p>
+</blockquote>
+<h3 id="Java层的MediaScanner"><a href="#Java层的MediaScanner" class="headerlink" title="Java层的MediaScanner"></a>Java层的MediaScanner</h3><p>完成两件事：</p>
+<ol>
+<li>加载JNI库</li>
+<li>Java的native函数</li>
+</ol>
+<figure class="highlight c++"><figcaption><span>frameworks/base/media/java/android/media/MediaScanner.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MediaScanner</span> <span class="title">implements</span> <span class="title">AutoCloseable</span> &#123;</span></span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        System.loadLibrary(<span class="string">"media_jni"</span>);  <span class="comment">//加载对应的JNI库，media_jni是库名，在实际加载动态库的时候会拓展成libmedia_jni.so</span></span><br><span class="line">        native_init();  <span class="comment">//调用函数</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> <span class="keyword">String</span> TAG = <span class="string">"MediaScanner"</span>;</span><br><span class="line">...</span><br><span class="line">    <span class="function"><span class="keyword">private</span> native <span class="keyword">void</span> <span class="title">processDirectory</span><span class="params">(<span class="keyword">String</span> path, MediaScannerClient client)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> native <span class="keyword">boolean</span> <span class="title">processFile</span><span class="params">(<span class="keyword">String</span> path, <span class="keyword">String</span> mimeType, MediaScannerClient client)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> native <span class="keyword">void</span> <span class="title">setLocale</span><span class="params">(<span class="keyword">String</span> locale)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> native <span class="keyword">byte</span>[] extractAlbumArt(FileDescriptor fd);</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> native <span class="keyword">final</span> <span class="keyword">void</span> <span class="title">native_init</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> native <span class="keyword">final</span> <span class="keyword">void</span> <span class="title">native_setup</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> native <span class="keyword">final</span> <span class="keyword">void</span> <span class="title">native_finalize</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>动态库是运行时加载的库。如果Java要调用native函数，必须通过一个位于JNI层的动态库实现。通常是在类的static语句中加载，调用<code>System.loadLibrary</code>方法就可以加载。</p>
+<p>函数名前有Java的关键字<code>native</code>的函数表示将由JNI层实现。</p>
+<p>因而Java层只需要两项工作：<strong>加载对应的JNI库，和声明由关键字native修饰的函数</strong></p>
+<h3 id="JNI层的MediaScanner"><a href="#JNI层的MediaScanner" class="headerlink" title="JNI层的MediaScanner"></a>JNI层的MediaScanner</h3><p>JNI对应的文件是<code>frameworks/base/media/jni/android_media_MediaScanner.cpp</code></p>
+<figure class="highlight c++"><figcaption><span>frameworks/base/media/jni/android_media_MediaScanner.cpp</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// This function gets a field ID, which in turn causes class initialization.</span></span><br><span class="line"><span class="comment">// It is called from a static block in MediaScanner, which won't run until the</span></span><br><span class="line"><span class="comment">// first time an instance of this class is used.</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">void</span></span><br><span class="line">android_media_MediaScanner_native_init(JNIEnv *env)</span><br><span class="line">&#123;</span><br><span class="line">    ALOGV(<span class="string">"native_init"</span>);</span><br><span class="line">    jclass clazz = env-&gt;FindClass(kClassMediaScanner);</span><br><span class="line">    <span class="keyword">if</span> (clazz == <span class="literal">NULL</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    fields.context = env-&gt;GetFieldID(clazz, <span class="string">"mNativeContext"</span>, <span class="string">"J"</span>);</span><br><span class="line">    <span class="keyword">if</span> (fields.context == <span class="literal">NULL</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>java层的native_init函数对应<code>android_media_MediaScanner_native_init</code>。通过文件路径来命名，观察两个文件的路径：</p>
+<ul>
+<li>frameworks/base/media/java/android/media/MediaScanner.java</li>
+<li>frameworks/base/media/jni/android_media_MediaScanner.cpp</li>
+</ul>
+<h4 id="注册JNI函数"><a href="#注册JNI函数" class="headerlink" title="注册JNI函数"></a>注册JNI函数</h4><p>java层的MediaScanner.java函数native_init位于android.media包中，全路径名是：<code>android/media/MediaScanner.java</code>，对应JNI层函数的名字。JNI层将Java函数名称（包含包名）中的<code>.</code>转换成<code>_</code>，通过这种方式，native_init对应JNI的函数。</p>
+<p>JNI函数注册的意思是将java层的native函数和JNI层对应的实现函数关联起来。注册有两种方式：<code>静态方法和动态注册</code></p>
+<ol>
+<li>静态注册</li>
+</ol>
+<blockquote>
+<p>根据函数名来找对应的JNI函数。</p>
+</blockquote>
+<p>（1） 编写Java代码，编译生成.class文件</p>
+<p>（2） 使用Java的工具命令<code>javah -o output packagename.classname</code>，生成一个<code>output.h</code>的JNI头文件，里面声明了对应的JNI函数，只要实现里面的函数即可。</p>
+<ol start="2">
+<li>动态注册</li>
+</ol>
+<blockquote>
+<p>因为Java native函数和JNI函数是一一对应的，所以存在一种<code>JNINativeMethod</code>的结构记录这种一一对应的关系。</p>
+</blockquote>
+<p>例如frameworks/base/media/jni/android_media_MediaScanner.cpp文件中：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">const</span> JNINativeMethod gMethods[] = &#123;</span><br><span class="line"> ......</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">"native_setup"</span>,</span><br><span class="line">        <span class="string">"()V"</span>,</span><br><span class="line">        (<span class="keyword">void</span> *)android_media_MediaScanner_native_setup</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">"native_finalize"</span>,</span><br><span class="line">        <span class="string">"()V"</span>,</span><br><span class="line">        (<span class="keyword">void</span> *)android_media_MediaScanner_native_finalize</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//注册上面的数组</span></span><br><span class="line"><span class="comment">// This function only registers the native methods, and is called from</span></span><br><span class="line"><span class="comment">// JNI_OnLoad in android_media_MediaPlayer.cpp</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">register_android_media_MediaScanner</span><span class="params">(JNIEnv *env)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> AndroidRuntime::registerNativeMethods(env,</span><br><span class="line">                kClassMediaScanner, gMethods, NELEM(gMethods));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当Java层通过<code>System.loadLibrary</code>加载完JNI动态库后，会查找该库中<code>JNI_OnLoad</code>函数，然后调用他，之后完成动态注册。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">jint <span class="title">JNI_OnLoad</span><span class="params">(JavaVM* vm, <span class="keyword">void</span>* <span class="comment">/* reserved */</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    JNIEnv* env = <span class="literal">NULL</span>;</span><br><span class="line">    jint result = <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (vm-&gt;GetEnv((<span class="keyword">void</span>**) &amp;env, JNI_VERSION_1_4) != JNI_OK) &#123;</span><br><span class="line">        ALOGE(<span class="string">"ERROR: GetEnv failed\n"</span>);</span><br><span class="line">        <span class="keyword">goto</span> bail;</span><br><span class="line">    &#125;</span><br><span class="line">    assert(env != <span class="literal">NULL</span>);</span><br><span class="line"></span><br><span class="line">......</span><br><span class="line">    <span class="keyword">if</span> (register_android_media_MediaRecorder(env) &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        ALOGE(<span class="string">"ERROR: MediaRecorder native registration failed\n"</span>);</span><br><span class="line">        <span class="keyword">goto</span> bail;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (register_android_media_MediaScanner(env) &lt; <span class="number">0</span>) &#123;   <span class="comment">//此处开始动态注册</span></span><br><span class="line">        ALOGE(<span class="string">"ERROR: MediaScanner native registration failed\n"</span>);</span><br><span class="line">        <span class="keyword">goto</span> bail;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (register_android_media_MediaMetadataRetriever(env) &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        ALOGE(<span class="string">"ERROR: MediaMetadataRetriever native registration failed\n"</span>);</span><br><span class="line">        <span class="keyword">goto</span> bail;</span><br><span class="line">    &#125;</span><br><span class="line">......</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* success -- return valid version number */</span></span><br><span class="line">    result = JNI_VERSION_1_4;</span><br><span class="line"></span><br><span class="line">bail:</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2020-03-08T10:11:22.924Z" itemprop="dateUpdated">2020-03-08 18:11:22</time>
+</span><br>
+
+
+        
+        版权声明:署名-非商用-相同方式共享 4.0 转载请保留原文链接及作者
+        
+    </div>
+    
+    <footer>
+        <a href="http://wizzie.top">
+            <img src="/img/avatar.jpg" alt="sunwengang">
+            sunwengang
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JNI/" rel="tag">JNI</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2019/09/01/2019/190901_cpp_namespace/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">C++头文件、作用域、内存模型和名称空间</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/08/29/2019/190829_linux_ibus/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">ubuntu输入法无法选择候选文字</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        奥利给
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>sunwengang &copy; 2019 - 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

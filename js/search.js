@@ -1,3 +1,141 @@
-// build time:Sun Mar 08 2020 19:48:46 GMT+0800 (CST)
-(function(){var e=window||this,t=e.BLOG.even,n=e.BLOG.$,i=n("#search"),s=n("#search-wrap"),r=n("#key"),a=n("#back"),o=n("#search-panel"),c=n("#search-result"),u=n("#search-tpl").innerHTML,l=(e.BLOG.ROOT+"/content.json").replace(/\/{2}/g,"/"),f;function d(e){if(!f){var t=new XMLHttpRequest;t.open("GET",l,true);t.onload=function(){if(this.status>=200&&this.status<300){var t=JSON.parse(this.response);f=t instanceof Array?t:t.posts;e(f)}else{console.error(this.statusText)}};t.onerror=function(){console.error(this.statusText)};t.send()}else{e(f)}}function p(e,t){return e.replace(/\{\w+\}/g,function(e){var n=e.replace(/\{|\}/g,"");return t[n]||""})}var h=e.BLOG.noop;var v=n("html");var L={show:function(){e.innerWidth<760?v.classList.add("lock-size"):h;o.classList.add("in")},hide:function(){e.innerWidth<760?v.classList.remove("lock-size"):h;o.classList.remove("in")}};function g(t){var n="";if(t.length){n=t.map(function(t){return p(u,{title:t.title,path:(e.BLOG.ROOT+"/"+t.path).replace(/\/{2,}/g,"/"),date:new Date(t.date).toLocaleDateString(),tags:t.tags.map(function(e){return"<span>#"+e.name+"</span>"}).join("")})}).join("")}else{n='<li class="tips"><i class="icon icon-coffee icon-3x"></i><p>Results not found!</p></li>'}c.innerHTML=n}function m(e,t){t.lastIndex=0;return t.test(e)}function O(e,t){return m(e.title,t)||e.tags.some(function(e){return m(e.name,t)})||m(e.text,t)}function w(e){var t=this.value.trim();if(!t){return}var n=new RegExp(t.replace(/[ ]/g,"|"),"gmi");d(function(e){var t=e.filter(function(e){return O(e,n)});g(t);L.show()});e.preventDefault()}i.addEventListener(t,function(){s.classList.toggle("in");r.value="";s.classList.contains("in")?r.focus():r.blur()});a.addEventListener(t,function(){s.classList.remove("in");L.hide()});document.addEventListener(t,function(e){if(e.target.id!=="key"&&t==="click"){L.hide()}});r.addEventListener("input",w);r.addEventListener(t,w)}).call(this);
-//rebuild by neat 
+(function () {
+
+    var G = window || this,
+        even = G.BLOG.even,
+        $ = G.BLOG.$,
+        searchIco = $('#search'),
+        searchWrap = $('#search-wrap'),
+        keyInput = $('#key'),
+        back = $('#back'),
+        searchPanel = $('#search-panel'),
+        searchResult = $('#search-result'),
+        searchTpl = $('#search-tpl').innerHTML,
+        JSON_DATA = (G.BLOG.ROOT + '/content.json').replace(/\/{2}/g, '/'),
+        searchData;
+
+    function loadData(success) {
+
+        if (!searchData) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', JSON_DATA, true);
+
+            xhr.onload = function () {
+                if (this.status >= 200 && this.status < 300) {
+                    var res = JSON.parse(this.response);
+                    searchData = res instanceof Array ? res : res.posts;
+                    success(searchData);
+                } else {
+                    console.error(this.statusText);
+                }
+            };
+
+            xhr.onerror = function () {
+                console.error(this.statusText);
+            };
+
+            xhr.send();
+
+        } else {
+            success(searchData);
+        }
+    }
+
+    function tpl(html, data) {
+        return html.replace(/\{\w+\}/g, function (str) {
+            var prop = str.replace(/\{|\}/g, '');
+            return data[prop] || '';
+        });
+    }
+
+    var noop = G.BLOG.noop;
+    var root = $('html');
+
+    var Control = {
+        show: function () {
+            G.innerWidth < 760 ? root.classList.add('lock-size') : noop;
+            searchPanel.classList.add('in');
+        },
+        hide: function () {
+            G.innerWidth < 760 ? root.classList.remove('lock-size') : noop;
+            searchPanel.classList.remove('in');
+        }
+    };
+
+    function render(data) {
+        var html = '';
+        if (data.length) {
+
+            html = data.map(function (post) {
+
+                return tpl(searchTpl, {
+                    title: post.title,
+                    path: (G.BLOG.ROOT + '/' + post.path).replace(/\/{2,}/g, '/'),
+                    date: new Date(post.date).toLocaleDateString(),
+                    tags: post.tags.map(function (tag) {
+                        return '<span>#' + tag.name + '</span>';
+                    }).join('')
+                });
+
+            }).join('');
+
+        } else {
+            html = '<li class="tips"><i class="icon icon-coffee icon-3x"></i><p>Results not found!</p></li>';
+        }
+
+        searchResult.innerHTML = html;
+    }
+
+    function regtest(raw, regExp) {
+        regExp.lastIndex = 0;
+        return regExp.test(raw);
+    }
+
+    function matcher(post, regExp) {
+        return regtest(post.title, regExp) || post.tags.some(function (tag) {
+            return regtest(tag.name, regExp);
+        }) || regtest(post.text, regExp);
+    }
+
+    function search(e) {
+        var key = this.value.trim();
+        if (!key) {
+            return;
+        }
+
+        var regExp = new RegExp(key.replace(/[ ]/g, '|'), 'gmi');
+
+        loadData(function (data) {
+
+            var result = data.filter(function (post) {
+                return matcher(post, regExp);
+            });
+
+            render(result);
+            Control.show();
+        });
+
+        e.preventDefault();
+    }
+
+
+    searchIco.addEventListener(even, function () {
+        searchWrap.classList.toggle('in');
+        keyInput.value = '';
+        searchWrap.classList.contains('in') ? keyInput.focus() : keyInput.blur();
+    });
+
+    back.addEventListener(even, function () {
+        searchWrap.classList.remove('in');
+        Control.hide();
+    });
+
+    document.addEventListener(even, function (e) {
+        if (e.target.id !== 'key' && even === 'click') {
+            Control.hide();
+        }
+    });
+
+    keyInput.addEventListener('input', search);
+    keyInput.addEventListener(even, search);
+
+}).call(this);

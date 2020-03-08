@@ -1,1 +1,632 @@
-<!-- build time:Sun Mar 08 2020 19:48:43 GMT+0800 (CST) --><!DOCTYPE html><html><head><meta charset="utf-8"><link rel="canonical" href="true/2019/10/21/2019/191021_android_basis/"><title>Android色彩空间（ColorSpace） | sunwengang blog</title><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="theme-color" content="#3F51B5"><meta name="keywords" content="android"><meta name="description" content="色彩空间Color Space广色域WCGWCG（Wide Color Gamut），是Adobe System开发的一种RGB色彩空间，使用纯光谱原色提供较大的色域。与Adove RGB和sRGB相比，能够存储更大范围的颜色值。相比之下，WCG包含CIELAB色彩空间可见颜色的77.6%，而Adobe RGB色彩空间仅覆盖52.1%，sRGB仅覆盖35.9%。"><meta property="og:type" content="article"><meta property="og:title" content="Android色彩空间（ColorSpace）"><meta property="og:url" content="http://wizzie.top/2019/10/21/2019/191021_android_basis/index.html"><meta property="og:site_name" content="sunwengang blog"><meta property="og:description" content="色彩空间Color Space广色域WCGWCG（Wide Color Gamut），是Adobe System开发的一种RGB色彩空间，使用纯光谱原色提供较大的色域。与Adove RGB和sRGB相比，能够存储更大范围的颜色值。相比之下，WCG包含CIELAB色彩空间可见颜色的77.6%，而Adobe RGB色彩空间仅覆盖52.1%，sRGB仅覆盖35.9%。"><meta property="og:locale" content="en_US"><meta property="og:image" content="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg=="><meta property="og:image" content="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg=="><meta property="og:image" content="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg=="><meta property="og:image" content="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg=="><meta property="og:image" content="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg=="><meta property="article:published_time" content="2019-10-21T15:52:00.000Z"><meta property="article:modified_time" content="2020-03-08T10:17:25.211Z"><meta property="article:author" content="sunwengang"><meta property="article:tag" content="android"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg=="><link rel="alternate" type="application/atom+xml" title="sunwengang blog" href="/atom.xml"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="/css/style.css?v=1.7.2"><script>window.lazyScripts=[]</script><meta name="generator" content="Hexo 4.2.0"></head><body><div id="loading" class="active"></div><aside id="menu" class="hide"><div class="inner flex-row-vertical"><a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off"><i class="icon icon-lg icon-close"></i></a><div class="brand-wrap" style="background-image:url(/img/brand.jpg)"><div class="brand"><a href="/" class="avatar waves-effect waves-circle waves-light"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/img/avatar.jpg"></a><hgroup class="introduce"><h5 class="nickname">sunwengang</h5><a href="mailto:1332963488@qq.com" title="1332963488@qq.com" class="mail">1332963488@qq.com</a></hgroup></div></div><div class="scroll-wrap flex-col"><ul class="nav"><li class="waves-block waves-effect"><a href="/"><i class="icon icon-lg icon-home"></i> Home</a></li><li class="waves-block waves-effect"><a href="/archives"><i class="icon icon-lg icon-archives"></i> Archives</a></li><li class="waves-block waves-effect"><a href="/tags"><i class="icon icon-lg icon-tags"></i> Tags</a></li><li class="waves-block waves-effect"><a href="/categories"><i class="icon icon-lg icon-th-list"></i> Categories</a></li><li class="waves-block waves-effect"><a href="https://www.cnblogs.com/1996swg" target="_blank"><i class="icon icon-lg icon-book"></i> cnblog</a></li><li class="waves-block waves-effect"><a href="https://github.com/AloneAlive" target="_blank"><i class="icon icon-lg icon-github"></i> Github</a></li><li class="waves-block waves-effect"><a href="/html/nav.html" target="_blank"><i class="icon icon-lg icon-external-link-square"></i> nav</a></li><li class="waves-block waves-effect"><a href="/others"><i class="icon icon-lg icon-address-book"></i> friends</a></li></ul></div></div></aside><main id="main"><header class="top-header" id="header"><div class="flex-row"><a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle"><i class="icon icon-lg icon-navicon"></i></a><div class="flex-col header-title ellipsis">Android色彩空间（ColorSpace）</div><div class="search-wrap" id="search-wrap"><a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back"><i class="icon icon-lg icon-chevron-left"></i> </a><input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search"> <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search"><i class="icon icon-lg icon-search"></i></a></div></div></header><header class="content-header post-header"><div class="container fade-scale"><h1 class="title">Android色彩空间（ColorSpace）</h1><h5 class="subtitle"><time datetime="2019-10-21T15:52:00.000Z" itemprop="datePublished" class="page-time">2019-10-21</time><ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/android/">android</a></li></ul></h5></div></header><div class="container body-wrap"><aside class="post-widget"><nav class="post-toc-wrap post-toc-shrink" id="post-toc"><h4>TOC</h4><ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#色彩空间Color-Space"><span class="post-toc-number">1.</span> <span class="post-toc-text">色彩空间Color Space</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#广色域WCG"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">广色域WCG</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#sRGB色彩空间"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">sRGB色彩空间</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Adobe-RGB色彩空间"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Adobe RGB色彩空间</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ProPhoto-RGB色彩空间"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">ProPhoto RGB色彩空间</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#DCI-P3色彩空间"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">DCI-P3色彩空间</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Display-P3色彩空间"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">Display P3色彩空间</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Android中启用-禁止WCG功能"><span class="post-toc-number">2.</span> <span class="post-toc-text">Android中启用&#x2F;禁止WCG功能</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#APP获取设备是否支持WCG"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">APP获取设备是否支持WCG</span></a></li></ol></li></ol></nav></aside><article id="post-2019/191021_android_basis" class="post-article article-type-post fade" itemprop="blogPost"><div class="post-card"><h1 class="post-card-title">Android色彩空间（ColorSpace）</h1><div class="post-meta"><time class="post-time" title="2019-10-21 23:52:00" datetime="2019-10-21T15:52:00.000Z" itemprop="datePublished">2019-10-21</time><ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/android/">android</a></li></ul><span id="busuanzi_container_page_pv" title="文章总阅读量" style="display:none"><i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span></span></div><div class="post-content" id="post-content" itemprop="postContent"><h1 id="色彩空间Color-Space"><a href="#色彩空间Color-Space" class="headerlink" title="色彩空间Color Space"></a>色彩空间<code>Color Space</code></h1><h2 id="广色域WCG"><a href="#广色域WCG" class="headerlink" title="广色域WCG"></a>广色域<code>WCG</code></h2><p>WCG（Wide Color Gamut），是Adobe System开发的一种RGB色彩空间，使用纯光谱原色提供较大的色域。与Adove RGB和sRGB相比，能够存储更大范围的颜色值。<strong>相比之下，WCG包含<code>CIELAB色彩空间</code>可见颜色的77.6%，而Adobe RGB色彩空间仅覆盖52.1%，sRGB仅覆盖35.9%。</strong></p><a id="more"></a><figure class="image-bubble"><div class="img-lightbox"><div class="overlay"></div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="WCG_ColorSpace.png" alt="WCG色彩空间"></div><div class="image-caption">WCG色彩空间</div></figure><p><strong>Note：</strong><br><code>CIELAB色彩空间</code>（也称为CIE L<em>a</em>b，抑或Lab色彩空间），是国际照明委员会（CIE）于1976年定义的色彩空间。它将色彩表示为三个值：</p><table><thead><tr><th align="center">符号</th><th align="center">释义</th></tr></thead><tbody><tr><td align="center"><code>L*</code></td><td align="center">为从黑色（0）到白色（100）的亮度</td></tr><tr><td align="center"><code>a*</code></td><td align="center">为从绿色（-）到红色（+）的亮度</td></tr><tr><td align="center"><code>b*</code></td><td align="center">为从蓝色（-）到黄色（+）的亮度</td></tr></tbody></table><p>CIELAB被设计为从这些值中相同数量的数字变化对应于大致相同数量的视觉感知变化。</p><hr><h2 id="sRGB色彩空间"><a href="#sRGB色彩空间" class="headerlink" title="sRGB色彩空间"></a>sRGB色彩空间</h2><p>sRG色彩空间是惠普和微软于1996年一起开发的用于显示器、打印机、因特网的一种标准RGB色彩空间。最初的目的是作为生成在因特网以及万维网上浏览的图像的通用色彩空间，最后选择的是使用<code>Gamma校准</code>（伽马）系数为2.2的色彩空间，即CRT显示器在这种情况下的平均线性电压响应。</p><p>sRGB定义了红色、绿色、蓝色三原色的颜色（又称三基色，用于电视机、投影仪等显示设备，对应RGB），即在其他两种颜色值都为零时该颜色的最大值。在<code>CIE xy</code>（Lab色彩空间）坐标系中坐标如下表。对于任何RGB色彩空间来说，非负的R、G、B都不可能表示超出原色定义的三角形即色域范围，它刚好在人眼的色彩感知范围之内。</p><table><thead><tr><th align="center">颜色</th><th align="center">X</th><th align="center">Y</th></tr></thead><tbody><tr><td align="center">红色</td><td align="center">0.6400</td><td align="center">0.3300</td></tr><tr><td align="center">绿色</td><td align="center">0.3000</td><td align="center">0.6000</td></tr><tr><td align="center">蓝色</td><td align="center">0.1500</td><td align="center">0.0600</td></tr><tr><td align="center">白色（D65）</td><td align="center">0.3127</td><td align="center">0.3290</td></tr></tbody></table><p>sRGB定义了原色强度与实际保存的数值之间的非线性变化，曲线类似于CRT显示器的伽马响应。这个非线性变化意味着sRGB非常搞笑的使图像文件中的整数值标识了人眼可以分辨的颜色。</p><p>但是由于它的色域不够大，尤其是蓝绿颜色色域无法表示SMYK印刷中的所有颜色。所以印刷行业的经常使用的是Adobe RGB色彩空间。</p><figure class="image-bubble"><div class="img-lightbox"><div class="overlay"></div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="sRGB_ColorSpace.png" alt="sRGB色彩空间"></div><div class="image-caption">sRGB色彩空间</div></figure><p><strong>Note:</strong><br>伽马校正（伽马非线性变化、伽马编码），是用来正对影片或者影像系统里对于管线的辉度或者三色刺激值所进行非线性的运算或反运算。</p><hr><h2 id="Adobe-RGB色彩空间"><a href="#Adobe-RGB色彩空间" class="headerlink" title="Adobe RGB色彩空间"></a>Adobe RGB色彩空间</h2><p>Adobe RGB色彩空间是一种由Adobe System于1998年开发的色彩空间。开发的目的是为了尽可能在<code>CMYK彩色印刷</code>中利用计算机显示器等设备的RGB颜色模式上囊括的更多的颜色。</p><p>在Adobe RGB标准中，色彩被指定为<code>（R,G,B）</code>三个组员，其中R，G，B每个的值介于0和1之间。但在显示器显示出来时，白色点(1,1,1)，黑色点（0,0,0），原色点（1,0,0）的准确值会被指定。</p><p>与sRGB相比，Adobe RGB中的RGB色彩分量和亮度并不是呈线性关系，他的伽马值是<code>563/256结果是2.19921875</code>。并且三原色点坐标只有绿色坐标不同。</p><table><thead><tr><th align="center">颜色</th><th align="center">X</th><th align="center">Y</th></tr></thead><tbody><tr><td align="center">红色</td><td align="center">0.6400</td><td align="center">0.3300</td></tr><tr><td align="center">绿色</td><td align="center">0.2100</td><td align="center">0.7100</td></tr><tr><td align="center">蓝色</td><td align="center">0.1500</td><td align="center">0.0600</td></tr><tr><td align="center">白色（D65）</td><td align="center">0.3127</td><td align="center">0.3290</td></tr></tbody></table><figure class="image-bubble"><div class="img-lightbox"><div class="overlay"></div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="AdobeRGB_ColorSpace.png" alt="Adobe RGB色彩空间"></div><div class="image-caption">Adobe RGB色彩空间</div></figure><hr><h2 id="ProPhoto-RGB色彩空间"><a href="#ProPhoto-RGB色彩空间" class="headerlink" title="ProPhoto RGB色彩空间"></a>ProPhoto RGB色彩空间</h2><p>ProPhoto RGB色彩空间（抑或ROMM RGB色彩空间），专为摄影输出所开发设计。该色彩空间的色域十分宽裕，甚至包含<code>CIE Lab色彩空间</code>中90%以上的表面色彩和1980年Poniter所记录的可能出现的表面色彩。<strong>该色域的表现范围甚至比WCG色彩空间还要大</strong></p><p>标准参考白点由<code>CIE标准光源D50</code>的色度决定。</p><table><thead><tr><th align="center">颜色</th><th align="center">X</th><th align="center">Y</th></tr></thead><tbody><tr><td align="center">红色</td><td align="center">0.7347</td><td align="center">0.2653</td></tr><tr><td align="center">绿色</td><td align="center">0.1596</td><td align="center">0.8404</td></tr><tr><td align="center">蓝色</td><td align="center">0.0366</td><td align="center">0.0001</td></tr><tr><td align="center">白色（D50）</td><td align="center">0.3457</td><td align="center">0.3585</td></tr></tbody></table><figure class="image-bubble"><div class="img-lightbox"><div class="overlay"></div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="ProPhotoRGB_ColorSpace.png" alt="ProPhoto RGB色彩空间"></div><div class="image-caption">ProPhoto RGB色彩空间</div></figure><p>缺点是该色彩空间包含大约13%的通常不存在色彩。</p><hr><h2 id="DCI-P3色彩空间"><a href="#DCI-P3色彩空间" class="headerlink" title="DCI-P3色彩空间"></a>DCI-P3色彩空间</h2><p>DCI-P3（抑或DCI/P3）是美国电影行业推出的一种色彩空间。在CIE 1931xy色彩空间中，覆盖了45.5%的全色于和86.9%的常见色域。在CIE 1976uv色度图覆盖率分别是41.7%和85.5%。</p><p>DCI-P3将来应该会在电视系统和家庭影院领域有更广泛的应用。</p><table><thead><tr><th align="center">颜色</th><th align="center">X</th><th align="center">Y</th></tr></thead><tbody><tr><td align="center">红色</td><td align="center">0.6800</td><td align="center">0.3200</td></tr><tr><td align="center">绿色</td><td align="center">0.2650</td><td align="center">0.6900</td></tr><tr><td align="center">蓝色</td><td align="center">0.1500</td><td align="center">0.0600</td></tr><tr><td align="center">白色（D65）</td><td align="center">0.3127</td><td align="center">0.3290</td></tr></tbody></table><figure class="image-bubble"><div class="img-lightbox"><div class="overlay"></div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="DCIP3_ColorSpace.png" alt="DCI-P3色彩空间"></div><div class="image-caption">DCI-P3色彩空间</div></figure><hr><h2 id="Display-P3色彩空间"><a href="#Display-P3色彩空间" class="headerlink" title="Display P3色彩空间"></a>Display P3色彩空间</h2><p>Display P3使用DCI-P3的原色，但是使用D65白点，这在计算机显示色彩空间中（sRGB,AdobeRGB都使用D65）更为常见。和DCI-P3的纯伽马曲线不同。Display-P3使用sRGB曲线。</p><hr><h1 id="Android中启用-禁止WCG功能"><a href="#Android中启用-禁止WCG功能" class="headerlink" title="Android中启用/禁止WCG功能"></a>Android中启用/禁止WCG功能</h1><h2 id="APP获取设备是否支持WCG"><a href="#APP获取设备是否支持WCG" class="headerlink" title="APP获取设备是否支持WCG"></a>APP获取设备是否支持WCG</h2><p>APP通过以下两种API来决定设备是否支持WCG：</p><ol><li><code>android.content.res.Configuration::isScreenWideColorGamut</code>：如果display和设备能够支持WCG则返回true。</li><li><code>android.view.Display::isWideColorGamut()</code>：返回显示display设备是否可用于WCG显示。这个并不意味着设备自己可以渲染WCG内容。</li></ol></div><blockquote class="post-copyright"><div class="content"><span class="post-time">Last updated: <time datetime="2020-03-08T10:17:25.211Z" itemprop="dateUpdated">2020-03-08 18:17:25</time></span><br>版权声明:署名-非商用-相同方式共享 4.0 转载请保留原文链接及作者</div><footer><a href="http://wizzie.top"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/img/avatar.jpg" alt="sunwengang"> sunwengang</a></footer></blockquote><div class="page-reward"><a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a></div><div class="post-footer"><ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/" rel="tag">android</a></li></ul></div></div><nav class="post-nav flex-row flex-justify-between"><div class="waves-block waves-effect prev"><a href="/2019/10/23/2019/191023_android_shell/" id="post-prev" class="post-nav-link"><div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div><h4 class="title">Android Shell脚本应用</h4></a></div><div class="waves-block waves-effect next"><a href="/2019/10/20/2019/191020_cpp_singletonMode/" id="post-next" class="post-nav-link"><div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div><h4 class="title">C++ 单例模式</h4></a></div></nav></article><div id="reward" class="page-modal reward-lay"><a class="close" href="javascript:;"><i class="icon icon-close"></i></a><h3 class="reward-title"><i class="icon icon-quote-left"></i> 奥利给 <i class="icon icon-quote-right"></i></h3><div class="reward-content"><div class="reward-code"><img id="rewardCode" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/img/wechat.png" alt="打赏二维码"></div><label class="reward-toggle"><input id="rewardToggle" type="checkbox" class="reward-toggle-check" data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg"><div class="reward-toggle-ctrol"><span class="reward-toggle-item wechat">微信</span> <span class="reward-toggle-label"></span> <span class="reward-toggle-item alipay">支付宝</span></div></label></div></div></div><footer class="footer"><div class="top"><p><span id="busuanzi_container_site_uv" style="display:none">站点总访客数：<span id="busuanzi_value_site_uv"></span> </span><span id="busuanzi_container_site_pv" style="display:none">站点总访问量：<span id="busuanzi_value_site_pv"></span></span></p><p><span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span> <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span></p></div><div class="bottom"><p><span>sunwengang &copy; 2019 - 2020</span> <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span></p></div></footer></main><div class="mask" id="mask"></div><a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a><script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script><script>var BLOG={ROOT:"/",SHARE:!1,REWARD:!0}</script><script src="/js/main.min.js?v=1.7.2"></script><div class="search-panel" id="search-panel"><ul class="search-result" id="search-result"></ul></div><template id="search-tpl"><li class="item"><a href="{path}" class="waves-block waves-effect"><div class="title ellipsis" title="{title}">{title}</div><div class="flex-row flex-middle"><div class="tags ellipsis">{tags}</div><time class="flex-col time">{date}</time></div></a></li></template><script src="/js/search.min.js?v=1.7.2" async></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script>!function(){var t,e=document.title;document.addEventListener("visibilitychange",function(){document.hidden?(document.title="",clearTimeout(t)):(document.title="(つェ⊂)咦!又好了!",t=setTimeout(function(){document.title=e},2e3))})}()</script><script>!function(t){function n(){for(var n=0;n<e.length;n++)i=e[n],0<=(o=i.getBoundingClientRect()).bottom&&0<=o.left&&o.top<=(t.innerHeight||document.documentElement.clientHeight)&&function(){var t,i,o,r,c=e[n];t=c,i=function(){e=e.filter(function(t){return c!==t})},o=new Image,r=t.getAttribute("data-original"),o.onload=function(){t.src=r,i&&i()},o.src=r}();var i,o}var e=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));n(),t.addEventListener("scroll",function(){var e,i;e=n,i=t,clearTimeout(e.tId),e.tId=setTimeout(function(){e.call(i)},500)})}(this)</script><script>window.addEventListener("load",function(){var a=/\.(gif|jpg|jpeg|tiff|png)$/i,e=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(t){var r=t.parentNode;"A"===r.tagName&&(r.href.match(a)||r.href.match(e))&&(r.href=t.dataset.original)})})</script></body></html><!-- rebuild by neat -->
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <link rel="canonical" href="true/2019/10/21/2019/191021_android_basis/">
+    
+    
+    <title>Android色彩空间（ColorSpace） | sunwengang blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="android">
+    <meta name="description" content="色彩空间Color Space广色域WCGWCG（Wide Color Gamut），是Adobe System开发的一种RGB色彩空间，使用纯光谱原色提供较大的色域。与Adove RGB和sRGB相比，能够存储更大范围的颜色值。相比之下，WCG包含CIELAB色彩空间可见颜色的77.6%，而Adobe RGB色彩空间仅覆盖52.1%，sRGB仅覆盖35.9%。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android色彩空间（ColorSpace）">
+<meta property="og:url" content="http://wizzie.top/2019/10/21/2019/191021_android_basis/index.html">
+<meta property="og:site_name" content="sunwengang blog">
+<meta property="og:description" content="色彩空间Color Space广色域WCGWCG（Wide Color Gamut），是Adobe System开发的一种RGB色彩空间，使用纯光谱原色提供较大的色域。与Adove RGB和sRGB相比，能够存储更大范围的颜色值。相比之下，WCG包含CIELAB色彩空间可见颜色的77.6%，而Adobe RGB色彩空间仅覆盖52.1%，sRGB仅覆盖35.9%。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://wizzie.top/2019/10/21/2019/191021_android_basis/WCG_ColorSpace.png">
+<meta property="og:image" content="http://wizzie.top/2019/10/21/2019/191021_android_basis/sRGB_ColorSpace.png">
+<meta property="og:image" content="http://wizzie.top/2019/10/21/2019/191021_android_basis/AdobeRGB_ColorSpace.png">
+<meta property="og:image" content="http://wizzie.top/2019/10/21/2019/191021_android_basis/ProPhotoRGB_ColorSpace.png">
+<meta property="og:image" content="http://wizzie.top/2019/10/21/2019/191021_android_basis/DCIP3_ColorSpace.png">
+<meta property="article:published_time" content="2019-10-21T15:52:00.000Z">
+<meta property="article:modified_time" content="2020-03-08T10:17:25.211Z">
+<meta property="article:author" content="sunwengang">
+<meta property="article:tag" content="android">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://wizzie.top/2019/10/21/2019/191021_android_basis/WCG_ColorSpace.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="sunwengang blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">sunwengang</h5>
+          <a href="mailto:1332963488@qq.com" title="1332963488@qq.com" class="mail">1332963488@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://www.cnblogs.com/1996swg" target="_blank" >
+                <i class="icon icon-lg icon-book"></i>
+                cnblog
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/AloneAlive" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/html/nav.html" target="_blank" >
+                <i class="icon icon-lg icon-external-link-square"></i>
+                nav
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/others"  >
+                <i class="icon icon-lg icon-address-book"></i>
+                friends
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Android色彩空间（ColorSpace）</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Android色彩空间（ColorSpace）</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-10-21T15:52:00.000Z" itemprop="datePublished" class="page-time">
+  2019-10-21
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/android/">android</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#色彩空间Color-Space"><span class="post-toc-number">1.</span> <span class="post-toc-text">色彩空间Color Space</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#广色域WCG"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">广色域WCG</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#sRGB色彩空间"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">sRGB色彩空间</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Adobe-RGB色彩空间"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Adobe RGB色彩空间</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ProPhoto-RGB色彩空间"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">ProPhoto RGB色彩空间</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#DCI-P3色彩空间"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">DCI-P3色彩空间</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Display-P3色彩空间"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">Display P3色彩空间</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Android中启用-禁止WCG功能"><span class="post-toc-number">2.</span> <span class="post-toc-text">Android中启用&#x2F;禁止WCG功能</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#APP获取设备是否支持WCG"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">APP获取设备是否支持WCG</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-2019/191021_android_basis"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Android色彩空间（ColorSpace）</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-10-21 23:52:00" datetime="2019-10-21T15:52:00.000Z"  itemprop="datePublished">2019-10-21</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/android/">android</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="色彩空间Color-Space"><a href="#色彩空间Color-Space" class="headerlink" title="色彩空间Color Space"></a>色彩空间<code>Color Space</code></h1><h2 id="广色域WCG"><a href="#广色域WCG" class="headerlink" title="广色域WCG"></a>广色域<code>WCG</code></h2><p>WCG（Wide Color Gamut），是Adobe System开发的一种RGB色彩空间，使用纯光谱原色提供较大的色域。与Adove RGB和sRGB相比，能够存储更大范围的颜色值。<strong>相比之下，WCG包含<code>CIELAB色彩空间</code>可见颜色的77.6%，而Adobe RGB色彩空间仅覆盖52.1%，sRGB仅覆盖35.9%。</strong></p>
+<a id="more"></a>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="WCG_ColorSpace.png" alt="WCG色彩空间" title="">
+                </div>
+                <div class="image-caption">WCG色彩空间</div>
+            </figure>
+
+<p><strong>Note：</strong><br><code>CIELAB色彩空间</code>（也称为CIE L<em>a</em>b，抑或Lab色彩空间），是国际照明委员会（CIE）于1976年定义的色彩空间。它将色彩表示为三个值：</p>
+<table>
+<thead>
+<tr>
+<th align="center">符号</th>
+<th align="center">释义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>L*</code></td>
+<td align="center">为从黑色（0）到白色（100）的亮度</td>
+</tr>
+<tr>
+<td align="center"><code>a*</code></td>
+<td align="center">为从绿色（-）到红色（+）的亮度</td>
+</tr>
+<tr>
+<td align="center"><code>b*</code></td>
+<td align="center">为从蓝色（-）到黄色（+）的亮度</td>
+</tr>
+</tbody></table>
+<p>CIELAB被设计为从这些值中相同数量的数字变化对应于大致相同数量的视觉感知变化。</p>
+<hr>
+<h2 id="sRGB色彩空间"><a href="#sRGB色彩空间" class="headerlink" title="sRGB色彩空间"></a>sRGB色彩空间</h2><p>sRG色彩空间是惠普和微软于1996年一起开发的用于显示器、打印机、因特网的一种标准RGB色彩空间。最初的目的是作为生成在因特网以及万维网上浏览的图像的通用色彩空间，最后选择的是使用<code>Gamma校准</code>（伽马）系数为2.2的色彩空间，即CRT显示器在这种情况下的平均线性电压响应。</p>
+<p>sRGB定义了红色、绿色、蓝色三原色的颜色（又称三基色，用于电视机、投影仪等显示设备，对应RGB），即在其他两种颜色值都为零时该颜色的最大值。在<code>CIE xy</code>（Lab色彩空间）坐标系中坐标如下表。对于任何RGB色彩空间来说，非负的R、G、B都不可能表示超出原色定义的三角形即色域范围，它刚好在人眼的色彩感知范围之内。</p>
+<table>
+<thead>
+<tr>
+<th align="center">颜色</th>
+<th align="center">X</th>
+<th align="center">Y</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">红色</td>
+<td align="center">0.6400</td>
+<td align="center">0.3300</td>
+</tr>
+<tr>
+<td align="center">绿色</td>
+<td align="center">0.3000</td>
+<td align="center">0.6000</td>
+</tr>
+<tr>
+<td align="center">蓝色</td>
+<td align="center">0.1500</td>
+<td align="center">0.0600</td>
+</tr>
+<tr>
+<td align="center">白色（D65）</td>
+<td align="center">0.3127</td>
+<td align="center">0.3290</td>
+</tr>
+</tbody></table>
+<p>sRGB定义了原色强度与实际保存的数值之间的非线性变化，曲线类似于CRT显示器的伽马响应。这个非线性变化意味着sRGB非常搞笑的使图像文件中的整数值标识了人眼可以分辨的颜色。</p>
+<p>但是由于它的色域不够大，尤其是蓝绿颜色色域无法表示SMYK印刷中的所有颜色。所以印刷行业的经常使用的是Adobe RGB色彩空间。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="sRGB_ColorSpace.png" alt="sRGB色彩空间" title="">
+                </div>
+                <div class="image-caption">sRGB色彩空间</div>
+            </figure>
+
+<p><strong>Note:</strong><br>伽马校正（伽马非线性变化、伽马编码），是用来正对影片或者影像系统里对于管线的辉度或者三色刺激值所进行非线性的运算或反运算。</p>
+<hr>
+<h2 id="Adobe-RGB色彩空间"><a href="#Adobe-RGB色彩空间" class="headerlink" title="Adobe RGB色彩空间"></a>Adobe RGB色彩空间</h2><p>Adobe RGB色彩空间是一种由Adobe System于1998年开发的色彩空间。开发的目的是为了尽可能在<code>CMYK彩色印刷</code>中利用计算机显示器等设备的RGB颜色模式上囊括的更多的颜色。</p>
+<p>在Adobe RGB标准中，色彩被指定为<code>（R,G,B）</code>三个组员，其中R，G，B每个的值介于0和1之间。但在显示器显示出来时，白色点(1,1,1)，黑色点（0,0,0），原色点（1,0,0）的准确值会被指定。</p>
+<p>与sRGB相比，Adobe RGB中的RGB色彩分量和亮度并不是呈线性关系，他的伽马值是<code>563/256结果是2.19921875</code>。并且三原色点坐标只有绿色坐标不同。</p>
+<table>
+<thead>
+<tr>
+<th align="center">颜色</th>
+<th align="center">X</th>
+<th align="center">Y</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">红色</td>
+<td align="center">0.6400</td>
+<td align="center">0.3300</td>
+</tr>
+<tr>
+<td align="center">绿色</td>
+<td align="center">0.2100</td>
+<td align="center">0.7100</td>
+</tr>
+<tr>
+<td align="center">蓝色</td>
+<td align="center">0.1500</td>
+<td align="center">0.0600</td>
+</tr>
+<tr>
+<td align="center">白色（D65）</td>
+<td align="center">0.3127</td>
+<td align="center">0.3290</td>
+</tr>
+</tbody></table>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="AdobeRGB_ColorSpace.png" alt="Adobe RGB色彩空间" title="">
+                </div>
+                <div class="image-caption">Adobe RGB色彩空间</div>
+            </figure>
+
+<hr>
+<h2 id="ProPhoto-RGB色彩空间"><a href="#ProPhoto-RGB色彩空间" class="headerlink" title="ProPhoto RGB色彩空间"></a>ProPhoto RGB色彩空间</h2><p>ProPhoto RGB色彩空间（抑或ROMM RGB色彩空间），专为摄影输出所开发设计。该色彩空间的色域十分宽裕，甚至包含<code>CIE Lab色彩空间</code>中90%以上的表面色彩和1980年Poniter所记录的可能出现的表面色彩。<strong>该色域的表现范围甚至比WCG色彩空间还要大</strong></p>
+<p>标准参考白点由<code>CIE标准光源D50</code>的色度决定。</p>
+<table>
+<thead>
+<tr>
+<th align="center">颜色</th>
+<th align="center">X</th>
+<th align="center">Y</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">红色</td>
+<td align="center">0.7347</td>
+<td align="center">0.2653</td>
+</tr>
+<tr>
+<td align="center">绿色</td>
+<td align="center">0.1596</td>
+<td align="center">0.8404</td>
+</tr>
+<tr>
+<td align="center">蓝色</td>
+<td align="center">0.0366</td>
+<td align="center">0.0001</td>
+</tr>
+<tr>
+<td align="center">白色（D50）</td>
+<td align="center">0.3457</td>
+<td align="center">0.3585</td>
+</tr>
+</tbody></table>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="ProPhotoRGB_ColorSpace.png" alt="ProPhoto RGB色彩空间" title="">
+                </div>
+                <div class="image-caption">ProPhoto RGB色彩空间</div>
+            </figure>
+
+<p>缺点是该色彩空间包含大约13%的通常不存在色彩。</p>
+<hr>
+<h2 id="DCI-P3色彩空间"><a href="#DCI-P3色彩空间" class="headerlink" title="DCI-P3色彩空间"></a>DCI-P3色彩空间</h2><p>DCI-P3（抑或DCI/P3）是美国电影行业推出的一种色彩空间。在CIE 1931xy色彩空间中，覆盖了45.5%的全色于和86.9%的常见色域。在CIE 1976uv色度图覆盖率分别是41.7%和85.5%。</p>
+<p>DCI-P3将来应该会在电视系统和家庭影院领域有更广泛的应用。</p>
+<table>
+<thead>
+<tr>
+<th align="center">颜色</th>
+<th align="center">X</th>
+<th align="center">Y</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">红色</td>
+<td align="center">0.6800</td>
+<td align="center">0.3200</td>
+</tr>
+<tr>
+<td align="center">绿色</td>
+<td align="center">0.2650</td>
+<td align="center">0.6900</td>
+</tr>
+<tr>
+<td align="center">蓝色</td>
+<td align="center">0.1500</td>
+<td align="center">0.0600</td>
+</tr>
+<tr>
+<td align="center">白色（D65）</td>
+<td align="center">0.3127</td>
+<td align="center">0.3290</td>
+</tr>
+</tbody></table>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="DCIP3_ColorSpace.png" alt="DCI-P3色彩空间" title="">
+                </div>
+                <div class="image-caption">DCI-P3色彩空间</div>
+            </figure>
+
+<hr>
+<h2 id="Display-P3色彩空间"><a href="#Display-P3色彩空间" class="headerlink" title="Display P3色彩空间"></a>Display P3色彩空间</h2><p>Display P3使用DCI-P3的原色，但是使用D65白点，这在计算机显示色彩空间中（sRGB,AdobeRGB都使用D65）更为常见。和DCI-P3的纯伽马曲线不同。Display-P3使用sRGB曲线。</p>
+<hr>
+<h1 id="Android中启用-禁止WCG功能"><a href="#Android中启用-禁止WCG功能" class="headerlink" title="Android中启用/禁止WCG功能"></a>Android中启用/禁止WCG功能</h1><h2 id="APP获取设备是否支持WCG"><a href="#APP获取设备是否支持WCG" class="headerlink" title="APP获取设备是否支持WCG"></a>APP获取设备是否支持WCG</h2><p>APP通过以下两种API来决定设备是否支持WCG：</p>
+<ol>
+<li><code>android.content.res.Configuration::isScreenWideColorGamut</code>：如果display和设备能够支持WCG则返回true。</li>
+<li><code>android.view.Display::isWideColorGamut()</code>：返回显示display设备是否可用于WCG显示。这个并不意味着设备自己可以渲染WCG内容。</li>
+</ol>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2020-03-08T10:17:25.211Z" itemprop="dateUpdated">2020-03-08 18:17:25</time>
+</span><br>
+
+
+        
+        版权声明:署名-非商用-相同方式共享 4.0 转载请保留原文链接及作者
+        
+    </div>
+    
+    <footer>
+        <a href="http://wizzie.top">
+            <img src="/img/avatar.jpg" alt="sunwengang">
+            sunwengang
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/" rel="tag">android</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2019/10/23/2019/191023_android_shell/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Android Shell脚本应用</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/10/20/2019/191020_cpp_singletonMode/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">C++ 单例模式</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        奥利给
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>sunwengang &copy; 2019 - 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
