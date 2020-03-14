@@ -1,1263 +1,1205 @@
 <!DOCTYPE html>
-<html>
-<head>
-    
 
-    
-
-    
-
-
-
+<html lang="zh-CN">
+    <head>
     <meta charset="utf-8">
+    <!--
+        hexo-theme-suka © SukkaW
+        GitHub: https://github.com/SukkaW/hexo-theme-suka
+    -->
+
+    <!-- ### Resource Hint ### -->
+
+    <!-- ## DNS Prefetch ## -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+<!-- busuanzi -->
+
+    <link rel="dns-prefetch" href="//busuanzi.ibruce.info">
+
+
+<!-- comment -->
+
+
+
+
+
+
+
+<!-- analytics -->
+
+
+
+
+
+
+
+    <!-- ## Preload ## -->
     
+    <!-- Busuanzi -->
     
-    
-    <link rel="canonical" href="true/page/2/">
-    
-    
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" as="script">
+
+
+
+
+
+
+
+    <!-- ### Meta & Title & Info ### -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
+
+    <!-- Title -->
     <title>sunwengang blog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <meta name="theme-color" content="#3F51B5">
-    
-    
-    <meta name="keywords" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="sunwengang blog">
-<meta property="og:url" content="http://wizzie.top/page/2/index.html">
-<meta property="og:site_name" content="sunwengang blog">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="sunwengang">
-<meta name="twitter:card" content="summary">
-    
-        <link rel="alternate" type="application/atom+xml" title="sunwengang blog" href="/atom.xml">
-    
-    <link rel="shortcut icon" href="/img/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
-    <script>window.lazyScripts=[]</script>
 
-    <!-- custom head -->
+    <!-- Favicons -->
+    <link rel="icon" type="image&#x2F;ico" href="/img/favicon.ico">
+
+    <!-- ### Import File ### -->
+    <link rel="stylesheet" href="/lib/spectre/spectre.min.css"><style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    a, a:visited {
+        color: #0070ff;
+    }
+
+    a:active, a:focus, a:hover {
+        color: #0070ff;
+        opacity: .75;
+    }
+
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #005eb9;
+        opacity: 1;
+    }
+
     
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+    .post-entry .card-body a {
+        color: #0070ff;
+    }
 
-<body>
-    <div id="loading" class="active"></div>
+    .avatar {
+        background: #444;
+    }
 
-    <aside id="menu"  >
-  <div class="inner flex-row-vertical">
-    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
-        <i class="icon icon-lg icon-close"></i>
-    </a>
-    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
-      <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/img/avatar.jpg">
-        </a>
-        <hgroup class="introduce">
-          <h5 class="nickname">sunwengang</h5>
-          <a href="mailto:1332963488@qq.com" title="1332963488@qq.com" class="mail">1332963488@qq.com</a>
-        </hgroup>
-      </div>
-    </div>
-    <div class="scroll-wrap flex-col">
-      <ul class="nav">
-        
-            <li class="waves-block waves-effect">
-              <a href="/"  >
-                <i class="icon icon-lg icon-home"></i>
-                Home
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/archives"  >
-                <i class="icon icon-lg icon-archives"></i>
-                Archives
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/tags"  >
-                <i class="icon icon-lg icon-tags"></i>
-                Tags
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/categories"  >
-                <i class="icon icon-lg icon-th-list"></i>
-                Categories
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="https://www.cnblogs.com/1996swg" target="_blank" >
-                <i class="icon icon-lg icon-book"></i>
-                cnblog
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="https://github.com/AloneAlive" target="_blank" >
-                <i class="icon icon-lg icon-github"></i>
-                Github
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/html/nav.html" target="_blank" >
-                <i class="icon icon-lg icon-external-link-square"></i>
-                nav
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/others"  >
-                <i class="icon icon-lg icon-address-book"></i>
-                friends
-              </a>
-            </li>
-        
-      </ul>
-    </div>
-  </div>
-</aside>
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #0070ff;
+    }
 
-    <main id="main">
-        <header class="top-header" id="header">
-    <div class="flex-row">
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
-          <i class="icon icon-lg icon-navicon"></i>
-        </a>
-        <div class="flex-col header-title ellipsis">sunwengang blog</div>
-        
-        <div class="search-wrap" id="search-wrap">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-                <i class="icon icon-lg icon-chevron-left"></i>
-            </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
-                <i class="icon icon-lg icon-search"></i>
-            </a>
-        </div>
-        
-        
-    </div>
-</header>
-<header class="content-header index-header">
+    .navbar-link:hover {
+        color: #0070ff;
+        opacity: .8;
+    }
 
-    <div class="container fade-scale">
-        <h1 class="title">sunwengang blog</h1>
-        <h5 class="subtitle">
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #727e96;
+        border-color: #727e96;
+        color: #fff;
+    }
+
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #727e96;
+    }
+
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
+</style><link rel="stylesheet" href="/css/style.min.css">
+
+
+
+
+
+
+
+
+    <!-- Prettify Theme -->
+    
+
+
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+</script>
+
+    <!-- ### Site Verification ### -->
+    
+
+
+    <link rel="alternate" type="application/atom+xml" href="/atom.xml"><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="sunwengang blog"><meta name="msapplication-starturl" content="http://wizzie.top"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="sunwengang blog"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- ### The Open Graph & Twitter Card Protocol ### -->
+    <meta property="og:title" content="sunwengang blog"><meta property="og:site_name" content="sunwengang blog"><meta property="og:type" content="website"><meta property="og:url" content="http://wizzie.top/page/2/"><meta property="og:locale" content="zh-CN"><meta name="description" content="sunwengang - sunwengang blog">
+
+    
+
+    <!-- ### Canonical link ### -->
+    <link rel="canonical" href="http://wizzie.top/page/2/">
+
+    <meta name="generator" content="Hexo 4.2.0">
+
+    <!-- ### Analytics ### -->
+    
+
+
+
+
+
+
+
+    <!-- ### Structured Data ### -->
+    
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Blog",
+    "author": {
+        "@type": "Person",
+        "name": "sunwengang",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://wizzie.top/img/avatar.jpg"
+        },
+        "description": "休想打败我的生活"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "sunwengang blog",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://wizzie.top/img/favicon.ico"
+        }
+    },
+    "url": "http://wizzie.top",
+    "logo": "http://wizzie.top/img/favicon.ico",
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://wizzie.top/img/favicon.ico"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://wizzie.top"
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "http://wizzie.top/search?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": "",
+    "description": "sunwengang - sunwengang blog"
+}
+</script>
+
+
+
+
+
+    <!-- ### Custom Head ### -->
+    
+</head>
+
+    <body>
             
+
+            <!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">sunwengang blog</a></h1>
+
+    <p class="text-center header-slogan">
+        
+            
+                休想打败我的生活
+            
+        
+    </p>
+
+    <nav class="navbar-section text-center">
+    
+        <a href="/" class="navbar-link">首页</a>
+    
+    
+        <a href="/archives/" class="navbar-link">归档</a>
+    
+    
+        <a href="/search" class="navbar-link">搜索</a>
+    
+    
+        <a href="/tags" class="navbar-link">标签</a>
+    
+        <a href="/html/nav.html" class="navbar-link">导航</a>
+    
+        <a href="/links" class="navbar-link">友链</a>
+    
+    
+        <div class="dropdown dropdown-right">
+    <a class="navbar-link dropdown-toggle" tabindex="0">分享</a>
+    <ul class="menu share-menu">
+
+        <!-- Share Weibo -->
+        
+        <li class="menu-item">
+            <a href="http://service.weibo.com/share/share.php?appkey=&title=sunwengang blog&url=http://wizzie.top&pic=http://wizzie.top/img/favicon.ico&searchPic=false&style=simple" target="_blank" rel="external noopener noreferrer nofollow">分享到微博</a>
+        </li>
+        
+
+        <!-- Share Twitter -->
+        
+        <li class="menu-item">
+            <a href="https://twitter.com/intent/tweet?text=sunwengang blog&url=http://wizzie.top&via=sunwengang" target="_blank" rel="external noopener noreferrer nofollow">分享到 Twitter</a>
+        </li>
+        
+
+        <!-- Share Facebook -->
+        
+        <li class="menu-item">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://wizzie.top" target="_blank" rel="external noopener noreferrer nofollow">分享到 Facebook</a>
+        </li>
+        
+
+        <!-- Share Google+ -->
+        
+        <li class="menu-item">
+            <a href="https://plus.google.com/share?url=http://wizzie.top" target="_blank" rel="external noopener noreferrer nofollow">分享到 Google+</a>
+        </li>
+        
+
+        <!-- Share LinkedIn -->
+        
+        <li class="menu-item">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://wizzie.top&title=" target="_blank" rel="external noopener noreferrer nofollow">分享到 LinkedIn</a>
+        </li>
+        
+
+        <!-- Share QQ -->
+        
+        <li class="menu-item">
+            <a href="http://connect.qq.com/widget/shareqq/index.html?site=sunwengang blog&title=&summary=&pics=http://wizzie.top/img/favicon.ico&url=http://wizzie.top" target="_blank" rel="external noopener noreferrer nofollow"> 分享到 QQ</a>
+        </li>
+        
+
+        <!-- Share Telegram -->
+        
+        <li class="menu-item">
+            <a href="https://t.me/share/url?url=http://wizzie.top&text=" target="_blank" rel="external noopener noreferrer nofollow">分享到 Telegram</a>
+        </li>
+        
+
+        <!-- QRCode -->
+        
+        <li class="menu-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHQAAAB0CAAAAABx8Un7AAABL0lEQVR42u3Zyw7CIBCF4b7/S+vGjcjMOQPNUJOfjam1fE0kzIXrdWBcoKCgS+iVjK8HPteze+48oH3o9E8P0BGozAPai44TzRbODHbnAX0WGv0ue0nQ/0Fnz4E+E4026uh+tnFsRxnQbTRLqCqft2WDoFuoLHqGF8gSttuqNtAtVAXnbNGoAgr0HBoFYBWU1ab/cw3agjoLoVo4RwsOtAdVG3pWBDsBAPQM6jQd3QQs3WhAW1EVmCtFVBgAQNvRKGhXDheyzQb0DJo1k7ME3JoLtB3NFpD7XdbMAu1BK40OdSCkggRoD2o1EkWiZjdMQNtQdXDgNECcggy0F1UHBrtJG+jzUDfJXiqKQY+hMkirxBu0FXUayNVDBtBzqNNgdF/o1tN/0CW0c4CCgpbGGxkMMoJG4gC5AAAAAElFTkSuQmCC" alr="QRCode">
+        </li>
+        
+
+    </ul>
+</div>
+    
+    
+</nav>
+</header>
+
+            <div class="container">
+    <div class="main-container">
+        <main>
+            <div class="post-stream-container">
+                <!-- # Post List # -->
                 
+                    
+                        <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
             
-        </h5>
-    </div>
+                <div class="column col-12">
+                    
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/08/29/2019/190829_android_JNI/" rel="bookmark">Android JNI理解</a></h2>
 
+
+<p class="mb-0 card-body">
     
+        概述
+JNI,即Java Native Interface，Java本地调用。通过JNI可以实现：  
+
+Java程序函数可以调用Natvie语言（C/C++）写的函数
+Natvie程序函数可以调用Java层的函数
 
 
-</header>
+    <a href="/2019/08/29/2019/190829_android_JNI/">阅读全文</a>
+</p>
 
-<div class="container body-wrap">
 
-    <ul class="post-list">
-    
-        <li class="post-list-item fade">
-            <article id="post-2019/190829_android_JNI"
-  class="article-card article-type-post" itemprop="blogPost">
 
-    <div class="post-meta">
-        <time class="post-time" title="2019-08-29 23:41:06" datetime="2019-08-29T15:41:06.000Z"  itemprop="datePublished">2019-08-29</time>
 
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2019-08-29</time>
         
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/android/">android</a></li></ul>
-
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/08/29/2019/190829_android_JNI/">Android JNI理解</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><blockquote>
-<p>JNI,即Java Native Interface，Java本地调用。通过JNI可以实现：  </p>
-<ul>
-<li>Java程序函数可以调用Natvie语言（C/C++）写的函数</li>
-<li>Natvie程序函数可以调用Java层的函数</li>
-</ul>
-</blockquote>
-    
-
-        <a href="/2019/08/29/2019/190829_android_JNI/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/android/">android</a>
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JNI/" rel="tag">JNI</a></li></ul>
-
+        
     </div>
-    
+
+                </div>
+            
+        </div>
 </article>
 
-        </li>
+                    
+                
+                    
+                        <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
+            
+                <div class="column col-12">
+                    
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/08/29/2019/190829_linux_ibus/" rel="bookmark">ubuntu输入法无法选择候选文字</a></h2>
+
+
+<p class="mb-0 card-body">
     
-        <li class="post-list-item fade">
-            <article id="post-2019/190829_linux_ibus"
-  class="article-card article-type-post" itemprop="blogPost">
+        解决方法1234#删除配置文件rm -rf ~/.cache/ibus/libpinyinibus-daemon -drxibus-daemon -drx
+    <a href="/2019/08/29/2019/190829_linux_ibus/">阅读全文</a>
+</p>
 
-    <div class="post-meta">
-        <time class="post-time" title="2019-08-29 22:28:00" datetime="2019-08-29T14:28:00.000Z"  itemprop="datePublished">2019-08-29</time>
 
+
+
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2019-08-29</time>
         
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/linux/">linux</a></li></ul>
-
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/08/29/2019/190829_linux_ibus/">ubuntu输入法无法选择候选文字</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">删除配置文件</span></span><br><span class="line">rm -rf ~/.cache/ibus/libpinyin</span><br><span class="line">ibus-daemon -drx</span><br><span class="line">ibus-daemon -drx</span><br></pre></td></tr></table></figure>
-    
-
-        <a href="/2019/08/29/2019/190829_linux_ibus/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/linux/">linux</a>
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
-
+        
     </div>
-    
+
+                </div>
+            
+        </div>
 </article>
 
-        </li>
+                    
+                
+                    
+                        <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
+            
+                <div class="column col-12">
+                    
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/08/29/2019/190829_cpp_maohao/" rel="bookmark">C++双冒号、点号、箭头的区别</a></h2>
+
+
+<p class="mb-0 card-body">
     
-        <li class="post-list-item fade">
-            <article id="post-2019/190829_cpp_maohao"
-  class="article-card article-type-post" itemprop="blogPost">
+        箭头-&gt;和点号.声明一个结构：
+123struct mystruct &#123;    int age;&#125;;
+    <a href="/2019/08/29/2019/190829_cpp_maohao/">阅读全文</a>
+</p>
 
-    <div class="post-meta">
-        <time class="post-time" title="2019-08-29 21:52:00" datetime="2019-08-29T13:52:00.000Z"  itemprop="datePublished">2019-08-29</time>
 
+
+
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2019-08-29</time>
         
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/cpp/">cpp</a></li></ul>
-
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/08/29/2019/190829_cpp_maohao/">C++双冒号、点号、箭头的区别</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <h2 id="箭头-gt-和点号"><a href="#箭头-gt-和点号" class="headerlink" title="箭头-&gt;和点号."></a>箭头<code>-&gt;</code>和点号<code>.</code></h2><p>声明一个结构：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">mystruct</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-    
-
-        <a href="/2019/08/29/2019/190829_cpp_maohao/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/cpp/">cpp</a>
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cpp/" rel="tag">cpp</a></li></ul>
-
+        
     </div>
-    
+
+                </div>
+            
+        </div>
 </article>
 
-        </li>
+                    
+                
+                    
+                        <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
+            
+                <div class="column col-12">
+                    
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/08/28/2019/190828_android_makefile/" rel="bookmark">Android中的makefile（Android.mk）</a></h2>
+
+
+<p class="mb-0 card-body">
     
-        <li class="post-list-item fade">
-            <article id="post-2019/190828_android_makefile"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2019-08-28 21:52:00" datetime="2019-08-28T13:52:00.000Z"  itemprop="datePublished">2019-08-28</time>
-
         
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/android/">android</a></li></ul>
+makefile是和make命令一起使用，在Android中，可以使用mm、mmm、mma进行编译。Makefile可以组织项目中各种库和代码之间的依赖，构建项目，和maven、gradle一样属于构建工具。常用于大型项目。
 
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/08/28/2019/190828_android_makefile/">Android中的makefile（Android.mk）</a>
-    </h3>
-  
+    <a href="/2019/08/28/2019/190828_android_makefile/">阅读全文</a>
+</p>
 
 
 
 
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <blockquote>
-<p>makefile是和make命令一起使用，在Android中，可以使用<code>mm</code>、<code>mmm</code>、<code>mma</code>进行编译。<br>Makefile可以组织项目中各种库和代码之间的依赖，构建项目，和maven、gradle一样属于构建工具。<br>常用于大型项目。</p>
-</blockquote>
-    
-
-        <a href="/2019/08/28/2019/190828_android_makefile/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2019-08-28</time>
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/makefile/" rel="tag">makefile</a></li></ul>
-
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/android/">android</a>
+        
+        
     </div>
-    
+
+                </div>
+            
+        </div>
 </article>
 
-        </li>
+                    
+                
+                    
+                        <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
+            
+                <div class="column col-12">
+                    
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/08/26/2019/190826_cpp_inline/" rel="bookmark">C++内联函数、引用变量、函数重载、函数模板</a></h2>
+
+
+<p class="mb-0 card-body">
     
-        <li class="post-list-item fade">
-            <article id="post-2019/190826_cpp_inline"
-  class="article-card article-type-post" itemprop="blogPost">
+        内联函数
+常规函数调用使程序跳到另一个地址（函数的地址），并在函数结束后返回。来回跳跃并记录跳跃位置意味着一定的开销。内联函数使得编译器将相应的函数代码替换函数调用。程序无需跳到另一个位置处执行代码，再调回来。因而，内联函数运行速度比常规函数快，但是代价是需要占用更多的内存。如果程序在10个不同的地方调用调用同一个内联函数，则该程序将包含该函数代码的10个副本。
 
-    <div class="post-meta">
-        <time class="post-time" title="2019-08-26 22:23:05" datetime="2019-08-26T14:23:05.000Z"  itemprop="datePublished">2019-08-26</time>
+    <a href="/2019/08/26/2019/190826_cpp_inline/">阅读全文</a>
+</p>
 
+
+
+
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2019-08-26</time>
         
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/cpp/">cpp</a></li></ul>
-
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/08/26/2019/190826_cpp_inline/">C++内联函数、引用变量、函数重载、函数模板</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <h2 id="内联函数"><a href="#内联函数" class="headerlink" title="内联函数"></a>内联函数</h2><blockquote>
-<p>常规函数调用使程序跳到另一个地址（函数的地址），并在函数结束后返回。来回跳跃并记录跳跃位置意味着一定的开销。<br>内联函数使得编译器将相应的函数代码替换函数调用。程序无需跳到另一个位置处执行代码，再调回来。<br>因而，内联函数运行速度比常规函数快，但是代价是需要占用更多的内存。如果程序在10个不同的地方调用调用同一个内联函数，则该程序将包含该函数代码的10个副本。</p>
-</blockquote>
-    
-
-        <a href="/2019/08/26/2019/190826_cpp_inline/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/cpp/">cpp</a>
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cpp/" rel="tag">cpp</a></li></ul>
-
+        
     </div>
-    
+
+                </div>
+            
+        </div>
 </article>
 
-        </li>
+                    
+                
+                    
+                        <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
+            
+                <div class="column col-12">
+                    
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/08/21/2019/190821_cpp_function/" rel="bookmark">C++函数模块（函数指针、递归）</a></h2>
+
+
+<p class="mb-0 card-body">
     
-        <li class="post-list-item fade">
-            <article id="post-2019/190821_cpp_function"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2019-08-21 22:23:05" datetime="2019-08-21T14:23:05.000Z"  itemprop="datePublished">2019-08-21</time>
-
         
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/cpp/">cpp</a></li></ul>
+本章节主要是围绕函数为圆心，涉及到字符串、指针、C++11特性auto、typedef。由于接触android源码、opengl，需将C++学习一遍，之前只是用过java、c、c#这些。涉及到android源码，例如frameworks/native的surfaceflinger,gui,ui, 以及vender,hardware都是需要仔细的阅读C++代码才能够理解。再如graphics的测量、绘制渲染、硬件加速、合成显示，私以为学习一些图形学是有必要的。人生在勤，不索何获。
 
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/08/21/2019/190821_cpp_function/">C++函数模块（函数指针、递归）</a>
-    </h3>
-  
+    <a href="/2019/08/21/2019/190821_cpp_function/">阅读全文</a>
+</p>
 
 
 
 
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <blockquote>
-<p>本章节主要是围绕函数为圆心，涉及到字符串、指针、C++11特性auto、typedef。<br>由于接触android源码、opengl，需将C++学习一遍，之前只是用过java、c、c#这些。涉及到android源码，例如frameworks/native的surfaceflinger,gui,ui, 以及vender,hardware都是需要仔细的阅读C++代码才能够理解。<br>再如graphics的测量、绘制渲染、硬件加速、合成显示，私以为学习一些图形学是有必要的。<br>人生在勤，不索何获。</p>
-</blockquote>
-    
-
-        <a href="/2019/08/21/2019/190821_cpp_function/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2019-08-21</time>
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cpp/" rel="tag">cpp</a></li></ul>
-
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/cpp/">cpp</a>
+        
+        
     </div>
-    
+
+                </div>
+            
+        </div>
 </article>
 
-        </li>
+                    
+                
+                    
+                        <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
+            
+                <div class="column col-12">
+                    
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/08/20/2019/190820_opengl_setup/" rel="bookmark">ubuntu搭建opengl环境</a></h2>
+
+
+<p class="mb-0 card-body">
     
-        <li class="post-list-item fade">
-            <article id="post-2019/190820_opengl_setup"
-  class="article-card article-type-post" itemprop="blogPost">
+        安装1234sudo apt-get install build-essentialsudo apt-get install libgl1-mesa-devsudo apt-get install libglu1-mesa-devsudo apt-get install freeglut3-dev
+    <a href="/2019/08/20/2019/190820_opengl_setup/">阅读全文</a>
+</p>
 
-    <div class="post-meta">
-        <time class="post-time" title="2019-08-20 22:23:05" datetime="2019-08-20T14:23:05.000Z"  itemprop="datePublished">2019-08-20</time>
 
+
+
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2019-08-20</time>
         
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/opengl/">opengl</a></li></ul>
-
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/08/20/2019/190820_opengl_setup/">ubuntu搭建opengl环境</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install build-essential</span><br><span class="line">sudo apt-get install libgl1-mesa-dev</span><br><span class="line">sudo apt-get install libglu1-mesa-dev</span><br><span class="line">sudo apt-get install freeglut3-dev</span><br></pre></td></tr></table></figure>
-    
-
-        <a href="/2019/08/20/2019/190820_opengl_setup/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/opengl/">opengl</a>
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/opengl/" rel="tag">opengl</a></li></ul>
-
+        
     </div>
-    
+
+                </div>
+            
+        </div>
 </article>
 
-        </li>
+                    
+                
+                    
+                        <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
+            
+                <div class="column col-12">
+                    
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/08/15/2019/190815_cpp_ifelse/" rel="bookmark">C++分支语句、逻辑表达式、字符函数库、switch、文本I/O</a></h2>
+
+
+<p class="mb-0 card-body">
     
-        <li class="post-list-item fade">
-            <article id="post-2019/190815_cpp_ifelse"
-  class="article-card article-type-post" itemprop="blogPost">
+        if语句
+两种格式： if和if else
 
-    <div class="post-meta">
-        <time class="post-time" title="2019-08-15 22:23:05" datetime="2019-08-15T14:23:05.000Z"  itemprop="datePublished">2019-08-15</time>
+    <a href="/2019/08/15/2019/190815_cpp_ifelse/">阅读全文</a>
+</p>
 
+
+
+
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2019-08-15</time>
         
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/cpp/">cpp</a></li></ul>
-
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/08/15/2019/190815_cpp_ifelse/">C++分支语句、逻辑表达式、字符函数库、switch、文本I/O</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <h2 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h2><blockquote>
-<p>两种格式： <code>if</code>和<code>if else</code></p>
-</blockquote>
-    
-
-        <a href="/2019/08/15/2019/190815_cpp_ifelse/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/cpp/">cpp</a>
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cpp/" rel="tag">cpp</a></li></ul>
-
+        
     </div>
-    
+
+                </div>
+            
+        </div>
 </article>
 
-        </li>
+                    
+                
+                    
+                        <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
+            
+                <div class="column col-12">
+                    
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/08/14/2019/190814_cpp_for/" rel="bookmark">C++循环语句for, while, do-while</a></h2>
+
+
+<p class="mb-0 card-body">
     
-        <li class="post-list-item fade">
-            <article id="post-2019/190814_cpp_for"
-  class="article-card article-type-post" itemprop="blogPost">
+        for循环12for (int i = 5; i &lt; 0; i--)    cout &lt;&lt; "i=" &lt;&lt; i &lt;&lt;endl;
+    <a href="/2019/08/14/2019/190814_cpp_for/">阅读全文</a>
+</p>
 
-    <div class="post-meta">
-        <time class="post-time" title="2019-08-14 22:23:05" datetime="2019-08-14T14:23:05.000Z"  itemprop="datePublished">2019-08-14</time>
 
+
+
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2019-08-14</time>
         
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/cpp/">cpp</a></li></ul>
-
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/08/14/2019/190814_cpp_for/">C++循环语句for, while, do-while</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <h2 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">5</span>; i &lt; <span class="number">0</span>; i--)</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"i="</span> &lt;&lt; i &lt;&lt;<span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
-    
-
-        <a href="/2019/08/14/2019/190814_cpp_for/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/cpp/">cpp</a>
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cpp/" rel="tag">cpp</a></li></ul>
-
+        
     </div>
-    
+
+                </div>
+            
+        </div>
 </article>
 
-        </li>
+                    
+                
+                    
+                        <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
+            
+                <div class="column col-12">
+                    
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/08/13/2019/190813_cpp_typeTemplete/" rel="bookmark">C++内存分配方式和模板类vector, array</a></h2>
+
+
+<p class="mb-0 card-body">
     
-        <li class="post-list-item fade">
-            <article id="post-2019/190813_cpp_typeTemplete"
-  class="article-card article-type-post" itemprop="blogPost">
+        使用new创建动态结构
+在运行时创建数组优于编译时创建数组，对于结构也是如此。需要在程序运行时为结构分配所需的空间，可以使用new完成。动态意味着内存是在运行时，而不是编译时分配的。例如inflatable *ps = new inflatable;其中inflatable是一个结构类型。这句代码将把存储结构inflatable的一块可用内存的地址赋值给ps。箭头成员运算符-&gt;，可用于指向结构的指针。例如ps指向一个inflatable结构的成员price，即ps-&gt;price
 
-    <div class="post-meta">
-        <time class="post-time" title="2019-08-13 23:31:05" datetime="2019-08-13T15:31:05.000Z"  itemprop="datePublished">2019-08-13</time>
+    <a href="/2019/08/13/2019/190813_cpp_typeTemplete/">阅读全文</a>
+</p>
 
+
+
+
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2019-08-13</time>
         
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/cpp/">cpp</a></li></ul>
-
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/08/13/2019/190813_cpp_typeTemplete/">C++内存分配方式和模板类vector, array</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <h2 id="使用new创建动态结构"><a href="#使用new创建动态结构" class="headerlink" title="使用new创建动态结构"></a>使用new创建动态结构</h2><blockquote>
-<p>在运行时创建数组优于编译时创建数组，对于结构也是如此。<br>需要在程序运行时为结构分配所需的空间，可以使用<code>new</code>完成。<br>动态意味着内存是在<code>运行时</code>，而不是<code>编译时</code>分配的。<br>例如<code>inflatable *ps = new inflatable;</code>其中inflatable是一个结构类型。这句代码将把存储结构inflatable的一块可用内存的地址赋值给ps。<br><strong>箭头成员运算符</strong><code>-&gt;</code>，可用于指向结构的指针。例如ps指向一个inflatable结构的成员price，即<code>ps-&gt;price</code></p>
-</blockquote>
-    
-
-        <a href="/2019/08/13/2019/190813_cpp_typeTemplete/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/cpp/">cpp</a>
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cpp/" rel="tag">cpp</a></li></ul>
-
+        
     </div>
-    
+
+                </div>
+            
+        </div>
 </article>
 
-        </li>
+                    
+                
+                    
+                        <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
+            
+                <div class="column col-12">
+                    
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/08/12/2019/190812_cpp_complex2/" rel="bookmark">C++复合类型之枚举、指针</a></h2>
+
+
+<p class="mb-0 card-body">
     
-        <li class="post-list-item fade">
-            <article id="post-2019/190812_cpp_complex2"
-  class="article-card article-type-post" itemprop="blogPost">
+        枚举enum
+C++的enum工具提供了另一种创建符号常量的方式，可以代替const。它还允许定义新的类型，但是必须严格按照格式。使用enum语法格式和结构相似，例如  
 
-    <div class="post-meta">
-        <time class="post-time" title="2019-08-12 22:21:05" datetime="2019-08-12T14:21:05.000Z"  itemprop="datePublished">2019-08-12</time>
+    <a href="/2019/08/12/2019/190812_cpp_complex2/">阅读全文</a>
+</p>
 
+
+
+
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2019-08-12</time>
         
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/cpp/">cpp</a></li></ul>
-
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/08/12/2019/190812_cpp_complex2/">C++复合类型之枚举、指针</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <h2 id="枚举enum"><a href="#枚举enum" class="headerlink" title="枚举enum"></a>枚举<code>enum</code></h2><blockquote>
-<p>C++的enum工具提供了另一种创建符号常量的方式，可以代替<code>const</code>。<br>它还允许定义新的类型，但是必须严格按照格式。<br>使用<code>enum</code>语法格式和<code>结构</code>相似，<strong>例如</strong>  </p>
-</blockquote>
-    
-
-        <a href="/2019/08/12/2019/190812_cpp_complex2/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/cpp/">cpp</a>
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cpp/" rel="tag">cpp</a></li></ul>
-
+        
     </div>
-    
+
+                </div>
+            
+        </div>
 </article>
 
-        </li>
+                    
+                
+                    
+                        <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
+            
+                <div class="column col-12">
+                    
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/08/01/2019/190801_cpp_complex/" rel="bookmark">C++复合类型之数组、字符串、结构、共用体</a></h2>
+
+
+<p class="mb-0 card-body">
     
-        <li class="post-list-item fade">
-            <article id="post-2019/190801_cpp_complex"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2019-08-01 21:41:05" datetime="2019-08-01T13:41:05.000Z"  itemprop="datePublished">2019-08-01</time>
-
         
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/cpp/">cpp</a></li></ul>
+题外话： 在我眼里，我实习的第一家公司教会了我两件事，一是让自己忙起来，二是代码规范整洁。有时候有所悟会很晚，但终究不迟。序： C++提供了基于整型和浮点类型创建的复合类型。影响最深远的复合类型是类。然而，C++还支持几种普通的复合类型。例如，数组 可以存储多个同类型的值。结构 可以存储多个不同类型的值。指针 则是一种将数据所处位置告诉计算机的类型。
 
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/08/01/2019/190801_cpp_complex/">C++复合类型之数组、字符串、结构、共用体</a>
-    </h3>
-  
+    <a href="/2019/08/01/2019/190801_cpp_complex/">阅读全文</a>
+</p>
 
 
 
 
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <blockquote>
-<p><font color=green>题外话： 在我眼里，我实习的第一家公司教会了我两件事，一是让自己忙起来，二是代码规范整洁。有时候有所悟会很晚，但终究不迟。</font><br>序： C++提供了基于整型和浮点类型创建的复合类型。影响最深远的复合类型是<code>类</code>。然而，C++还支持几种普通的复合类型。<br>例如，<strong>数组</strong> 可以存储多个同类型的值。<br><strong>结构</strong> 可以存储多个不同类型的值。<br><strong>指针</strong> 则是一种将数据所处位置告诉计算机的类型。</p>
-</blockquote>
-    
-
-        <a href="/2019/08/01/2019/190801_cpp_complex/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2019-08-01</time>
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cpp/" rel="tag">cpp</a></li></ul>
-
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/cpp/">cpp</a>
+        
+        
     </div>
-    
+
+                </div>
+            
+        </div>
 </article>
 
-        </li>
+                    
+                
+                    
+                        <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
+            
+                <div class="column col-12">
+                    
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/07/27/2019/190727-linux-zsh-md/" rel="bookmark">linux配置zsh终端</a></h2>
+
+
+<p class="mb-0 card-body">
     
-        <li class="post-list-item fade">
-            <article id="post-2019/190727-linux-zsh-md"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2019-07-27 17:41:06" datetime="2019-07-27T09:41:06.000Z"  itemprop="datePublished">2019-07-27</time>
-
         
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/linux/">linux</a></li></ul>
+从echo $SHELL可以查看当前使用的终端是/bin/bash。zsh是Ubuntu的一种终端工具，虽然听说功能很强很给力，事实上我只是被他的众多主题迷住了。具体查看文档
 
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/07/27/2019/190727-linux-zsh-md/">linux配置zsh终端</a>
-    </h3>
-  
+    <a href="/2019/07/27/2019/190727-linux-zsh-md/">阅读全文</a>
+</p>
 
 
 
 
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <blockquote>
-<p>从<code>echo $SHELL</code>可以查看当前使用的终端是<code>/bin/bash</code>。<code>zsh</code>是Ubuntu的一种终端工具，虽然听说功能很强很给力，事实上我只是被他的众多主题迷住了。<br><a href="https://wiki.archlinux.org/index.php/Zsh_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87" target="_blank" rel="noopener">具体查看文档</a></p>
-</blockquote>
-    
-
-        <a href="/2019/07/27/2019/190727-linux-zsh-md/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2019-07-27</time>
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
-
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/linux/">linux</a>
+        
+        
     </div>
-    
+
+                </div>
+            
+        </div>
 </article>
 
-        </li>
+                    
+                
+                    
+                        <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
+            
+                <div class="column col-12">
+                    
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/07/27/2019/190726-next-addmusic/" rel="bookmark">hexo文章中使用iframe插件插入网易云音乐</a></h2>
+
+
+<p class="mb-0 card-body">
     
-        <li class="post-list-item fade">
-            <article id="post-2019/190726-next-addmusic"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2019-07-27 01:12:19" datetime="2019-07-26T17:12:19.000Z"  itemprop="datePublished">2019-07-27</time>
-
         
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/web/">web</a></li></ul>
+为了收藏一些喜欢的音乐分享在博客上，使用iframe插件生成网易云音乐的控件。
 
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/07/27/2019/190726-next-addmusic/">hexo文章中使用iframe插件插入网易云音乐</a>
-    </h3>
-  
+    <a href="/2019/07/27/2019/190726-next-addmusic/">阅读全文</a>
+</p>
 
 
 
 
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <blockquote>
-<p>为了收藏一些喜欢的音乐分享在博客上，使用iframe插件生成网易云音乐的控件。</p>
-</blockquote>
-    
-
-        <a href="/2019/07/27/2019/190726-next-addmusic/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2019-07-27</time>
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/music/" rel="tag">music</a></li></ul>
-
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/web/">web</a>
+        
+        
     </div>
-    
+
+                </div>
+            
+        </div>
 </article>
 
-        </li>
+                    
+                
+                    
+                        <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
+            
+                <div class="column col-12">
+                    
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/07/26/2019/190725_linux_linuxEnv/" rel="bookmark">Ubuntu安装后的环境配置注意点</a></h2>
+
+
+<p class="mb-0 card-body">
     
-        <li class="post-list-item fade">
-            <article id="post-2019/190725_linux_linuxEnv"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2019-07-26 21:31:37" datetime="2019-07-26T13:31:37.000Z"  itemprop="datePublished">2019-07-26</time>
-
         
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/linux/">linux</a></li></ul>
+Ubuntu系统刚安装完成后，工作还只是进行了一小半，还有一大堆的环境需要配置搭建。比如说JDK, nodejs, python, vs code编译器 …
 
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/07/26/2019/190725_linux_linuxEnv/">Ubuntu安装后的环境配置注意点</a>
-    </h3>
-  
+    <a href="/2019/07/26/2019/190725_linux_linuxEnv/">阅读全文</a>
+</p>
 
 
 
 
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <blockquote>
-<p>Ubuntu系统刚安装完成后，工作还只是进行了一小半，还有一大堆的环境需要配置搭建。比如说JDK, nodejs, python, vs code编译器 …</p>
-</blockquote>
-    
-
-        <a href="/2019/07/26/2019/190725_linux_linuxEnv/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2019-07-26</time>
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
-
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/linux/">linux</a>
+        
+        
     </div>
-    
+
+                </div>
+            
+        </div>
 </article>
 
-        </li>
+                    
+                
+                    
+                        <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
+            
+                <div class="column col-12">
+                    
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/07/25/2019/190725_cpp_operator/" rel="bookmark">C++浮点常量表示、算术运算符、类型转换</a></h2>
+
+
+<p class="mb-0 card-body">
     
-        <li class="post-list-item fade">
-            <article id="post-2019/190725_cpp_operator"
-  class="article-card article-type-post" itemprop="blogPost">
+        浮点常量
+默认情况下，8.27和3.4E5这类浮点常量都属于double类型。如果希望常量是float类型，使用f或者F后缀对于long double的类型，使用l和L的后缀
 
-    <div class="post-meta">
-        <time class="post-time" title="2019-07-25 22:01:37" datetime="2019-07-25T14:01:37.000Z"  itemprop="datePublished">2019-07-25</time>
+例如：
+12341.234f  //float2.2L    //long double2.34F   //float23.231E24  //double (defalut)
+    <a href="/2019/07/25/2019/190725_cpp_operator/">阅读全文</a>
+</p>
 
+
+
+
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2019-07-25</time>
         
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/cpp/">cpp</a></li></ul>
-
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/07/25/2019/190725_cpp_operator/">C++浮点常量表示、算术运算符、类型转换</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <h2 id="浮点常量"><a href="#浮点常量" class="headerlink" title="浮点常量"></a>浮点常量</h2><blockquote>
-<p>默认情况下，<code>8.27</code>和<code>3.4E5</code>这类浮点常量都属于double类型。<br>如果希望常量是float类型，使用<code>f</code>或者<code>F</code>后缀<br>对于<code>long double</code>的类型，使用<code>l</code>和<code>L</code>的后缀</p>
-</blockquote>
-<p><strong>例如：</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.234f</span>  <span class="comment">//float</span></span><br><span class="line"><span class="number">2.2L</span>    <span class="comment">//long double</span></span><br><span class="line"><span class="number">2.34F</span>   <span class="comment">//float</span></span><br><span class="line"><span class="number">23.231E24</span>  <span class="comment">//double (defalut)</span></span><br></pre></td></tr></table></figure>
-    
-
-        <a href="/2019/07/25/2019/190725_cpp_operator/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/cpp/">cpp</a>
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cpp/" rel="tag">cpp</a></li></ul>
-
+        
     </div>
-    
+
+                </div>
+            
+        </div>
 </article>
 
-        </li>
+                    
+                
+                    
+                        <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
+            
+                <div class="column col-12">
+                    
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/07/25/2019/190724_ubuntu_install/" rel="bookmark">Ubuntu18系统安装（无需制作启动盘）</a></h2>
+
+
+<p class="mb-0 card-body">
     
-        <li class="post-list-item fade">
-            <article id="post-2019/190724_ubuntu_install"
-  class="article-card article-type-post" itemprop="blogPost">
+        数据备份准备工具
+Ubuntu系统（官网选择版本下载ISO文件）
+U盘（之前有一个U盘是做了window10的启动盘）
 
-    <div class="post-meta">
-        <time class="post-time" title="2019-07-25 21:31:37" datetime="2019-07-25T13:31:37.000Z"  itemprop="datePublished">2019-07-25</time>
+安装步骤
+移除备份好的机械硬盘
 
+制作一个启动盘(win10系统不需要用软碟通UltraISO作启动盘)
+    <a href="/2019/07/25/2019/190724_ubuntu_install/">阅读全文</a>
+</p>
+
+
+
+
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2019-07-25</time>
         
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/linux/">linux</a></li></ul>
-
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/07/25/2019/190724_ubuntu_install/">Ubuntu18系统安装（无需制作启动盘）</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <h2 id="数据备份"><a href="#数据备份" class="headerlink" title="数据备份"></a>数据备份</h2><h3 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h3><ol>
-<li>Ubuntu系统（官网选择版本下载ISO文件）</li>
-<li>U盘（之前有一个U盘是做了window10的启动盘）</li>
-</ol>
-<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ol>
-<li><p>移除备份好的机械硬盘</p>
-</li>
-<li><p>制作一个启动盘(win10系统不需要用软碟通UltraISO作启动盘)</p>
-    
-
-        <a href="/2019/07/25/2019/190724_ubuntu_install/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/linux/">linux</a>
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
-
+        
     </div>
-    
+
+                </div>
+            
+        </div>
 </article>
 
-        </li>
+                    
+                
+                    
+                        <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
+            
+                <div class="column col-12">
+                    
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/07/23/2019/190723_cpp_float/" rel="bookmark">C++多字节char、bool、字符常量、浮点数</a></h2>
+
+
+<p class="mb-0 card-body">
     
-        <li class="post-list-item fade">
-            <article id="post-2019/190723_cpp_float"
-  class="article-card article-type-post" itemprop="blogPost">
+        wchar_t
+程序需要处理的字符集可能无法用一个8位的字节表示，比如日文、汉字等此时有两种处理方法：  
 
-    <div class="post-meta">
-        <time class="post-time" title="2019-07-23 22:01:37" datetime="2019-07-23T14:01:37.000Z"  itemprop="datePublished">2019-07-23</time>
+编译器厂商将char定义16位的字节或者更长  
+char表示8位的字节，另一种wchar_t表示宽字符类型，可以扩展字符集
 
+
+    <a href="/2019/07/23/2019/190723_cpp_float/">阅读全文</a>
+</p>
+
+
+
+
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2019-07-23</time>
         
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/cpp/">cpp</a></li></ul>
-
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/07/23/2019/190723_cpp_float/">C++多字节char、bool、字符常量、浮点数</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <h2 id="wchar-t"><a href="#wchar-t" class="headerlink" title="wchar_t"></a>wchar_t</h2><blockquote>
-<p>程序需要处理的字符集可能无法用一个8位的字节表示，比如日文、汉字等<br>此时有两种处理方法：  </p>
-<ol>
-<li>编译器厂商将char定义16位的字节或者更长  </li>
-<li>char表示8位的字节，另一种<code>wchar_t</code>表示宽字符类型，可以扩展字符集</li>
-</ol>
-</blockquote>
-    
-
-        <a href="/2019/07/23/2019/190723_cpp_float/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/cpp/">cpp</a>
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cpp/" rel="tag">cpp</a></li></ul>
-
+        
     </div>
-    
+
+                </div>
+            
+        </div>
 </article>
 
-        </li>
+                    
+                
+                    
+                        <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
+            
+                <div class="column col-12">
+                    
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/07/22/2019/190722-hexo-article-pass/" rel="bookmark">hexo文章加密方法</a></h2>
+
+
+<p class="mb-0 card-body">
     
-        <li class="post-list-item fade">
-            <article id="post-2019/190722-hexo-article-pass"
-  class="article-card article-type-post" itemprop="blogPost">
+        直接修改JS
+存在问题：可能被破解。如果你的博客源码是存放在GitHub这样的开源库的话，那么恭喜你。别有用心之人可以通过查看你的GitHub仓库对应文章的md文件找到这个密码。
 
-    <div class="post-meta">
-        <time class="post-time" title="2019-07-22 22:31:16" datetime="2019-07-22T14:31:16.000Z"  itemprop="datePublished">2019-07-22</time>
+    <a href="/2019/07/22/2019/190722-hexo-article-pass/">阅读全文</a>
+</p>
 
+
+
+
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2019-07-22</time>
         
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/web/">web</a></li></ul>
-
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/07/22/2019/190722-hexo-article-pass/">hexo文章加密方法</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <h2 id="直接修改JS"><a href="#直接修改JS" class="headerlink" title="直接修改JS"></a>直接修改JS</h2><blockquote>
-<p>存在问题：可能被破解。如果你的博客源码是存放在GitHub这样的开源库的话，那么恭喜你。别有用心之人可以通过查看你的GitHub仓库对应文章的md文件找到这个密码。</p>
-</blockquote>
-    
-
-        <a href="/2019/07/22/2019/190722-hexo-article-pass/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/web/">web</a>
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
-
+        
     </div>
-    
+
+                </div>
+            
+        </div>
 </article>
 
-        </li>
+                    
+                
+                    
+                        <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
+            
+                <div class="column col-12">
+                    
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/07/22/2019/190722-git-stashing/" rel="bookmark">git stash储藏命令</a></h2>
+
+
+<p class="mb-0 card-body">
     
-        <li class="post-list-item fade">
-            <article id="post-2019/190722-git-stashing"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2019-07-22 11:12:33" datetime="2019-07-22T03:12:33.000Z"  itemprop="datePublished">2019-07-22</time>
-
         
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/git/">git</a></li></ul>
-
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/07/22/2019/190722-git-stashing/">git stash储藏命令</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <p>
 储藏（stashing）可以获取工作目录的中间状态，即被修改过的被追踪的文件和暂存的变更。
 并将它保存在一个未完结变更的堆栈中，随时可以重新应用。
+
+    <a href="/2019/07/22/2019/190722-git-stashing/">阅读全文</a>
 </p>
-    
 
-        <a href="/2019/07/22/2019/190722-git-stashing/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
+
+
+
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2019-07-22</time>
         
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li></ul>
-
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/git/">git</a>
+        
+        
     </div>
-    
+
+                </div>
+            
+        </div>
 </article>
 
+                    
+                
+            </div>
+        </main>
+        
+<nav>
+<ul class="pagination">
+    
+        <li class="page-item page-prev">
+            <a href="/" rel="prev">
+                <span class="page-item-subtitle"><i class="icon icon-back" aria-hidden="true"></i></span>
+                <span class="page-item-title">上一页</span>
+            </a>
         </li>
     
-    </ul>
-
     
-<nav id="page-nav">
-    <div class="inner">
-    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
-    </div>
+        <li class="page-item page-next">
+            <a href="/page/3/" rel="next">
+                <span class="page-item-title">下一页</span>
+                <span class="page-item-subtitle"><i class="icon icon-forward" aria-hidden="true"></i></span>
+            </a>
+        </li>
+    
+</ul>
 </nav>
 
 
+    </div>
 </div>
 
-        <footer class="footer">
-    <div class="top">
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    
+        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
+            <a class="footer-copyright-a" href="http://wizzie.top">sunwengang blog</a>
+        </p>
+
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
         
-<p>
-    <span id="busuanzi_container_site_uv" style='display:none'>
-        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    <!-- Busuanzi User Views -->
+    <span id="busuanzi_container_site_uv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_uv"></span>
+        <span>Viewers</span>
+        
+            <span>|</span>
+        
     </span>
-    <span id="busuanzi_container_site_pv" style='display:none'>
-        站点总访问量：<span id="busuanzi_value_site_pv"></span>
-    </span>
-</p>
 
 
-        <p>
-            
-                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
-            
-            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
-        </p>
-    </div>
-    <div class="bottom">
-        <p><span>sunwengang &copy; 2019 - 2020</span>
-            <span>
-                
-                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
-            </span>
-        </p>
-    </div>
+
+
+        
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
 </footer>
 
-    </main>
-    <div class="mask" id="mask"></div>
-<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
-
-    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script>
-var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
-
-
-</script>
-
-<script src="/js/main.min.js?v=1.7.2"></script>
-
-
-<div class="search-panel" id="search-panel">
-    <ul class="search-result" id="search-result"></ul>
-</div>
-<template id="search-tpl">
-<li class="item">
-    <a href="{path}" class="waves-block waves-effect">
-        <div class="title ellipsis" title="{title}">{title}</div>
-        <div class="flex-row flex-middle">
-            <div class="tags ellipsis">
-                {tags}
-            </div>
-            <time class="flex-col time">{date}</time>
-        </div>
-    </a>
-</li>
-</template>
-
-<script src="/js/search.min.js?v=1.7.2" async></script>
-
-
-
-
-
-
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
+        <!-- ### Import File ### -->
+        <!-- ### Footer JS Import ### -->
 
 <script>
+
+    
+window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+};
+
 (function() {
-    var OriginTitile = document.title, titleTime;
-    document.addEventListener('visibilitychange', function() {
-        if (document.hidden) {
-            document.title = '';
-            clearTimeout(titleTime);
-        } else {
-            document.title = '(つェ⊂)咦!又好了!';
-            titleTime = setTimeout(function() {
-                document.title = OriginTitile;
-            },2000);
-        }
-    });
+    var copyrightNow = new Date().getFullYear();
+    var copyrightContent = document.getElementById('copyright-year');
+    var copyrightSince = 2019;
+    if (copyrightSince === copyrightNow) {
+        copyrightContent.textContent = copyrightNow;
+    } else {
+        copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+    }
 })();
+console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
+
 </script>
 
+<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" async></script>
 
 
-</body>
+<!-- Offset -->
+
+
+
+
+<!-- Comment -->
+
+
+<!-- ### Custom Footer ### -->
+
+    </body>
+
 </html>

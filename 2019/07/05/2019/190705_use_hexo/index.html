@@ -1,213 +1,445 @@
 <!DOCTYPE html>
-<html>
-<head>
-    
 
-    
-
-    
-
-
-
+<html lang="zh-CN">
+    <head>
     <meta charset="utf-8">
+    <!--
+        hexo-theme-suka © SukkaW
+        GitHub: https://github.com/SukkaW/hexo-theme-suka
+    -->
+
+    <!-- ### Resource Hint ### -->
+
+    <!-- ## DNS Prefetch ## -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+<!-- busuanzi -->
+
+    <link rel="dns-prefetch" href="//busuanzi.ibruce.info">
+
+
+<!-- comment -->
+
+
+
+
+
+
+
+<!-- analytics -->
+
+
+
+
+
+
+
+    <!-- ## Preload ## -->
     
+    <!-- Busuanzi -->
     
-    
-    <link rel="canonical" href="true/2019/07/05/2019/190705_use_hexo/">
-    
-    
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" as="script">
+
+
+
+
+
+
+
+    <!-- ### Meta & Title & Info ### -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
+
+    <!-- Title -->
     <title>Use hexo and github to build website | sunwengang blog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <meta name="theme-color" content="#3F51B5">
-    
-    
-    <meta name="keywords" content="hexo">
-    <meta name="description" content="这篇文章主要是讲述如何结合hexo和github建站。使用hexo+github建站，相对减少开发时间和成本。相关Link： hexo官方文档、github建站Issue、我的网站">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Use hexo and github to build website">
-<meta property="og:url" content="http://wizzie.top/2019/07/05/2019/190705_use_hexo/index.html">
-<meta property="og:site_name" content="sunwengang blog">
-<meta property="og:description" content="这篇文章主要是讲述如何结合hexo和github建站。使用hexo+github建站，相对减少开发时间和成本。相关Link： hexo官方文档、github建站Issue、我的网站">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://wizzie.top/2019/07/05/2019/190705_use_hexo/changeLinkStyle.png">
-<meta property="article:published_time" content="2019-07-05T14:04:14.000Z">
-<meta property="article:modified_time" content="2020-03-08T07:08:11.739Z">
-<meta property="article:author" content="sunwengang">
-<meta property="article:tag" content="hexo">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://wizzie.top/2019/07/05/2019/190705_use_hexo/changeLinkStyle.png">
-    
-        <link rel="alternate" type="application/atom+xml" title="sunwengang blog" href="/atom.xml">
-    
-    <link rel="shortcut icon" href="/img/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
-    <script>window.lazyScripts=[]</script>
 
-    <!-- custom head -->
+    <!-- Favicons -->
+    <link rel="icon" type="image&#x2F;ico" href="/img/favicon.ico">
+
+    <!-- ### Import File ### -->
+    <link rel="stylesheet" href="/lib/spectre/spectre.min.css"><style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    a, a:visited {
+        color: #0070ff;
+    }
+
+    a:active, a:focus, a:hover {
+        color: #0070ff;
+        opacity: .75;
+    }
+
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #005eb9;
+        opacity: 1;
+    }
+
     
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+    .post-entry .card-body a {
+        color: #0070ff;
+    }
 
-<body>
-    <div id="loading" class="active"></div>
+    .avatar {
+        background: #444;
+    }
 
-    <aside id="menu" class="hide" >
-  <div class="inner flex-row-vertical">
-    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
-        <i class="icon icon-lg icon-close"></i>
-    </a>
-    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
-      <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/img/avatar.jpg">
-        </a>
-        <hgroup class="introduce">
-          <h5 class="nickname">sunwengang</h5>
-          <a href="mailto:1332963488@qq.com" title="1332963488@qq.com" class="mail">1332963488@qq.com</a>
-        </hgroup>
-      </div>
-    </div>
-    <div class="scroll-wrap flex-col">
-      <ul class="nav">
-        
-            <li class="waves-block waves-effect">
-              <a href="/"  >
-                <i class="icon icon-lg icon-home"></i>
-                Home
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/archives"  >
-                <i class="icon icon-lg icon-archives"></i>
-                Archives
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/tags"  >
-                <i class="icon icon-lg icon-tags"></i>
-                Tags
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/categories"  >
-                <i class="icon icon-lg icon-th-list"></i>
-                Categories
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="https://www.cnblogs.com/1996swg" target="_blank" >
-                <i class="icon icon-lg icon-book"></i>
-                cnblog
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="https://github.com/AloneAlive" target="_blank" >
-                <i class="icon icon-lg icon-github"></i>
-                Github
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/html/nav.html" target="_blank" >
-                <i class="icon icon-lg icon-external-link-square"></i>
-                nav
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/others"  >
-                <i class="icon icon-lg icon-address-book"></i>
-                friends
-              </a>
-            </li>
-        
-      </ul>
-    </div>
-  </div>
-</aside>
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #0070ff;
+    }
 
-    <main id="main">
-        <header class="top-header" id="header">
-    <div class="flex-row">
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
-          <i class="icon icon-lg icon-navicon"></i>
-        </a>
-        <div class="flex-col header-title ellipsis">Use hexo and github to build website</div>
+    .navbar-link:hover {
+        color: #0070ff;
+        opacity: .8;
+    }
+
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #727e96;
+        border-color: #727e96;
+        color: #fff;
+    }
+
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #727e96;
+    }
+
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
+</style><link rel="stylesheet" href="/css/style.min.css">
+
+
+
+
+
+
+
+
+    <!-- Prettify Theme -->
+    
+    <link rel="preload" href="/css/highlight/arduino-light.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/highlight/arduino-light.min.css"></noscript>
+
+
+
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+</script>
+
+    <!-- ### Site Verification ### -->
+    
+
+
+    <link rel="alternate" type="application/atom+xml" href="/atom.xml"><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="sunwengang blog"><meta name="msapplication-starturl" content="http://wizzie.top"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="sunwengang blog"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- ### The Open Graph & Twitter Card Protocol ### -->
+    <meta property="og:title" content="Use hexo and github to build website | sunwengang blog"><meta property="og:site_name" content="sunwengang blog"><meta property="og:type" content="article"><meta property="og:url" content="http://wizzie.top/2019/07/05/2019/190705_use_hexo/"><meta property="og:locale" content="zh-CN"><meta name="description" content="这篇文章主要是讲述如何结合hexo和github建站。使用hexo+github建站，相对减少开发时间和成本。相关Link： hexo官方文档、github建站Issue、我的网站 - sunwengang - sunwengang blog"><meta name="keywords" content="hexo"><meta property="og:image" content="http://wizzie.top/2019/07/05/2019/190705_use_hexo/changeLinkStyle.png"><meta property="article:published_time" content="2019-07-05T14:04:14.000Z"><meta property="article:modified_time" content="2020-03-08T07:08:11.739Z"><meta property="og:updated_time" content="2020-03-08T07:08:11.739Z"><meta property="article:author" content="sunwengang"><meta property="article:tag" content="hexo"><meta name="twitter:card" content="summary">
+
+    
+
+    <!-- ### Canonical link ### -->
+    <link rel="canonical" href="http://wizzie.top/2019/07/05/2019/190705_use_hexo/">
+
+    <meta name="generator" content="Hexo 4.2.0">
+
+    <!-- ### Analytics ### -->
+    
+
+
+
+
+
+
+
+    <!-- ### Structured Data ### -->
+    
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "url": "http://wizzie.top/2019/07/05/2019/190705_use_hexo/",
+    "@type": "BlogPosting",
+    "logo": "http://wizzie.top/img/favicon.ico",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://wizzie.top/2019/07/05/2019/190705_use_hexo/"
+    },
+    "headline": "Use hexo and github to build website | sunwengang blog",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://wizzie.top/img/favicon.ico"
+    },
+    
+    "datePublished": "2019-07-05T14:04:14.000Z",
+    "dateModified": "2020-03-08T07:08:11.739Z",
+    "author": {
+        "@type": "Person",
+        "name": "sunwengang",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://wizzie.top/img/avatar.jpg"
+        },
+        "description": "休想打败我的生活"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "sunwengang blog",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://wizzie.top/img/favicon.ico"
+        }
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "http://wizzie.top/search?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": "hexo",
+    "description": "这篇文章主要是讲述如何结合hexo和github建站。使用hexo+github建站，相对减少开发时间和成本。相关Link： hexo官方文档、github建站Issue、我的网站 - sunwengang - sunwengang blog"
+}
+</script>
+
+
+
+    <!-- ### Custom Head ### -->
+    
+</head>
+
+    <body>
+            
+
+            <!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">sunwengang blog</a></h1>
+
+    <p class="text-center header-slogan">
         
-        <div class="search-wrap" id="search-wrap">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-                <i class="icon icon-lg icon-chevron-left"></i>
-            </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
-                <i class="icon icon-lg icon-search"></i>
-            </a>
-        </div>
+            
+                休想打败我的生活
+            
         
+    </p>
+
+    <nav class="navbar-section text-center">
+    
+        <a href="/" class="navbar-link">首页</a>
+    
+    
+        <a href="/archives/" class="navbar-link">归档</a>
+    
+    
+        <a href="/search" class="navbar-link">搜索</a>
+    
+    
+        <a href="/tags" class="navbar-link">标签</a>
+    
+        <a href="/html/nav.html" class="navbar-link">导航</a>
+    
+        <a href="/links" class="navbar-link">友链</a>
+    
+    
+        <div class="dropdown dropdown-right">
+    <a class="navbar-link dropdown-toggle" tabindex="0">分享</a>
+    <ul class="menu share-menu">
+
+        <!-- Share Weibo -->
         
-    </div>
+        <li class="menu-item">
+            <a href="http://service.weibo.com/share/share.php?appkey=&title=sunwengang blog&url=http://wizzie.top&pic=http://wizzie.top/img/favicon.ico&searchPic=false&style=simple" target="_blank" rel="external noopener noreferrer nofollow">分享到微博</a>
+        </li>
+        
+
+        <!-- Share Twitter -->
+        
+        <li class="menu-item">
+            <a href="https://twitter.com/intent/tweet?text=sunwengang blog&url=http://wizzie.top&via=sunwengang" target="_blank" rel="external noopener noreferrer nofollow">分享到 Twitter</a>
+        </li>
+        
+
+        <!-- Share Facebook -->
+        
+        <li class="menu-item">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://wizzie.top" target="_blank" rel="external noopener noreferrer nofollow">分享到 Facebook</a>
+        </li>
+        
+
+        <!-- Share Google+ -->
+        
+        <li class="menu-item">
+            <a href="https://plus.google.com/share?url=http://wizzie.top" target="_blank" rel="external noopener noreferrer nofollow">分享到 Google+</a>
+        </li>
+        
+
+        <!-- Share LinkedIn -->
+        
+        <li class="menu-item">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://wizzie.top&title=Use hexo and github to build website" target="_blank" rel="external noopener noreferrer nofollow">分享到 LinkedIn</a>
+        </li>
+        
+
+        <!-- Share QQ -->
+        
+        <li class="menu-item">
+            <a href="http://connect.qq.com/widget/shareqq/index.html?site=sunwengang blog&title=Use hexo and github to build website&summary=&pics=http://wizzie.top/img/favicon.ico&url=http://wizzie.top" target="_blank" rel="external noopener noreferrer nofollow"> 分享到 QQ</a>
+        </li>
+        
+
+        <!-- Share Telegram -->
+        
+        <li class="menu-item">
+            <a href="https://t.me/share/url?url=http://wizzie.top&text=Use hexo and github to build website" target="_blank" rel="external noopener noreferrer nofollow">分享到 Telegram</a>
+        </li>
+        
+
+        <!-- QRCode -->
+        
+        <li class="menu-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAAAAABQV18IAAAB1ElEQVR42u3by46DMBBEUf7/p5MtiuyqaotIdnPZRDMD+CA57gee67PhcYECBQrUAHWJ4/cc9fP9c3ReNA6oNqjhpBsMoG6eAN04oHqhfgdIJu/outE5yTig3oVamdCgQCUT3Q0kEzhQr0Opm8xw6iH+miWA2h6lErcnPx+rZkBtjbJNh8HF1aLj8a4LqK1RaiJWE8HqRAfVE+WStEphMCtI3d9A9ULNCoNZE1U1WpPFc/ZQoHqh3KKWNsvcg6qGCag+qJXAXB3cPRyonqi0cKi8sKwkh6B6oVQj370IUkVCEuhl4QDqSJQKsjJ4CnTlelD9UK5BkTQyXANXFSBRhQzqKJQaUCVz6ndu4Y03dYE6GqWKz5WNES44xys6qONQqvGgEjVXGLjCIm5wgDoSpW6afhmSL4q9BlQLlGuopsl/0vi3gR1UG1TazE8W2uo/YSxnCaCOQaUT3gXaarEBqifqMkeKdQ2QKCCDOhaVvjBywds1ZdWLBFC9UJWJnQbklU30oHqh0s1XSZBVDTNQ70IlhYC8YbAJupwlgGqNmg2cNO6Tjc2g3olSk1w1WpNFFVQ/VGWgpJlW2SwGqh8qaVSoye42L6f3BtUDtdMBChQoULfjC+d1b15VZ8g+AAAAAElFTkSuQmCC" alr="QRCode">
+        </li>
+        
+
+    </ul>
+</div>
+    
+    
+</nav>
 </header>
-<header class="content-header post-header">
-
-    <div class="container fade-scale">
-        <h1 class="title">Use hexo and github to build website</h1>
-        <h5 class="subtitle">
-            
-                <time datetime="2019-07-05T14:04:14.000Z" itemprop="datePublished" class="page-time">
-  2019-07-05
-</time>
-
-
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/web/">web</a></li></ul>
 
             
-        </h5>
-    </div>
-
-    
-
-
-</header>
-
-
-<div class="container body-wrap">
-    
-    <aside class="post-widget">
-        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
-            <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#1-安装node-js"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. 安装node.js</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#2-配置hexo"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. 配置hexo</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#3-初始化hexo工作目录"><span class="post-toc-number">3.</span> <span class="post-toc-text">3. 初始化hexo工作目录</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-mkdir-hexo-新建文件夹"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">1. mkdir hexo &#x2F;&#x2F;新建文件夹</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-hexo-init-hexo-初始化hexo工作目录"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">2. hexo init hexo   &#x2F;&#x2F;初始化hexo工作目录</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#4-编译运行登录"><span class="post-toc-number">4.</span> <span class="post-toc-text">4. 编译运行登录</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-hexo-g-build"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">1. hexo g   &#x2F;&#x2F;build</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-hexo-s-生成服务端"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">2. hexo s   &#x2F;&#x2F;生成服务端</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#5-发布到github"><span class="post-toc-number">5.</span> <span class="post-toc-text">5. 发布到github</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-在根目录的-config-yml（非theme主题文件下的配置文件）修改"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">1. 在根目录的_config.yml（非theme主题文件下的配置文件）修改</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-安装插件"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">2. 安装插件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-发布到github"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">3. 发布到github</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-查看结果，例如我的网站wizzie-top"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">4. 查看结果，例如我的网站wizzie.top</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#6-修改配置-config-yml"><span class="post-toc-number">6.</span> <span class="post-toc-text">6. 修改配置_config.yml</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-修改主题"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">1. 修改主题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-修改博主信息"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">2. 修改博主信息</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-hexo文件夹结构"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">3. hexo文件夹结构</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-主页配置（分页大小、排序规则）"><span class="post-toc-number">6.4.</span> <span class="post-toc-text">4. 主页配置（分页大小、排序规则）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-网站日期格式"><span class="post-toc-number">6.5.</span> <span class="post-toc-text">5. 网站日期格式</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#7-修改theme的-config-yml-Next主题"><span class="post-toc-number">7.</span> <span class="post-toc-text">7. 修改theme的_config.yml(Next主题)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-主题选择"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">1. 主题选择</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-菜单配置"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">2. 菜单配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-LOGO修改"><span class="post-toc-number">7.3.</span> <span class="post-toc-text">3. LOGO修改</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-页脚配置"><span class="post-toc-number">7.4.</span> <span class="post-toc-text">4. 页脚配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-主页阅读全文设置"><span class="post-toc-number">7.5.</span> <span class="post-toc-text">5. 主页阅读全文设置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-评论系统"><span class="post-toc-number">7.6.</span> <span class="post-toc-text">6. 评论系统</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-右上角github"><span class="post-toc-number">7.7.</span> <span class="post-toc-text">7. 右上角github</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-创建page-menu标签"><span class="post-toc-number">7.8.</span> <span class="post-toc-text">8. 创建page(menu标签)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#9-创建文章和草稿"><span class="post-toc-number">7.9.</span> <span class="post-toc-text">9. 创建文章和草稿</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#10-头像显示"><span class="post-toc-number">7.10.</span> <span class="post-toc-text">10. 头像显示</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#11-浏览进度按钮"><span class="post-toc-number">7.11.</span> <span class="post-toc-text">11. 浏览进度按钮</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#12-侧边栏社交图标"><span class="post-toc-number">7.12.</span> <span class="post-toc-text">12. 侧边栏社交图标</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#13-侧边栏其余外部链接"><span class="post-toc-number">7.13.</span> <span class="post-toc-text">13. 侧边栏其余外部链接</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#14-修改底部user文字"><span class="post-toc-number">7.14.</span> <span class="post-toc-text">14. 修改底部user文字</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#15-修改加载进度条"><span class="post-toc-number">7.15.</span> <span class="post-toc-text">15. 修改加载进度条</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#16-打开本地搜索"><span class="post-toc-number">7.16.</span> <span class="post-toc-text">16. 打开本地搜索</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#17-文章顶部显示时间信息"><span class="post-toc-number">7.17.</span> <span class="post-toc-text">17. 文章顶部显示时间信息</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#18-文章阅读量统计"><span class="post-toc-number">7.18.</span> <span class="post-toc-text">18. 文章阅读量统计</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#8-修改主题背景custom-styl"><span class="post-toc-number">8.</span> <span class="post-toc-text">8. 修改主题背景custom.styl</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#9-修改文章底部标签"><span class="post-toc-number">9.</span> <span class="post-toc-text">9. 修改文章底部标签#</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#10-修改文章链接样式"><span class="post-toc-number">10.</span> <span class="post-toc-text">10. 修改文章链接样式</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#hexo-admin配置后台"><span class="post-toc-number">11.</span> <span class="post-toc-text">hexo-admin配置后台</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#部署步骤"><span class="post-toc-number">11.1.</span> <span class="post-toc-text">部署步骤</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#hexo的-config-xml配置"><span class="post-toc-number">11.2.</span> <span class="post-toc-text">hexo的_config.xml配置</span></a></li></ol></li></ol>
-        </nav>
-    </aside>
-
-
-<article id="post-2019/190705_use_hexo"
-  class="post-article article-type-post fade" itemprop="blogPost">
-
-    <div class="post-card">
-        <h1 class="post-card-title">Use hexo and github to build website</h1>
-        <div class="post-meta">
-            <time class="post-time" title="2019-07-05 22:04:14" datetime="2019-07-05T14:04:14.000Z"  itemprop="datePublished">2019-07-05</time>
-
-            
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/web/">web</a></li></ul>
+    <!-- ## Post ## -->
+    <div class="post-container">
+    <div id="post-card" class="card">
+        
+        <div class="card-item-container">
+            <div class="card-inner-cell">
+                <!-- # Post Header Info # -->
+                <div class="card-header">
+                    
+    <h1 class="card-title h3 mb-2">Use hexo and github to build website</h1>
 
 
 
-            
-<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
-    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+
+<div class="post-header-info">
+    <p class="post-header-info-left text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <span>2019-07-05</span>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/web/">web</a>
+        
+        
+            <!-- Busuanzi Post Views -->
+<span id="busuanzi_container_page_pv" hidden>
+    <span class="suka-devide-dot"></span>
+    <span></span>
+    <span id="busuanzi_value_page_pv"></span>
+    <span>Views</span>
 </span>
+        
+        
+    </p>
+    <div class="post-header-info-right">
+        
+            <div class="dropdown dropdown-right">
+<a class="dropdown-toggle" tabindex="0">分享本文</a>
+<ul class="menu share-menu">
+    <!-- Share Weibo -->
+    
+    <li class="menu-item">
+        <a href="http://service.weibo.com/share/share.php?appkey=&title=Use hexo and github to build website&url=http://wizzie.top/2019/07/05/2019/190705_use_hexo/&pic=http://wizzie.top/img/favicon.ico&searchPic=false&style=simple" target="_blank" rel="external noopener noreferrer nofollow">分享到微博</a>
+    </li>
+    
 
+    <!-- Share Twitter -->
+    
+    <li class="menu-item">
+        <a href="https://twitter.com/intent/tweet?text=Use hexo and github to build website&url=http://wizzie.top/2019/07/05/2019/190705_use_hexo/&via=sunwengang" target="_blank" rel="external noopener noreferrer nofollow">分享到 Twitter</a>
+    </li>
+    
 
-        </div>
-        <div class="post-content" id="post-content" itemprop="postContent">
-            <blockquote>
+    <!-- Share Facebook -->
+    
+    <li class="menu-item">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://wizzie.top/2019/07/05/2019/190705_use_hexo/" target="_blank" rel="external noopener noreferrer nofollow">分享到 Facebook</a>
+    </li>
+    
+
+    <!-- Share Google+ -->
+    
+    <li class="menu-item">
+        <a href="https://plus.google.com/share?url=http://wizzie.top/2019/07/05/2019/190705_use_hexo/" target="_blank" rel="external noopener noreferrer nofollow">分享到 Google+</a>
+    </li>
+    
+
+    <!-- Share LinkedIn -->
+    
+    <li class="menu-item">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://wizzie.top/2019/07/05/2019/190705_use_hexo/&title=sunwengang blog" target="_blank" rel="external noopener noreferrer nofollow">分享到 LinkedIn</a>
+    </li>
+    
+
+    <!-- Share QQ -->
+    
+    <li class="menu-item">
+        <a href="http://connect.qq.com/widget/shareqq/index.html?site=sunwengang blog&title=sunwengang blog&summary=&pics=http://wizzie.top/img/favicon.ico&url=http://wizzie.top/2019/07/05/2019/190705_use_hexo/" target="_blank" rel="external noopener noreferrer nofollow"> 分享到 QQ</a>
+    </li>
+    
+
+    <!-- Share Telegram -->
+    
+    <li class="menu-item">
+        <a href="https://t.me/share/url?url=http://wizzie.top/2019/07/05/2019/190705_use_hexo/&text=sunwengang blog" target="_blank" rel="external noopener noreferrer nofollow">分享到 Telegram</a>
+    </li>
+    
+
+    <!-- QRCode -->
+    
+    <li class="menu-item">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAAAAABQV18IAAAB1ElEQVR42u3by46DMBBEUf7/p5MtiuyqaotIdnPZRDMD+CA57gee67PhcYECBQrUAHWJ4/cc9fP9c3ReNA6oNqjhpBsMoG6eAN04oHqhfgdIJu/outE5yTig3oVamdCgQCUT3Q0kEzhQr0Opm8xw6iH+miWA2h6lErcnPx+rZkBtjbJNh8HF1aLj8a4LqK1RaiJWE8HqRAfVE+WStEphMCtI3d9A9ULNCoNZE1U1WpPFc/ZQoHqh3KKWNsvcg6qGCag+qJXAXB3cPRyonqi0cKi8sKwkh6B6oVQj370IUkVCEuhl4QDqSJQKsjJ4CnTlelD9UK5BkTQyXANXFSBRhQzqKJQaUCVz6ndu4Y03dYE6GqWKz5WNES44xys6qONQqvGgEjVXGLjCIm5wgDoSpW6afhmSL4q9BlQLlGuopsl/0vi3gR1UG1TazE8W2uo/YSxnCaCOQaUT3gXaarEBqifqMkeKdQ2QKCCDOhaVvjBywds1ZdWLBFC9UJWJnQbklU30oHqh0s1XSZBVDTNQ70IlhYC8YbAJupwlgGqNmg2cNO6Tjc2g3olSk1w1WpNFFVQ/VGWgpJlW2SwGqh8qaVSoye42L6f3BtUDtdMBChQoULfjC+d1b15VZ8g+AAAAAElFTkSuQmCC" alt="QRCode">
+    </li>
+    
+
+</ul>
+</div>
+        
+    </div>
+</div>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        
+                            <div id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#1-安装node-js"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. 安装node.js</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#2-配置hexo"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. 配置hexo</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#3-初始化hexo工作目录"><span class="post-toc-number">3.</span> <span class="post-toc-text">3. 初始化hexo工作目录</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-mkdir-hexo-新建文件夹"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">1. mkdir hexo &#x2F;&#x2F;新建文件夹</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-hexo-init-hexo-初始化hexo工作目录"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">2. hexo init hexo   &#x2F;&#x2F;初始化hexo工作目录</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#4-编译运行登录"><span class="post-toc-number">4.</span> <span class="post-toc-text">4. 编译运行登录</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-hexo-g-build"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">1. hexo g   &#x2F;&#x2F;build</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-hexo-s-生成服务端"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">2. hexo s   &#x2F;&#x2F;生成服务端</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#5-发布到github"><span class="post-toc-number">5.</span> <span class="post-toc-text">5. 发布到github</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-在根目录的-config-yml（非theme主题文件下的配置文件）修改"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">1. 在根目录的_config.yml（非theme主题文件下的配置文件）修改</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-安装插件"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">2. 安装插件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-发布到github"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">3. 发布到github</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-查看结果，例如我的网站wizzie-top"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">4. 查看结果，例如我的网站wizzie.top</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#6-修改配置-config-yml"><span class="post-toc-number">6.</span> <span class="post-toc-text">6. 修改配置_config.yml</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-修改主题"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">1. 修改主题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-修改博主信息"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">2. 修改博主信息</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-hexo文件夹结构"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">3. hexo文件夹结构</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-主页配置（分页大小、排序规则）"><span class="post-toc-number">6.4.</span> <span class="post-toc-text">4. 主页配置（分页大小、排序规则）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-网站日期格式"><span class="post-toc-number">6.5.</span> <span class="post-toc-text">5. 网站日期格式</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#7-修改theme的-config-yml-Next主题"><span class="post-toc-number">7.</span> <span class="post-toc-text">7. 修改theme的_config.yml(Next主题)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-主题选择"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">1. 主题选择</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-菜单配置"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">2. 菜单配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-LOGO修改"><span class="post-toc-number">7.3.</span> <span class="post-toc-text">3. LOGO修改</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-页脚配置"><span class="post-toc-number">7.4.</span> <span class="post-toc-text">4. 页脚配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-主页阅读全文设置"><span class="post-toc-number">7.5.</span> <span class="post-toc-text">5. 主页阅读全文设置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-评论系统"><span class="post-toc-number">7.6.</span> <span class="post-toc-text">6. 评论系统</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-右上角github"><span class="post-toc-number">7.7.</span> <span class="post-toc-text">7. 右上角github</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-创建page-menu标签"><span class="post-toc-number">7.8.</span> <span class="post-toc-text">8. 创建page(menu标签)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#9-创建文章和草稿"><span class="post-toc-number">7.9.</span> <span class="post-toc-text">9. 创建文章和草稿</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#10-头像显示"><span class="post-toc-number">7.10.</span> <span class="post-toc-text">10. 头像显示</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#11-浏览进度按钮"><span class="post-toc-number">7.11.</span> <span class="post-toc-text">11. 浏览进度按钮</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#12-侧边栏社交图标"><span class="post-toc-number">7.12.</span> <span class="post-toc-text">12. 侧边栏社交图标</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#13-侧边栏其余外部链接"><span class="post-toc-number">7.13.</span> <span class="post-toc-text">13. 侧边栏其余外部链接</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#14-修改底部user文字"><span class="post-toc-number">7.14.</span> <span class="post-toc-text">14. 修改底部user文字</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#15-修改加载进度条"><span class="post-toc-number">7.15.</span> <span class="post-toc-text">15. 修改加载进度条</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#16-打开本地搜索"><span class="post-toc-number">7.16.</span> <span class="post-toc-text">16. 打开本地搜索</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#17-文章顶部显示时间信息"><span class="post-toc-number">7.17.</span> <span class="post-toc-text">17. 文章顶部显示时间信息</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#18-文章阅读量统计"><span class="post-toc-number">7.18.</span> <span class="post-toc-text">18. 文章阅读量统计</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#8-修改主题背景custom-styl"><span class="post-toc-number">8.</span> <span class="post-toc-text">8. 修改主题背景custom.styl</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#9-修改文章底部标签"><span class="post-toc-number">9.</span> <span class="post-toc-text">9. 修改文章底部标签#</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#10-修改文章链接样式"><span class="post-toc-number">10.</span> <span class="post-toc-text">10. 修改文章链接样式</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#hexo-admin配置后台"><span class="post-toc-number">11.</span> <span class="post-toc-text">hexo-admin配置后台</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#部署步骤"><span class="post-toc-number">11.1.</span> <span class="post-toc-text">部署步骤</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#hexo的-config-xml配置"><span class="post-toc-number">11.2.</span> <span class="post-toc-text">hexo的_config.xml配置</span></a></li></ol></li></ol></div>
+                        
+                    
+                    <article id="post-content">
+                        <blockquote>
 <p>这篇文章主要是讲述如何结合hexo和github建站。使用hexo+github建站，相对减少开发时间和成本。<br>相关Link： <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">hexo官方文档</a>、<a href="https://github.com/AloneAlive/Blog/issues/3" target="_blank" rel="noopener">github建站Issue</a>、<a href="wizzie.top">我的网站</a></p>
 </blockquote>
 <a id="more"></a>
@@ -290,14 +522,7 @@
 
 <h1 id="10-修改文章链接样式"><a href="#10-修改文章链接样式" class="headerlink" title="10. 修改文章链接样式"></a>10. 修改文章链接样式</h1><p>在theme/next/source/css/custom/custom.styl添加以下内容：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 文章内链接文本样式</span></span><br><span class="line">.post-body p a&#123;</span><br><span class="line">  color: #0593d3;</span><br><span class="line">  border-bottom: none;</span><br><span class="line">  border-bottom: 1px solid #0593d3;</span><br><span class="line">  &amp;:hover &#123;</span><br><span class="line">    color: #fc6423;</span><br><span class="line">    border-bottom: none;</span><br><span class="line">    border-bottom: 1px solid #fc6423;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>效果图：</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="changeLinkStyle.png" alt="change LinkStyle" title="change">
-                </div>
-                <div class="image-caption">change</div>
-            </figure>
+<p>效果图：<br><img src="changeLinkStyle.png" alt="change LinkStyle" title="change article link Style"></p>
 <blockquote>
 <p>note：注意此处的image是放在hexo/source/img/目录下，但是构建之后在public目录下img是一级目录。所以引用的时候不用加上souce/</p>
 </blockquote>
@@ -309,208 +534,166 @@
 <h2 id="hexo的-config-xml配置"><a href="#hexo的-config-xml配置" class="headerlink" title="hexo的_config.xml配置"></a>hexo的_config.xml配置</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">admin:</span><br><span class="line">   username: zoro</span><br><span class="line">   password_hash:be121740bf988b2225a313fa1f107ca1</span><br><span class="line">   secret: hey hexo</span><br><span class="line">   deployCommand: './admin_script/hexo-generate.sh'</span><br><span class="line">  <span class="meta"># expire: 60*1</span></span><br></pre></td></tr></table></figure>
 
 
-        </div>
-
-        <blockquote class="post-copyright">
-    
-    <div class="content">
-        
-<span class="post-time">
-    Last updated: <time datetime="2020-03-08T07:08:11.739Z" itemprop="dateUpdated">2020-03-08 15:08:11</time>
-</span><br>
-
-
-        
-        版权声明:署名-非商用-相同方式共享 4.0 转载请保留原文链接及作者
-        
-    </div>
-    
-    <footer>
-        <a href="http://wizzie.top">
-            <img src="/img/avatar.jpg" alt="sunwengang">
-            sunwengang
-        </a>
-    </footer>
-</blockquote>
-
-        
-<div class="page-reward">
-    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
-</div>
-
-
-
-        <div class="post-footer">
+                    </article>
+                    
+    <blockquote class="post-license">
+        <p>
+            <strong>本文作者&nbsp;:&nbsp;sunwengang</strong>
+            <br>
+            <strong>
             
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
-
-
-            
-
-
-        </div>
-    </div>
-
-    
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2019/07/08/2019/190708_hexo%E7%9A%84admin%E5%90%8E%E5%8F%B0%E6%90%AD%E5%BB%BA/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">hexo的admin后台搭建</h4>
-      </a>
-    </div>
-  
-
-  
-</nav>
+                本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)</a> 协议
+            </strong>
+            <br>
+            <strong>本文链接&nbsp;:&nbsp;</strong><a href="http://wizzie.top/2019/07/05/2019/190705_use_hexo/">http://wizzie.top/2019/07/05/2019/190705_use_hexo/</a>
+        </p>
+    </blockquote>
 
 
 
-    
+    <blockquote id="date-expire-notification" class="post-expired-notify">本文最后更新于 <span id="date-expire-num"></span> 天前，文中所描述的信息可能已发生改变</blockquote>
+    <script>
+    (function() {
+        var dateUpdate = Date.parse("2020-03-08");
+        var nowDate = new Date();
+        var a = nowDate.getTime();
+        var b = a - dateUpdate;
+        var daysUpdateExpire = Math.floor(b/(24*3600*1000));
+        if (daysUpdateExpire >= 120) {
+            document.getElementById('date-expire-num').innerHTML = daysUpdateExpire;
+        } else {
+            document.getElementById('date-expire-notification').style.display = 'none';
+        }
+    })();
+    </script>
+
+
+<p class="post-footer-info mb-0 pt-0">本文发表于&nbsp;<time datetime="2019-07-05T14:04:14.000Z" itemprop="datePublished">2019-07-05</time>
+
+    , 最后修改于&nbsp;<time datetime="2020-03-08T07:08:11.739Z" itemprop="dateModified">2020-03-08</time>
+
+</p>
+<p class="post-footer-info mb-0 pt-2">
+
+<span class="post-categories-list mt-2">
+
+<a class="post-categories-list-item" href='/categories/web/'>web</a>
+
+</span>
 
 
 
+<span class="post-tags-list mt-2">
+
+<a class="post-tags-list-item" href="/tags/hexo/" rel="tag">#&nbsp;hexo</a>
+
+</span>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</article>
-
-<div id="reward" class="page-modal reward-lay">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <h3 class="reward-title">
-        <i class="icon icon-quote-left"></i>
-        奥利给
-        <i class="icon icon-quote-right"></i>
-    </h3>
-    <div class="reward-content">
-        
-        <div class="reward-code">
-            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
-        </div>
-        
-        <label class="reward-toggle">
-            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
-                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
-            <div class="reward-toggle-ctrol">
-                <span class="reward-toggle-item wechat">微信</span>
-                <span class="reward-toggle-label"></span>
-                <span class="reward-toggle-item alipay">支付宝</span>
-            </div>
-        </label>
-        
-    </div>
-</div>
-
-
-
-</div>
-
-        <footer class="footer">
-    <div class="top">
-        
-<p>
-    <span id="busuanzi_container_site_uv" style='display:none'>
-        站点总访客数：<span id="busuanzi_value_site_uv"></span>
-    </span>
-    <span id="busuanzi_container_site_pv" style='display:none'>
-        站点总访问量：<span id="busuanzi_value_site_pv"></span>
-    </span>
 </p>
 
+                </div>
+                <div class="post-nav px-2 bg-gray">
+<ul class="pagination">
+    <!-- Prev Nav -->
+    
+        <li class="page-item page-prev">
+            <a href="/2019/07/08/2019/190708_hexo%E7%9A%84admin%E5%90%8E%E5%8F%B0%E6%90%AD%E5%BB%BA/" rel="prev">
+                <div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">hexo的admin后台搭建</div>
+            </a>
+        </li>
+    
 
-        <p>
-            
-                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
-            
-            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
-        </p>
-    </div>
-    <div class="bottom">
-        <p><span>sunwengang &copy; 2019 - 2020</span>
-            <span>
+    <!-- Next Nav -->
+    
+</ul>
+</div>
+
                 
-                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
-            </span>
-        </p>
+                    <!-- # Comment # -->
+                    
+                
+            </div>
+        </div>
     </div>
+</div>
+
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    
+        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
+            <a class="footer-copyright-a" href="http://wizzie.top">sunwengang blog</a>
+        </p>
+
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
+        
+    <!-- Busuanzi User Views -->
+    <span id="busuanzi_container_site_uv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_uv"></span>
+        <span>Viewers</span>
+        
+            <span>|</span>
+        
+    </span>
+
+
+
+
+        
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
 </footer>
 
-    </main>
-    <div class="mask" id="mask"></div>
-<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
-
-    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script>
-var BLOG = { ROOT: '/', SHARE: false, REWARD: true };
-
-
-</script>
-
-<script src="/js/main.min.js?v=1.7.2"></script>
-
-
-<div class="search-panel" id="search-panel">
-    <ul class="search-result" id="search-result"></ul>
-</div>
-<template id="search-tpl">
-<li class="item">
-    <a href="{path}" class="waves-block waves-effect">
-        <div class="title ellipsis" title="{title}">{title}</div>
-        <div class="flex-row flex-middle">
-            <div class="tags ellipsis">
-                {tags}
-            </div>
-            <time class="flex-col time">{date}</time>
-        </div>
-    </a>
-</li>
-</template>
-
-<script src="/js/search.min.js?v=1.7.2" async></script>
-
-
-
-
-
-
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
+        <!-- ### Import File ### -->
+        <!-- ### Footer JS Import ### -->
 
 <script>
+
+    
+window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+};
+
 (function() {
-    var OriginTitile = document.title, titleTime;
-    document.addEventListener('visibilitychange', function() {
-        if (document.hidden) {
-            document.title = '';
-            clearTimeout(titleTime);
-        } else {
-            document.title = '(つェ⊂)咦!又好了!';
-            titleTime = setTimeout(function() {
-                document.title = OriginTitile;
-            },2000);
-        }
-    });
+    var copyrightNow = new Date().getFullYear();
+    var copyrightContent = document.getElementById('copyright-year');
+    var copyrightSince = 2019;
+    if (copyrightSince === copyrightNow) {
+        copyrightContent.textContent = copyrightNow;
+    } else {
+        copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+    }
 })();
+console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
+
 </script>
 
+<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" async></script>
 
 
-</body>
+<!-- Offset -->
+
+
+
+
+<!-- Comment -->
+
+
+<!-- ### Custom Footer ### -->
+
+    </body>
+
 </html>

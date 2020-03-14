@@ -1,222 +1,445 @@
 <!DOCTYPE html>
-<html>
-<head>
-    
 
-    
-
-    
-
-
-
+<html lang="zh-CN">
+    <head>
     <meta charset="utf-8">
+    <!--
+        hexo-theme-suka © SukkaW
+        GitHub: https://github.com/SukkaW/hexo-theme-suka
+    -->
+
+    <!-- ### Resource Hint ### -->
+
+    <!-- ## DNS Prefetch ## -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+<!-- busuanzi -->
+
+    <link rel="dns-prefetch" href="//busuanzi.ibruce.info">
+
+
+<!-- comment -->
+
+
+
+
+
+
+
+<!-- analytics -->
+
+
+
+
+
+
+
+    <!-- ## Preload ## -->
     
+    <!-- Busuanzi -->
     
-    
-    <link rel="canonical" href="true/2019/09/21/2019/190921-android-wms-view-cpp/">
-    
-    
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" as="script">
+
+
+
+
+
+
+
+    <!-- ### Meta & Title & Info ### -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
+
+    <!-- Title -->
     <title>Android WMS和View基本理解 | sunwengang blog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <meta name="theme-color" content="#3F51B5">
-    
-    
-    <meta name="keywords" content="graphics">
-    <meta name="description" content="概述 Window 可以看做是Surface的一个包装，本质上，Window的本体就是一片Surface。将操作对象Surface，对象关联属性集以及操作方法等组合在一起便是 Window。Surface 其实是一块画布，应用可以随心所欲地通过 Canvas 或者 OpenGL 在其上作画，然后通过 SurfaceFlinger 将多块 Surface 的内容按照特定的顺序(ZOrder)进行混合">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Android WMS和View基本理解">
-<meta property="og:url" content="http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/index.html">
-<meta property="og:site_name" content="sunwengang blog">
-<meta property="og:description" content="概述 Window 可以看做是Surface的一个包装，本质上，Window的本体就是一片Surface。将操作对象Surface，对象关联属性集以及操作方法等组合在一起便是 Window。Surface 其实是一块画布，应用可以随心所欲地通过 Canvas 或者 OpenGL 在其上作画，然后通过 SurfaceFlinger 将多块 Surface 的内容按照特定的顺序(ZOrder)进行混合">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/displayContent.png">
-<meta property="og:image" content="http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/addview.png">
-<meta property="og:image" content="http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/relayoutwindow.png">
-<meta property="og:image" content="http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/viewgroup.png">
-<meta property="og:image" content="http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/view_tree.png">
-<meta property="og:image" content="http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/vsync.png">
-<meta property="og:image" content="http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/performmeasure.png">
-<meta property="og:image" content="http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/performlayout.png">
-<meta property="og:image" content="http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/hardware_render.png">
-<meta property="og:image" content="http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/software_render.png">
-<meta property="article:published_time" content="2019-09-21T13:32:22.000Z">
-<meta property="article:modified_time" content="2020-03-08T10:14:08.790Z">
-<meta property="article:author" content="sunwengang">
-<meta property="article:tag" content="graphics">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/displayContent.png">
-    
-        <link rel="alternate" type="application/atom+xml" title="sunwengang blog" href="/atom.xml">
-    
-    <link rel="shortcut icon" href="/img/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
-    <script>window.lazyScripts=[]</script>
 
-    <!-- custom head -->
+    <!-- Favicons -->
+    <link rel="icon" type="image&#x2F;ico" href="/img/favicon.ico">
+
+    <!-- ### Import File ### -->
+    <link rel="stylesheet" href="/lib/spectre/spectre.min.css"><style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    a, a:visited {
+        color: #0070ff;
+    }
+
+    a:active, a:focus, a:hover {
+        color: #0070ff;
+        opacity: .75;
+    }
+
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #005eb9;
+        opacity: 1;
+    }
+
     
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+    .post-entry .card-body a {
+        color: #0070ff;
+    }
 
-<body>
-    <div id="loading" class="active"></div>
+    .avatar {
+        background: #444;
+    }
 
-    <aside id="menu" class="hide" >
-  <div class="inner flex-row-vertical">
-    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
-        <i class="icon icon-lg icon-close"></i>
-    </a>
-    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
-      <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/img/avatar.jpg">
-        </a>
-        <hgroup class="introduce">
-          <h5 class="nickname">sunwengang</h5>
-          <a href="mailto:1332963488@qq.com" title="1332963488@qq.com" class="mail">1332963488@qq.com</a>
-        </hgroup>
-      </div>
-    </div>
-    <div class="scroll-wrap flex-col">
-      <ul class="nav">
-        
-            <li class="waves-block waves-effect">
-              <a href="/"  >
-                <i class="icon icon-lg icon-home"></i>
-                Home
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/archives"  >
-                <i class="icon icon-lg icon-archives"></i>
-                Archives
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/tags"  >
-                <i class="icon icon-lg icon-tags"></i>
-                Tags
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/categories"  >
-                <i class="icon icon-lg icon-th-list"></i>
-                Categories
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="https://www.cnblogs.com/1996swg" target="_blank" >
-                <i class="icon icon-lg icon-book"></i>
-                cnblog
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="https://github.com/AloneAlive" target="_blank" >
-                <i class="icon icon-lg icon-github"></i>
-                Github
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/html/nav.html" target="_blank" >
-                <i class="icon icon-lg icon-external-link-square"></i>
-                nav
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/others"  >
-                <i class="icon icon-lg icon-address-book"></i>
-                friends
-              </a>
-            </li>
-        
-      </ul>
-    </div>
-  </div>
-</aside>
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #0070ff;
+    }
 
-    <main id="main">
-        <header class="top-header" id="header">
-    <div class="flex-row">
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
-          <i class="icon icon-lg icon-navicon"></i>
-        </a>
-        <div class="flex-col header-title ellipsis">Android WMS和View基本理解</div>
+    .navbar-link:hover {
+        color: #0070ff;
+        opacity: .8;
+    }
+
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #727e96;
+        border-color: #727e96;
+        color: #fff;
+    }
+
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #727e96;
+    }
+
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
+</style><link rel="stylesheet" href="/css/style.min.css">
+
+
+
+
+
+
+
+
+    <!-- Prettify Theme -->
+    
+    <link rel="preload" href="/css/highlight/arduino-light.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/highlight/arduino-light.min.css"></noscript>
+
+
+
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+</script>
+
+    <!-- ### Site Verification ### -->
+    
+
+
+    <link rel="alternate" type="application/atom+xml" href="/atom.xml"><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="sunwengang blog"><meta name="msapplication-starturl" content="http://wizzie.top"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="sunwengang blog"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- ### The Open Graph & Twitter Card Protocol ### -->
+    <meta property="og:title" content="Android WMS和View基本理解 | sunwengang blog"><meta property="og:site_name" content="sunwengang blog"><meta property="og:type" content="article"><meta property="og:url" content="http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/"><meta property="og:locale" content="zh-CN"><meta name="description" content="概述 Window 可以看做是Surface的一个包装，本质上，Window的本体就是一片Surface。将操作对象Surface，对象关联属性集以及操作方法等组合在一起便是 Window。Surface 其实是一块画布，应用可以随心所欲地通过 Canvas 或者 OpenGL 在其上作画，然后通过 SurfaceFlinger 将多块 Surface 的内容按照特定的顺序(ZOrder)进行混合 - sunwengang - sunwengang blog"><meta name="keywords" content="graphics"><meta property="og:image" content="http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/displayContent.png"><meta property="og:image" content="http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/addview.png"><meta property="og:image" content="http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/relayoutwindow.png"><meta property="og:image" content="http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/viewgroup.png"><meta property="og:image" content="http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/view_tree.png"><meta property="og:image" content="http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/vsync.png"><meta property="og:image" content="http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/performmeasure.png"><meta property="og:image" content="http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/performlayout.png"><meta property="og:image" content="http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/hardware_render.png"><meta property="og:image" content="http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/software_render.png"><meta property="article:published_time" content="2019-09-21T13:32:22.000Z"><meta property="article:modified_time" content="2020-03-08T10:14:08.790Z"><meta property="og:updated_time" content="2020-03-08T10:14:08.790Z"><meta property="article:author" content="sunwengang"><meta property="article:tag" content="graphics"><meta name="twitter:card" content="summary">
+
+    
+
+    <!-- ### Canonical link ### -->
+    <link rel="canonical" href="http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/">
+
+    <meta name="generator" content="Hexo 4.2.0">
+
+    <!-- ### Analytics ### -->
+    
+
+
+
+
+
+
+
+    <!-- ### Structured Data ### -->
+    
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "url": "http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/",
+    "@type": "BlogPosting",
+    "logo": "http://wizzie.top/img/favicon.ico",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/"
+    },
+    "headline": "Android WMS和View基本理解 | sunwengang blog",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://wizzie.top/img/favicon.ico"
+    },
+    
+    "datePublished": "2019-09-21T13:32:22.000Z",
+    "dateModified": "2020-03-08T10:14:08.790Z",
+    "author": {
+        "@type": "Person",
+        "name": "sunwengang",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://wizzie.top/img/avatar.jpg"
+        },
+        "description": "休想打败我的生活"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "sunwengang blog",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://wizzie.top/img/favicon.ico"
+        }
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "http://wizzie.top/search?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": "graphics",
+    "description": "概述 Window 可以看做是Surface的一个包装，本质上，Window的本体就是一片Surface。将操作对象Surface，对象关联属性集以及操作方法等组合在一起便是 Window。Surface 其实是一块画布，应用可以随心所欲地通过 Canvas 或者 OpenGL 在其上作画，然后通过 SurfaceFlinger 将多块 Surface 的内容按照特定的顺序(ZOrder)进行混合 - sunwengang - sunwengang blog"
+}
+</script>
+
+
+
+    <!-- ### Custom Head ### -->
+    
+</head>
+
+    <body>
+            
+
+            <!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">sunwengang blog</a></h1>
+
+    <p class="text-center header-slogan">
         
-        <div class="search-wrap" id="search-wrap">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-                <i class="icon icon-lg icon-chevron-left"></i>
-            </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
-                <i class="icon icon-lg icon-search"></i>
-            </a>
-        </div>
+            
+                休想打败我的生活
+            
         
+    </p>
+
+    <nav class="navbar-section text-center">
+    
+        <a href="/" class="navbar-link">首页</a>
+    
+    
+        <a href="/archives/" class="navbar-link">归档</a>
+    
+    
+        <a href="/search" class="navbar-link">搜索</a>
+    
+    
+        <a href="/tags" class="navbar-link">标签</a>
+    
+        <a href="/html/nav.html" class="navbar-link">导航</a>
+    
+        <a href="/links" class="navbar-link">友链</a>
+    
+    
+        <div class="dropdown dropdown-right">
+    <a class="navbar-link dropdown-toggle" tabindex="0">分享</a>
+    <ul class="menu share-menu">
+
+        <!-- Share Weibo -->
         
-    </div>
+        <li class="menu-item">
+            <a href="http://service.weibo.com/share/share.php?appkey=&title=sunwengang blog&url=http://wizzie.top&pic=http://wizzie.top/img/favicon.ico&searchPic=false&style=simple" target="_blank" rel="external noopener noreferrer nofollow">分享到微博</a>
+        </li>
+        
+
+        <!-- Share Twitter -->
+        
+        <li class="menu-item">
+            <a href="https://twitter.com/intent/tweet?text=sunwengang blog&url=http://wizzie.top&via=sunwengang" target="_blank" rel="external noopener noreferrer nofollow">分享到 Twitter</a>
+        </li>
+        
+
+        <!-- Share Facebook -->
+        
+        <li class="menu-item">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://wizzie.top" target="_blank" rel="external noopener noreferrer nofollow">分享到 Facebook</a>
+        </li>
+        
+
+        <!-- Share Google+ -->
+        
+        <li class="menu-item">
+            <a href="https://plus.google.com/share?url=http://wizzie.top" target="_blank" rel="external noopener noreferrer nofollow">分享到 Google+</a>
+        </li>
+        
+
+        <!-- Share LinkedIn -->
+        
+        <li class="menu-item">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://wizzie.top&title=Android WMS和View基本理解" target="_blank" rel="external noopener noreferrer nofollow">分享到 LinkedIn</a>
+        </li>
+        
+
+        <!-- Share QQ -->
+        
+        <li class="menu-item">
+            <a href="http://connect.qq.com/widget/shareqq/index.html?site=sunwengang blog&title=Android WMS和View基本理解&summary=&pics=http://wizzie.top/img/favicon.ico&url=http://wizzie.top" target="_blank" rel="external noopener noreferrer nofollow"> 分享到 QQ</a>
+        </li>
+        
+
+        <!-- Share Telegram -->
+        
+        <li class="menu-item">
+            <a href="https://t.me/share/url?url=http://wizzie.top&text=Android WMS和View基本理解" target="_blank" rel="external noopener noreferrer nofollow">分享到 Telegram</a>
+        </li>
+        
+
+        <!-- QRCode -->
+        
+        <li class="menu-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAAAAABQV18IAAAB40lEQVR42u3aQW7DMAxEUd//0u3WaKmZoeOFxHxvAjSx/ArQEknp+tnwukCBAgWqQF3iun9///39s/pbda97DqhZqDLoioevvlfwdBxQ81BVgP99GVywd4K/HAPUV6DUZFlhVi8QKFDuwauFOwl4UN+BkgvlIphXv0sC/6MsAdT2KFc4vPX5ajUDaluUbTqIhXX1jyUvyEddF1Bbo1wzwhWV6j41yZbFBqhRKNWsUM0wVYyqxluc5IE6DpUErytG3cKbFBag5qGSBM8GqigOoqYsqNEoN0Da2E8mWVAzUd0GhZsIk0btvzFBjUGphVYlda4YVS9GCQU1EpVsLLqGiEv8li8FqDEoNVmqojJuXASJI6g5KBeAncIzTRptkgdqDCptkNnBxYTbDnRQR6LcDckhneSwhV3wQY1AuUHdxtHTzfCoQgZ1JMptOLpDXsnBZjXZxlkCqGNQrmDoHmR+0vAANQ/1dCM7ObDjGnOg5qHSBTZJ8NKN7tapIFDHodLGqjqo88amOKg5qORAc+dhnQYsqLmoJNlLBnaT46OmGahjUa7plRQV3cVYVsigxqK6DdZksxEUqOQwRXKA3m5CgRqFShsVLinsJH420EEdi+oUDq6Z+vQeUHNQO12gQIECdbt+AX3J788U8YUpAAAAAElFTkSuQmCC" alr="QRCode">
+        </li>
+        
+
+    </ul>
+</div>
+    
+    
+</nav>
 </header>
-<header class="content-header post-header">
-
-    <div class="container fade-scale">
-        <h1 class="title">Android WMS和View基本理解</h1>
-        <h5 class="subtitle">
-            
-                <time datetime="2019-09-21T13:32:22.000Z" itemprop="datePublished" class="page-time">
-  2019-09-21
-</time>
-
-
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/android/">android</a></li></ul>
 
             
-        </h5>
-    </div>
-
-    
-
-
-</header>
-
-
-<div class="container body-wrap">
-    
-    <aside class="post-widget">
-        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
-            <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#概述"><span class="post-toc-number">1.</span> <span class="post-toc-text">概述</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Dump-window信息"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Dump window信息</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#相关类"><span class="post-toc-number">2.</span> <span class="post-toc-text">相关类</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#WMS添加窗口流程（addView）"><span class="post-toc-number">3.</span> <span class="post-toc-text">WMS添加窗口流程（addView）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#addWindow"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">addWindow</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#relayoutWindow"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">relayoutWindow</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#View概述"><span class="post-toc-number">4.</span> <span class="post-toc-text">View概述</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#基本元素"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">基本元素</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#View处理简单流程"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">View处理简单流程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#VSYNC"><span class="post-toc-number">4.2.1.</span> <span class="post-toc-text">VSYNC</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#performTraversals触发描绘处理"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">performTraversals触发描绘处理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#performMeasure（测量）"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">performMeasure（测量）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#performLayout（布局）"><span class="post-toc-number">4.5.</span> <span class="post-toc-text">performLayout（布局）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#performDraw（硬件渲染）"><span class="post-toc-number">4.6.</span> <span class="post-toc-text">performDraw（硬件渲染）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Step1-ViewRootImpl-setView"><span class="post-toc-number">4.6.1.</span> <span class="post-toc-text">Step1. ViewRootImpl.setView</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Step3-ThreaedRenderer-create"><span class="post-toc-number">4.6.2.</span> <span class="post-toc-text">Step3: ThreaedRenderer.create</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Step4：ViewRootImpl-performTraversals"><span class="post-toc-number">4.6.3.</span> <span class="post-toc-text">Step4：ViewRootImpl.performTraversals</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#硬件渲染流程图"><span class="post-toc-number">4.6.4.</span> <span class="post-toc-text">硬件渲染流程图</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#软件渲染"><span class="post-toc-number">4.7.</span> <span class="post-toc-text">软件渲染</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Step1-ViewRootImpl-Draw"><span class="post-toc-number">4.7.1.</span> <span class="post-toc-text">Step1. ViewRootImpl.Draw</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Step2-ViewRootImlp-drawSoftware"><span class="post-toc-number">4.7.2.</span> <span class="post-toc-text">Step2. ViewRootImlp.drawSoftware</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Step3-Framelayout-draw-Canvas"><span class="post-toc-number">4.7.3.</span> <span class="post-toc-text">Step3. Framelayout.draw(Canvas)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Step4-View-draw"><span class="post-toc-number">4.7.4.</span> <span class="post-toc-text">Step4. View.draw</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Step5-ViewGroup-dispatchDraw"><span class="post-toc-number">4.7.5.</span> <span class="post-toc-text">Step5. ViewGroup.dispatchDraw</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Step6-ViewGroup-drawChild"><span class="post-toc-number">4.7.6.</span> <span class="post-toc-text">Step6. ViewGroup.drawChild</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Step7-View-draw-Canvas-ViewGroup-long"><span class="post-toc-number">4.7.7.</span> <span class="post-toc-text">Step7. View.draw(Canvas, ViewGroup, long)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Step8-ViewRootImpl-drawSoftware"><span class="post-toc-number">4.7.8.</span> <span class="post-toc-text">Step8. ViewRootImpl.drawSoftware</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#软件渲染流程图"><span class="post-toc-number">4.7.9.</span> <span class="post-toc-text">软件渲染流程图</span></a></li></ol></li></ol></li></ol>
-        </nav>
-    </aside>
-
-
-<article id="post-2019/190921-android-wms-view-cpp"
-  class="post-article article-type-post fade" itemprop="blogPost">
-
-    <div class="post-card">
-        <h1 class="post-card-title">Android WMS和View基本理解</h1>
-        <div class="post-meta">
-            <time class="post-time" title="2019-09-21 21:32:22" datetime="2019-09-21T13:32:22.000Z"  itemprop="datePublished">2019-09-21</time>
-
-            
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/android/">android</a></li></ul>
+    <!-- ## Post ## -->
+    <div class="post-container">
+    <div id="post-card" class="card">
+        
+        <div class="card-item-container">
+            <div class="card-inner-cell">
+                <!-- # Post Header Info # -->
+                <div class="card-header">
+                    
+    <h1 class="card-title h3 mb-2">Android WMS和View基本理解</h1>
 
 
 
-            
-<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
-    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+
+<div class="post-header-info">
+    <p class="post-header-info-left text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <span>2019-09-21</span>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/android/">android</a>
+        
+        
+            <!-- Busuanzi Post Views -->
+<span id="busuanzi_container_page_pv" hidden>
+    <span class="suka-devide-dot"></span>
+    <span></span>
+    <span id="busuanzi_value_page_pv"></span>
+    <span>Views</span>
 </span>
+        
+        
+    </p>
+    <div class="post-header-info-right">
+        
+            <div class="dropdown dropdown-right">
+<a class="dropdown-toggle" tabindex="0">分享本文</a>
+<ul class="menu share-menu">
+    <!-- Share Weibo -->
+    
+    <li class="menu-item">
+        <a href="http://service.weibo.com/share/share.php?appkey=&title=Android WMS和View基本理解&url=http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/&pic=http://wizzie.top/img/favicon.ico&searchPic=false&style=simple" target="_blank" rel="external noopener noreferrer nofollow">分享到微博</a>
+    </li>
+    
 
+    <!-- Share Twitter -->
+    
+    <li class="menu-item">
+        <a href="https://twitter.com/intent/tweet?text=Android WMS和View基本理解&url=http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/&via=sunwengang" target="_blank" rel="external noopener noreferrer nofollow">分享到 Twitter</a>
+    </li>
+    
 
-        </div>
-        <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><blockquote>
+    <!-- Share Facebook -->
+    
+    <li class="menu-item">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/" target="_blank" rel="external noopener noreferrer nofollow">分享到 Facebook</a>
+    </li>
+    
+
+    <!-- Share Google+ -->
+    
+    <li class="menu-item">
+        <a href="https://plus.google.com/share?url=http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/" target="_blank" rel="external noopener noreferrer nofollow">分享到 Google+</a>
+    </li>
+    
+
+    <!-- Share LinkedIn -->
+    
+    <li class="menu-item">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/&title=sunwengang blog" target="_blank" rel="external noopener noreferrer nofollow">分享到 LinkedIn</a>
+    </li>
+    
+
+    <!-- Share QQ -->
+    
+    <li class="menu-item">
+        <a href="http://connect.qq.com/widget/shareqq/index.html?site=sunwengang blog&title=sunwengang blog&summary=&pics=http://wizzie.top/img/favicon.ico&url=http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/" target="_blank" rel="external noopener noreferrer nofollow"> 分享到 QQ</a>
+    </li>
+    
+
+    <!-- Share Telegram -->
+    
+    <li class="menu-item">
+        <a href="https://t.me/share/url?url=http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/&text=sunwengang blog" target="_blank" rel="external noopener noreferrer nofollow">分享到 Telegram</a>
+    </li>
+    
+
+    <!-- QRCode -->
+    
+    <li class="menu-item">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAAAAABQV18IAAAB40lEQVR42u3aQW7DMAxEUd//0u3WaKmZoeOFxHxvAjSx/ArQEknp+tnwukCBAgWqQF3iun9///39s/pbda97DqhZqDLoioevvlfwdBxQ81BVgP99GVywd4K/HAPUV6DUZFlhVi8QKFDuwauFOwl4UN+BkgvlIphXv0sC/6MsAdT2KFc4vPX5ajUDaluUbTqIhXX1jyUvyEddF1Bbo1wzwhWV6j41yZbFBqhRKNWsUM0wVYyqxluc5IE6DpUErytG3cKbFBag5qGSBM8GqigOoqYsqNEoN0Da2E8mWVAzUd0GhZsIk0btvzFBjUGphVYlda4YVS9GCQU1EpVsLLqGiEv8li8FqDEoNVmqojJuXASJI6g5KBeAncIzTRptkgdqDCptkNnBxYTbDnRQR6LcDckhneSwhV3wQY1AuUHdxtHTzfCoQgZ1JMptOLpDXsnBZjXZxlkCqGNQrmDoHmR+0vAANQ/1dCM7ObDjGnOg5qHSBTZJ8NKN7tapIFDHodLGqjqo88amOKg5qORAc+dhnQYsqLmoJNlLBnaT46OmGahjUa7plRQV3cVYVsigxqK6DdZksxEUqOQwRXKA3m5CgRqFShsVLinsJH420EEdi+oUDq6Z+vQeUHNQO12gQIECdbt+AX3J788U8YUpAAAAAElFTkSuQmCC" alt="QRCode">
+    </li>
+    
+
+</ul>
+</div>
+        
+    </div>
+</div>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        
+                            <div id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#概述"><span class="post-toc-number">1.</span> <span class="post-toc-text">概述</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Dump-window信息"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Dump window信息</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#相关类"><span class="post-toc-number">2.</span> <span class="post-toc-text">相关类</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#WMS添加窗口流程（addView）"><span class="post-toc-number">3.</span> <span class="post-toc-text">WMS添加窗口流程（addView）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#addWindow"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">addWindow</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#relayoutWindow"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">relayoutWindow</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#View概述"><span class="post-toc-number">4.</span> <span class="post-toc-text">View概述</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#基本元素"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">基本元素</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#View处理简单流程"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">View处理简单流程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#VSYNC"><span class="post-toc-number">4.2.1.</span> <span class="post-toc-text">VSYNC</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#performTraversals触发描绘处理"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">performTraversals触发描绘处理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#performMeasure（测量）"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">performMeasure（测量）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#performLayout（布局）"><span class="post-toc-number">4.5.</span> <span class="post-toc-text">performLayout（布局）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#performDraw（硬件渲染）"><span class="post-toc-number">4.6.</span> <span class="post-toc-text">performDraw（硬件渲染）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Step1-ViewRootImpl-setView"><span class="post-toc-number">4.6.1.</span> <span class="post-toc-text">Step1. ViewRootImpl.setView</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Step3-ThreaedRenderer-create"><span class="post-toc-number">4.6.2.</span> <span class="post-toc-text">Step3: ThreaedRenderer.create</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Step4：ViewRootImpl-performTraversals"><span class="post-toc-number">4.6.3.</span> <span class="post-toc-text">Step4：ViewRootImpl.performTraversals</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#硬件渲染流程图"><span class="post-toc-number">4.6.4.</span> <span class="post-toc-text">硬件渲染流程图</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#软件渲染"><span class="post-toc-number">4.7.</span> <span class="post-toc-text">软件渲染</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Step1-ViewRootImpl-Draw"><span class="post-toc-number">4.7.1.</span> <span class="post-toc-text">Step1. ViewRootImpl.Draw</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Step2-ViewRootImlp-drawSoftware"><span class="post-toc-number">4.7.2.</span> <span class="post-toc-text">Step2. ViewRootImlp.drawSoftware</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Step3-Framelayout-draw-Canvas"><span class="post-toc-number">4.7.3.</span> <span class="post-toc-text">Step3. Framelayout.draw(Canvas)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Step4-View-draw"><span class="post-toc-number">4.7.4.</span> <span class="post-toc-text">Step4. View.draw</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Step5-ViewGroup-dispatchDraw"><span class="post-toc-number">4.7.5.</span> <span class="post-toc-text">Step5. ViewGroup.dispatchDraw</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Step6-ViewGroup-drawChild"><span class="post-toc-number">4.7.6.</span> <span class="post-toc-text">Step6. ViewGroup.drawChild</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Step7-View-draw-Canvas-ViewGroup-long"><span class="post-toc-number">4.7.7.</span> <span class="post-toc-text">Step7. View.draw(Canvas, ViewGroup, long)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Step8-ViewRootImpl-drawSoftware"><span class="post-toc-number">4.7.8.</span> <span class="post-toc-text">Step8. ViewRootImpl.drawSoftware</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#软件渲染流程图"><span class="post-toc-number">4.7.9.</span> <span class="post-toc-text">软件渲染流程图</span></a></li></ol></li></ol></li></ol></div>
+                        
+                    
+                    <article id="post-content">
+                        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><blockquote>
 <p>Window 可以看做是Surface的一个包装，本质上，Window的本体就是一片Surface。将操作对象Surface，对象关联属性集以及操作方法等组合在一起便是 Window。Surface 其实是一块画布，应用可以随心所欲地通过 Canvas 或者 OpenGL 在其上作画，然后通过 SurfaceFlinger 将多块 Surface 的内容按照特定的顺序(ZOrder)进行混合并输出到 FrameBuffer，从而将 Android 漂亮的脸蛋显示给用户。既然每个窗口都有一块 Surface 供自己涂鸦，所以必然需要一个角色对所有窗口的 Surface 进行协调管理。于是,WMS 应运而生。</p>
 </blockquote>
 <blockquote>
@@ -246,23 +469,9 @@
 <li>WindowState： 一般被认为是 WMS 眼中的窗口，管理着关联窗口的所有属性状态信息</li>
 <li>AppWindowToken 根据 AMS 侧 Activity 的顺序有序排列，WindowState 根据 Layer 值有序排列。</li>
 </ul>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="displayContent.png" alt="Window分布" title="">
-                </div>
-                <div class="image-caption">Window分布</div>
-            </figure>
-
+<p><img src="displayContent.png" alt="Window分布"></p>
 <h2 id="WMS添加窗口流程（addView）"><a href="#WMS添加窗口流程（addView）" class="headerlink" title="WMS添加窗口流程（addView）"></a>WMS添加窗口流程（addView）</h2><p>WindowManagerGlobal，是一个进程唯一的实例，也就是说无论在应用的任何角落调用addView，都会通过WindowManagerGlobal 来处理相应的请求。从理解出发，可以认为<code>WindowManagerGlobal</code>是一个App进程中窗口管理者。</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="addview.png" alt="AddView简单流程" title="">
-                </div>
-                <div class="image-caption">AddView简单流程</div>
-            </figure>
-
+<p><img src="addview.png" alt="AddView简单流程"></p>
 <figure class="highlight java"><figcaption><span>frameworks/base/core/java/android/view/WindowManagerImpl.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addView</span><span class="params">(@NonNull View view, @NonNull ViewGroup.LayoutParams params)</span> </span>&#123;</span><br><span class="line">    applyDefaultToken(params);</span><br><span class="line">    mGlobal.addView(view, params, mContext.getDisplay(), mParentWindow);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>调用WindowManagerGlobal的addView函数：</p>
@@ -285,14 +494,7 @@
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">addWindow</span><span class="params">(Session session, IWindow client, <span class="keyword">int</span> seq,</span></span></span><br><span class="line"><span class="function"><span class="params">            LayoutParams attrs, <span class="keyword">int</span> viewVisibility, <span class="keyword">int</span> displayId, Rect outFrame,</span></span></span><br><span class="line"><span class="function"><span class="params">            Rect outContentInsets, Rect outStableInsets, Rect outOutsets,</span></span></span><br><span class="line"><span class="function"><span class="params">            DisplayCutout.ParcelableWrapper outDisplayCutout, InputChannel outInputChannel,</span></span></span><br><span class="line"><span class="function"><span class="params">            InsetsState outInsetsState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] appOp = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">int</span> res = mPolicy.checkAddPermission(attrs, appOp);</span><br><span class="line">        <span class="keyword">if</span> (res != WindowManagerGlobal.ADD_OKAY) &#123;</span><br><span class="line">            <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">boolean</span> reportNewConfig = <span class="keyword">false</span>;</span><br><span class="line">        WindowState parentWindow = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">long</span> origId;</span><br><span class="line">        <span class="keyword">final</span> <span class="keyword">int</span> callingUid = Binder.getCallingUid();</span><br><span class="line">        <span class="keyword">final</span> <span class="keyword">int</span> type = attrs.type;</span><br><span class="line">......</span><br></pre></td></tr></table></figure>
 
-<h3 id="relayoutWindow"><a href="#relayoutWindow" class="headerlink" title="relayoutWindow"></a>relayoutWindow</h3><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="relayoutwindow.png" alt="relayoutWindow处理流程" title="">
-                </div>
-                <div class="image-caption">relayoutWindow处理流程</div>
-            </figure>
-
+<h3 id="relayoutWindow"><a href="#relayoutWindow" class="headerlink" title="relayoutWindow"></a>relayoutWindow</h3><p><img src="relayoutwindow.png" alt="relayoutWindow处理流程"></p>
 <p>Surface outSurface：输出参数，用于承载该窗口的 Surface，ViewRootImpl 获得此 Surface 便可以调用<code>Draw</code>在上面进行<strong>绘制窗口所承载的所有View</strong>。</p>
 <p>关于 relayoutWindow 的处理内容粗略分为下列：</p>
 <ul>
@@ -303,24 +505,10 @@
 </ul>
 <h2 id="View概述"><a href="#View概述" class="headerlink" title="View概述"></a>View概述</h2><p><code>View</code>就是一块可以用来进行绘画，可以处理输入事件进行交互的矩形区域，而<code>ViewGroup</code>就是一种可以容纳View的矩形容器。</p>
 <p>从设计模式的角度看，ViewGroup 和 View 是组合模式的典型应用。View 是基本的控件元素，ViewParent 接口定义了添加、删除 View 的接口 addView、removeView，ViewGroup 实现了 ViewParent 的接口，因此可以作为 View 的容器管理 View，同时 ViewGroup 又继承自 View，可以被其他的 ViewGroup 管理。这样 ViewGroup 和 View 就可以组成上面的树状结构了。</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="viewgroup.png" alt="View和ViewGroup" title="">
-                </div>
-                <div class="image-caption">View和ViewGroup</div>
-            </figure>
-
+<p><img src="viewgroup.png" alt="View和ViewGroup"></p>
 <p>应用程序启动的过程中，会加载一个或者多个 Activity。每个 Activity 对应一个 PhoneWindow。当Activity在onCreate方法中调用 setContentView 的时候，PhoneWindow 会根据布局文件，创建 View 树，同时，根据应用的一些参数设置，得到集合了窗口显示特性的 View 树的根节点 mDecor 。WindowManagerGlobal 会通过数组记录一个应用程序对应的所有 View 树的根节点 mDecor，布局参数，以及对应的 ViewRootImpl。同时，将 mDecor 和布局参数传递给 ViewRootImpl。ViewRootImpl中实现对 View 树的整体控制，包括与 WMS 的通信，View 的描绘处理，输入事件的分发处理等。</p>
 <p><strong>View 的结构图如下：</strong></p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="view_tree.png" alt="View关系图" title="">
-                </div>
-                <div class="image-caption">View关系图</div>
-            </figure>
-
+<p><img src="view_tree.png" alt="View关系图"></p>
 <h3 id="基本元素"><a href="#基本元素" class="headerlink" title="基本元素"></a>基本元素</h3><ul>
 <li>View ：最基本的UI组件，表示屏幕上的一个矩形区域</li>
 <li>Window ：1〉 表示顶层窗口，管理界面的显示和事件的响应；2 〉每个Activity均会创建一个PhoneWindow对象，是Activity和整个View系统交互的接口。该Window在Activity的attach方法中通过调用<code>PolicyManager.makeNewWindow</code>创建；</li>
@@ -330,14 +518,7 @@
 <li>ActivityThread：1〉 应用程序的主线程，其中会创建关联当前 Activity 与 Window；2〉创建 WindowManager 实现类实例，把当前 DecoView 加入到 WindowManager</li>
 </ul>
 <h3 id="View处理简单流程"><a href="#View处理简单流程" class="headerlink" title="View处理简单流程"></a>View处理简单流程</h3><h4 id="VSYNC"><a href="#VSYNC" class="headerlink" title="VSYNC"></a>VSYNC</h4><p>VSYNC 信号，即 vertical synchronization，可以理解为垂直同步，或者帧同步。是 Android4.1 为了解决 UI 不流畅问题而引入的处理。当需要同步信号的时候，通过 Choreographer 注册回调，等到 VSYNC信号到来的时候，执行相应的回调。这样，一方面可以避免频繁更新导致的画面不流程；另一方面，因为 SYNC 信号的频率大概是 60 次/秒，即可以保证帧率 60，显示效果非常平滑。</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="vsync.png" alt="VSYNC" title="">
-                </div>
-                <div class="image-caption">VSYNC</div>
-            </figure>
-
+<p><img src="vsync.png" alt="VSYNC"></p>
 <p>由上图可见，View 的描绘工作，是在 performTraversals 中完成的。主要分为三步：</p>
 <ol>
 <li>performMeasure，负责计算View的尺寸；</li>
@@ -351,28 +532,14 @@
 <li>应用主动调用 invalidate:自下而上通过 mParent 调用父节点的 invalidateChild，直至 ViewRootImpl。</li>
 <li>其他情况：如应用程序的 Visibility 发生变化的时候，LayoutParams 发生变化的时候等，都会触发遍历操作。</li>
 </ol>
-<h3 id="performMeasure（测量）"><a href="#performMeasure（测量）" class="headerlink" title="performMeasure（测量）"></a>performMeasure（测量）</h3><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="performmeasure.png" alt="测量流程" title="">
-                </div>
-                <div class="image-caption">测量流程</div>
-            </figure>
-
+<h3 id="performMeasure（测量）"><a href="#performMeasure（测量）" class="headerlink" title="performMeasure（测量）"></a>performMeasure（测量）</h3><p><img src="performmeasure.png" alt="测量流程"></p>
 <figure class="highlight java"><figcaption><span>frameworks/base/core/java/android/view/ViewRootImpl.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">performMeasure</span><span class="params">(<span class="keyword">int</span> childWidthMeasureSpec, <span class="keyword">int</span> childHeightMeasureSpec)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (mView == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    Trace.traceBegin(Trace.TRACE_TAG_VIEW, <span class="string">"measure"</span>);</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        mView.measure(childWidthMeasureSpec, childHeightMeasureSpec);</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        Trace.traceEnd(Trace.TRACE_TAG_VIEW);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight java"><figcaption><span>frameworks/base/core/java/android/view/View.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">void</span> <span class="title">measure</span><span class="params">(<span class="keyword">int</span> widthMeasureSpec, <span class="keyword">int</span> heightMeasureSpec)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">boolean</span> optical = isLayoutModeOptical(<span class="keyword">this</span>);</span><br><span class="line">       <span class="keyword">if</span> (optical != isLayoutModeOptical(mParent)) &#123;</span><br><span class="line">           Insets insets = getOpticalInsets();</span><br><span class="line">           <span class="keyword">int</span> oWidth  = insets.left + insets.right;</span><br><span class="line">           <span class="keyword">int</span> oHeight = insets.top  + insets.bottom;</span><br><span class="line">           widthMeasureSpec  = MeasureSpec.adjust(widthMeasureSpec,  optical ? -oWidth  : oWidth);</span><br><span class="line">           heightMeasureSpec = MeasureSpec.adjust(heightMeasureSpec, optical ? -oHeight : oHeight);</span><br><span class="line">       &#125;</span><br><span class="line">       ......</span><br><span class="line">        <span class="keyword">if</span> (forceLayout || needsLayout) &#123;</span><br><span class="line">           <span class="comment">// first clears the measured dimension flag</span></span><br><span class="line">           mPrivateFlags &amp;= ~PFLAG_MEASURED_DIMENSION_SET;</span><br><span class="line"></span><br><span class="line">           resolveRtlPropertiesIfNeeded();</span><br><span class="line"></span><br><span class="line">           <span class="keyword">int</span> cacheIndex = forceLayout ? -<span class="number">1</span> : mMeasureCache.indexOfKey(key);</span><br><span class="line">           <span class="keyword">if</span> (cacheIndex &lt; <span class="number">0</span> || sIgnoreMeasureCache) &#123;</span><br><span class="line">               <span class="comment">// measure ourselves, this should set the measured dimension flag back</span></span><br><span class="line">               onMeasure(widthMeasureSpec, heightMeasureSpec);   <span class="comment">//调用onMeasure函数</span></span><br><span class="line">               mPrivateFlags3 &amp;= ~PFLAG3_MEASURE_NEEDED_BEFORE_LAYOUT;</span><br><span class="line">           &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">               <span class="keyword">long</span> value = mMeasureCache.valueAt(cacheIndex);</span><br><span class="line">               <span class="comment">// Casting a long to int drops the high 32 bits, no mask needed</span></span><br><span class="line">               setMeasuredDimensionRaw((<span class="keyword">int</span>) (value &gt;&gt; <span class="number">32</span>), (<span class="keyword">int</span>) value);</span><br><span class="line">               mPrivateFlags3 |= PFLAG3_MEASURE_NEEDED_BEFORE_LAYOUT;</span><br><span class="line">           &#125;</span><br><span class="line"></span><br><span class="line">           <span class="comment">// flag not set, setMeasuredDimension() was not invoked, we raise</span></span><br><span class="line">           <span class="comment">// an exception to warn the developer</span></span><br><span class="line">           <span class="keyword">if</span> ((mPrivateFlags &amp; PFLAG_MEASURED_DIMENSION_SET) != PFLAG_MEASURED_DIMENSION_SET) &#123;</span><br><span class="line">               <span class="keyword">throw</span> <span class="keyword">new</span> IllegalStateException(<span class="string">"View with id "</span> + getId() + <span class="string">": "</span></span><br><span class="line">                       + getClass().getName() + <span class="string">"#onMeasure() did not set the"</span></span><br><span class="line">                       + <span class="string">" measured dimension by calling"</span></span><br><span class="line">                       + <span class="string">" setMeasuredDimension()"</span>);</span><br><span class="line">           &#125;</span><br><span class="line"></span><br><span class="line">           mPrivateFlags |= PFLAG_LAYOUT_REQUIRED;</span><br><span class="line">       &#125;</span><br><span class="line">       ......</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onMeasure</span><span class="params">(<span class="keyword">int</span> widthMeasureSpec, <span class="keyword">int</span> heightMeasureSpec)</span> </span>&#123;</span><br><span class="line">      setMeasuredDimension(getDefaultSize(getSuggestedMinimumWidth(), widthMeasureSpec),</span><br><span class="line">              getDefaultSize(getSuggestedMinimumHeight(), heightMeasureSpec));</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="performLayout（布局）"><a href="#performLayout（布局）" class="headerlink" title="performLayout（布局）"></a>performLayout（布局）</h3><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="performlayout.png" alt="布局流程" title="">
-                </div>
-                <div class="image-caption">布局流程</div>
-            </figure>
-
+<h3 id="performLayout（布局）"><a href="#performLayout（布局）" class="headerlink" title="performLayout（布局）"></a>performLayout（布局）</h3><p><img src="performlayout.png" alt="布局流程"></p>
 <h3 id="performDraw（硬件渲染）"><a href="#performDraw（硬件渲染）" class="headerlink" title="performDraw（硬件渲染）"></a>performDraw（硬件渲染）</h3><blockquote>
 <p>performDraw调用draw，完成绘制工作。实际绘制操作可以分为硬件渲染和软件渲染两种情况。</p>
 </blockquote>
@@ -403,14 +570,7 @@
 <li>mDrawFrameTask：指向一个 DrawFrameTask 对象，Main thread 通过它向 Render Thread 线程发送渲染下一帧的命令。</li>
 </ol>
 <h4 id="Step4：ViewRootImpl-performTraversals"><a href="#Step4：ViewRootImpl-performTraversals" class="headerlink" title="Step4：ViewRootImpl.performTraversals"></a>Step4：ViewRootImpl.performTraversals</h4><p>当得到了有效的surface，就通过ThreadedRender的initialize方法，将该surface与RenderThread绑定。</p>
-<h4 id="硬件渲染流程图"><a href="#硬件渲染流程图" class="headerlink" title="硬件渲染流程图"></a>硬件渲染流程图</h4><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="hardware_render.png" alt="硬件渲染流程" title="">
-                </div>
-                <div class="image-caption">硬件渲染流程</div>
-            </figure>
-
+<h4 id="硬件渲染流程图"><a href="#硬件渲染流程图" class="headerlink" title="硬件渲染流程图"></a>硬件渲染流程图</h4><p><img src="hardware_render.png" alt="硬件渲染流程"></p>
 <p><strong>ThreadedRender.draw主要执行三个操作：</strong></p>
 <ol>
 <li>调用成员函数 updateRootDisplayList 构建或者更新应用程序窗口的 Root Render Node 的 DisplayList。<strong>RenderNode.start 和 RenderNode.end 直接的处理，与软件渲染的流程一样，只是硬件渲染的时候，只把渲染命令存储到 DisplayList 中，并不真正开始执行渲染操作。</strong></li>
@@ -452,222 +612,175 @@
 </ol>
 <h4 id="Step8-ViewRootImpl-drawSoftware"><a href="#Step8-ViewRootImpl-drawSoftware" class="headerlink" title="Step8. ViewRootImpl.drawSoftware"></a>Step8. ViewRootImpl.drawSoftware</h4><p>循环上面的过程，直到所有子视图都被绘制到画布上，返回 drawSoftware 方法。</p>
 <p>通过 surface.unlockCanvasAndPost()方法，请求 SurfaceFlinger 服务渲染这块画布到图形缓冲区。</p>
-<h4 id="软件渲染流程图"><a href="#软件渲染流程图" class="headerlink" title="软件渲染流程图"></a>软件渲染流程图</h4><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="software_render.png" alt="软件渲染流程图" title="">
-                </div>
-                <div class="image-caption">软件渲染流程图</div>
-            </figure>
-        </div>
+<h4 id="软件渲染流程图"><a href="#软件渲染流程图" class="headerlink" title="软件渲染流程图"></a>软件渲染流程图</h4><p><img src="software_render.png" alt="软件渲染流程图"></p>
 
-        <blockquote class="post-copyright">
-    
-    <div class="content">
-        
-<span class="post-time">
-    Last updated: <time datetime="2020-03-08T10:14:08.790Z" itemprop="dateUpdated">2020-03-08 18:14:08</time>
-</span><br>
-
-
-        
-        版权声明:署名-非商用-相同方式共享 4.0 转载请保留原文链接及作者
-        
-    </div>
-    
-    <footer>
-        <a href="http://wizzie.top">
-            <img src="/img/avatar.jpg" alt="sunwengang">
-            sunwengang
-        </a>
-    </footer>
-</blockquote>
-
-        
-<div class="page-reward">
-    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
-</div>
-
-
-
-        <div class="post-footer">
+                    </article>
+                    
+    <blockquote class="post-license">
+        <p>
+            <strong>本文作者&nbsp;:&nbsp;sunwengang</strong>
+            <br>
+            <strong>
             
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/graphics/" rel="tag">graphics</a></li></ul>
-
-
-            
-
-
-        </div>
-    </div>
-
-    
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2019/09/22/2019/190922-android-handler-cpp/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">Android Handler消息循环处理机制(例ActivityThread)</h4>
-      </a>
-    </div>
-  
-
-  
-    <div class="waves-block waves-effect next">
-      <a href="/2019/09/16/2019/190916_cpp_useclass/" id="post-next" class="post-nav-link">
-        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">C++ 运算符重载、友元、返回对象</h4>
-      </a>
-    </div>
-  
-</nav>
+                本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)</a> 协议
+            </strong>
+            <br>
+            <strong>本文链接&nbsp;:&nbsp;</strong><a href="http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/">http://wizzie.top/2019/09/21/2019/190921-android-wms-view-cpp/</a>
+        </p>
+    </blockquote>
 
 
 
-    
+    <blockquote id="date-expire-notification" class="post-expired-notify">本文最后更新于 <span id="date-expire-num"></span> 天前，文中所描述的信息可能已发生改变</blockquote>
+    <script>
+    (function() {
+        var dateUpdate = Date.parse("2020-03-08");
+        var nowDate = new Date();
+        var a = nowDate.getTime();
+        var b = a - dateUpdate;
+        var daysUpdateExpire = Math.floor(b/(24*3600*1000));
+        if (daysUpdateExpire >= 120) {
+            document.getElementById('date-expire-num').innerHTML = daysUpdateExpire;
+        } else {
+            document.getElementById('date-expire-notification').style.display = 'none';
+        }
+    })();
+    </script>
+
+
+<p class="post-footer-info mb-0 pt-0">本文发表于&nbsp;<time datetime="2019-09-21T13:32:22.000Z" itemprop="datePublished">2019-09-21</time>
+
+    , 最后修改于&nbsp;<time datetime="2020-03-08T10:14:08.790Z" itemprop="dateModified">2020-03-08</time>
+
+</p>
+<p class="post-footer-info mb-0 pt-2">
+
+<span class="post-categories-list mt-2">
+
+<a class="post-categories-list-item" href='/categories/android/'>android</a>
+
+</span>
 
 
 
+<span class="post-tags-list mt-2">
+
+<a class="post-tags-list-item" href="/tags/graphics/" rel="tag">#&nbsp;graphics</a>
+
+</span>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</article>
-
-<div id="reward" class="page-modal reward-lay">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <h3 class="reward-title">
-        <i class="icon icon-quote-left"></i>
-        奥利给
-        <i class="icon icon-quote-right"></i>
-    </h3>
-    <div class="reward-content">
-        
-        <div class="reward-code">
-            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
-        </div>
-        
-        <label class="reward-toggle">
-            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
-                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
-            <div class="reward-toggle-ctrol">
-                <span class="reward-toggle-item wechat">微信</span>
-                <span class="reward-toggle-label"></span>
-                <span class="reward-toggle-item alipay">支付宝</span>
-            </div>
-        </label>
-        
-    </div>
-</div>
-
-
-
-</div>
-
-        <footer class="footer">
-    <div class="top">
-        
-<p>
-    <span id="busuanzi_container_site_uv" style='display:none'>
-        站点总访客数：<span id="busuanzi_value_site_uv"></span>
-    </span>
-    <span id="busuanzi_container_site_pv" style='display:none'>
-        站点总访问量：<span id="busuanzi_value_site_pv"></span>
-    </span>
 </p>
 
+                </div>
+                <div class="post-nav px-2 bg-gray">
+<ul class="pagination">
+    <!-- Prev Nav -->
+    
+        <li class="page-item page-prev">
+            <a href="/2019/09/22/2019/190922-android-handler-cpp/" rel="prev">
+                <div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">Android Handler消息循环处理机制(例ActivityThread)</div>
+            </a>
+        </li>
+    
 
-        <p>
-            
-                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
-            
-            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
-        </p>
-    </div>
-    <div class="bottom">
-        <p><span>sunwengang &copy; 2019 - 2020</span>
-            <span>
+    <!-- Next Nav -->
+    
+        <li class="page-item page-next">
+            <a href="/2019/09/16/2019/190916_cpp_useclass/" rel="next">
+                <div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">C++ 运算符重载、友元、返回对象</div>
+            </a>
+        </li>
+    
+</ul>
+</div>
+
                 
-                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
-            </span>
-        </p>
+                    <!-- # Comment # -->
+                    
+                
+            </div>
+        </div>
     </div>
+</div>
+
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    
+        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
+            <a class="footer-copyright-a" href="http://wizzie.top">sunwengang blog</a>
+        </p>
+
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
+        
+    <!-- Busuanzi User Views -->
+    <span id="busuanzi_container_site_uv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_uv"></span>
+        <span>Viewers</span>
+        
+            <span>|</span>
+        
+    </span>
+
+
+
+
+        
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
 </footer>
 
-    </main>
-    <div class="mask" id="mask"></div>
-<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
-
-    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script>
-var BLOG = { ROOT: '/', SHARE: false, REWARD: true };
-
-
-</script>
-
-<script src="/js/main.min.js?v=1.7.2"></script>
-
-
-<div class="search-panel" id="search-panel">
-    <ul class="search-result" id="search-result"></ul>
-</div>
-<template id="search-tpl">
-<li class="item">
-    <a href="{path}" class="waves-block waves-effect">
-        <div class="title ellipsis" title="{title}">{title}</div>
-        <div class="flex-row flex-middle">
-            <div class="tags ellipsis">
-                {tags}
-            </div>
-            <time class="flex-col time">{date}</time>
-        </div>
-    </a>
-</li>
-</template>
-
-<script src="/js/search.min.js?v=1.7.2" async></script>
-
-
-
-
-
-
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
+        <!-- ### Import File ### -->
+        <!-- ### Footer JS Import ### -->
 
 <script>
+
+    
+window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+};
+
 (function() {
-    var OriginTitile = document.title, titleTime;
-    document.addEventListener('visibilitychange', function() {
-        if (document.hidden) {
-            document.title = '';
-            clearTimeout(titleTime);
-        } else {
-            document.title = '(つェ⊂)咦!又好了!';
-            titleTime = setTimeout(function() {
-                document.title = OriginTitile;
-            },2000);
-        }
-    });
+    var copyrightNow = new Date().getFullYear();
+    var copyrightContent = document.getElementById('copyright-year');
+    var copyrightSince = 2019;
+    if (copyrightSince === copyrightNow) {
+        copyrightContent.textContent = copyrightNow;
+    } else {
+        copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+    }
 })();
+console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
+
 </script>
 
+<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" async></script>
 
 
-</body>
+<!-- Offset -->
+
+
+
+
+<!-- Comment -->
+
+
+<!-- ### Custom Footer ### -->
+
+    </body>
+
 </html>

@@ -1,211 +1,445 @@
 <!DOCTYPE html>
-<html>
-<head>
-    
 
-    
-
-    
-
-
-
+<html lang="zh-CN">
+    <head>
     <meta charset="utf-8">
+    <!--
+        hexo-theme-suka © SukkaW
+        GitHub: https://github.com/SukkaW/hexo-theme-suka
+    -->
+
+    <!-- ### Resource Hint ### -->
+
+    <!-- ## DNS Prefetch ## -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+<!-- busuanzi -->
+
+    <link rel="dns-prefetch" href="//busuanzi.ibruce.info">
+
+
+<!-- comment -->
+
+
+
+
+
+
+
+<!-- analytics -->
+
+
+
+
+
+
+
+    <!-- ## Preload ## -->
     
+    <!-- Busuanzi -->
     
-    
-    <link rel="canonical" href="true/2019/10/23/2019/191023_android_shell/">
-    
-    
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" as="script">
+
+
+
+
+
+
+
+    <!-- ### Meta & Title & Info ### -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
+
+    <!-- Title -->
     <title>Android Shell脚本应用 | sunwengang blog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <meta name="theme-color" content="#3F51B5">
-    
-    
-    <meta name="keywords" content="shell">
-    <meta name="description" content="基本结构.sh（系统中文.ch.sh）#!&#x2F;bin&#x2F;bash 脚本开头 #!&#x2F;bin&#x2F;csh 是 C shell 的命令解">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Android Shell脚本应用">
-<meta property="og:url" content="http://wizzie.top/2019/10/23/2019/191023_android_shell/index.html">
-<meta property="og:site_name" content="sunwengang blog">
-<meta property="og:description" content="基本结构.sh（系统中文.ch.sh）#!&#x2F;bin&#x2F;bash 脚本开头 #!&#x2F;bin&#x2F;csh 是 C shell 的命令解">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2019-10-23T15:52:00.000Z">
-<meta property="article:modified_time" content="2020-03-08T10:17:25.211Z">
-<meta property="article:author" content="sunwengang">
-<meta property="article:tag" content="shell">
-<meta name="twitter:card" content="summary">
-    
-        <link rel="alternate" type="application/atom+xml" title="sunwengang blog" href="/atom.xml">
-    
-    <link rel="shortcut icon" href="/img/favicon.ico">
-    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
-    <script>window.lazyScripts=[]</script>
 
-    <!-- custom head -->
+    <!-- Favicons -->
+    <link rel="icon" type="image&#x2F;ico" href="/img/favicon.ico">
+
+    <!-- ### Import File ### -->
+    <link rel="stylesheet" href="/lib/spectre/spectre.min.css"><style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    a, a:visited {
+        color: #0070ff;
+    }
+
+    a:active, a:focus, a:hover {
+        color: #0070ff;
+        opacity: .75;
+    }
+
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #005eb9;
+        opacity: 1;
+    }
+
     
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+    .post-entry .card-body a {
+        color: #0070ff;
+    }
 
-<body>
-    <div id="loading" class="active"></div>
+    .avatar {
+        background: #444;
+    }
 
-    <aside id="menu" class="hide" >
-  <div class="inner flex-row-vertical">
-    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
-        <i class="icon icon-lg icon-close"></i>
-    </a>
-    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
-      <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/img/avatar.jpg">
-        </a>
-        <hgroup class="introduce">
-          <h5 class="nickname">sunwengang</h5>
-          <a href="mailto:1332963488@qq.com" title="1332963488@qq.com" class="mail">1332963488@qq.com</a>
-        </hgroup>
-      </div>
-    </div>
-    <div class="scroll-wrap flex-col">
-      <ul class="nav">
-        
-            <li class="waves-block waves-effect">
-              <a href="/"  >
-                <i class="icon icon-lg icon-home"></i>
-                Home
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/archives"  >
-                <i class="icon icon-lg icon-archives"></i>
-                Archives
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/tags"  >
-                <i class="icon icon-lg icon-tags"></i>
-                Tags
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/categories"  >
-                <i class="icon icon-lg icon-th-list"></i>
-                Categories
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="https://www.cnblogs.com/1996swg" target="_blank" >
-                <i class="icon icon-lg icon-book"></i>
-                cnblog
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="https://github.com/AloneAlive" target="_blank" >
-                <i class="icon icon-lg icon-github"></i>
-                Github
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/html/nav.html" target="_blank" >
-                <i class="icon icon-lg icon-external-link-square"></i>
-                nav
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/others"  >
-                <i class="icon icon-lg icon-address-book"></i>
-                friends
-              </a>
-            </li>
-        
-      </ul>
-    </div>
-  </div>
-</aside>
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #0070ff;
+    }
 
-    <main id="main">
-        <header class="top-header" id="header">
-    <div class="flex-row">
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
-          <i class="icon icon-lg icon-navicon"></i>
-        </a>
-        <div class="flex-col header-title ellipsis">Android Shell脚本应用</div>
+    .navbar-link:hover {
+        color: #0070ff;
+        opacity: .8;
+    }
+
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #727e96;
+        border-color: #727e96;
+        color: #fff;
+    }
+
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #727e96;
+    }
+
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
+</style><link rel="stylesheet" href="/css/style.min.css">
+
+
+
+
+
+
+
+
+    <!-- Prettify Theme -->
+    
+    <link rel="preload" href="/css/highlight/arduino-light.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/highlight/arduino-light.min.css"></noscript>
+
+
+
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+</script>
+
+    <!-- ### Site Verification ### -->
+    
+
+
+    <link rel="alternate" type="application/atom+xml" href="/atom.xml"><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="sunwengang blog"><meta name="msapplication-starturl" content="http://wizzie.top"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="sunwengang blog"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- ### The Open Graph & Twitter Card Protocol ### -->
+    <meta property="og:title" content="Android Shell脚本应用 | sunwengang blog"><meta property="og:site_name" content="sunwengang blog"><meta property="og:type" content="article"><meta property="og:url" content="http://wizzie.top/2019/10/23/2019/191023_android_shell/"><meta property="og:locale" content="zh-CN"><meta name="description" content="基本结构.sh（系统中文.ch.sh）#!&#x2F;bin&#x2F;bash 脚本开头 #!&#x2F;bin&#x2F;csh 是 C shell 的命令解 - sunwengang - sunwengang blog"><meta name="keywords" content="shell"><meta property="article:published_time" content="2019-10-23T15:52:00.000Z"><meta property="article:modified_time" content="2020-03-08T10:17:25.211Z"><meta property="og:updated_time" content="2020-03-08T10:17:25.211Z"><meta property="article:author" content="sunwengang"><meta property="article:tag" content="shell"><meta name="twitter:card" content="summary">
+
+    
+
+    <!-- ### Canonical link ### -->
+    <link rel="canonical" href="http://wizzie.top/2019/10/23/2019/191023_android_shell/">
+
+    <meta name="generator" content="Hexo 4.2.0">
+
+    <!-- ### Analytics ### -->
+    
+
+
+
+
+
+
+
+    <!-- ### Structured Data ### -->
+    
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "url": "http://wizzie.top/2019/10/23/2019/191023_android_shell/",
+    "@type": "BlogPosting",
+    "logo": "http://wizzie.top/img/favicon.ico",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://wizzie.top/2019/10/23/2019/191023_android_shell/"
+    },
+    "headline": "Android Shell脚本应用 | sunwengang blog",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://wizzie.top/img/favicon.ico"
+    },
+    
+    "datePublished": "2019-10-23T15:52:00.000Z",
+    "dateModified": "2020-03-08T10:17:25.211Z",
+    "author": {
+        "@type": "Person",
+        "name": "sunwengang",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://wizzie.top/img/avatar.jpg"
+        },
+        "description": "休想打败我的生活"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "sunwengang blog",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://wizzie.top/img/favicon.ico"
+        }
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "http://wizzie.top/search?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": "shell",
+    "description": "基本结构.sh（系统中文.ch.sh）#!/bin/bash 脚本开头 #!/bin/csh 是 C shell 的命令解 - sunwengang - sunwengang blog"
+}
+</script>
+
+
+
+    <!-- ### Custom Head ### -->
+    
+</head>
+
+    <body>
+            
+
+            <!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">sunwengang blog</a></h1>
+
+    <p class="text-center header-slogan">
         
-        <div class="search-wrap" id="search-wrap">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-                <i class="icon icon-lg icon-chevron-left"></i>
-            </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
-                <i class="icon icon-lg icon-search"></i>
-            </a>
-        </div>
+            
+                休想打败我的生活
+            
         
+    </p>
+
+    <nav class="navbar-section text-center">
+    
+        <a href="/" class="navbar-link">首页</a>
+    
+    
+        <a href="/archives/" class="navbar-link">归档</a>
+    
+    
+        <a href="/search" class="navbar-link">搜索</a>
+    
+    
+        <a href="/tags" class="navbar-link">标签</a>
+    
+        <a href="/html/nav.html" class="navbar-link">导航</a>
+    
+        <a href="/links" class="navbar-link">友链</a>
+    
+    
+        <div class="dropdown dropdown-right">
+    <a class="navbar-link dropdown-toggle" tabindex="0">分享</a>
+    <ul class="menu share-menu">
+
+        <!-- Share Weibo -->
         
-    </div>
+        <li class="menu-item">
+            <a href="http://service.weibo.com/share/share.php?appkey=&title=sunwengang blog&url=http://wizzie.top&pic=http://wizzie.top/img/favicon.ico&searchPic=false&style=simple" target="_blank" rel="external noopener noreferrer nofollow">分享到微博</a>
+        </li>
+        
+
+        <!-- Share Twitter -->
+        
+        <li class="menu-item">
+            <a href="https://twitter.com/intent/tweet?text=sunwengang blog&url=http://wizzie.top&via=sunwengang" target="_blank" rel="external noopener noreferrer nofollow">分享到 Twitter</a>
+        </li>
+        
+
+        <!-- Share Facebook -->
+        
+        <li class="menu-item">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://wizzie.top" target="_blank" rel="external noopener noreferrer nofollow">分享到 Facebook</a>
+        </li>
+        
+
+        <!-- Share Google+ -->
+        
+        <li class="menu-item">
+            <a href="https://plus.google.com/share?url=http://wizzie.top" target="_blank" rel="external noopener noreferrer nofollow">分享到 Google+</a>
+        </li>
+        
+
+        <!-- Share LinkedIn -->
+        
+        <li class="menu-item">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://wizzie.top&title=Android Shell脚本应用" target="_blank" rel="external noopener noreferrer nofollow">分享到 LinkedIn</a>
+        </li>
+        
+
+        <!-- Share QQ -->
+        
+        <li class="menu-item">
+            <a href="http://connect.qq.com/widget/shareqq/index.html?site=sunwengang blog&title=Android Shell脚本应用&summary=&pics=http://wizzie.top/img/favicon.ico&url=http://wizzie.top" target="_blank" rel="external noopener noreferrer nofollow"> 分享到 QQ</a>
+        </li>
+        
+
+        <!-- Share Telegram -->
+        
+        <li class="menu-item">
+            <a href="https://t.me/share/url?url=http://wizzie.top&text=Android Shell脚本应用" target="_blank" rel="external noopener noreferrer nofollow">分享到 Telegram</a>
+        </li>
+        
+
+        <!-- QRCode -->
+        
+        <li class="menu-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAAAAABQV18IAAAB3klEQVR42u3aQQ6DMAxEUe5/6XZbocQzplkkw2dDharyKhnsOL4+Gx4XKFCgQA1QV3GMvvN77f55dL5/Lu8DKgY1DLoBavSd+3Xn96b3ARWFugfe7LoK7hlA3QfUu1AykRYIUKBUUu0mclDvRVUvO5WEVaG3vEoAtT2qCtiV52WrGVBbo5xkO/uRzoOwtOsCamtUFYiqYBtBOoEOKhM1C+hOwFfXRsEvizxQx6MucaiH4kmTTAY6qGNRo6KuWnw6DQ31Mp0md1ARKKeZ6m4AzR6eqggsX56gjkY5idZprjobBNNEDSoCVUGqTSMnyN1FBag8lMJUjX2nkHMWuKCyUU5z32ngug8MqCyUk3jdgrBqrikwqBxUJ0idDW81jNNucICKQambuINbzh8GlYdym/duQ8RZ4C7ZhAS1LUptRleFoFPAuUkcVA7KGc7qJlqn4JMvT1AxqNZwn7kJ4MBAZaHcje1O494p+NpVAqjtUe6gYFWktTavqwQOKgL1z+CNs5HkbhaBykI5i4WqqaGaGY+aZqCOR3USa7WwUE2yx10XUFGoJyC1oJADOKCiUZ1BVWdocBbsoLJQThNDNfydQdQlVQKo7VGdJoQafnCHdazpRVBHonY6QIECBern+ALAhjGAfLvprAAAAABJRU5ErkJggg==" alr="QRCode">
+        </li>
+        
+
+    </ul>
+</div>
+    
+    
+</nav>
 </header>
-<header class="content-header post-header">
-
-    <div class="container fade-scale">
-        <h1 class="title">Android Shell脚本应用</h1>
-        <h5 class="subtitle">
-            
-                <time datetime="2019-10-23T15:52:00.000Z" itemprop="datePublished" class="page-time">
-  2019-10-23
-</time>
-
-
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/android/">android</a></li></ul>
 
             
-        </h5>
-    </div>
-
-    
-
-
-</header>
-
-
-<div class="container body-wrap">
-    
-    <aside class="post-widget">
-        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
-            <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基本结构-sh（系统中文-ch-sh）"><span class="post-toc-number">1.</span> <span class="post-toc-text">基本结构.sh（系统中文.ch.sh）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#export"><span class="post-toc-number">2.</span> <span class="post-toc-text">export</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#用语句给变量赋值，如将-etc下目录的文件名循环出来"><span class="post-toc-number">3.</span> <span class="post-toc-text">用语句给变量赋值，如将&#x2F;etc下目录的文件名循环出来</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#、-0、-1、-2"><span class="post-toc-number">4.</span> <span class="post-toc-text">$、$0、$1、$2..</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ps-ef-grep-surfaceFlinger-awk-‘-print-2-’的含义"><span class="post-toc-number">5.</span> <span class="post-toc-text">ps -ef |grep surfaceFlinger |awk ‘{print $2}’的含义</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#两种方式声明函数"><span class="post-toc-number">6.</span> <span class="post-toc-text">两种方式声明函数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#while-语句"><span class="post-toc-number">7.</span> <span class="post-toc-text">while 语句</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#android-serial-adb-shell-getprop-“re-serialno”-获取设备序列号"><span class="post-toc-number">8.</span> <span class="post-toc-text">$android_serial&#x3D;$(adb shell getprop “re.serialno”)获取设备序列号</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#adb-shell-input-swipe-359-1600-359-340-500"><span class="post-toc-number">9.</span> <span class="post-toc-text">adb shell input swipe 359 1600 359 340 500</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#if-ps-ef-grep-c-quot-ssh-quot-gt-1-then-echo-quot-true-quot-fi（适合中断，写成一行）"><span class="post-toc-number">10.</span> <span class="post-toc-text">if [ $(ps -ef | grep -c &quot;ssh&quot;) -gt 1 ]; then echo &quot;true&quot;; fi（适合中断，写成一行）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#sed-i-‘s-15-g’-tmp-txt"><span class="post-toc-number">11.</span> <span class="post-toc-text">sed -i ‘s&#x2F;^.\{15\}&#x2F;&#x2F;g’ tmp.txt</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#sed-i就是直接对文本文件进行操作"><span class="post-toc-number">11.1.</span> <span class="post-toc-text">sed -i就是直接对文本文件进行操作</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#正则"><span class="post-toc-number">11.2.</span> <span class="post-toc-text">正则</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#sed"><span class="post-toc-number">11.3.</span> <span class="post-toc-text">sed</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#多选择语句case"><span class="post-toc-number">12.</span> <span class="post-toc-text">多选择语句case</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#adb-shell-pidof-”mediaserver“"><span class="post-toc-number">13.</span> <span class="post-toc-text">adb shell pidof ”mediaserver“</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#adb-shell-am-start-n"><span class="post-toc-number">14.</span> <span class="post-toc-text">adb shell am start -n</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#adb-shell-input-tap-x-y"><span class="post-toc-number">15.</span> <span class="post-toc-text">adb shell input tap x y</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#adb-shell-dumpsys-window-windows-grep-Current-tee-tmp-txt"><span class="post-toc-number">16.</span> <span class="post-toc-text">adb shell dumpsys window windows |grep Current |tee tmp.txt</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#date-Y-m-d-H-M-S输出日期"><span class="post-toc-number">17.</span> <span class="post-toc-text">date + %Y%m%d_%H%M%S输出日期</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#date-N-cut-c-3"><span class="post-toc-number">18.</span> <span class="post-toc-text">date + %N | cut -c -3</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#cat-systrace-html-grep-postComp-wc-l"><span class="post-toc-number">19.</span> <span class="post-toc-text">cat **systrace.html |grep postComp |wc -l</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#（视频播放时）旋转屏幕"><span class="post-toc-number">20.</span> <span class="post-toc-text">（视频播放时）旋转屏幕</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#shell判断数组中是否包含某个元素"><span class="post-toc-number">21.</span> <span class="post-toc-text">shell判断数组中是否包含某个元素</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#解决播放结束后，判断当前activity然后重新播放"><span class="post-toc-number">22.</span> <span class="post-toc-text">解决播放结束后，判断当前activity然后重新播放</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#包含关系"><span class="post-toc-number">23.</span> <span class="post-toc-text">包含关系</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#查找手机文件"><span class="post-toc-number">24.</span> <span class="post-toc-text">查找手机文件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#播放视频"><span class="post-toc-number">25.</span> <span class="post-toc-text">播放视频</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#逐行读某个文件"><span class="post-toc-number">26.</span> <span class="post-toc-text">逐行读某个文件</span></a></li></ol>
-        </nav>
-    </aside>
-
-
-<article id="post-2019/191023_android_shell"
-  class="post-article article-type-post fade" itemprop="blogPost">
-
-    <div class="post-card">
-        <h1 class="post-card-title">Android Shell脚本应用</h1>
-        <div class="post-meta">
-            <time class="post-time" title="2019-10-23 23:52:00" datetime="2019-10-23T15:52:00.000Z"  itemprop="datePublished">2019-10-23</time>
-
-            
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/android/">android</a></li></ul>
+    <!-- ## Post ## -->
+    <div class="post-container">
+    <div id="post-card" class="card">
+        
+        <div class="card-item-container">
+            <div class="card-inner-cell">
+                <!-- # Post Header Info # -->
+                <div class="card-header">
+                    
+    <h1 class="card-title h3 mb-2">Android Shell脚本应用</h1>
 
 
 
-            
-<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
-    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+
+<div class="post-header-info">
+    <p class="post-header-info-left text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <span>2019-10-23</span>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/android/">android</a>
+        
+        
+            <!-- Busuanzi Post Views -->
+<span id="busuanzi_container_page_pv" hidden>
+    <span class="suka-devide-dot"></span>
+    <span></span>
+    <span id="busuanzi_value_page_pv"></span>
+    <span>Views</span>
 </span>
+        
+        
+    </p>
+    <div class="post-header-info-right">
+        
+            <div class="dropdown dropdown-right">
+<a class="dropdown-toggle" tabindex="0">分享本文</a>
+<ul class="menu share-menu">
+    <!-- Share Weibo -->
+    
+    <li class="menu-item">
+        <a href="http://service.weibo.com/share/share.php?appkey=&title=Android Shell脚本应用&url=http://wizzie.top/2019/10/23/2019/191023_android_shell/&pic=http://wizzie.top/img/favicon.ico&searchPic=false&style=simple" target="_blank" rel="external noopener noreferrer nofollow">分享到微博</a>
+    </li>
+    
 
+    <!-- Share Twitter -->
+    
+    <li class="menu-item">
+        <a href="https://twitter.com/intent/tweet?text=Android Shell脚本应用&url=http://wizzie.top/2019/10/23/2019/191023_android_shell/&via=sunwengang" target="_blank" rel="external noopener noreferrer nofollow">分享到 Twitter</a>
+    </li>
+    
 
-        </div>
-        <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="基本结构-sh（系统中文-ch-sh）"><a href="#基本结构-sh（系统中文-ch-sh）" class="headerlink" title="基本结构.sh（系统中文.ch.sh）"></a>基本结构.sh（系统中文.ch.sh）</h2><p><code>#!/bin/bash</code> 脚本开头</p>
+    <!-- Share Facebook -->
+    
+    <li class="menu-item">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://wizzie.top/2019/10/23/2019/191023_android_shell/" target="_blank" rel="external noopener noreferrer nofollow">分享到 Facebook</a>
+    </li>
+    
+
+    <!-- Share Google+ -->
+    
+    <li class="menu-item">
+        <a href="https://plus.google.com/share?url=http://wizzie.top/2019/10/23/2019/191023_android_shell/" target="_blank" rel="external noopener noreferrer nofollow">分享到 Google+</a>
+    </li>
+    
+
+    <!-- Share LinkedIn -->
+    
+    <li class="menu-item">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://wizzie.top/2019/10/23/2019/191023_android_shell/&title=sunwengang blog" target="_blank" rel="external noopener noreferrer nofollow">分享到 LinkedIn</a>
+    </li>
+    
+
+    <!-- Share QQ -->
+    
+    <li class="menu-item">
+        <a href="http://connect.qq.com/widget/shareqq/index.html?site=sunwengang blog&title=sunwengang blog&summary=&pics=http://wizzie.top/img/favicon.ico&url=http://wizzie.top/2019/10/23/2019/191023_android_shell/" target="_blank" rel="external noopener noreferrer nofollow"> 分享到 QQ</a>
+    </li>
+    
+
+    <!-- Share Telegram -->
+    
+    <li class="menu-item">
+        <a href="https://t.me/share/url?url=http://wizzie.top/2019/10/23/2019/191023_android_shell/&text=sunwengang blog" target="_blank" rel="external noopener noreferrer nofollow">分享到 Telegram</a>
+    </li>
+    
+
+    <!-- QRCode -->
+    
+    <li class="menu-item">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAAAAABQV18IAAAB3klEQVR42u3aQQ6DMAxEUe5/6XZbocQzplkkw2dDharyKhnsOL4+Gx4XKFCgQA1QV3GMvvN77f55dL5/Lu8DKgY1DLoBavSd+3Xn96b3ARWFugfe7LoK7hlA3QfUu1AykRYIUKBUUu0mclDvRVUvO5WEVaG3vEoAtT2qCtiV52WrGVBbo5xkO/uRzoOwtOsCamtUFYiqYBtBOoEOKhM1C+hOwFfXRsEvizxQx6MucaiH4kmTTAY6qGNRo6KuWnw6DQ31Mp0md1ARKKeZ6m4AzR6eqggsX56gjkY5idZprjobBNNEDSoCVUGqTSMnyN1FBag8lMJUjX2nkHMWuKCyUU5z32ngug8MqCyUk3jdgrBqrikwqBxUJ0idDW81jNNucICKQambuINbzh8GlYdym/duQ8RZ4C7ZhAS1LUptRleFoFPAuUkcVA7KGc7qJlqn4JMvT1AxqNZwn7kJ4MBAZaHcje1O494p+NpVAqjtUe6gYFWktTavqwQOKgL1z+CNs5HkbhaBykI5i4WqqaGaGY+aZqCOR3USa7WwUE2yx10XUFGoJyC1oJADOKCiUZ1BVWdocBbsoLJQThNDNfydQdQlVQKo7VGdJoQafnCHdazpRVBHonY6QIECBern+ALAhjGAfLvprAAAAABJRU5ErkJggg==" alt="QRCode">
+    </li>
+    
+
+</ul>
+</div>
+        
+    </div>
+</div>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        
+                            <div id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基本结构-sh（系统中文-ch-sh）"><span class="post-toc-number">1.</span> <span class="post-toc-text">基本结构.sh（系统中文.ch.sh）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#export"><span class="post-toc-number">2.</span> <span class="post-toc-text">export</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#用语句给变量赋值，如将-etc下目录的文件名循环出来"><span class="post-toc-number">3.</span> <span class="post-toc-text">用语句给变量赋值，如将&#x2F;etc下目录的文件名循环出来</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#、-0、-1、-2"><span class="post-toc-number">4.</span> <span class="post-toc-text">$、$0、$1、$2..</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ps-ef-grep-surfaceFlinger-awk-‘-print-2-’的含义"><span class="post-toc-number">5.</span> <span class="post-toc-text">ps -ef |grep surfaceFlinger |awk ‘{print $2}’的含义</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#两种方式声明函数"><span class="post-toc-number">6.</span> <span class="post-toc-text">两种方式声明函数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#while-语句"><span class="post-toc-number">7.</span> <span class="post-toc-text">while 语句</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#android-serial-adb-shell-getprop-“re-serialno”-获取设备序列号"><span class="post-toc-number">8.</span> <span class="post-toc-text">$android_serial&#x3D;$(adb shell getprop “re.serialno”)获取设备序列号</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#adb-shell-input-swipe-359-1600-359-340-500"><span class="post-toc-number">9.</span> <span class="post-toc-text">adb shell input swipe 359 1600 359 340 500</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#if-ps-ef-grep-c-quot-ssh-quot-gt-1-then-echo-quot-true-quot-fi（适合中断，写成一行）"><span class="post-toc-number">10.</span> <span class="post-toc-text">if [ $(ps -ef | grep -c &quot;ssh&quot;) -gt 1 ]; then echo &quot;true&quot;; fi（适合中断，写成一行）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#sed-i-‘s-15-g’-tmp-txt"><span class="post-toc-number">11.</span> <span class="post-toc-text">sed -i ‘s&#x2F;^.\{15\}&#x2F;&#x2F;g’ tmp.txt</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#sed-i就是直接对文本文件进行操作"><span class="post-toc-number">11.1.</span> <span class="post-toc-text">sed -i就是直接对文本文件进行操作</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#正则"><span class="post-toc-number">11.2.</span> <span class="post-toc-text">正则</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#sed"><span class="post-toc-number">11.3.</span> <span class="post-toc-text">sed</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#多选择语句case"><span class="post-toc-number">12.</span> <span class="post-toc-text">多选择语句case</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#adb-shell-pidof-”mediaserver“"><span class="post-toc-number">13.</span> <span class="post-toc-text">adb shell pidof ”mediaserver“</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#adb-shell-am-start-n"><span class="post-toc-number">14.</span> <span class="post-toc-text">adb shell am start -n</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#adb-shell-input-tap-x-y"><span class="post-toc-number">15.</span> <span class="post-toc-text">adb shell input tap x y</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#adb-shell-dumpsys-window-windows-grep-Current-tee-tmp-txt"><span class="post-toc-number">16.</span> <span class="post-toc-text">adb shell dumpsys window windows |grep Current |tee tmp.txt</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#date-Y-m-d-H-M-S输出日期"><span class="post-toc-number">17.</span> <span class="post-toc-text">date + %Y%m%d_%H%M%S输出日期</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#date-N-cut-c-3"><span class="post-toc-number">18.</span> <span class="post-toc-text">date + %N | cut -c -3</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#cat-systrace-html-grep-postComp-wc-l"><span class="post-toc-number">19.</span> <span class="post-toc-text">cat **systrace.html |grep postComp |wc -l</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#（视频播放时）旋转屏幕"><span class="post-toc-number">20.</span> <span class="post-toc-text">（视频播放时）旋转屏幕</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#shell判断数组中是否包含某个元素"><span class="post-toc-number">21.</span> <span class="post-toc-text">shell判断数组中是否包含某个元素</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#解决播放结束后，判断当前activity然后重新播放"><span class="post-toc-number">22.</span> <span class="post-toc-text">解决播放结束后，判断当前activity然后重新播放</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#包含关系"><span class="post-toc-number">23.</span> <span class="post-toc-text">包含关系</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#查找手机文件"><span class="post-toc-number">24.</span> <span class="post-toc-text">查找手机文件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#播放视频"><span class="post-toc-number">25.</span> <span class="post-toc-text">播放视频</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#逐行读某个文件"><span class="post-toc-number">26.</span> <span class="post-toc-text">逐行读某个文件</span></a></li></ol></div>
+                        
+                    
+                    <article id="post-content">
+                        <h2 id="基本结构-sh（系统中文-ch-sh）"><a href="#基本结构-sh（系统中文-ch-sh）" class="headerlink" title="基本结构.sh（系统中文.ch.sh）"></a>基本结构.sh（系统中文.ch.sh）</h2><p><code>#!/bin/bash</code> 脚本开头</p>
 <p><code>#!/bin/csh</code> 是 C shell 的命令解</p>
 <a id="more"></a>
 
@@ -340,215 +574,173 @@
 <h2 id="播放视频"><a href="#播放视频" class="headerlink" title="播放视频"></a>播放视频</h2><p><code>adb shell am start -a android.intent.action.VIEW -d &quot;file:///storage/...../Test.mp4&quot; -t &quot;video/&quot;</code></p>
 <h2 id="逐行读某个文件"><a href="#逐行读某个文件" class="headerlink" title="逐行读某个文件"></a>逐行读某个文件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">while read line</span><br><span class="line">do</span><br><span class="line">…</span><br><span class="line">done &lt; file // `&lt;`是读，`&gt;`是写入，`&gt;&gt;`是写入到某个文件的末尾</span><br></pre></td></tr></table></figure>
 
-        </div>
-
-        <blockquote class="post-copyright">
-    
-    <div class="content">
-        
-<span class="post-time">
-    Last updated: <time datetime="2020-03-08T10:17:25.211Z" itemprop="dateUpdated">2020-03-08 18:17:25</time>
-</span><br>
-
-
-        
-        版权声明:署名-非商用-相同方式共享 4.0 转载请保留原文链接及作者
-        
-    </div>
-    
-    <footer>
-        <a href="http://wizzie.top">
-            <img src="/img/avatar.jpg" alt="sunwengang">
-            sunwengang
-        </a>
-    </footer>
-</blockquote>
-
-        
-<div class="page-reward">
-    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
-</div>
-
-
-
-        <div class="post-footer">
+                    </article>
+                    
+    <blockquote class="post-license">
+        <p>
+            <strong>本文作者&nbsp;:&nbsp;sunwengang</strong>
+            <br>
+            <strong>
             
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/" rel="tag">shell</a></li></ul>
-
-
-            
-
-
-        </div>
-    </div>
-
-    
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2019/11/03/2019/191103_android_hideDoc/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">Android @hide接口注释</h4>
-      </a>
-    </div>
-  
-
-  
-    <div class="waves-block waves-effect next">
-      <a href="/2019/10/21/2019/191021_android_basis/" id="post-next" class="post-nav-link">
-        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">Android色彩空间（ColorSpace）</h4>
-      </a>
-    </div>
-  
-</nav>
+                本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)</a> 协议
+            </strong>
+            <br>
+            <strong>本文链接&nbsp;:&nbsp;</strong><a href="http://wizzie.top/2019/10/23/2019/191023_android_shell/">http://wizzie.top/2019/10/23/2019/191023_android_shell/</a>
+        </p>
+    </blockquote>
 
 
 
-    
+    <blockquote id="date-expire-notification" class="post-expired-notify">本文最后更新于 <span id="date-expire-num"></span> 天前，文中所描述的信息可能已发生改变</blockquote>
+    <script>
+    (function() {
+        var dateUpdate = Date.parse("2020-03-08");
+        var nowDate = new Date();
+        var a = nowDate.getTime();
+        var b = a - dateUpdate;
+        var daysUpdateExpire = Math.floor(b/(24*3600*1000));
+        if (daysUpdateExpire >= 120) {
+            document.getElementById('date-expire-num').innerHTML = daysUpdateExpire;
+        } else {
+            document.getElementById('date-expire-notification').style.display = 'none';
+        }
+    })();
+    </script>
+
+
+<p class="post-footer-info mb-0 pt-0">本文发表于&nbsp;<time datetime="2019-10-23T15:52:00.000Z" itemprop="datePublished">2019-10-23</time>
+
+    , 最后修改于&nbsp;<time datetime="2020-03-08T10:17:25.211Z" itemprop="dateModified">2020-03-08</time>
+
+</p>
+<p class="post-footer-info mb-0 pt-2">
+
+<span class="post-categories-list mt-2">
+
+<a class="post-categories-list-item" href='/categories/android/'>android</a>
+
+</span>
 
 
 
+<span class="post-tags-list mt-2">
+
+<a class="post-tags-list-item" href="/tags/shell/" rel="tag">#&nbsp;shell</a>
+
+</span>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</article>
-
-<div id="reward" class="page-modal reward-lay">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <h3 class="reward-title">
-        <i class="icon icon-quote-left"></i>
-        奥利给
-        <i class="icon icon-quote-right"></i>
-    </h3>
-    <div class="reward-content">
-        
-        <div class="reward-code">
-            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
-        </div>
-        
-        <label class="reward-toggle">
-            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
-                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
-            <div class="reward-toggle-ctrol">
-                <span class="reward-toggle-item wechat">微信</span>
-                <span class="reward-toggle-label"></span>
-                <span class="reward-toggle-item alipay">支付宝</span>
-            </div>
-        </label>
-        
-    </div>
-</div>
-
-
-
-</div>
-
-        <footer class="footer">
-    <div class="top">
-        
-<p>
-    <span id="busuanzi_container_site_uv" style='display:none'>
-        站点总访客数：<span id="busuanzi_value_site_uv"></span>
-    </span>
-    <span id="busuanzi_container_site_pv" style='display:none'>
-        站点总访问量：<span id="busuanzi_value_site_pv"></span>
-    </span>
 </p>
 
+                </div>
+                <div class="post-nav px-2 bg-gray">
+<ul class="pagination">
+    <!-- Prev Nav -->
+    
+        <li class="page-item page-prev">
+            <a href="/2019/11/03/2019/191103_android_hideDoc/" rel="prev">
+                <div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">Android @hide接口注释</div>
+            </a>
+        </li>
+    
 
-        <p>
-            
-                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
-            
-            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
-        </p>
-    </div>
-    <div class="bottom">
-        <p><span>sunwengang &copy; 2019 - 2020</span>
-            <span>
+    <!-- Next Nav -->
+    
+        <li class="page-item page-next">
+            <a href="/2019/10/21/2019/191021_android_basis/" rel="next">
+                <div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">Android色彩空间（ColorSpace）</div>
+            </a>
+        </li>
+    
+</ul>
+</div>
+
                 
-                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
-            </span>
-        </p>
+                    <!-- # Comment # -->
+                    
+                
+            </div>
+        </div>
     </div>
+</div>
+
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    
+        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
+            <a class="footer-copyright-a" href="http://wizzie.top">sunwengang blog</a>
+        </p>
+
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
+        
+    <!-- Busuanzi User Views -->
+    <span id="busuanzi_container_site_uv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_uv"></span>
+        <span>Viewers</span>
+        
+            <span>|</span>
+        
+    </span>
+
+
+
+
+        
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
 </footer>
 
-    </main>
-    <div class="mask" id="mask"></div>
-<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
-
-    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script>
-var BLOG = { ROOT: '/', SHARE: false, REWARD: true };
-
-
-</script>
-
-<script src="/js/main.min.js?v=1.7.2"></script>
-
-
-<div class="search-panel" id="search-panel">
-    <ul class="search-result" id="search-result"></ul>
-</div>
-<template id="search-tpl">
-<li class="item">
-    <a href="{path}" class="waves-block waves-effect">
-        <div class="title ellipsis" title="{title}">{title}</div>
-        <div class="flex-row flex-middle">
-            <div class="tags ellipsis">
-                {tags}
-            </div>
-            <time class="flex-col time">{date}</time>
-        </div>
-    </a>
-</li>
-</template>
-
-<script src="/js/search.min.js?v=1.7.2" async></script>
-
-
-
-
-
-
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
+        <!-- ### Import File ### -->
+        <!-- ### Footer JS Import ### -->
 
 <script>
+
+    
+window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+};
+
 (function() {
-    var OriginTitile = document.title, titleTime;
-    document.addEventListener('visibilitychange', function() {
-        if (document.hidden) {
-            document.title = '';
-            clearTimeout(titleTime);
-        } else {
-            document.title = '(つェ⊂)咦!又好了!';
-            titleTime = setTimeout(function() {
-                document.title = OriginTitile;
-            },2000);
-        }
-    });
+    var copyrightNow = new Date().getFullYear();
+    var copyrightContent = document.getElementById('copyright-year');
+    var copyrightSince = 2019;
+    if (copyrightSince === copyrightNow) {
+        copyrightContent.textContent = copyrightNow;
+    } else {
+        copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+    }
 })();
+console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
+
 </script>
 
+<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" async></script>
 
 
-</body>
+<!-- Offset -->
+
+
+
+
+<!-- Comment -->
+
+
+<!-- ### Custom Footer ### -->
+
+    </body>
+
 </html>
