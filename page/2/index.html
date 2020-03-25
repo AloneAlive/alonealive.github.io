@@ -334,6 +334,129 @@
             
                 <div class="column col-12">
                     
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/09/09/2019/190909_android_init_service/" rel="bookmark">Android init进程</a></h2>
+
+
+<p class="mb-0 card-body">
+    
+        概述
+init是Linux系统中用户空间的第一个进程。通过adb shell ps -rf查看我的一加手机进程信息。
+
+12UID            PID  PPID C STIME TTY          TIME CMDroot             1     0 0 12:43:34 ?     00:00:10 init
+
+
+init进程负责创建系统中的几个关键进程，例如zygote
+init提供了一个property service（属性服务）来管理Android系统的众多属性
+    <a href="/2019/09/09/2019/190909_android_init_service/">阅读全文</a>
+</p>
+
+
+
+
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2019-09-09</time>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/android/">android</a>
+        
+        
+    </div>
+
+                </div>
+            
+        </div>
+</article>
+
+                    
+                
+                    
+                        <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
+            
+                <div class="column col-12">
+                    
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/09/04/2019/190904_cpp_class_object/" rel="bookmark">C++对象和类</a></h2>
+
+
+<p class="mb-0 card-body">
+    
+        类型指定基本类型完成了三项工作：
+
+决定数据对象需要的内存数量
+决定如何解释内存中的位（long和float所占位数相同，但是将他们转换成数值的方法不同）
+决定可使用数据对象执行的操作和方法
+    <a href="/2019/09/04/2019/190904_cpp_class_object/">阅读全文</a>
+</p>
+
+
+
+
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2019-09-04</time>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/cpp/">cpp</a>
+        
+        
+    </div>
+
+                </div>
+            
+        </div>
+</article>
+
+                    
+                
+                    
+                        <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
+            
+                <div class="column col-12">
+                    
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/09/01/2019/190901_cpp_namespace/" rel="bookmark">C++头文件、作用域、内存模型和名称空间</a></h2>
+
+
+<p class="mb-0 card-body">
+    
+        单独编译C++提供#include语法，因而可以将程序划分，大致可以分成三部分：  
+
+头文件a.h：包含结构声明和使用这些结构的函数原型
+源代码文件a.cpp：包含与结构相关的函数的代码
+源代码文件b.cpp：包含调用与结构相关的函数的代码
+    <a href="/2019/09/01/2019/190901_cpp_namespace/">阅读全文</a>
+</p>
+
+
+
+
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2019-09-01</time>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/cpp/">cpp</a>
+        
+        
+    </div>
+
+                </div>
+            
+        </div>
+</article>
+
+                    
+                
+                    
+                        <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
+            
+                <div class="column col-12">
+                    
     <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/08/29/2019/190829_android_JNI/" rel="bookmark">Android JNI理解</a></h2>
 
 
@@ -967,125 +1090,6 @@ U盘（之前有一个U盘是做了window10的启动盘）
         
             <span class="suka-devide-dot"></span>
             <a class="category-link" href="/categories/linux/">linux</a>
-        
-        
-    </div>
-
-                </div>
-            
-        </div>
-</article>
-
-                    
-                
-                    
-                        <article class="post-entry container px-0 card">
-        <div class="columns col-gapless">
-            
-                <div class="column col-12">
-                    
-    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/07/23/2019/190723_cpp_float/" rel="bookmark">C++多字节char、bool、字符常量、浮点数</a></h2>
-
-
-<p class="mb-0 card-body">
-    
-        wchar_t
-程序需要处理的字符集可能无法用一个8位的字节表示，比如日文、汉字等此时有两种处理方法：  
-
-编译器厂商将char定义16位的字节或者更长  
-char表示8位的字节，另一种wchar_t表示宽字符类型，可以扩展字符集
-
-
-    <a href="/2019/07/23/2019/190723_cpp_float/">阅读全文</a>
-</p>
-
-
-
-
-    <!-- Date & Category -->
-    <div class="card-footer post-entry-info text-gray">
-        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
-        <time>2019-07-23</time>
-        
-            <span class="suka-devide-dot"></span>
-            <a class="category-link" href="/categories/cpp/">cpp</a>
-        
-        
-    </div>
-
-                </div>
-            
-        </div>
-</article>
-
-                    
-                
-                    
-                        <article class="post-entry container px-0 card">
-        <div class="columns col-gapless">
-            
-                <div class="column col-12">
-                    
-    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/07/22/2019/190722-hexo-article-pass/" rel="bookmark">hexo文章加密方法</a></h2>
-
-
-<p class="mb-0 card-body">
-    
-        直接修改JS
-存在问题：可能被破解。如果你的博客源码是存放在GitHub这样的开源库的话，那么恭喜你。别有用心之人可以通过查看你的GitHub仓库对应文章的md文件找到这个密码。
-
-    <a href="/2019/07/22/2019/190722-hexo-article-pass/">阅读全文</a>
-</p>
-
-
-
-
-    <!-- Date & Category -->
-    <div class="card-footer post-entry-info text-gray">
-        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
-        <time>2019-07-22</time>
-        
-            <span class="suka-devide-dot"></span>
-            <a class="category-link" href="/categories/web/">web</a>
-        
-        
-    </div>
-
-                </div>
-            
-        </div>
-</article>
-
-                    
-                
-                    
-                        <article class="post-entry container px-0 card">
-        <div class="columns col-gapless">
-            
-                <div class="column col-12">
-                    
-    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/07/22/2019/190722-git-stashing/" rel="bookmark">git stash储藏命令</a></h2>
-
-
-<p class="mb-0 card-body">
-    
-        
-储藏（stashing）可以获取工作目录的中间状态，即被修改过的被追踪的文件和暂存的变更。
-并将它保存在一个未完结变更的堆栈中，随时可以重新应用。
-
-    <a href="/2019/07/22/2019/190722-git-stashing/">阅读全文</a>
-</p>
-
-
-
-
-    <!-- Date & Category -->
-    <div class="card-footer post-entry-info text-gray">
-        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
-        <time>2019-07-22</time>
-        
-            <span class="suka-devide-dot"></span>
-            <a class="category-link" href="/categories/git/">git</a>
         
         
     </div>
