@@ -25,6 +25,8 @@
 
 
 
+    <link rel="dns-prefetch" href="//cdn1.lncld.net">
+
 
 <!-- analytics -->
 
@@ -530,6 +532,36 @@
                 
                     <!-- # Comment # -->
                     
+                        <div class="card-footer post-comment">
+                            <div id="vcomments"></div>
+
+<script src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+<script>
+    var GUEST_INFO = ['nick','mail','link'];
+    var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+        return GUEST_INFO.indexOf(item) > -1
+    });
+    var notify = '' === 'true';
+    var verify = '' === 'true';
+    new Valine({
+        el: '#vcomments',
+        notify: notify,
+        verify: verify,
+        appId: "vhY87VAxwU991O4b7vDREoC7-gzGzoHsz",
+        appKey: "CftrDkclI3ylGGjiQeD8C2xz",
+        placeholder: "Just go go",
+        meta: guest_info,
+        pageSize:'10',
+        avatar:'identicon',
+        lang:'zh-cn',
+        guest_info: guest_info,
+        visitor: false
+    });
+</script>
+
+                        </div>
+                    
                 
             </div>
         </div>
@@ -607,6 +639,10 @@ console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c 
 
 
 <!-- Comment -->
+
+    
+        
+    
 
 
 <!-- ### Custom Footer ### -->
