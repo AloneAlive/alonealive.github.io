@@ -294,6 +294,42 @@
             
                 <div class="column col-12">
                     
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2020/05/10/2020/200510_android_inputANR/" rel="bookmark">Android Input事件ANR流程</a></h2>
+
+
+<p class="mb-0 card-body">
+    
+        
+Android Input体系中，大致有两种类型的事件：实体按键key事件，屏幕点击触摸事件。如果根据事件类型的不同，还能细分为基础实体按键的key(power，volume up/down，recents，back，home)，实体键按键，屏幕点击(多点，单点)，屏幕滑动等事件。在Android整个Input体系中有三个格外重要的成员：Eventhub，InputReader，InputDispatcher。它们分别担负着各自不同的职责，Eventhub负责监听/dev/input产生的Input事件；InputReader负责从Eventhub读取事件，并将读取的事件发给InputDispatcher；InputDispatcher则根据实际的需要具体分发给当前手机获得焦点实际的Window。常说的Input ANR超时，都是指的是Input事件分发超时。
+
+    <a href="/2020/05/10/2020/200510_android_inputANR/">阅读全文</a>
+</p>
+
+
+
+
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2020-05-10</time>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/android/">android</a>
+        
+        
+    </div>
+
+                </div>
+            
+        </div>
+</article>
+
+                
+                    <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
+            
+                <div class="column col-12">
+                    
     <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2020/01/05/2020/200105_android_lcd_cabc/" rel="bookmark">Android LCD背光驱动节电技术LABC/CABC</a></h2>
 
 

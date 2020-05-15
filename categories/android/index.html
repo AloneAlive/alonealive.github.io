@@ -294,6 +294,44 @@
                         <article class="post-entry container px-0 card">
         <div class="columns col-gapless">
             
+                <div class="column col-12">
+                    
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2020/05/10/2020/200510_android_inputANR/" rel="bookmark">Android Input事件ANR流程</a></h2>
+
+
+<p class="mb-0 card-body">
+    
+        
+Android Input体系中，大致有两种类型的事件：实体按键key事件，屏幕点击触摸事件。如果根据事件类型的不同，还能细分为基础实体按键的key(power，volume up/down，recents，back，home)，实体键按键，屏幕点击(多点，单点)，屏幕滑动等事件。在Android整个Input体系中有三个格外重要的成员：Eventhub，InputReader，InputDispatcher。它们分别担负着各自不同的职责，Eventhub负责监听/dev/input产生的Input事件；InputReader负责从Eventhub读取事件，并将读取的事件发给InputDispatcher；InputDispatcher则根据实际的需要具体分发给当前手机获得焦点实际的Window。常说的Input ANR超时，都是指的是Input事件分发超时。
+
+    <a href="/2020/05/10/2020/200510_android_inputANR/">阅读全文</a>
+</p>
+
+
+
+
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2020-05-10</time>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/android/">android</a>
+        
+        
+    </div>
+
+                </div>
+            
+        </div>
+</article>
+
+                    </div>
+                
+                    <div class="grid-item">
+                        <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
+            
                 <div class="column column-thumbnail col-4 col-lg-12">
                     <a href="/2020/04/01/2020/200401_android_HWC2_Display/">
                         <div class="post-thumbnail lazyload" data-bg="url(https://cdn.jsdelivr.net/gh/AloneAlive/alonealive.github.com_images@1.0.1/2020_images/android.jpg)"></div>
@@ -1035,48 +1073,6 @@ init提供了一个property service（属性服务）来管理Android系统的�
     <div class="card-footer post-entry-info text-gray">
         <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
         <time>2019-09-09</time>
-        
-            <span class="suka-devide-dot"></span>
-            <a class="category-link" href="/categories/android/">android</a>
-        
-        
-    </div>
-
-                </div>
-            
-        </div>
-</article>
-
-                    </div>
-                
-                    <div class="grid-item">
-                        <article class="post-entry container px-0 card">
-        <div class="columns col-gapless">
-            
-                <div class="column col-12">
-                    
-    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/08/29/2019/190829_android_JNI/" rel="bookmark">Android JNI理解</a></h2>
-
-
-<p class="mb-0 card-body">
-    
-        概述
-JNI,即Java Native Interface，Java本地调用。通过JNI可以实现：  
-
-Java程序函数可以调用Natvie语言（C/C++）写的函数
-Natvie程序函数可以调用Java层的函数
-
-
-    <a href="/2019/08/29/2019/190829_android_JNI/">阅读全文</a>
-</p>
-
-
-
-
-    <!-- Date & Category -->
-    <div class="card-footer post-entry-info text-gray">
-        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
-        <time>2019-08-29</time>
         
             <span class="suka-devide-dot"></span>
             <a class="category-link" href="/categories/android/">android</a>
