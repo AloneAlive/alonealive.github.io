@@ -294,6 +294,41 @@
             
                 <div class="column col-12">
                     
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2020/05/20/2020/200520_android_input_notifyMotion/" rel="bookmark">Android InputDispatcher获取点击事件</a></h2>
+
+
+<p class="mb-0 card-body">
+    
+        
+Input点击事件从InputReader会传到InputDispatcher进行处理。针对一些点击调试方式和日志打印，来分析InputDispatcher获取点...
+    <a href="/2020/05/20/2020/200520_android_input_notifyMotion/">阅读全文</a>
+</p>
+
+
+
+
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2020-05-20</time>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/android/">android</a>
+        
+        
+    </div>
+
+                </div>
+            
+        </div>
+</article>
+
+                
+                    <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
+            
+                <div class="column col-12">
+                    
     <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2020/05/10/2020/200510_android_inputANR/" rel="bookmark">Android Input事件ANR流程</a></h2>
 
 
@@ -312,6 +347,47 @@ Android Input体系中，大致有两种类型的事件：实体按键key事件�
     <div class="card-footer post-entry-info text-gray">
         <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
         <time>2020-05-10</time>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/android/">android</a>
+        
+        
+    </div>
+
+                </div>
+            
+        </div>
+</article>
+
+                
+                    <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
+            
+                <div class="column col-12">
+                    
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2020/03/17/2020/200317_adnroid_touchEvent/" rel="bookmark">Android 触控事件分析</a></h2>
+
+
+<p class="mb-0 card-body">
+    
+        
+我们常见的触摸事件除了按下，弹起，移动之外还有很多，诸如长按，双击，Scroll，Fling等，他们是怎么判断的，还有这些长按，双击等事件的时间能否自由设置。可以在开发者选项中打开“显示点按操作反馈”和“指针位置”，同时可以打开inputflinger模块的log开关做一些调试，分析TP报点。
+
+一般当我们需要处理触摸事件时有两种方式：
+
+委托式 ： 将事件委托给监听器来进行处理。即定义一个View.onTouchListener()子类的监听器，由其onTouch()方法来处理。
+回调式 ： 通过重写View类自己的onTouchEvent()方法来处理，在执行时会回调该方法，在其中执行自定义的代码。
+
+    <a href="/2020/03/17/2020/200317_adnroid_touchEvent/">阅读全文</a>
+</p>
+
+
+
+
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2020-03-17</time>
         
             <span class="suka-devide-dot"></span>
             <a class="category-link" href="/categories/android/">android</a>
