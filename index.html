@@ -336,15 +336,15 @@
             
                 <div class="column col-12">
                     
-    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2020/06/04/2020/200601_android_rotation/" rel="bookmark">Android 屏幕旋转流程</a></h2>
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2020/06/11/2020/200611_android_tracetxt/" rel="bookmark">Android ANR traces.txt文件分析</a></h2>
 
 
 <p class="mb-0 card-body">
     
         
-Android支持横屏和竖屏，用户可以选择锁定(rotation lock)也可以选择让传感器来自动转屏。而转屏时为了使用户体验更流畅，会对屏幕截屏，然后使用截屏的图来做转屏动画，直到转屏动作结束。
+trace.txt生成:当APP(包括系统APP和用户APP)进程出现ANR、应用响应慢或WatchDog的监视没有得到回馈时,系统会dump此时的top进程,进程中Thread的运行状态就都dump到这个Trace文件中了。
 
-    <a href="/2020/06/04/2020/200601_android_rotation/">阅读全文</a>
+    <a href="/2020/06/11/2020/200611_android_tracetxt/">阅读全文</a>
 </p>
 
 
@@ -353,7 +353,83 @@ Android支持横屏和竖屏，用户可以选择锁定(rotation lock)也可以�
     <!-- Date & Category -->
     <div class="card-footer post-entry-info text-gray">
         <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
-        <time>2020-06-04</time>
+        <time>2020-06-11</time>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/android/">android</a>
+        
+        
+    </div>
+
+                </div>
+            
+        </div>
+</article>
+
+                    
+                
+                    
+                        <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
+            
+                <div class="column col-12">
+                    
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2020/06/10/2020/200610_android_pointerDraw/" rel="bookmark">Android 开发者选项的“指针位置”坐标值</a></h2>
+
+
+<p class="mb-0 card-body">
+    
+        
+打开开发者选项中的“指针位置”，界面上方状态栏处会显示当前触屏的X/Y坐标，那么这个坐标值是怎么打印出来的呢？
+
+    <a href="/2020/06/10/2020/200610_android_pointerDraw/">阅读全文</a>
+</p>
+
+
+
+
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2020-06-10</time>
+        
+            <span class="suka-devide-dot"></span>
+            <a class="category-link" href="/categories/android/">android</a>
+        
+        
+    </div>
+
+                </div>
+            
+        </div>
+</article>
+
+                    
+                
+                    
+                        <article class="post-entry container px-0 card">
+        <div class="columns col-gapless">
+            
+                <div class="column col-12">
+                    
+    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2020/06/01/2020/200601_android_rotation/" rel="bookmark">Android 屏幕旋转流程</a></h2>
+
+
+<p class="mb-0 card-body">
+    
+        
+Android支持横屏和竖屏，用户可以选择锁定(rotation lock)也可以选择让传感器来自动转屏。而转屏时为了使用户体验更流畅，会对屏幕截屏，然后使用截屏的图来做转屏动画，直到转屏动作结束。
+
+    <a href="/2020/06/01/2020/200601_android_rotation/">阅读全文</a>
+</p>
+
+
+
+
+    <!-- Date & Category -->
+    <div class="card-footer post-entry-info text-gray">
+        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
+        <time>2020-06-01</time>
         
             <span class="suka-devide-dot"></span>
             <a class="category-link" href="/categories/android/">android</a>
@@ -1027,85 +1103,6 @@ Binder通信是Android用的比较多的一种通信机制，它是一种client-
         
             <span class="suka-devide-dot"></span>
             <a class="category-link" href="/categories/android/">android</a>
-        
-        
-    </div>
-
-                </div>
-            
-        </div>
-</article>
-
-                    
-                
-                    
-                        <article class="post-entry container px-0 card">
-        <div class="columns col-gapless">
-            
-                <div class="column column-thumbnail col-4 col-lg-12">
-                    <a href="/2019/10/21/2019/191021_android_basis/">
-                        <div class="post-thumbnail lazyload" data-bg="url(https://cdn.jsdelivr.net/gh/AloneAlive/alonealive.github.com_images@1.0.1/2020_images/colorspace.jpeg)"></div>
-                    </a>
-                </div>
-                <div class="column column-body col-8 col-lg-12">
-                    
-    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/10/21/2019/191021_android_basis/" rel="bookmark">Android色彩空间（ColorSpace）</a></h2>
-
-
-<p class="mb-0 card-body">
-    
-        色彩空间Color Space广色域WCGWCG（Wide Color Gamut），是Adobe System开发的一种RGB色彩空间，使用纯光谱原色提供较大的色域。与Adove RGB和sRGB相比，能够存储更大范围的颜色值。相比之下，WCG包含CIELAB色彩空间可见颜色的77.6%，而Adobe RGB色彩空间仅覆盖52.1%，sRGB仅覆盖35.9%。
-    <a href="/2019/10/21/2019/191021_android_basis/">阅读全文</a>
-</p>
-
-
-
-
-    <!-- Date & Category -->
-    <div class="card-footer post-entry-info text-gray">
-        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
-        <time>2019-10-21</time>
-        
-            <span class="suka-devide-dot"></span>
-            <a class="category-link" href="/categories/android/">android</a>
-        
-        
-    </div>
-
-                </div>
-            
-        </div>
-</article>
-
-                    
-                
-                    
-                        <article class="post-entry container px-0 card">
-        <div class="columns col-gapless">
-            
-                <div class="column col-12">
-                    
-    <h2 class="h5 mb-0 card-header"><a class="card-title" href="/2019/10/20/2019/191020_cpp_singletonMode/" rel="bookmark">C++ 单例模式</a></h2>
-
-
-<p class="mb-0 card-body">
-    
-        懒汉式单例模式
-缺点是延迟加载，比如配置文件，只有在使用的时候才会加载。
-
-    <a href="/2019/10/20/2019/191020_cpp_singletonMode/">阅读全文</a>
-</p>
-
-
-
-
-    <!-- Date & Category -->
-    <div class="card-footer post-entry-info text-gray">
-        <img class="author-thumb lazyload" data-src="/img/avatar.jpg" src="/img/suka-lazyload.gif" alt="sunwengang's Avatar">
-        <time>2019-10-20</time>
-        
-            <span class="suka-devide-dot"></span>
-            <a class="category-link" href="/categories/cpp/">cpp</a>
         
         
     </div>
