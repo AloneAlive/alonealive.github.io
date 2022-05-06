@@ -1,0 +1,18 @@
+# main links
+main:
+  # - title: "Quick-Start Guide"
+  #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  - title: "Archive"
+    url: /year-archive/
+  - title: "Category"
+    url: /categories/
+  - title: "Tag"
+    url: /tags/
+  # - title: "Sitemap"
+  #   url: /sitemap/
+  # - title: "About"
+  #   url: https://wizzie.top/Blog/html/nav.html\
+  - title: "Search"
+    url: /search/
+  # - title: "OldBlog"
+  #   url: https://wizzie.top/
