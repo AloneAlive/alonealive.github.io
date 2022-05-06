@@ -10,11 +10,11 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-theme                  : "minimal-mistakes-jekyll"
-# remote_theme           : "mmistakes/minimal-mistakes"
+#theme                  : "minimal-mistakes-jekyll"
+remote_theme           : "mmistakes/minimal-mistakes"
 # 主题皮肤 参考：https://mmistakes.github.io/minimal-mistakes/docs/configuration/
-minimal_mistakes_skin    : "dirt" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-minimal_mistakes_skin_dark   : "dark" # 新增黑暗主题切换
+minimal_mistakes_skin    : "default" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin_dark   : "dark" # 新增黑暗主题切换，对应主题需是default
 
 # Site Settings 站点语言
 locale                   : "en-US"
@@ -29,7 +29,7 @@ description              : "android framework blogs."
 # 网站链接网址
 url                      : "https://alonealive.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "AloneAlive/alonealive.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 # 网站标头徽标
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # 网站左侧标题图标logo
