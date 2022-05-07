@@ -3,16 +3,16 @@ layout: single
 related: false
 title:  Android Automotive OTA概念
 date:   2022-04-25 14:19:02 +0800
-categories: android ota
+categories: ota
 tags: android ota
 toc: true
 ---
 
+> android automotive升级功能概念原理和方式
 
-## OTA介绍
+# 1. OTA介绍
 
 > OTA全称为Over-The-Air technology(空中下载技术)，通过移动通信的接口实现对软件进行远程管理，传统的做法到4S店通过整车OBD（一种为汽车故障诊断而延伸出来的一种检测系统）对相应的ECU进行软件升级。OTA技术最早2000年在出现日本，目前通过OTA方式升级软件广泛应用于智能手机。
-
 
 **汽车OTA的好处和作用：**
 
@@ -20,46 +20,45 @@ toc: true
 2. OTA可以为车辆增加新功能，增加用户的新鲜感
 3. OTA拓宽了“服务”和“运营”的范畴，增加车辆的附加价值
 
-
-### OTA架构
+## 1.1. OTA架构
 
 OTA整体架构包含OTA云端、OTA终端、OTA设计对象三部分。
 
-![](220425_android_OTA/OTA升级架构.jpg)
+![](../../assets/post/2022/2022-04-25-android_OTA/OTA升级架构.jpg)
 
 OTA云端为OEM专属的云端服务器平台，OTA终端采用Tbox，OTA设计对象网络架构按功能域划分，分为动力系统域、车身系统域、影音系统域、ADAS主动安全域
 
-![](220425_android_OTA/TBOX无线网关作用.jpg)
+![](../../assets/post/2022/2022-04-25-android_OTA/TBOX无线网关作用.jpg)
 
-<font color=red> **PS：** T-BOX有各种各样的接口与总线相连，不仅包括传统的控制器局域网CAN（Controller Area Network）、局域互联网络LIN （Local Interconnect Network）以及调试接口RS232/RS485/USB2.0等，还包括了汽车总线“新贵”车载以太网（Ethernet）</font>
+<font color=red> PS： T-BOX有各种各样的接口与总线相连，不仅包括传统的控制器局域网CAN（Controller Area Network）、局域互联网络LIN （Local Interconnect Network）以及调试接口RS232/RS485/USB2.0等，还包括了汽车总线“新贵”车载以太网（Ethernet）</font>
 
-1. OTA云端：也称为OTA云服务平台，包含OEM支持OTA升级的ECU全部的完整的升级包。OTA云端的设计要求是独立的平台，支持多车型、多型号规格、多种类型ECU软件的升级。**OTA云端的框架结构主要包括五部分：OTA管理平台、OTA升级服务、任务调度、文件服务、任务管理**
++ OTA云端：也称为OTA云服务平台，包含OEM支持OTA升级的ECU全部的完整的升级包。OTA云端的设计要求是独立的平台，支持多车型、多型号规格、多种类型ECU软件的升级。**OTA云端的框架结构主要包括五部分：OTA管理平台、OTA升级服务、任务调度、文件服务、任务管理**
 
-![](220425_android_OTA/OTA云端架构.jpg)
+![](../../assets/post/2022/2022-04-25-android_OTA/OTA云端架构.jpg)
 
-2. OTA终端：主要包含OTA引擎和OTA适配器，其中OTA引擎是一个连接OTA终端与OTA云端的桥梁，实现云端同终端的安全通信，包括升级包下载、升级包解密、差分包重构等功能。OTA适配器是为兼容不同的软件或设备的不同更新逻辑或流程，根据统一的接口要求封装的不同实现。升级适配器由需要OTA升级的各个ECU软件实现提供
++ OTA终端：主要包含OTA引擎和OTA适配器，其中OTA引擎是一个连接OTA终端与OTA云端的桥梁，实现云端同终端的安全通信，包括升级包下载、升级包解密、差分包重构等功能。OTA适配器是为兼容不同的软件或设备的不同更新逻辑或流程，根据统一的接口要求封装的不同实现。升级适配器由需要OTA升级的各个ECU软件实现提供
 
-3. 汽车OTA对象：主要包括影音系统，ADAS软件，以及车内嵌入式ECU。嵌入式ECU通常采用软件备份功能，即ECU内部用于两片区域，一部分用于存储当前运行的程序，一部分用于存储备份程序。除第一次安装或者设备下线时，ECU内部只有一份软件外，之后安装的软件都会与上一份共存。当前运行的是最新的软件，如果升级过程中发生错误或者刷写的程序不能运行，ECU内部自动回滚至上一版程序，防止车辆趴窝
++ 汽车OTA对象：主要包括影音系统，ADAS软件，以及车内嵌入式ECU。嵌入式ECU通常采用软件备份功能，即ECU内部用于两片区域，一部分用于存储当前运行的程序，一部分用于存储备份程序。除第一次安装或者设备下线时，ECU内部只有一份软件外，之后安装的软件都会与上一份共存。当前运行的是最新的软件，如果升级过程中发生错误或者刷写的程序不能运行，ECU内部自动回滚至上一版程序，防止车辆趴窝
 
-![](220425_android_OTA/OTA对象之ECU分区.png)
+![](../../assets/post/2022/2022-04-25-android_OTA/OTA对象之ECU分区.png)
 
 ***
 
-### OTA升级方式
+## 1.2. OTA升级方式
 
 **1. 根据升级方式不同，分为：**
 + A/B（无缝）系统更新（android O新增）
 + 传统的非A/B系统更新：传统的非 A/B 系统更新 又可以分为 基于文件的ota（android5.0之前）和基于块的ota（block，android5.0开始支持，即升级android5.0以上的系统，可以用基于block的ota包）。关于块OTA不会比较各个文件，也不会分别计算各个二进制补丁程序，而是将整个分区处理为一个文件并计算单个二进制补丁程序，以确保生成的分区刚好包含预期的位数。这样一来，设备系统映像就能够通过 fastboot 或 OTA 达到相同的状态。因为块 OTA 可确保每个设备使用相同的分区，所以它能够使用 dm-verity 以加密的方式为系统分区签名。dm-verity是验证启动相关的
 + 时区规则更新（Android 8.1 开始支持）
 
-<font color=red> **PS：**
+<font color=red> PS：
 1. A/B系统更新和非A/B系统更新 这两种方式是不兼容的，因为他们对应的系统分区和升级逻辑完全不同
 2. 目前基本用的都是基于块block的OTA方式，Android P中关于OTA升级包的制作已经默认只有`基于块block的OTA` 和 `A/B系统OTA`这两种包的制作流程了。
 </font>
 
 随着Android版本更新，Android系统升级方式也发生了几次变化：
 
-![](220425_android_OTA/升级方式变化历史.png)
+![](../../assets/post/2022/2022-04-25-android_OTA/升级方式变化历史.png)
 
 **2. 根据升级内容不同，分为：**
 + 整包/全量升级（全量包）:包含system、boot、vendor等分区的完整镜像文件，对整个系统进行升级更新,编译命令`make otapackage`
@@ -73,7 +72,7 @@ OTA云端为OEM专属的云端服务器平台，OTA终端采用Tbox，OTA设计�
 
 Android平台提供Google diff arithmetic差分机制，升级包支持整包(Full Image)和差分包(Differential Image)。OTA运行原理如下图：
 
-![](220425_android_OTA/OTA差分机制.jpg)
+![](../../assets/post/2022/2022-04-25-android_OTA/OTA差分机制.jpg)
 
 + OTA Server主要是对差分包的一个上传、下载以及版本的管理
 + 开发者通过差分包的制作工具制作出差分包，使用客户端进行上传和对版本的管理
@@ -87,7 +86,7 @@ Android平台提供Google diff arithmetic差分机制，升级包支持整包(Fu
 
 ***
 
-### OTA升级触发流程描述
+## 1.3. OTA升级触发流程描述
 
 1. 设备会与OTA服务器进行定期确认，并被告知是否有更新可用，包括更新软件包的URL和向用户显示的描述字符串
 2. 下载包并校验：将更新下载到缓存或数据分区，并根据`/system/etc/security/otacerts.zip`中的证书验证加密签名，系统提示用户安装更新
@@ -98,7 +97,7 @@ Android平台提供Google diff arithmetic差分机制，升级包支持整包(Fu
 7. 作为正常启动的一部分，系统会根据所需内容（预先存储为/system中的一个文件）检查恢复分区的内容。如果二者内容不同，则恢复分区会被所需内容重新刷写（在后续引导中，恢复分区已经包含新内容，因此无需重新刷写）
 8. 系统更新完成，重启
 
-### OTA升级包
+## 1.4. OTA升级包
 
 **OTA过程中有几种相关软件包：**
 + Target包：这个包可以理解为系统内容资料收集包，它对应了某个版本的软件。里面基本包含了系统的所有内容。是用来生成升级包的中间包。我们每次编译android系统软件，都可以同步生成Target包，特别是发布的软件一定要备份对应的Target包，以便后面升级使用
@@ -107,7 +106,7 @@ Android平台提供Google diff arithmetic差分机制，升级包支持整包(Fu
 
 ***
 
-#### Target包制作流程命令
+### 1.4.1. Target包制作流程命令
 
 正常使用比较多的命令是：`make otapackage` ，编译完成后，在根目录执行这个命令会生成Target包和完整升级包。
 
@@ -116,7 +115,7 @@ Android平台提供Google diff arithmetic差分机制，升级包支持整包(Fu
 android默认情况下，最终生成的Target包在此目录下：`out/target/product/xxx(project_name)/obj/PACKAGING/target_files_intermediates/`
 
 
-#### 升级包的制作流程命令
+### 1.4.2. 升级包的制作流程命令
 
 制作升级包需要用到脚本：`build/tools/releasetools/ota_from_target_files.py`
 
@@ -136,7 +135,7 @@ android默认情况下，最终生成的Target包在此目录下：`out/target/p
 -log_diff 做增量升级包的时候添加，做完增量升级包后，运行脚本target_files_diff.py打印出差异的log
 ```
 
-#### 升级包主要涉及的文件
+### 1.4.3. 升级包主要涉及的文件
 
 **Target包涉及的文件：**
 1. build/core/Makefile
@@ -151,7 +150,7 @@ android默认情况下，最终生成的Target包在此目录下：`out/target/p
 
 ***
 
-## Android Recovery升级
+# 2. Android Recovery升级
 
 > Android Recovery升级：Android系统在recovery模式下进行的升级
 
@@ -161,7 +160,7 @@ android默认情况下，最终生成的Target包在此目录下：`out/target/p
 + Main System: 即我们平时正常开机后所使用的Android操作系统模式
 
 
-## A/B升级
+# 3. A/B升级
 
 Android 7.0引入了新的OTA升级方式A/B系统升级（无缝升级）
 
@@ -169,11 +168,11 @@ A/B系统是指设备上有A和B两套可以工作的系统，目标是确保在
 
 cat proc/cmdline查看分区（升级会进行AB分区切换）
 
-![](220425_android_OTA/AB升级系统分区.png)
+![](../../assets/post/2022/2022-04-25-android_OTA/AB升级系统分区.png)
 
-![](220425_android_OTA/AB系统分区和recovery系统分区对比.png)
+![](../../assets/post/2022/2022-04-25-android_OTA/AB系统分区和recovery系统分区对比.png)
 
-### A/B系统升级优点
+## 3.1. A/B系统升级优点
 
 1. OTA升级可以在系统运行期间进行，而不会打断用户。用户可以在升级期间继续使用其设备。在更新期间，唯一的一次宕机发生在设备重新启动到更新后的磁盘分区时
 2. 更新后，重新启动所用的时间不会超过常规重新启动所用的时间
@@ -183,15 +182,15 @@ cat proc/cmdline查看分区（升级会进行AB分区切换）
 6. 更新包可以流式传输到A/B设备，因此在安装之前不需要先下载更新包。流式更新意味着用户没有必要在/data或/cache上留出足够的可用空间来存储更新包
 7. 缓存分区不再用于存储OTA更新包，因此无需确保缓存分区的大小要足以应对日后的更新
 
-### A/B系统升级缺点
+## 3.2. A/B系统升级缺点
 
 系统所需的存储空间比recovery升级所需的更多，因为A/B系统的分区boot. system, vendor等都作了两套分区
 
-![](220425_android_OTA/AB分区所需存储空间.png)
+![](../../assets/post/2022/2022-04-25-android_OTA/AB分区所需存储空间.png)
 
-### A/B系统的状态
+## 3.3. A/B系统的状态
 
-#### 系统分区属性
+### 3.3.1. 系统分区属性
 
 对于A/B系统的slot A和slot B分区，其都存在以下三个属性：
 
@@ -199,7 +198,7 @@ cat proc/cmdline查看分区（升级会进行AB分区切换）
 2. bootable：分区可启动标识，设置为bootable的分区表明该分区包含了一个完整的可以启动的系统
 3. successful：分区成功运行标识，设置为successful的分区表明该分区在上一次启动或当前启动中可以正确运行
 
-#### 系统典型场景
+### 3.3.2. 系统典型场景
 
 典型的应用场景有以下4个，每个场景详细说明如下：
 
@@ -208,7 +207,7 @@ cat proc/cmdline查看分区（升级会进行AB分区切换）
 3. 更新完成，等待重启（Update applied, reboot pending）：B分区将A分区成功更新后，将A分区标识为bootable。另外，由于重启后需要从A分区启动，所以也需要将A分区设置为active，但是由于还没有验证过A分区是否能成功运行，所以不设置successful；B分区的状态变为bootable和successful，但没有active。
 4. 从新系统成功启动（System rebooted into new update）：设备重启后，bootloader检测到A分区为active，所以加载A分区系统。进入A系统后如果能正确运行，需要将A分区标识为successful。对比第1个普通场景，A和B系统都设置为bootable和successful，但active从B分区切换到A分区。至此，B分区成功更新并切换到A分区，设备重新进入普通场景。
 
-### A/B系统和传统方式的镜像内容比较
+## 3.4. A/B系统和传统方式的镜像内容比较
 
 > 可通过阅读Makefile了解每个镜像打包了哪些文件。
 
@@ -222,7 +221,7 @@ A/B系统下：
 + boot.img内包含的是recovery ramdisk，而不是boot ramdisk。Android系统启动时不再加载boot.img内的ramdisk，而是通过device + mapper机制选择system.img内的ramdisk进行加载；
 + 没有recovery.img文件
 
-### Makefile中A/B系统的相关变量
+## 3.5. Makefile中A/B系统的相关变量
 
 **A/B系统必须定义的变量：**
 ```s
@@ -264,21 +263,13 @@ BOARD_CACHEIMAGE_PARTITION_SIZE
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE
 ```
 
-### A/B系统镜像文件的生成
+## 3.6. A/B系统镜像文件的生成
 
 build\core\Makefile定义了所需生成的镜像目标和规则，各镜像规则如下:
 
-1. recovery.img
-
-由于A/B系统定了`TARGET_NO_RECOVERY := true`，INSTALLED_RECOVERYIMAGE_TARGET被设置为空，所以不会生成recovery.img
-
-2. boot.img
-
-对比A/B系统下boot.img生成方式和非A/B系统下recovery.img的生成方式，基本上是一样的，所以A/B系统下的boot.img相当于非A/B系统下的recovery.img
-
-3. system.img
-
-此前boot.img里面的ramdisk是recovery系统的recovery ramdisk，这里生成system.img添加ramdisk需要查看宏`build-systemimage-target`的过程。
+1. recovery.img：由于A/B系统定了`TARGET_NO_RECOVERY := true`，INSTALLED_RECOVERYIMAGE_TARGET被设置为空，所以不会生成recovery.img
+2. boot.img：对比A/B系统下boot.img生成方式和非A/B系统下recovery.img的生成方式，基本上是一样的，所以A/B系统下的boot.img相当于非A/B系统下的recovery.img
+3. system.img：此前boot.img里面的ramdisk是recovery系统的recovery ramdisk，这里生成system.img添加ramdisk需要查看宏`build-systemimage-target`的过程。
 
 宏build-systemimage-target的过程，调用命令：
 
@@ -291,7 +282,7 @@ build\core\Makefile定义了所需生成的镜像目标和规则，各镜像规�
 5. cache.img:A/B系统没有定义BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE，这里BUILT_CACHEIMAGE_TARGET也不会定义，所以不会生成cache.img
 6. vendor.img:vendor.img跟是否是A/B系统没有关系，主要看系统是否定义了`BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE`
 
-#### img生成小结
+### 3.6.1. img生成小结
 
 + recovery.img，不再单独生成，传统方式的recovery.img现在叫做boot.img
 + boot.img，包含kernel和recovery模式的ramdisk
@@ -302,9 +293,9 @@ build\core\Makefile定义了所需生成的镜像目标和规则，各镜像规�
 
 ***
 
-### A/B系统启动
+## 3.7. A/B系统启动
 
-#### bootloader检查slot metadata
+### 3.7.1. bootloader检查slot metadata
 
 系统复位后，bootloader会去读取boot_control私有的存储数slot metadata并进行解析，以此确定从哪一个slot启动
 
@@ -317,7 +308,7 @@ build\core\Makefile定义了所需生成的镜像目标和规则，各镜像规�
 5. 如果当前选择分区的retry count为0，且没有启动成功（启动成功的分区会标记为successful），则将所选择分区标记为无效分区（通常设置为unbootable），然后重复第2步，查找下一个可以启动的分区；
 6. 如果当前选择的分区尝试启动次数retry count不为0，则表示还可以继续尝试从当前分区启动，需要将其retry count进行递减，然后加载相应的slot进行启动
 
-### payload.bin文件
+## 3.8. payload.bin文件
 
 OTA整包解压后会有payload.bin文件，是系统要更新的数据文件，而payload_properties.txt包含了升级内容的一些属性信息，升级时会被用到，内容大概如下：
 
@@ -328,11 +319,9 @@ METADATA_HASH=xZrAFkNRSwFz5RR9udtWZlrst+54kCXyatyJshIxEHI=
 METADATA_SIZE=106185
 ```
 
-
-
 ***
 
-## update_engine
+# 4. update_engine
 
 > update_engine是A/B升级的核心逻辑，用于执行下载和升级
 > 
@@ -340,7 +329,7 @@ METADATA_SIZE=106185
 
 ***
 
-## 参考OTA升级相关文档
+# 5. 参考OTA升级相关文档
 
 **系列文章：**
 + [系列-Android A/B System OTA分析和Update模块](https://blog.csdn.net/guyongqiangx/article/details/71334889)

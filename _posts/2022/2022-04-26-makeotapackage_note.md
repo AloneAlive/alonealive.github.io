@@ -2,27 +2,24 @@
 layout: single
 title:  AB升级 升级包生成制作流程和常见问题现象小结
 date:   2022-04-26 14:19:02 +0800 
-categories: android ota 
+categories: ota 
 tags: android ota AB升级
 toc: true
-toc_label: "my table"
-toc_icon: "cog"
-toc_sticky: true
 ---
 
-> 包含：升级包生成文件、升级方式、常见问题分析调试方法、make otapackage升级包脚本流程解析
+> 升级包生成文件、升级方式、常见问题分析调试方法、make otapackage升级包脚本流程解析
 
-## 升级包生成方式
+# 1. 升级包生成方式
 
 Android升级包使用`make otapackage`打包生成，会生成target压缩包（包含完整的image数据）和可用于升级的ota update压缩包。
 
 升级包包含全量包和差分包，差分包的制作需要两个不同版本的target包，然后使用`./build/tools/releasetools/ota_from_target_files –i A-target_files.zip B-target_files.zip incremental_ota_update.zip`脚本命令制作
 
-## 升级包目录
+# 2. 升级包目录
 
-升级包解压后可以查看文件目录：
+**升级包解压后可以查看文件目录：**
 
-```s
+```shell
 ├── META-INF
 │   └── com
 │       └── android
@@ -32,8 +29,9 @@ Android升级包使用`make otapackage`打包生成，会生成target压缩包�
 └── payload_properties.txt  //包含FILE_HASH、FILE_SIZE、METADATA_HASH、METADATA_SIZE四个文件元信息
 ```
 
-target包解压后：
-```s
+**target包解压后：**
+
+```shell
 target$ tree -L 1
 .
 ├── BOOT
@@ -47,9 +45,9 @@ target$ tree -L 1
 └── VENDOR
 ```
 
-## 升级脚本和方法
+## 2.1. 升级脚本和方法
 
-```s
+```shell
 android/system/update_engine/scripts$ tree
 .
 ├── blockdiff.py
@@ -64,9 +62,9 @@ android/system/update_engine/scripts$ tree
 ```
 
 当AB系统升级时，有两种方式来调用updateengine,来实现升级：
-1. 一种方法是直接执行shell命令，调用update_engine_client，带参数来实现升级
+（1） 一种方法是直接执行shell命令，调用update_engine_client，带参数来实现升级
 
-```s
+```shell
 //解压升级包
 adb shell
 update_engine_client --payload=file:///storage/5F49-FB9D/socupdate8g/payload.bin --update --headers="FILE_HASH=YP7Z1bFDv6O8C5LTWZ20JxTljXyoVitlCX27TBTyVDM=
@@ -75,7 +73,7 @@ METADATA_HASH=1gpTz/Q7T1ysTu6suP8N2KVOfa+vKEdnJGnPsKcPiXw=
 METADATA_SIZE=75378"
 ```
 
-2. 另一种方式是应用层直接调用UpdateEngine的applyPayload方法来升级
+（2） 另一种方式是应用层直接调用UpdateEngine的applyPayload方法来升级
 
 
 调试方式打印日志：`adb logcat -s update_engine`
@@ -84,13 +82,13 @@ METADATA_SIZE=75378"
 
 ***
 
-## 常见错误现象分析
+# 3. 常见错误现象分析
 
-### 重复升级同版本报错
+## 3.1. 重复升级同版本报错
 
-1.删除`/data/misc/update_engine/prefs`目录下记录的信息文件
+（1）删除`/data/misc/update_engine/prefs`目录下记录的信息文件
 
-```s
+```shell
 /data/misc/update_engine/prefs # ls -al
 total 60
 drwx------ 2 root root 4096 1970-01-01 08:00 .
@@ -113,7 +111,7 @@ drwx------ 3 root root 4096 1970-01-01 08:00 ..
 /data/misc/update_engine/prefs # rm -rf *
 ```
 
-2.修改/system/update_engine/update_attempter_android.cc文件，添加如下代码.
+（2）修改/system/update_engine/update_attempter_android.cc文件，添加如下代码.
 
 这样就会在升级完成后，删除`/data/misc/update_engine/prefs/update-check-response-hash`文件；再使用任意升级包升级，都会认为是一次全新的升级
 
@@ -131,7 +129,7 @@ diff --git a/update_attempter_android.cc b/update_attempter_android.cc
        break;
 ```
 
-### 回滚版本升级报错
+## 3.2. 回滚版本升级报错
 
 update engine会校验版本构建的时间戳，修改将时间戳的校验删除即可
 
@@ -161,11 +159,11 @@ diff --git a/payload_consumer/delta_performer.cc b/payload_consumer/delta_perfor
 
 2）差分包：差分包和全量包不同，如果想做新版本差分到旧版本的包，需要在使用ota_from_target_files.py脚本制作升级包时添加参数`—override_timestamp`，这样就可以跳过时间戳的检测
 
-### 差分包升级error code=20(kDownloadStateInitializationError)
+## 3.3. 差分包升级error code=20(kDownloadStateInitializationError)
 
 > 错误码见：`system/update_engine/common/error_code.h`
 
-1.如果是如下log，则当前版本应该是userdebug版本，设备有被进行过remount操作，需要整包升级/线刷恢复
+（1）如果是如下log，则当前版本应该是userdebug版本，设备有被进行过remount操作，需要整包升级/线刷恢复
 
 ```log
 04-01 18:33:13.337  2631  2631 E update_engine: [0401/183313.337259:ERROR:fec_file_descriptor.cc(30)] No ECC data in the passed file
@@ -188,11 +186,11 @@ diff --git a/payload_consumer/delta_performer.cc b/payload_consumer/delta_perfor
 
 ```
 
-2.如果是其他问题，则检查对应分区的image，比如线刷包的image和target包是否一致，比如设备的image是否被改动（使用dd命令）
+（2）如果是其他问题，则检查对应分区的image，比如线刷包的image和target包是否一致，比如设备的image是否被改动（使用dd命令）
 
 ***
 
-### 差分包升级error code=15(kNewRootfsVerificationError)
+## 3.4. 差分包升级error code=15(kNewRootfsVerificationError)
 
 该错误码和15一样都是分区hash校验失败，一个是在升级刚开始，一个是在文件系统校验的时候。
 
@@ -202,7 +200,7 @@ diff --git a/payload_consumer/delta_performer.cc b/payload_consumer/delta_perfor
 
 **调试方法：**
 
-1. dump获取车机的image文件
+**（1） dump获取车机的image文件**
 
 （1）进入adb shell
 
@@ -211,11 +209,11 @@ diff --git a/payload_consumer/delta_performer.cc b/payload_consumer/delta_perfor
 （3）使用`dd if=/dev/block/by-name/system of=/sdacar/a.img bs=512 count=5`命令获取到
 (如果dump失败，尝试更改of路径)
 
-2. 解析image文件
+**(2) 解析image文件**
 
 （1）确认文件属性
 
-```s
+```shell
 //车机dd出来的img
 $ file system_old.img 
 system_old.img: Linux rev 1.0 ext4 filesystem data, UUID=4729639d-b5f2-5cc1-a120-9ac5f788683c (extents) (large files) (huge files)
@@ -229,32 +227,32 @@ system.img: Android sparse image, version: 1.0, Total of 1310720 4096-byte outpu
 
 `simg2img get.img result.img`
 
-3. 采用挂载分区的方式来解压打开img文件
+**（3）采用挂载分区的方式来解压打开img文件**
 
-```s
+```shell
 g$ file system_old.img 
 system_old.img: Linux rev 1.0 ext4 filesystem data, UUID=4729639d-b5f2-5cc1-a120-9ac5f788683c (needs journal recovery) (extents) (large files) (huge files)
 $ mkdir 1
 $ sudo mount system_old.img 1/ -o loop
 ```
 
-4. 使用文件对比工具（比如beyond compare）对比两个image的md5值和文件目录
+**（4）使用文件对比工具（比如beyond compare）对比两个image的md5值和文件目录**
 
 ***
 
-## 升级包生成流程解析
+# 4. 升级包生成流程解析
 
 在源码下执行该命令生成update.zip包主要分成两步：
 1. 根据`build/core/Makefile`执行编译生成一个target update原包（zip格式）
 2. 运行一个python脚本，并以上一步准备的zip包作为输入，最终生成我们需要的升级包
 
-### 1.Makefile编译生成target原包
+## 4.1. Makefile编译生成target原包
 
 这个原包在实际编译过程中有两个作用：
 1. 用来生成OTA update升级包
 2. 用来生成系统镜像
 
-编译脚本`build/core/Makefile`中：
+**编译脚本`build/core/Makefile`中：**
 
 (参考otapackage/Makefile注释)
 
@@ -337,13 +335,13 @@ endif # BOARD_SUPER_PARTITION_GROUPS
 	$(hide) $(SOONG_ZIP) -d -o $@ -C $(zip_root) -l $@.list
 ```
 
-### 2. ota_frome_target_files.py脚本
+## 4.2. ota_frome_target_files.py脚本
 
 在编译过程中若生成OTA update升级包时会调用一个名为`ota_from_target_files`的python脚本，位置在/build/tools/releasetools/ota_from_target_files。
 
 这个脚本的作用是以第一步生成的zip原始包作为输入，最终生成可用的OTA升级zip包。
 
-#### Makefile
+### 4.2.1. Makefile
 
 下面是Makefile引用的入口：
 
@@ -398,13 +396,13 @@ INTERNAL_OTA_METADATA := $(PRODUCT_OUT)/ota_metadata
 
 ***
 
-#### ota_from_target_files
+### 4.2.2. ota_from_target_files
 
 > Path:`android/build/make/tools/releasetools/ota_from_target_files.py`
 
 这个脚本开始部分的帮助文档:
 
-```s
+```shell
 Usage: ota_from_target_files [flags] input_target_files output_ota_package
     -b 过时的。
     -k 签名所使用的密钥
@@ -422,7 +420,7 @@ Usage: ota_from_target_files [flags] input_target_files output_ota_package
 
 `/build/tools/releasetools/ota_from_target_files.py`脚本:
 
-主函数main是python的入口函数，从main函数开始看，大概看一下main函数里的流程：
+**主函数main是python的入口函数，从main函数开始看，大概看一下main函数里的流程：**
 
 （1）在main函数的开头，首先将用户设定的option选项存入OPTIONS变量中，它是一个python中的类。紧接着判断有没有额外的脚本，如果有就读入到OPTIONS变量中。
 
@@ -587,7 +585,7 @@ def GetPackageMetadata(target_info, source_info=None):
 
 ***
 
-### misc_info.txt
+## 4.3. misc_info.txt
 
 生成META目录下，可以查看到image的size、type等信息
 
@@ -597,7 +595,7 @@ def GetPackageMetadata(target_info, source_info=None):
 
 ***
 
-## ab_partitions.txt
+# 5. ab_partitions.txt
 
 ab分区的image文件列表
 
@@ -606,7 +604,7 @@ ab分区的image文件列表
 make otapackage后，会在build/core/add_img_to_target_files.py脚本中，从该文件中读取列表然后查找image name
 
 
-## 参考
+# 6. 参考
 
 + [Android 编译如何跳过生成ota package过程](https://www.jianshu.com/p/1b3ff36f4138)
 + [Android OTA升级原理和流程分析（一）--update.zip包的制作](https://blog.csdn.net/twk121109281/article/details/90712880)

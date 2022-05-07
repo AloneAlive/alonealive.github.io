@@ -43,7 +43,7 @@ body {
   }
   // 修改文章界面的左侧间隔
   @include breakpoint($x-large) {
-    width: calc(100% - #{100px});  //原来是$right-sidebar-width （300px）
+    width: calc(100%);  //原来是$right-sidebar-width （300px）
     padding-right: $right-sidebar-width;
   }
 

@@ -3,7 +3,7 @@ layout: single
 related: false
 title:  Android Vehicle HAL架构
 date:   2021-12-31 14:19:02 +0800
-categories: android carservice
+categories: carservice
 tags: IVI android carservice
 toc: true
 toc_label: "my table"
@@ -14,7 +14,7 @@ toc_icon: "cog"
 
 ***
 
-## VehicleHAL启动流程
+# 1. VehicleHAL启动流程
 
 + 源码位置：`hardware/interfaces/automotive/vehicle/2.0/`
 
@@ -22,7 +22,8 @@ toc_icon: "cog"
 
 该文件位于设备系统`vendor/etc/init`目录
 
-```s hardware/interfaces/automotive/vehicle/2.0/default/android.hardware.automotive.vehicle@2.0-service.rc
+```shell
+//hardware/interfaces/automotive/vehicle/2.0/default/android.hardware.automotive.vehicle@2.0-service.rc
 service vendor.vehicle-hal-2.0 /vendor/bin/hw/android.hardware.automotive.vehicle@2.0-service
     class hal
     user vehicle_network
@@ -58,16 +59,12 @@ static void LoadBootScripts(ActionManager& action_manager, ServiceList& service_
 
 ***
 
-### vehicleHal类图
+## 1.1. vehicleHal类图
 
-![vehicleHal Class](211231_android_VehicleHal/vehicle_hal关系类图.png)
-
-![test](/211231_android_VehicleHal/211231_android_VehicleHal/vehicle_hal关系类图.png)
-
-![test](./211231_android_VehicleHal/211231_android_VehicleHal/vehicle_hal关系类图.png)
+![vehicleHal Class](../../assets/post/2021/2021-12-31-androidVehicleHal/vehicle_hal关系类图.png)
 
 
-#### types.hal/IVehicle.hal/IVehicleCallback.hal
+### 1.1.1. types.hal/IVehicle.hal/IVehicleCallback.hal
 
 > 均在`/hardware/interfaces/automotive/vehicle/2.0/`目录下
 
@@ -75,11 +72,11 @@ static void LoadBootScripts(ActionManager& action_manager, ServiceList& service_
 2. IVehicle.hal定义的是从CarService往HAL调用的接口
 3. IVehicleCallback.hal则是HAL往CarService上报回调的接口
 
-![types.hal](211231_android_VehicleHal/Markmap_vehicleTypes.mm.md.png)
+![types.hal](../../assets/post/2021/2021-12-31-androidVehicleHal/Markmap_vehicleTypes.mm.md.png)
 
 ***
 
-## VehicleHal初始化流程
+# 2. VehicleHal初始化流程
 
 初始化从执行`hardware/interfaces/automotive/vehicle/2.0/default/VehicleService.cpp`的main函数开始：
 
@@ -179,15 +176,15 @@ void VehicleHalManager::init() {
 
 -----> 调用onCreate函数，遍历属性列表并以mPropStore，即VehiclePropertyStore保存当前值
 
-### vehiclehal启动序列图
+## 2.1. vehiclehal启动序列图
 
-![vehiclehal启动流程序列图](211231_android_VehicleHal/vehiclehal启动流程序列图.png)
+![vehiclehal启动流程序列图](../../assets/post/2021/2021-12-31-androidVehicleHal/vehiclehal启动流程序列图.png)
 
 ***
 
-## 车辆属性类型types.hal
+# 3. 车辆属性类型types.hal
 
-### 车辆属性VehiclePropertyType
+## 3.1. 车辆属性VehiclePropertyType
 
 + 定义在hardware/interfaces/automotive/vehicle/2.0/types.hal（以下属性定义均在该文件内）
 
@@ -245,7 +242,7 @@ enum VehiclePropertyType : int32_t {
 };
 ```
 
-### 车辆区域类型VehicleArea
+## 3.2. 车辆区域类型VehicleArea
 
 定义在hardware/interfaces/automotive/vehicle/2.0/types.hal
 ```cpp
@@ -265,7 +262,7 @@ enum VehicleArea : int32_t {
 };
 ```
 
-#### 车辆属性分组类型VehiclePropertyGroup
+### 3.2.1. 车辆属性分组类型VehiclePropertyGroup
 
 + 定义在hardware/interfaces/automotive/vehicle/2.0/types.hal
 
@@ -281,7 +278,7 @@ enum VehiclePropertyGroup : int32_t {
 };
 ```
 
-#### 车辆窗户区域属性VehicleAreaWindow
+### 3.2.2. 车辆窗户区域属性VehicleAreaWindow
 
 ```cpp
 /**
@@ -303,7 +300,7 @@ enum VehicleAreaWindow : int32_t {
 };
 ```
 
-### 车辆属性访问权限VehiclePropertyAccess
+## 3.3. 车辆属性访问权限VehiclePropertyAccess
 
 + 定义在hardware/interfaces/automotive/vehicle/2.0/types.hal
 
@@ -316,7 +313,7 @@ enum VehiclePropertyAccess : int32_t {
 };
 ```
 
-### 车辆属性变化模式VehiclePropertyChangeMode
+## 3.4. 车辆属性变化模式VehiclePropertyChangeMode
 
 + 定义在hardware/interfaces/automotive/vehicle/2.0/types.hal
 
@@ -334,7 +331,7 @@ enum VehiclePropertyChangeMode : int32_t {
 };
 ```
 
-### 车辆属性事件订阅信息SubscribeOptions
+## 3.5. 车辆属性事件订阅信息SubscribeOptions
 
 ```cpp
 struct SubscribeOptions {
@@ -361,7 +358,7 @@ enum SubscribeFlags : int32_t {
 };
 ```
 
-### 车辆座椅属性VehicleAreaSeat
+## 3.6. 车辆座椅属性VehicleAreaSeat
 
 ```cpp
 /**
@@ -380,7 +377,7 @@ enum VehicleAreaSeat : int32_t {
 };
 ```
 
-### 接口调用状态值StatusCode
+## 3.7. 接口调用状态值StatusCode
 
 ```cpp
 enum StatusCode : int32_t {
@@ -407,7 +404,7 @@ enum StatusCode : int32_t {
 
 ***
 
-## 回调接口函数IVehicleCallback
+# 4. 回调接口函数IVehicleCallback
 
 + 定义于：hardware/interfaces/automotive/vehicle/2.0/IVehicleCallback.hal
 
@@ -446,9 +443,9 @@ interface IVehicleCallback {
 
 ***
 
-## VehicleHal获取/设置属性流程
+# 5. VehicleHal获取/设置属性流程
 
-### subscribe订阅属性
+## 5.1. subscribe订阅属性
 
 > CarService在onCreate中创建ICarImpl时，构造函数中new VehicleHal对象，然后又在CarImpl的init函数中调用VehicleHal对象的init函数
 
@@ -488,13 +485,13 @@ class EmulatedVehicleHal : public EmulatedVehicleHalIface{....}
 
 同理，unsubscribe注销订阅
 
-### subscribe序列图
+## 5.2. subscribe序列图
 
-![subscribe流程序列图](211231_android_VehicleHal/carservice_subscribe流程序列图.png)
+![subscribe流程序列图](../../assets/post/2021/2021-12-31-androidVehicleHal/carservice_subscribe流程序列图.png)
 
 ***
 
-### set设置属性请求流程
+## 5.3. set设置属性请求流程
 
 例如空调APP的设置开关状态：packages/apps/Car/Hvac/src/com/android/car/hvac/HvacController.java - setHvacPowerState
 
@@ -555,7 +552,7 @@ public class CarPropertyService extends ICarProperty.Stub
 
 ***
 
-### get获取属性请求流程
+## 5.4. get获取属性请求流程
 
 packages/services/Car/car-lib/src/android/car/hardware/CarVendorExtensionManager.java - getProperty
 
@@ -696,29 +693,29 @@ class VehiclePropertyStore {
 }
 ```
 
-### set和get属性流程序列图
+## 5.5. set和get属性流程序列图
 
-![set和get属性流程](211231_android_VehicleHal/carservice_set和get属性流程.png)
+![set和get属性流程](../../assets/post/2021/2021-12-31-androidVehicleHal/carservice_set和get属性流程.png)
 
 ***
 
-## DBus IPC通信方式
+# 6. DBus IPC通信方式
 
 + DBus是一种低延迟、低开销、高可用性的IPC（interprocess communication ）机制总线系统，用于进程间的通信（会话总线）或进程与内核的通信（系统总线）
 
-### 应用场景
+## 6.1. 应用场景
 
 根据DBUS消息类型可知，DBUS提供一种高效的进程间通信机制，主要用于进程间函数调用以及进程间信号广播。
 
 1. 函数调用：DBUS可以实现进程间函数调用，进程A发送函数调用的请求（Methodcall消息），经过总线转发至进程B。进程B将应答函数返回值（Method return消息）或者错误消息（Error消息）
 2. 消息广播：进程间消息广播（Signal消息）不需要响应，接收方需要向总线注册感兴趣的消息类型，当总线接收到“Signal消息”类型的消息时，会将消息转发至希望接收的进程
 
-### 通信实现原理
+## 6.2. 通信实现原理
 
 > 在DBUS通信过程中，存在一个后台进程（BUS Daemon Process）。后台进程和普通进程间信息交互是通过**域套接字**进行通信
 
 ***
 
-## 参考
+# 7. 参考
  
 + [Item 21: 比起直接使用new优先使用std::make_unique和std::make_shared](https://www.cnblogs.com/boydfd/p/5146432.html)

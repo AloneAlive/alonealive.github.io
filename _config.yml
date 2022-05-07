@@ -315,7 +315,7 @@ defaults:
       # date_format: "%Y-%m-%d" # 日期格式 默认"%B %-d, %Y"
       related: false # 关闭推荐关联文章
       toc_sticky: true #目录位置锁定
-      toc_label: "title list" #目录标题
+      toc_label: "My Table" #目录标题
       toc_icon: "cog" #目录icon
       # classes: wide # 关闭宽页 会让目录显示在上方
       # author_profile: true #侧边栏添加作者简介

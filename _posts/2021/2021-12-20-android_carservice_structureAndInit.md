@@ -2,26 +2,24 @@
 layout: single
 title:  Android carservice架构及启动流程
 date:   2021-12-20 14:19:02 +0800
-categories: android carservice
-tags: IVI android carservice
+categories: carservice
+tags: android carservice
 toc: true
-toc_label: "my table"
-toc_icon: "cog"
 ---
 
 > 文档内容：carservice架构介绍，内容有Car APP、Car API、Car Service等部分，carservice启动流程
 
 ***
 
-# 概述
+# 1. 概述
 
-## 架构
+## 1.1. 架构
 
 Google官网上介绍汽车架构：
 
 车载HAL是汽车与车辆网络服务之间的接口定义（同时保护传入的数据）：
 
-![示意图](211220_android_carservice_structureAndInit/vehicle_hal_arch.png)
+![示意图](../../assets/post/2021/2021-12-20-android_carservice_structureAndInit/vehicle_hal_arch.png)
 
 车载HAL与Android Automotive架构：
 
@@ -32,20 +30,20 @@ Google官网上介绍汽车架构：
 
 ***
 
-### Framework CarService
+### 1.1.1. Framework CarService
 
 > Android O/P为Automotive场景提供了一系列的服务，这些服务统被称为CarService。它们与HAL层的VehicleHAL通信，进而通过车载总线(例如CAN总线)与车身进行通讯，同时它们还为应用层的APP提供接口，从而让APP能够实现对车身的控制与状态的显示
 
-![car service](211220_android_carservice_structureAndInit/carservice_In_Framework.png)
+![car service](../../assets/post/2021/2021-12-20-android_carservice_structureAndInit/carservice_In_Framework.png)
 
 + Car***Manager:`packages/services/Car/car-lib/src/android/car/hardware`  
 + Car***Service:`packages/services/Car/service/src/com/android/car/`
 
 ***
 
-## APP层
+## 1.2. APP层
 
-### APP层确认是否支持车载功能
+### 1.2.1. APP层确认是否支持车载功能
 
 1. APP层在调用Car API之前首先会判断该平台是否支持车载功能：
 
@@ -57,7 +55,8 @@ if (getPackageManager().hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE)) {
 
 例如：
 
-```java packages/apps/SettingsIntelligence/src/com/android/settings/intelligence/suggestions/eligibility/AutomotiveEligibilityChecker.java
+```java
+//packages/apps/SettingsIntelligence/src/com/android/settings/intelligence/suggestions/eligibility/AutomotiveEligibilityChecker.java
     public static boolean isEligible(Context context, String id, ResolveInfo info) {
         PackageManager packageManager = context.getPackageManager();
         //是否支持车载功能
@@ -75,7 +74,8 @@ if (getPackageManager().hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE)) {
     }
 ```
 
-```java frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java
+```java
+//frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java
     @GuardedBy("mAvailableFeatures")
     final ArrayMap<String, FeatureInfo> mAvailableFeatures;
 
@@ -95,7 +95,8 @@ if (getPackageManager().hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE)) {
 
 2. 通过Binder访问PackageManagerService，mAvailableFeatures里面的内容是通过读取/system/etc/permissions下面的xml文件(对应SDK的位置---frameworks/native/data/etc下的XML文件中的feature字段)
 
-```xml frameworks/native/data/etc/car_core_hardware.xml
+```xml
+//frameworks/native/data/etc/car_core_hardware.xml
 <permissions>
     <!-- Feature to specify if the device is a car -->
     <feature name="android.hardware.type.automotive" />
@@ -103,7 +104,8 @@ if (getPackageManager().hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE)) {
 </permission>
 ```
 
-```xml frameworks/native/data/etc/android.hardware.type.automotive.xml
+```xml
+//frameworks/native/data/etc/android.hardware.type.automotive.xml
 <!-- These features determine that the device running android is a car. -->
 <permissions>
     <feature name="android.hardware.type.automotive" />
@@ -112,7 +114,7 @@ if (getPackageManager().hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE)) {
 
 ***
 
-### APP创建Car API，接收底层回调
+### 1.2.2. APP创建Car API，接收底层回调
 
 > Car作为汽车平台最高等级的API（`packages/services/Car/car-lib/src/android/car/Car.java`），为外界提供汽车所有服务和数据的访问
 
@@ -122,7 +124,8 @@ if (getPackageManager().hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE)) {
 
 例如HvacController.java：
 
-```java packages/apps/Car/Hvac/src/com/android/car/hvac/HvacController.java
+```java
+//packages/apps/Car/Hvac/src/com/android/car/hvac/HvacController.java
   private Object mHvacManagerReady = new Object();
 
  @Override
@@ -217,7 +220,8 @@ if (getPackageManager().hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE)) {
 
 例如Radio APP的RadioTunerExt.java文件：
 
-```java packages/apps/Car/Radio/src/com/android/car/radio/platform/RadioTunerExt.java
+```java
+//packages/apps/Car/Radio/src/com/android/car/radio/platform/RadioTunerExt.java
     RadioTunerExt(Context context) {
         //创建Car实例，即new Car对象
         mCar = Car.createCar(context, mCarServiceConnection);
@@ -244,9 +248,9 @@ if (getPackageManager().hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE)) {
 
 ***
 
-# 目录结构
+# 2. 目录结构
 
-## CarService一级目录结构说明（`packages/services/Car/`）
+## 2.1. CarService一级目录结构说明（`packages/services/Car/`）
 
 > 目录：`packages/services/Car/`
 
@@ -276,15 +280,15 @@ if (getPackageManager().hasSystemFeature(PackageManager.FEATURE_AUTOMOTIVE)) {
 └── vehicle-hal-support-lib
 ```
 
-## Car APP
+## 2.2. Car APP
 
 + `packages/services/Car/car_product/build/car.mk`里面决定了是否编译相关apk（system/priv-app）
-+ 
 + 源码位置：：`packages/apps/Car/`
 
 这个文件中列出了汽车系统中的专有模块（首字母大写的模块基本上都是汽车系统中专有的App）：
 
-```mk packages/services/Car/car_product/build/car.mk
+```shell
+//packages/services/Car/car_product/build/car.mk
 # Automotive specific packages
 PRODUCT_PACKAGES += \
     CarService \
@@ -315,21 +319,21 @@ PRODUCT_PACKAGES += \
     SystemUpdater                       # 系统升级应用
 ```
 
-## Car API
+## 2.3. Car API
 
 + 源码位置：`/platform/packages/services/Car/car-lib`，因为对手机和平板没有意义，仅用于开发汽车，所以没有包含在Framework SDK中
 
 Car API（详细路径：`packages/services/Car/car-lib/src/android/car/`）有如下：
 
-![Car API思维导图](211220_android_carservice_structureAndInit/Markmap_carAPI.mm.md.png)
+![Car API思维导图](../../assets/post/2021/2021-12-20-android_carservice_structureAndInit/Markmap_carAPI.mm.md.png)
 
 **Car API类图：**
 
-![Car API](211220_android_carservice_structureAndInit/carservice_API.png)
+![Car API](../../assets/post/2021/2021-12-20-android_carservice_structureAndInit/carservice_API.png)
 
 ***
 
-## Car Service
+## 2.4. Car Service
 
 + 源码位置：`packages/services/Car/`
 
@@ -342,11 +346,11 @@ Car API（详细路径：`packages/services/Car/car-lib/src/android/car/`）有�
 + 可以获取DSP版本、前屏版本号等；
 + 持有Power模块的锁，carservice挂了就会息屏
 
-![Car Service思维导图](211220_android_carservice_structureAndInit/Mardmap_carService.mm.md.png)
+![Car Service思维导图](../../assets/post/2021/2021-12-20-android_carservice_structureAndInit/Mardmap_carService.mm.md.png)
 
 ***
 
-## AIDL
+## 2.5. AIDL
 
 > Android接口定义语言，一种android内部进程通信接口的描述语言，通过它我们可以定义进程间的通信接口
 
@@ -356,10 +360,11 @@ Car API（详细路径：`packages/services/Car/car-lib/src/android/car/`）有�
 2. 实现接口:Android SDK 工具会基于您的`.aidl`文件，使用Java编程语言生成接口。此接口拥有一个名为Stub的内部抽象类，用于扩展Binder类并实现AIDL接口中的方法您必须扩展`Stub`类并实现这些方法
 3. 向客户端公开接口,实现Service并重写`onBind()`，从而返回`Stub`类的实现
 
-### 示例ICarInputListener
+### 2.5.1. 示例ICarInputListener
 
 1. AIDL文件：
-```java packages/services/Car/car-lib/src/android/car/input/ICarInputListener.aidl
+```java
+//packages/services/Car/car-lib/src/android/car/input/ICarInputListener.aidl
 /**
  * Binder API for Input Service.
  *
@@ -373,7 +378,8 @@ oneway interface ICarInputListener {
 
 2. 同目录下实现AIDL接口中的内部抽象类Stub（Stub类继承了Binder，并继承我们在aidl文件中定义的接口）
 
-```java packages/services/Car/car-lib/src/android/car/input/CarInputHandlingService.java
+```java
+//packages/services/Car/car-lib/src/android/car/input/CarInputHandlingService.java
     private class InputBinder extends ICarInputListener.Stub {
         private final EventHandler mEventHandler;
 
@@ -392,7 +398,8 @@ oneway interface ICarInputListener {
 
 PS:如果需要返回对象则需要实现`Service.onBind(Intent)`方法，该方法会返回一个IBinder对象到客户端
 
-```java /packages/services/Car/service/src/com/android/car/CarInputService.java
+```java
+//packages/services/Car/service/src/com/android/car/CarInputService.java
     private final ServiceConnection mInputServiceConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder binder) {
@@ -417,7 +424,7 @@ PS:如果需要返回对象则需要实现`Service.onBind(Intent)`方法，该�
 
 ***
 
-## carservice启动流程
+## 2.6. carservice启动流程
 
 大致流程：
 1. SystemServer启动CarServiceHelperService服务
@@ -425,11 +432,11 @@ PS:如果需要返回对象则需要实现`Service.onBind(Intent)`方法，该�
 3. 启动CarService后首先调用onCreate，创建ICarImpl对象并初始化，在此时创建了一系列car相关的核心服务，并遍历init初始化
 4. 然后调用onBind将该ICarImpl对象返回给CarServiceHelperService，CarServiceHelperService在内部的一个Binder对象ICarServiceHelperImpl传递给CarService，建立双向跨进程
 
-### 序列图
+### 2.6.1. 序列图
 
-![carservice启动流程图](211220_android_carservice_structureAndInit/carservice_init.png)
+![carservice启动流程图](../../assets/post/2021/2021-12-20-android_carservice_structureAndInit/carservice_init.png)
 
-### 启动CarServiceHelperService服务
+### 2.6.2. 启动CarServiceHelperService服务
 
 frameworks/base/services/java/com/android/server/SystemServer.java - run()
 ----> startOtherServices()
@@ -468,7 +475,7 @@ frameworks/base/services/java/com/android/server/SystemServer.java - run()
         }
 ```
 
-### 绑定carservice服务
+### 2.6.3. 绑定carservice服务
 
 -----> frameworks/opt/car/services/src/com/android/internal/car/CarServiceHelperService.java - onStart()
 
@@ -497,7 +504,8 @@ frameworks/base/services/java/com/android/server/SystemServer.java - run()
 
 设备文件路径在： `/system/priv-app/CarService/CarService.apk`
 
-```xml packages/services/Car/service/AndroidManifest.xml
+```shell
+//packages/services/Car/service/AndroidManifest.xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:androidprv="http://schemas.android.com/apk/prv/res/android"
         package="com.android.car"
@@ -518,7 +526,7 @@ frameworks/base/services/java/com/android/server/SystemServer.java - run()
     </application>
 ```
 
-### bindService启动流程
+### 2.6.4. bindService启动流程
 
 `context.bindService()  ——> onCreate()  ——> onBind()  ——> Service running  ——> onUnbind()  ——> onDestroy()  ——> Service stop`
 
@@ -530,9 +538,9 @@ onBind()将返回给客户端一个IBind接口实例，IBind允许客户端回�
 
 ***
 
-## Car Service启动
+## 2.7. Car Service启动
 
-### onCreate
+### 2.7.1. onCreate
 
 --------> packages/services/Car/service/src/com/android/car/CarService.java - onCreate()
 
@@ -572,7 +580,8 @@ onBind()将返回给客户端一个IBind接口实例，IBind允许客户端回�
     }
 ```
 
-```java packages/services/Car/service/src/com/android/car/ICarImpl.java
+```java
+//packages/services/Car/service/src/com/android/car/ICarImpl.java
     private final VehicleHal mHal;
     //构造函数启动一大堆服务
     public ICarImpl(Context serviceContext, IVehicle vehicle, SystemInterface systemInterface,
@@ -651,14 +660,15 @@ onBind()将返回给客户端一个IBind接口实例，IBind允许客户端回�
     }
 ```
 
-### onBind
+### 2.7.2. onBind
 
 将上面onCreate创建的mICarImpl对象返回：
 
 1. onBind()回调方法会继续传递通过bindService()传递来的intent对象（即上面的`bindServiceAsUser`方法）
 2. onUnbind()会处理传递给unbindService()的intent对象。如果service允许绑定，onBind()会返回客户端与服务互相联系的通信句柄
 
-```java packages/services/Car/service/src/com/android/car/CarService.java
+```java
+//packages/services/Car/service/src/com/android/car/CarService.java
     @Override
     public IBinder onBind(Intent intent) {
         return mICarImpl;
@@ -667,7 +677,7 @@ onBind()将返回给客户端一个IBind接口实例，IBind允许客户端回�
 
 所以此处的mICarImpl会作为IBinder返回给`CarServiceHelperService.java - bindServiceAsUser`方法中的参数mCarServiceConnection（回调）
 
-### onDestroy
+### 2.7.3. onDestroy
 
 释放mICarImpl创建的资源，包含一系列的服务：
 
@@ -693,7 +703,7 @@ onBind()将返回给客户端一个IBind接口实例，IBind允许客户端回�
 
 ***
 
-## 回调ServiceConnection
+## 2.8. 回调ServiceConnection
 
 > ICarImpl初始化完毕，会作为IBinder返回给`CarServiceHelperService.java - bindServiceAsUser`方法中绑定此服务的mCarServiceConnection（回调）
 
@@ -702,7 +712,8 @@ mCarServiceConnection初始化如下：
 1. 其中返回的ICarImpl被保存在了CarServiceHelperService的mCarService
 2. mCarService.transact跨进程通信，调用ICar.aidl中定义的第一个方法setCarServiceHelper
 
-```java frameworks/opt/car/services/src/com/android/internal/car/CarServiceHelperService.java
+```java
+//frameworks/opt/car/services/src/com/android/internal/car/CarServiceHelperService.java
 private static final String CAR_SERVICE_INTERFACE = "android.car.ICar";
 private IBinder mCarService;
 private final ICarServiceHelperImpl mHelper = new ICarServiceHelperImpl();
@@ -740,7 +751,7 @@ private final ServiceConnection mCarServiceConnection = new ServiceConnection() 
     };
 ```
 
-## 跨进程setCarServiceHelper
+## 2.9. 跨进程setCarServiceHelper
 
 ```java
     @Override
@@ -759,7 +770,7 @@ private final ServiceConnection mCarServiceConnection = new ServiceConnection() 
     }
 ```
 
-## 参考
+# 3. 参考
 
 > [Android Automotive之CarService开机启动](https://blog.csdn.net/qq_34211365/article/details/117510997)
 > 
