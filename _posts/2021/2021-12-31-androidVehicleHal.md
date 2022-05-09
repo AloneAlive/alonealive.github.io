@@ -6,8 +6,6 @@ date:   2021-12-31 14:19:02 +0800
 categories: carservice
 tags: IVI android carservice
 toc: true
-toc_label: "my table"
-toc_icon: "cog"
 ---
 
 > 文档内容：1.vehicle HAL架构介绍、详细的启动流程；2.部分车辆属性类型名称说明；3.上层carservice和hal层数据subscribe/set/get流程梳理;4.dbus和vehicle hal连接交互的流程；4.从dbus回调数据返回至APP层的详细流程梳理（最终梳理方法流转调用的流程，绘制序列图）
