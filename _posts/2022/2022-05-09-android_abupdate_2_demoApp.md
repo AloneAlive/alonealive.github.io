@@ -348,7 +348,7 @@ public class SystemUpdaterActivity extends AppCompatActivity
 
 ### 2.2.3. 序列图
 
-![](../../assets/post/2022/2022-05-29-android_abupdate_2_demoApp/applyPayload.png)
+![](../../assets/post/2022/2022-05-09-android_abupdate_2_demoApp/applyPayload.png)
 
 ***
 
