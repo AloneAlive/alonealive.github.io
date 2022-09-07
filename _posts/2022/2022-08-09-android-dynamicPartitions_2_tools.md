@@ -2,8 +2,8 @@
 layout: single
 title:  Android 动态分区相关模块和常用工具
 date:   2022-08-09 13:58:02 +0800
-categories: android
-tags: android
+categories: ota
+tags: android ota AB升级
 toc: true
 ---
 

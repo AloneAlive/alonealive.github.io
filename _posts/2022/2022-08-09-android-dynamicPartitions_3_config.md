@@ -2,8 +2,8 @@
 layout: single
 title:  Android 动态分区配置原生示例
 date:   2022-08-09 16:58:02 +0800
-categories: android
-tags: android
+categories: ota
+tags: android ota AB升级
 toc: true
 ---
 
