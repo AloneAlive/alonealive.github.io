@@ -46,6 +46,15 @@ layout: default
       </section>
 
       <footer class="page__meta">
+        <hr>
+        <!-- 文章底部版权说明 -->
+        <div class="copyright">
+        <p><strong>本文作者: sunwengang</strong></p>
+        <p><strong>本文使用</strong><a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+        <p><strong>本文固定链接：<a href="{{ page.url | absolute_url }}" class="u-url" itemprop="url">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</a></p>
+        <p><strong>原创文章,转载请注明出处！</strong></p>
+        </div>
+        <hr>
         {% if site.data.ui-text[site.locale].meta_label %}
           <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
         {% endif %}

@@ -708,3 +708,4 @@ enum class ErrorCode : int {
 + [Android 12 AOSP源码](http://aosp.opersys.com/xref/android-12.0.0_r2/xref/system/update_engine)
 + [fs_mgr模块-system文件系统管理的主模块](https://www.cnblogs.com/pyjetson/p/14872492.html)
 + [Android官方文档VAB-dm-snapshot](https://source.android.google.cn/devices/tech/ota/virtual_ab?hl=nl#dm-snapshot-overview)
++ 我的博客即将同步至腾讯云开发者社区，邀请大家一同入驻：https://cloud.tencent.com/developer/support-plan?invite_code=1ds259apwo697
