@@ -68,12 +68,12 @@ layout: default
     </div>
 
     <!-- 隐藏production判断逻辑，直接使用bundle exec jekyll serve即可显示评论，否则需使用JEKYLL_ENV=production jekyll s -->
-    {% if site.comments.provider and page.comments %}
+    <!-- {% if site.comments.provider and page.comments %}
       {% include comments.html %}
-    {% endif %}
-    <!-- {% if jekyll.environment == 'production' and site.comments.provider and page.comments %}
-    {% include comments.html %}
     {% endif %} -->
+    {% if jekyll.environment == 'production' and site.comments.provider and page.comments %}
+    {% include comments.html %}
+    {% endif %}
   </article>
 
   {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
