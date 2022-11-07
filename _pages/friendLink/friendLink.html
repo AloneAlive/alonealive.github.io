@@ -1,0 +1,274 @@
+<!--******************************
+* 卡片式友情链接页面
+* 孟坤博客 编写
+* 文章地址：http://mkblog.cn/666/  
+* 编写日期：2017-1-3
+*******************************-->
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>wizzie-友情链接</title>
+    <style>
+    *{
+        padding: 0;margin: 0;
+        font-family: Microsoft Yahei, "微软雅黑", "Helvetica Neue", Helvetica, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+    }
+    .container{
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    .more-title{
+        text-align: center;
+        font-weight: normal;
+        font-size: 25px;
+        margin: 20px 0 0 0;
+    }
+    /*放置链接框的区域*/
+    .link-box-area{
+        padding-top: 25px;
+        overflow: hidden;
+        zoom: 1;
+    }
+    /*链接框*/
+    .link-box{
+        width: 30%;
+        display: inline-block;
+        background: #84AF9B;
+        /* background-image: linear-gradient(to right, #ff9569 0%, #e92758 100%); */
+        height: 150px;
+        margin-left: 2.5%;
+        margin-bottom: 25px;
+        border-radius:15px;
+        float: left;
+        text-decoration: none!important;    /*这里这么处理是因为受下面的display: -webkit-box;影响，下划线又会回来*/
+        overflow: hidden;
+        -webkit-transition: all .2s linear; /*渐变效果*/
+            transition: all .2s linear;
+    }
+    /*链接区域鼠标滑动浮起效果*/
+    .link-box:hover{
+        z-index: 2; /*设置在顶层显示*/
+        -webkit-box-shadow: 0 15px 30px rgba(0,0,0,0.1);    /*添加阴影*/
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        -webkit-transform: translate3d(0, -2px, 0);     /*向上浮动*/
+        transform: translate3d(0, -2px, 0);
+    }
+    /*链接名字*/
+    .link-box .link-name{
+        font-size: 20px;
+        color: #2C3E50;
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        margin: 18px 0;
+        /*超过一行的内容被自动截断并加上省略号*/
+        text-overflow: -o-ellipsis-lastline;    /*最后一行加省略号*/
+        overflow: hidden;
+        text-overflow: ellipsis;    /*无法容纳的被加上省略号*/
+        display: -webkit-box;
+        -webkit-line-clamp: 1;  /*超出三行截断*/
+        -webkit-box-orient: vertical;
+    }
+    /*链接小图标*/
+    .link-box .link-name .link-favicon{
+        display: inline-block;
+        max-width: 30px;
+        height: 30px;
+        margin: -3px 2px 0 2px;
+        vertical-align: middle;
+        border: none;
+    }
+    /*链接描述*/
+    .link-box .link-direction{
+        display: inline-block;
+        padding: 0 14px;
+        font-size: 15px;
+        line-height: 25px;
+        color: #555;
+        /*超过三行的内容被自动截断并加上省略号*/
+        text-overflow: -o-ellipsis-lastline;    /*最后一行加省略号*/
+        overflow: hidden;
+        text-overflow: ellipsis;    /*无法容纳的被加上省略号*/
+        display: -webkit-box;
+        -webkit-line-clamp: 3;  /*超出三行截断*/
+        -webkit-box-orient: vertical;
+    }
+    /*网页宽度大于900px,每列显示3个*/
+    @media screen and (min-width:900px){
+        .link-box[data-role=.link-box-area]:nth-child(3n)
+        {
+            clear:both;
+        }
+    }
+    /*网页宽度在900px到600px之间,每列显示2个*/
+    @media screen and (max-width:900px) and (min-width:600px){
+        .link-box[data-role=.link-box-area]:nth-child(2n)
+        {
+            clear:both;
+        }
+        .link-box{
+            width: 40%;
+            height: 150px;
+            margin-left: 6.5%;
+        }
+    }
+    /*网页宽度小于600px,每列显示1个*/
+    @media screen and (max-width:600px){
+        .link-box{
+            width: 90%;
+            height: 150px;
+            margin-left: 5%;
+            clear:both;
+        }
+    }
+    </style>
+</head>
+<body>
+<div class="container">
+<h3 class="more-title">友情链接</h3>
+<div class="link-box-area">
+<a class="link-box" href="https://lruihao.cn" target="_blank">
+    <span class="link-name">
+        <img class="link-favicon" src="https://lruihao.cn/images/avatar.jpg"/>
+        菠菜眾長
+    </span>
+    <span class="link-direction">
+        不怕萬人阻擋，只怕自己投降
+    </span>
+</a>
+<a class="link-box" href="https://yuzhouwan.com/" target="_blank">
+    <span class="link-name">
+        <img class="link-favicon" src="https://yuzhouwan.com/yuzhouwan_logo_128x128.ico"/>
+        宇宙湾
+    </span>
+    <span class="link-direction">
+        主要是大数据和人工智能的原创文章
+    </span>
+</a>
+<a class="link-box" href="https://panqiincs.me/" target="_blank">
+    <span class="link-name">
+        <img class="link-favicon" src="https://panqiincs.me/images/avatar.jpg"/>
+        辛未羊的网络日志
+    </span>
+    <span class="link-direction">
+        记录生活和学习的清静之地
+    </span>
+</a>
+<a class="link-box" href="http://s190793.blog.163.com/" target="_blank">
+    <span class="link-name">
+        <img class="link-favicon" src="https://api.byi.pw/favicon/?url=s190793.blog.163.com"/>
+        瀚宇软件工作室
+    </span>
+    <span class="link-direction">
+        专注于绿色优质软件的制作与分享！是孟坤软件的好伙伴
+    </span>
+</a>
+<a class="link-box" href="http://xbdcc.cn/" target="_blank">
+    <span class="link-name">
+        <img class="link-favicon" src="https://api.byi.pw/favicon/?url=xbdcc.cn"/>
+        行走的代码狗
+    </span>
+    <span class="link-direction">
+        没有什么到不了的地方，相信就有力量。做个流浪的码农，不骄不躁，不卑不亢，不屈不挠。
+    </span>
+</a>
+<a class="link-box" href="http://liubeijing.ren/" target="_blank">
+    <span class="link-name">
+        <img class="link-favicon" src="https://api.byi.pw/favicon/?url=liubeijing.ren"/>
+        刘北京的个人blog
+    </span>
+    <span class="link-direction">
+        前端开发者，本博主的“入坑导师”之一
+    </span>
+</a>
+<a class="link-box" href="http://zhuangxiabi.com/" target="_blank">
+    <span class="link-name">
+        <img class="link-favicon" src="https://api.byi.pw/favicon/?url=zhuangxiabi.com"/>
+        装下逼
+    </span>
+    <span class="link-direction">
+        装逼神器，无形装逼，最为致命；海量素材每天更新,让你永远站在潮流的风口浪尖
+    </span>
+</a>
+<a class="link-box" href="http://www.vpao.net/" target="_blank">
+    <span class="link-name">
+        <img class="link-favicon" src="https://api.byi.pw/favicon/?url=www.vpao.net"/>
+        V泡网
+    </span>
+    <span class="link-direction">
+        专注IT、科技、Wordpress、主机域名VPS分享的一个网站，在这里，可能有你想要的内容。
+    </span>
+</a>
+<a class="link-box" href="http://yigujin.cn/" target="_blank">
+    <span class="link-name">
+        <img class="link-favicon" src="https://api.byi.pw/favicon/?url=yigujin.cn"/>
+        懿古今
+    </span>
+    <span class="link-direction">
+        懿古今是一个普通人的生活纪实博客，记录和分享个人生活、工作、家庭、博客上的点点滴滴！
+    </span>
+</a>
+</div>  <!--class="link-box-area"-->
+
+<!-- <h3 class="more-title">博主的个人收藏夹</h3>
+<div class="link-box-area">
+<a class="link-box" href="http://ilxdh.com/" target="_blank">
+    <span class="link-name">
+        <img class="link-favicon" src="https://api.byi.pw/favicon/?url=ilxdh.com"/>
+        龙轩导航
+    </span>
+    <span class="link-direction">
+        做一个有用的网址导航
+    </span>
+</a>
+<a class="link-box" href="http://www.52pojie.cn/" target="_blank">
+    <span class="link-name">
+        <img class="link-favicon" src="https://api.byi.pw/favicon/?url=www.52pojie.cn"/>
+        吾爱破解论坛
+    </span>
+    <span class="link-direction">
+        吾爱破解论坛致力于软件安全与病毒分析的前沿，由无数热衷于软件加密解密及反病毒爱好者共同维护
+    </span>
+</a>
+<a class="link-box" href="http://www.kalcaddle.com/" target="_blank">
+    <span class="link-name">
+        <img class="link-favicon" src="https://api.byi.pw/favicon/?url=www.kalcaddle.com"/>
+        芒果云
+    </span>
+    <span class="link-direction">
+        芒果云 在线资源管理器 集文件管理、浏览、编辑于一体的工具。你可以像使用操作系统一样使用它！
+    </span>
+</a>
+<a class="link-box" href="http://www.smohan.net/" target="_blank">
+    <span class="link-name">
+        <img class="link-favicon" src="https://api.byi.pw/favicon/?url=www.smohan.net"/>
+        水墨寒的博客
+    </span>
+    <span class="link-direction">
+        水墨寒，90后双鱼座普通男青年！WEB前端工程师。喜欢敲代码的感觉，相信编程是一门艺术。
+    </span>
+</a>
+<a class="link-box" href="http://youquhome.com/" target="_blank">
+    <span class="link-name">
+        <img class="link-favicon" src="https://api.byi.pw/favicon/?url=youquhome.com"/>
+        有趣网址之家
+    </span>
+    <span class="link-direction">
+        分享有趣的国内外网站&amp;应用新奇的html5网站
+    </span>
+</a>
+<a class="link-box" href="http://kongzue.com/" target="_blank">
+    <span class="link-name">
+        <img class="link-favicon" src="https://api.byi.pw/favicon/?url=kongzue.com"/>
+        空祖·N碳社
+    </span>
+    <span class="link-direction">
+        立志于打造最好用、易用的软件
+    </span>
+</a>
+</div>  class="link-box-area" -->
+
+</div>  <!--class="container"-->
+</body>

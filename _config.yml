@@ -10,6 +10,8 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
+# 隐藏production判断逻辑，直接使用bundle exec jekyll serve即可显示评论，否则需使用JEKYLL_ENV=production jekyll s
+
 #theme                  : "minimal-mistakes-jekyll"
 remote_theme           : "mmistakes/minimal-mistakes"
 # 主题皮肤 参考：https://mmistakes.github.io/minimal-mistakes/docs/configuration/
@@ -140,6 +142,9 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
+    # - label: "FriendLink"
+    #   icon: "fas fa-fw fa fa-archive"
+    #   url: "/_pages/friendLink/2111_pro_line/friend.html"
     # - label: "Email"
     #   icon: "fas fa-fw fa-envelope-square"
     #   url: "1332963488@qq.com"
@@ -174,6 +179,9 @@ footer:
     - label: "navigation"
       icon: "fas fa-fw fa fa-archive"
       url: "/_pages/nav.html"
+    - label: "FriendLink"
+      icon: "fas fa-fw fa fa-beer"
+      url: "/_pages/friendLink/2111_pro_line/friend.html"
 
 
 # Reading Files
