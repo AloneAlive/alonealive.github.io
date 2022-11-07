@@ -119,7 +119,7 @@ author:
   location         : "China"
   email            : "1332963488@qq.com"
   links:
-    - label: "Website"
+    - label: "OldBlog"
       icon: "fas fa-fw fa-link"
       url: "https://wizzie.top/Blog/"
     - label: "Twitter"
