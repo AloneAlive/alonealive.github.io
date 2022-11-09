@@ -121,9 +121,9 @@ author:
   location         : "China"
   email            : "1332963488@qq.com"
   links:
-    - label: "PreBlog"
-      icon: "fas fa-fw fa-link"
-      url: "https://wizzie.top/Blog/"
+    # - label: "PreBlog"
+    #   icon: "fas fa-fw fa-link"
+    #   url: "https://wizzie.top/Blog/"
     - label: "NAV"
       icon: "fas fa-fw fa fa-archive"
       url: "/_pages/nav.html"
@@ -152,7 +152,7 @@ author:
 # Site Footer
 footer:
   links:
-    - label: "Website"
+    - label: "PreBlog"
       icon: "fas fa-fw fa-link"
       url: "https://wizzie.top/Blog/"
     - label: "Twitter"
