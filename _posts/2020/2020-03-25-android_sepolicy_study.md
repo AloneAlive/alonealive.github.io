@@ -2,9 +2,9 @@
 layout: single
 related: false
 title:  Android SELinux权限笔记
-date:   2020-03-20 23:32:00 +0800
-categories: selinux
-tags: selinux android
+date:   2020-03-25 23:32:00 +0800
+categories: android
+tags: selinux
 toc: true
 ---
 
