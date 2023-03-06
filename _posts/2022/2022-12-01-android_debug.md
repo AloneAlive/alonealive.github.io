@@ -2079,12 +2079,9 @@ UUID=8e68541c-22a5-4156-8bae-c4479adf10d4 none            swap    sw            
 ### 3.18.1. ubuntu查看所有用户
 
 ```shell
-root@compile03-Virtual-Machine:/etc# grep bash /etc/passwd
+/etc# grep bash /etc/passwd
 root:x:0:0:root:/root:/bin/bash
-compile03:x:1000:1000:compile03,,,:/home/compile03:/bin/bash
-uchej537:x:999:999::/home/uchej537:/bin/bash
-usunw074:x:1001:1001::/home/compile03/workspace/usunw074:/bin/bash
-root@compile03-Virtual-Machine:/etc#
+test:x:1000:1000:test,,,:/home/test:/bin/bash
 ```
 
 ### 3.18.2. ubuntu切换用户
