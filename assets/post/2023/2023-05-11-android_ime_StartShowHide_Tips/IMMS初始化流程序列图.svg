@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- 由 Microsoft Visio, SVG Export 生成 IMMS初始化流程序列图.svg Page-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="22.8858in" height="16.0354in"
+		viewBox="0 0 1647.78 1154.55" xml:space="preserve" color-interpolation-filters="sRGB" class="st32">
+	<v:documentProperties v:langID="2052" v:metric="true" v:viewMarkup="false">
+		<v:userDefs>
+			<v:ud v:nameU="msvNoAutoConnect" v:prompt="" v:val="VT0(1):26"/>
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#90aadb;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st2 {stroke:#9b9b9b;stroke-dasharray:3.5,2.5;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st3 {fill:#ffffff;font-family:Segoe UI;font-size:0.833336em;font-weight:bold}
+		.st4 {fill:#fee599;stroke:#a54d00;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st5 {marker-end:url(#mrkr4-34);stroke:#a54d00;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st6 {fill:#a54d00;fill-opacity:1;stroke:#a54d00;stroke-opacity:1;stroke-width:0.13368983957219}
+		.st7 {fill:#ffffff;stroke:none;stroke-linecap:butt;stroke-width:7.2}
+		.st8 {fill:#803a00;font-family:Segoe UI;font-size:0.666664em}
+		.st9 {fill:#ffff00;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st10 {fill:#ff0000;font-family:Calibri;font-size:0.666664em;font-weight:bold}
+		.st11 {font-size:1em}
+		.st12 {font-family:宋体;font-size:1em}
+		.st13 {fill:#000000;font-family:微软雅黑;font-size:1em;font-weight:normal}
+		.st14 {fill:#000000;font-size:1em;font-weight:normal}
+		.st15 {fill:#000000;font-family:宋体;font-size:0.666664em;font-weight:bold}
+		.st16 {font-family:Calibri;font-size:1em;font-weight:normal}
+		.st17 {font-family:微软雅黑;font-size:1em;font-weight:normal}
+		.st18 {fill:#ff0000;font-family:Calibri;font-size:1em}
+		.st19 {fill:#ff0000;font-family:微软雅黑;font-size:1em}
+		.st20 {fill:#000000;font-family:宋体;font-size:0.666664em}
+		.st21 {font-family:Calibri;font-size:1em}
+		.st22 {font-family:微软雅黑;font-size:1em}
+		.st23 {font-family:微软雅黑;font-size:1em;font-weight:bold}
+		.st24 {font-family:Calibri;font-size:1em;font-weight:bold}
+		.st25 {font-family:黑体;font-size:1em}
+		.st26 {fill:#a5a5a5;stroke:#a54d00;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st27 {fill:#803a00;font-family:Segoe UI;font-size:0.666664em;font-weight:bold}
+		.st28 {fill:#ff0000;font-family:Calibri;font-size:1em;font-weight:bold}
+		.st29 {fill:#ff0000;font-family:微软雅黑;font-size:1em;font-weight:bold}
+		.st30 {fill:#f7cbac;stroke:#a54d00;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st31 {fill:#000000;font-family:Calibri;font-size:0.666664em}
+		.st32 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs id="Markers">
+		<g id="lend4">
+			<path d="M 2 1 L 0 0 L 2 -1 L 2 1 " style="stroke:none"/>
+		</g>
+		<marker id="mrkr4-34" class="st6" v:arrowType="4" v:arrowSize="3" v:setback="14.96" refX="-14.96" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-7.48,-7.48) "/>
+		</marker>
+	</defs>
+	<g v:mID="6" v:index="1" v:groupContext="foregroundPage">
+		<v:userDefs>
+			<v:ud v:nameU="msvThemeOrder" v:val="VT0(0):26"/>
+			<v:ud v:nameU="visNavType" v:val="VT0(1):26"/>
+		</v:userDefs>
+		<title>页-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<v:layer v:name="连接线" v:index="0"/>
+		<g id="group1-1" transform="translate(307.772,-953.931)" v:mID="1" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(1000):26"/>
+			</v:userDefs>
+			<title>Actor lifeline</title>
+			<desc>SystemServer.java</desc>
+			<g id="shape2-2" v:mID="2" v:groupContext="shape" transform="translate(28.3465,0)">
+				<title>工作表.2</title>
+				<rect x="0" y="1129.04" width="51.0236" height="25.5118" class="st1"/>
+			</g>
+			<g id="shape3-4" v:mID="3" v:groupContext="shape" transform="translate(35.9055,554.003)">
+				<title>工作表.3</title>
+			</g>
+			<g id="shape4-6" v:mID="4" v:groupContext="shape" transform="translate(1208.41,1154.55) rotate(90)">
+				<title>工作表.4</title>
+				<path d="M0 1154.55 L536.39 1154.55" class="st2"/>
+			</g>
+			<g id="shape1-9" v:mID="1" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="53.8583" cy="1141.8" width="107.72" height="25.5118"/>
+				<rect x="0" y="1129.04" width="107.717" height="25.5118" class="st1"/>
+				<text x="11.17" y="1144.8" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>SystemServer.java</text>			</g>
+		</g>
+		<g id="group5-12" transform="translate(472.181,-953.931)" v:mID="5" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(5000):26"/>
+			</v:userDefs>
+			<title>Object lifeline</title>
+			<desc>SystemServiceManager.java</desc>
+			<g id="shape6-13" v:mID="6" v:groupContext="shape" transform="translate(45.7087,0)">
+				<title>工作表.6</title>
+				<rect x="0" y="1129.04" width="51.0236" height="25.5118" class="st1"/>
+			</g>
+			<g id="shape7-15" v:mID="7" v:groupContext="shape" transform="translate(62.7165,-29.0551)">
+				<title>工作表.7</title>
+				<path d="M8.5 1154.55 a0 0 0 1 1 0 0 a0 0 0 1 1 0 0 Z" class="st1"/>
+			</g>
+			<g id="shape8-17" v:mID="8" v:groupContext="shape" transform="translate(47.4803,532.744)">
+				<title>工作表.8</title>
+			</g>
+			<g id="shape9-19" v:mID="9" v:groupContext="shape" transform="translate(1225.77,1154.55) rotate(90)">
+				<title>工作表.9</title>
+				<path d="M0 1154.55 L515.13 1154.55" class="st2"/>
+			</g>
+			<g id="shape5-22" v:mID="5" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="71.2205" cy="1141.8" width="142.45" height="25.5118"/>
+				<rect x="0" y="1129.04" width="142.441" height="25.5118" class="st1"/>
+				<text x="5.71" y="1144.8" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>SystemServiceManager.java</text>			</g>
+		</g>
+		<g id="shape15-25" v:mID="15" v:groupContext="shape" transform="translate(-788.669,722.195) rotate(-90)">
+			<title>Activation</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(2000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="487.559" height="8.50394" class="st4"/>
+		</g>
+		<g id="shape16-27" v:mID="16" v:groupContext="shape" transform="translate(-606.898,685.344) rotate(-90)">
+			<title>激活.60</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(6000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="371.339" height="8.50394" class="st4"/>
+		</g>
+		<g id="shape18-29" v:mID="18" v:groupContext="shape" v:layerMember="0" transform="translate(360.921,-919.916)">
+			<title>Message.21</title>
+			<desc>main</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(3000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="27.1417" cy="1168.23" width="40" height="17.6036"/>
+			<path d="M4.96 1154.55 L27.21 1154.55 L27.21 1188.57 L16.69 1188.57" class="st5"/>
+			<rect v:rectContext="textBkgnd" x="18.4291" y="1163.43" width="17.4254" height="9.59985" class="st7"/>
+			<text x="18.43" y="1170.63" class="st8" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>main</text>		</g>
+		<g id="shape21-37" v:mID="21" v:groupContext="shape" transform="translate(125.575,-964.63)">
+			<title>黄色便条</title>
+			<desc>Android 12 AOSP InputMethodManagerServiceIMMS初始化流程 从SystemSer...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(10000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="83.126" cy="1130.46" width="166.26" height="48.189"/>
+			<rect x="0" y="1106.36" width="166.252" height="48.189" class="st9"/>
+			<text x="4" y="1117.56" class="st10" v:langID="2052"><v:paragraph/><v:tabList/>Android 12 AOSP<v:newlineChar/><tspan
+						x="4" dy="1.298em" class="st11">InputMethodManagerService</tspan><tspan class="st12">（</tspan>IMMS<tspan
+						class="st12">）</tspan><tspan class="st12">初始化</tspan><tspan x="4" dy="1.331em" class="st12">流程</tspan><tspan
+						class="st12">：<v:newlineChar/></tspan><tspan x="4" dy="1.244em" class="st13">从</tspan><tspan class="st14">SystemService</tspan><tspan
+						class="st13">启动</tspan><tspan class="st14">service</tspan><tspan class="st13">开始梳理</tspan></text>		</g>
+		<g id="shape25-51" v:mID="25" v:groupContext="shape" transform="translate(385.795,-666.992)">
+			<title>黄色便条.145</title>
+			<desc>注意 1.此处有个判断启动IMMS还是MCIMMS。MULTI_CLIENT_IME_ENABLED即persist.de...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(14000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="74.4094" cy="1087.94" width="148.82" height="133.228"/>
+			<rect x="0" y="1021.32" width="148.819" height="133.228" class="st9"/>
+			<text x="4" y="1033.31" class="st15" v:langID="2052"><v:paragraph/><v:tabList/>注意：<v:newlineChar/><tspan x="4"
+						dy="1.244em" class="st16">1.</tspan><tspan class="st17">此处有个判断启动</tspan><tspan class="st16" v:langID="1033">IMMS</tspan><tspan
+						class="st17">还是</tspan><tspan x="4" dy="1.215em" class="st16" v:langID="1033">MCIMMS</tspan><tspan
+						class="st17" v:langID="1033">。</tspan><tspan class="st16" v:langID="1033">MULTI_CLIENT_IME_ENABLED</tspan><tspan
+						x="4" dy="1.215em" class="st17" v:langID="1033">（</tspan><tspan class="st17">即</tspan><tspan class="st16"
+						v:langID="1033">persist.debug.multi_client_ime</tspan><tspan class="st17">或</tspan><tspan x="4"
+						dy="1.215em" class="st16" v:langID="1033">ro.sys.multi_client_ime</tspan><tspan class="st17"
+						v:langID="1033">）</tspan><tspan class="st17">开启</tspan><tspan class="st17">，</tspan><tspan class="st17">启动</tspan><tspan
+						x="4" dy="1.215em" class="st16" v:langID="1033">MultiClientInputMethodManagerService</tspan><tspan
+						class="st17">服</tspan><tspan x="4" dy="1.204em" class="st17">务</tspan><tspan class="st17">，</tspan><tspan
+						class="st17">否则启动</tspan><tspan x="4" dy="1.211em" class="st16" v:langID="1033">InputMethodManagerService</tspan><tspan
+						class="st17">服务<v:newlineChar/></tspan><tspan x="4" dy="1.215em" class="st16">2. </tspan><tspan
+						class="st17">此处只关注</tspan><tspan class="st16">IMMS</tspan><tspan class="st17">启动</tspan><tspan class="st17">，</tspan><tspan
+						class="st17">该方法入参则</tspan><tspan x="4" dy="1.215em" class="st17">是传入</tspan><tspan class="st18"
+						v:langID="1033">class </tspan><tspan x="4" dy="1.215em" class="st18" v:langID="1033">name</tspan><tspan
+						class="st19" v:langID="1033">：</tspan><tspan class="st18" v:langID="1033">&#34;InputMethodManagerService.Lif</tspan><tspan
+						x="4" dy="1.204em" class="st18" v:langID="1033">ecycle.class&#34;</tspan></text>		</g>
+		<g id="shape57-89" v:mID="57" v:groupContext="shape" transform="translate(-784.417,708.661) rotate(-90)">
+			<title>激活.57</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(34000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="457.018" height="8.50394" class="st4"/>
+		</g>
+		<g id="shape58-91" v:mID="58" v:groupContext="shape" transform="translate(-780.165,694.488) rotate(-90)">
+			<title>激活.58</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(35000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="408.829" height="8.50394" class="st4"/>
+		</g>
+		<g id="shape59-93" v:mID="59" v:groupContext="shape" v:layerMember="0" transform="translate(365.173,-877.89)">
+			<title>Message.59</title>
+			<desc>run()</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(36000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="26.7213" cy="1160.95" width="40" height="17.6036"/>
+			<path d="M4.96 1154.55 L27.21 1154.55 L27.21 1175.53 L16.69 1175.53" class="st5"/>
+			<rect v:rectContext="textBkgnd" x="18.3896" y="1156.15" width="16.6635" height="9.59985" class="st7"/>
+			<text x="18.39" y="1163.35" class="st8" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>run()</text>		</g>
+		<g id="shape60-100" v:mID="60" v:groupContext="shape" transform="translate(-775.913,680.315) rotate(-90)">
+			<title>激活.60</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(37000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="368.504" height="8.50394" class="st4"/>
+		</g>
+		<g id="shape61-102" v:mID="61" v:groupContext="shape" v:layerMember="0" transform="translate(369.425,-851.884)">
+			<title>Message.61</title>
+			<desc>startOtherServices(t)</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(38000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="45.2834" cy="1163.7" width="81.9" height="17.6036"/>
+			<path d="M4.96 1154.55 L27.21 1154.55 L27.21 1180.7 L16.69 1180.7" class="st5"/>
+			<rect v:rectContext="textBkgnd" x="9.43447" y="1158.9" width="71.6982" height="9.59985" class="st7"/>
+			<text x="9.43" y="1166.1" class="st8" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>startOtherServices(t)</text>		</g>
+		<g id="shape62-109" v:mID="62" v:groupContext="shape" v:layerMember="0" transform="translate(378.638,-815.811)">
+			<title>Message.62</title>
+			<desc>startService</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(39000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="80.0078" cy="1160.22" width="50.73" height="17.6036"/>
+			<path d="M0 1161.64 L153.03 1161.64" class="st5"/>
+			<rect v:rectContext="textBkgnd" x="59.7426" y="1155.42" width="40.5308" height="9.59985" class="st7"/>
+			<text x="59.74" y="1162.62" class="st8" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>startService</text>		</g>
+		<g id="shape63-116" v:mID="63" v:groupContext="shape" transform="translate(-602.646,384.872) rotate(-90)">
+			<title>激活.63</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(40000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="19.8425" height="8.50394" class="st4"/>
+		</g>
+		<g id="shape66-118" v:mID="66" v:groupContext="shape" v:layerMember="0" transform="translate(542.693,-806.53)">
+			<title>Message.66</title>
+			<desc>loadClassFromLoader</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(43000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="49.0853" cy="1169.26" width="85.82" height="17.6036"/>
+			<path d="M4.96 1154.55 L27.21 1154.55 L27.21 1182.12 L16.69 1182.12" class="st5"/>
+			<rect v:rectContext="textBkgnd" x="11.2751" y="1164.46" width="75.6205" height="9.59985" class="st7"/>
+			<text x="11.28" y="1171.66" class="st8" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>loadClassFromLoader</text>		</g>
+		<g id="shape67-125" v:mID="67" v:groupContext="shape" v:layerMember="0" transform="translate(542.693,-760.93)">
+			<title>Message.67</title>
+			<desc>startService</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(44000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="32.1732" cy="1161.47" width="50.73" height="17.6036"/>
+			<path d="M4.96 1154.8 L27.21 1154.8 L27.21 1168.48 L16.69 1168.48" class="st5"/>
+			<rect v:rectContext="textBkgnd" x="11.9079" y="1156.67" width="40.5308" height="9.59985" class="st7"/>
+			<text x="11.91" y="1163.87" class="st8" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>startService</text>		</g>
+		<g id="shape68-132" v:mID="68" v:groupContext="shape" transform="translate(575.575,-796.677)">
+			<title>黄色便条.68</title>
+			<desc>通过反射方法得到具体的Class类返回Class&#60;SystemService&#62;类型的服务类即继承SystemService...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(45000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="74.4094" cy="1130.46" width="148.82" height="48.189"/>
+			<rect x="0" y="1106.36" width="148.819" height="48.189" class="st9"/>
+			<text x="4" y="1118.35" class="st20" v:langID="2052"><v:paragraph/><v:tabList/>通过反射方法得到具体的<tspan class="st21"
+						v:langID="1033">Class</tspan><tspan class="st22">类</tspan><tspan class="st22">，</tspan><tspan class="st22">返回</tspan><tspan
+						x="4" dy="1.244em" class="st21" v:langID="1033">Class&#60;SystemService&#62;</tspan><tspan class="st22">类型的服务类</tspan><tspan
+						class="st22">，</tspan><tspan class="st22">即</tspan><tspan x="4" dy="1.215em" class="st22">继承</tspan><tspan
+						class="st21" v:langID="1033">SystemService</tspan><tspan class="st22">的</tspan><tspan class="st21"
+						v:langID="1033">Lifecycle<v:newlineChar/></tspan><tspan x="4" dy="1.215em" class="st22">将其作为第二个</tspan><tspan
+						class="st21">startService</tspan><tspan class="st22">的入参</tspan></text>		</g>
+		<g id="shape69-150" v:mID="69" v:groupContext="shape" transform="translate(572.74,-712.346)">
+			<title>黄色便条.69</title>
+			<desc>第二个startService会通过反射构造类的实例&#34;service=constructor.newInstance(mC...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(46000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="119.409" cy="1136.13" width="238.82" height="36.8504"/>
+			<rect x="0" y="1117.7" width="238.819" height="36.8504" class="st9"/>
+			<text x="4" y="1129.69" class="st20" v:langID="2052"><v:paragraph/><v:tabList/>第二个<tspan class="st21">startService</tspan>会通过反射构造类的实例<tspan
+						x="4" dy="1.244em" class="st21">&#34;</tspan><tspan class="st21" v:langID="1033">service=constructor.newInstance(mContext)&#34;</tspan><tspan
+						class="st22" v:langID="1033">，</tspan><tspan class="st23">即实例化</tspan><tspan class="st24" v:langID="1033">Lifecycle</tspan><tspan
+						class="st23">类<v:newlineChar/></tspan><tspan x="4" dy="1.215em" class="st22">然后调用第三个</tspan><tspan
+						class="st21">startService</tspan></text>		</g>
+		<g id="shape70-162" v:mID="70" v:groupContext="shape" v:layerMember="0" transform="translate(542.693,-689.073)">
+			<title>Message.70</title>
+			<desc>startService</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(47000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="33.8413" cy="1164.38" width="50.73" height="17.6036"/>
+			<path d="M4.96 1154.55 L27.21 1154.55 L27.21 1184.5 L16.69 1184.5" class="st5"/>
+			<rect v:rectContext="textBkgnd" x="13.576" y="1159.58" width="40.5308" height="9.59985" class="st7"/>
+			<text x="13.58" y="1166.78" class="st8" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>startService</text>		</g>
+		<g id="shape71-169" v:mID="71" v:groupContext="shape" transform="translate(575.575,-640.063)">
+			<title>黄色便条.71</title>
+			<desc>先将该service添加到mServices列表中然后调用SystemService.java的onStart函数</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(48000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="93.8976" cy="1141.8" width="187.8" height="25.5118"/>
+			<rect x="0" y="1129.04" width="187.795" height="25.5118" class="st9"/>
+			<text x="4" y="1141.03" class="st20" v:langID="2052"><v:paragraph/><v:tabList/>先将该<tspan class="st21" v:langID="1033">service</tspan><tspan
+						class="st22">添加到</tspan><tspan class="st21" v:langID="1033">mServices</tspan><tspan class="st22">列表中</tspan><tspan
+						class="st22">，</tspan><tspan class="st22">然后调用</tspan><tspan x="4" dy="1.244em" class="st21"
+						v:langID="1033">SystemService.java</tspan><tspan class="st22">的</tspan><tspan class="st21" v:langID="1033">onStart</tspan><tspan
+						class="st22">函数</tspan></text>		</g>
+		<g id="shape72-182" v:mID="72" v:groupContext="shape" transform="translate(-602.646,455.738) rotate(-90)">
+			<title>激活.72</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(49000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="48.189" height="8.50394" class="st4"/>
+		</g>
+		<g id="shape73-184" v:mID="73" v:groupContext="shape" v:layerMember="0" transform="translate(551.906,-712.163)">
+			<title>Message.73</title>
+			<desc>constructor.newInstance(mContext) 即实例化IMMS的内部类Lifecycle类</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(50000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="162.478" cy="1164.12" width="135.03" height="28.0064"/>
+			<path d="M0 1160.4 L323.65 1162.82" class="st5"/>
+			<rect v:rectContext="textBkgnd" x="100.065" y="1154.11" width="124.827" height="20.0028" class="st7"/>
+			<text x="100.06" y="1161.31" class="st8" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>constructor.newInstance(mContext)<v:newlineChar/><tspan
+						x="101.22" dy="1.275em" class="st25" v:langID="2052">即实例化</tspan><tspan class="st11" v:langID="2052">IMMS</tspan><tspan
+						class="st25" v:langID="2052">的内部类</tspan>Lifecycle<tspan class="st25" v:langID="2052">类</tspan></text>		</g>
+		<g id="shape78-195" v:mID="78" v:groupContext="shape" transform="translate(-602.646,555.591) rotate(-90)">
+			<title>激活.78</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(53000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="77.1755" height="8.50394" class="st4"/>
+		</g>
+		<g id="group79-197" transform="translate(816.07,-950.457)" v:mID="79" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(54000):26"/>
+			</v:userDefs>
+			<title>Object lifeline.79</title>
+			<desc>InputMethodManager.java</desc>
+			<g id="shape80-198" v:mID="80" v:groupContext="shape" transform="translate(45.7087,0)">
+				<title>工作表.80</title>
+				<rect x="0" y="1129.04" width="51.0236" height="25.5118" class="st1"/>
+			</g>
+			<g id="shape81-200" v:mID="81" v:groupContext="shape" transform="translate(62.7165,-29.0551)">
+				<title>工作表.81</title>
+				<path d="M8.5 1154.55 a0 0 0 1 1 0 0 a0 0 0 1 1 0 0 Z" class="st1"/>
+			</g>
+			<g id="shape82-202" v:mID="82" v:groupContext="shape" transform="translate(47.4803,607.222)">
+				<title>工作表.82</title>
+			</g>
+			<g id="shape83-204" v:mID="83" v:groupContext="shape" transform="translate(1225.77,1154.55) rotate(90)">
+				<title>工作表.83</title>
+				<path d="M0 1154.55 L589.61 1154.55" class="st2"/>
+			</g>
+			<g id="shape79-207" v:mID="79" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="71.2205" cy="1141.8" width="142.45" height="25.5118"/>
+				<rect x="0" y="1129.04" width="142.441" height="25.5118" class="st1"/>
+				<text x="8.09" y="1144.8" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>InputMethodManager.java</text>			</g>
+		</g>
+		<g id="shape84-210" v:mID="84" v:groupContext="shape" transform="translate(-263.008,600.945) rotate(-90)">
+			<title>激活.84</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(55000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="184.252" height="8.50394" class="st26"/>
+		</g>
+		<g id="shape85-212" v:mID="85" v:groupContext="shape" v:layerMember="0" transform="translate(884.456,-703.843)">
+			<title>Message.85</title>
+			<desc>new InputMethodManagerService</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(56000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="72.1193" cy="1167.01" width="138.36" height="17.6036"/>
+			<path d="M7.09 1154.55 L25.09 1154.55 L25.09 1179.42 L14.57 1179.42" class="st5"/>
+			<rect v:rectContext="textBkgnd" x="8.04757" y="1162.21" width="128.143" height="9.59985" class="st7"/>
+			<text x="8.05" y="1169.41" class="st27" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>new InputMethodManagerService</text>		</g>
+		<g id="shape86-219" v:mID="86" v:groupContext="shape" transform="translate(919.016,-698.472)">
+			<title>黄色便条.86</title>
+			<desc>调用继承SystemService的Lifecycle类的构造函数然后创建IMMS对象</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(57000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="70.9958" cy="1141.8" width="142" height="25.5118"/>
+			<rect x="0" y="1129.04" width="141.992" height="25.5118" class="st9"/>
+			<text x="4" y="1141.03" class="st20" v:langID="2052"><v:paragraph/><v:tabList/>调用继承<tspan class="st21" v:langID="1033">SystemService</tspan><tspan
+						class="st22">的</tspan><tspan class="st28" v:langID="1033">Lifecycle</tspan><tspan class="st29">类</tspan><tspan
+						class="st22">的</tspan><tspan x="4" dy="1.244em" class="st22">构造函数</tspan><tspan class="st22">，</tspan><tspan
+						class="st22">然后创建</tspan><tspan class="st21">IMMS</tspan><tspan class="st22">对象</tspan></text>		</g>
+		<g id="shape87-232" v:mID="87" v:groupContext="shape" v:layerMember="0" transform="translate(551.906,-631.879)">
+			<title>Message.87</title>
+			<desc>Lifecycle.onStart</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(58000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="163.276" cy="1159.12" width="67.45" height="17.6036"/>
+			<path d="M0 1161.32 L323.65 1161.94" class="st5"/>
+			<rect v:rectContext="textBkgnd" x="134.653" y="1154.32" width="57.2454" height="9.59985" class="st7"/>
+			<text x="134.65" y="1161.52" class="st8" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Lifecycle<tspan
+						class="st11" v:langID="2052">.onStart</tspan></text>		</g>
+		<g id="group88-240" transform="translate(1057.02,-947.622)" v:mID="88" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(59000):26"/>
+			</v:userDefs>
+			<title>Object lifeline.88</title>
+			<desc>SystemService.java</desc>
+			<g id="shape89-241" v:mID="89" v:groupContext="shape" transform="translate(45.7087,0)">
+				<title>工作表.89</title>
+				<rect x="0" y="1129.04" width="51.0236" height="25.5118" class="st1"/>
+			</g>
+			<g id="shape90-243" v:mID="90" v:groupContext="shape" transform="translate(62.7165,-29.0551)">
+				<title>工作表.90</title>
+				<path d="M8.5 1154.55 a0 0 0 1 1 0 0 a0 0 0 1 1 0 0 Z" class="st1"/>
+			</g>
+			<g id="shape91-245" v:mID="91" v:groupContext="shape" transform="translate(47.4803,465.489)">
+				<title>工作表.91</title>
+			</g>
+			<g id="shape92-247" v:mID="92" v:groupContext="shape" transform="translate(1225.77,1154.55) rotate(90)">
+				<title>工作表.92</title>
+				<path d="M0 1154.55 L447.87 1154.55" class="st2"/>
+			</g>
+			<g id="shape88-250" v:mID="88" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="71.2205" cy="1141.8" width="142.45" height="25.5118"/>
+				<rect x="0" y="1129.04" width="142.441" height="25.5118" class="st1"/>
+				<text x="26.7" y="1144.8" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>SystemService.java</text>			</g>
+		</g>
+		<g id="shape93-253" v:mID="93" v:groupContext="shape" transform="translate(-22.0636,564.094) rotate(-90)">
+			<title>激活.93</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(60000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="51.0236" height="8.50394" class="st30"/>
+		</g>
+		<g id="shape96-255" v:mID="96" v:groupContext="shape" v:layerMember="0" transform="translate(891.543,-630.142)">
+			<title>Message.96</title>
+			<desc>publishBinderService</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(61000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="116.735" cy="1159.11" width="83.52" height="17.6036"/>
+			<path d="M0 1160.22 L229.21 1162.97" class="st5"/>
+			<rect v:rectContext="textBkgnd" x="80.0759" y="1154.31" width="73.3192" height="9.59985" class="st7"/>
+			<text x="80.08" y="1161.51" class="st8" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>publishBinderService</text>		</g>
+		<g id="shape97-262" v:mID="97" v:groupContext="shape" transform="translate(941.953,-593.291)">
+			<title>黄色便条.97</title>
+			<desc>将输入法服务发布到ServiceManager中以便其他服务和应用程序可以访问该服务</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(62000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="79.3701" cy="1141.8" width="158.75" height="25.5118"/>
+			<rect x="0" y="1129.04" width="158.74" height="25.5118" class="st9"/>
+			<text x="4" y="1141.03" class="st20" v:langID="2052"><v:paragraph/><v:tabList/>将输入法服务发布到<tspan class="st21"
+						v:langID="1033">ServiceManager</tspan><tspan class="st22">中</tspan><tspan class="st22">，</tspan><tspan
+						class="st22">以</tspan><tspan x="4" dy="1.244em" class="st22">便其他服务和应用程序可以访问该服务</tspan></text>		</g>
+		<g id="shape98-270" v:mID="98" v:groupContext="shape" v:layerMember="0" transform="translate(378.638,-580.535)">
+			<title>Message.98</title>
+			<desc>startBootPhase</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(63000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="80.0078" cy="1160.22" width="63.2" height="17.6036"/>
+			<path d="M0 1161.64 L153.03 1161.64" class="st5"/>
+			<rect v:rectContext="textBkgnd" x="53.5102" y="1155.42" width="52.9956" height="9.59985" class="st7"/>
+			<text x="53.51" y="1162.62" class="st8" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>startBootPhase</text>		</g>
+		<g id="shape99-277" v:mID="99" v:groupContext="shape" transform="translate(380.693,-457.228)">
+			<title>黄色便条.99</title>
+			<desc>在服务startservice后执行该函数将service分段处理 例如此处IMMS在SystemService.PHAS...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(64000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="77.9528" cy="1099.98" width="155.91" height="109.134"/>
+			<rect x="0" y="1045.42" width="155.906" height="109.134" class="st9"/>
+			<text x="4" y="1057.41" class="st20" v:langID="2052"><v:paragraph/><v:tabList/>在服务<tspan class="st21" v:langID="1033">startservice</tspan><tspan
+						class="st22">后执行</tspan><tspan class="st22">，</tspan><tspan class="st22">该函数将</tspan><tspan x="4"
+						dy="1.244em" class="st21" v:langID="1033">service</tspan><tspan class="st22">分段处理</tspan><tspan
+						class="st22">，<v:newlineChar/></tspan><tspan x="4" dy="1.215em" class="st22">例如此处</tspan><tspan
+						class="st21" v:langID="1033">IMMS</tspan><tspan class="st22">在</tspan><tspan x="4" dy="1.204em"
+						class="st21" v:langID="1033">SystemService.PHASE_WAIT_FOR_SENSOR_S</tspan><tspan x="4" dy="1.211em"
+						class="st21" v:langID="1033">ERVICE</tspan><tspan class="st22" v:langID="1033">（</tspan><tspan class="st21"
+						v:langID="1033">200</tspan><tspan class="st22" v:langID="1033">）</tspan><tspan class="st22">和</tspan><tspan
+						x="4" dy="1.204em" class="st21" v:langID="1033">SystemService.PHASE_LOCK_SETTINGS_REA</tspan><tspan x="4"
+						dy="1.211em" class="st21" v:langID="1033">DY</tspan><tspan class="st22" v:langID="1033">（</tspan><tspan
+						class="st21" v:langID="1033">480</tspan><tspan class="st22" v:langID="1033">）</tspan><tspan class="st22">之间<v:newlineChar/></tspan><tspan
+						x="4" dy="1.215em" class="st21" v:langID="1033">SystemServer.java </tspan><tspan class="st21"
+						v:langID="1033">--</tspan><tspan class="st21" v:langID="1033"> </tspan><tspan class="st21" v:langID="1033">startOtherServices</tspan><tspan
+						class="st22" v:langID="1033">，</tspan><tspan class="st22">然</tspan><tspan x="4" dy="1.215em" class="st22">后通过</tspan><tspan
+						class="st21" v:langID="1033">SystemServiceManager</tspan><tspan class="st22">的</tspan><tspan x="4"
+						dy="1.204em" class="st21" v:langID="1033">startBootPhase</tspan></text>		</g>
+		<g id="shape100-312" v:mID="100" v:groupContext="shape" v:layerMember="0" transform="translate(547.654,-569.197)">
+			<title>Message.100</title>
+			<desc>onBootPhase</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(65000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="165.367" cy="1144.95" width="56.74" height="17.6036"/>
+			<path d="M0 1147.46 L327.91 1147.46" class="st5"/>
+			<rect v:rectContext="textBkgnd" x="142.096" y="1140.15" width="46.5428" height="9.59985" class="st7"/>
+			<text x="142.1" y="1147.35" class="st8" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>onBootPhase</text>		</g>
+		<g id="shape101-319" v:mID="101" v:groupContext="shape" transform="translate(-263.008,779.528) rotate(-90)">
+			<title>激活.101</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(66000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="161.575" height="8.50394" class="st4"/>
+		</g>
+		<g id="shape102-321" v:mID="102" v:groupContext="shape" v:layerMember="0" transform="translate(886.582,-576.283)">
+			<title>Message.102</title>
+			<desc>systemRunning</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(67000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="34.0063" cy="1174.13" width="64.19" height="17.6036"/>
+			<path d="M4.96 1154.55 L27.21 1154.55 L27.21 1202.74 L16.69 1202.74" class="st5"/>
+			<rect v:rectContext="textBkgnd" x="7.01269" y="1169.33" width="53.9874" height="9.59985" class="st7"/>
+			<text x="7.01" y="1176.53" class="st8" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>systemRunning</text>		</g>
+		<g id="shape103-328" v:mID="103" v:groupContext="shape" transform="translate(-258.757,745.512) rotate(-90)">
+			<title>激活.103</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(68000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="119.055" height="8.50394" class="st4"/>
+		</g>
+		<g id="shape104-330" v:mID="104" v:groupContext="shape" v:layerMember="0" transform="translate(888.708,-511.087)">
+			<title>Message.104</title>
+			<desc>MyPackageMonitor.register</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(69000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="44.7408" cy="1163.06" width="107.38" height="17.6036"/>
+			<path d="M7.09 1154.55 L25.09 1154.55 L25.09 1171.56 L14.57 1171.56" class="st5"/>
+			<rect v:rectContext="textBkgnd" x="-3.84672" y="1158.26" width="97.1752" height="9.59985" class="st7"/>
+			<text x="-3.85" y="1165.46" class="st8" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>MyPackageMonitor<tspan
+						class="st11" v:langID="2052">.register</tspan></text>		</g>
+		<g id="shape105-338" v:mID="105" v:groupContext="shape" v:layerMember="0" transform="translate(888.708,-485.547)">
+			<title>Message.105</title>
+			<desc>SettingsObserver.registerContentObserverLocked</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(70000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="44.7408" cy="1163.06" width="184.14" height="17.6036"/>
+			<path d="M7.09 1154.55 L25.09 1154.55 L25.09 1171.56 L14.57 1171.56" class="st5"/>
+			<rect v:rectContext="textBkgnd" x="-42.231" y="1158.26" width="173.944" height="9.59985" class="st7"/>
+			<text x="-42.23" y="1165.46" class="st8" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>SettingsObserver<tspan
+						class="st11" v:langID="2052">.</tspan>registerContentObserverLocked</text>		</g>
+		<g id="shape107-346" v:mID="107" v:groupContext="shape" v:layerMember="0" transform="translate(888.708,-457.228)">
+			<title>Message.107</title>
+			<desc>getSelectedInputMethod</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(71000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="44.7408" cy="1161.64" width="98.26" height="17.6036"/>
+			<path d="M7.09 1154.55 L25.09 1154.55 L25.09 1168.72 L14.57 1168.72" class="st5"/>
+			<rect v:rectContext="textBkgnd" x="0.710001" y="1156.84" width="88.0617" height="9.59985" class="st7"/>
+			<text x="0.71" y="1164.04" class="st8" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>getSelectedInputMethod</text>		</g>
+		<g id="shape108-353" v:mID="108" v:groupContext="shape" v:layerMember="0" transform="translate(888.708,-428.22)">
+			<title>Message.108</title>
+			<desc>buildInputMethodListLocked</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(72000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="44.7408" cy="1161.64" width="111.44" height="17.6036"/>
+			<path d="M7.09 1155.21 L25.09 1155.21 L25.09 1168.06 L14.57 1168.06" class="st5"/>
+			<rect v:rectContext="textBkgnd" x="-5.88152" y="1156.84" width="101.245" height="9.59985" class="st7"/>
+			<text x="-5.88" y="1164.04" class="st8" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>buildInputMethodListLocke<tspan
+						class="st11" v:langID="2052">d</tspan></text>		</g>
+		<g id="shape109-361" v:mID="109" v:groupContext="shape" transform="translate(987.307,-287.15)">
+			<title>黄色便条.109</title>
+			<desc>1.MyPackageMonitor内部类register注册监听安装包的变化包含安装卸载更新等 2.SettingsOb...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(73000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="139.606" cy="1064.55" width="279.22" height="180"/>
+			<rect x="0" y="974.551" width="279.213" height="180" class="st9"/>
+			<text x="4" y="985.84" class="st31" v:langID="2052"><v:paragraph/><v:tabList/>1.<tspan class="st11" v:langID="1033">MyPackageMonitor</tspan><tspan
+						class="st22">内部类</tspan><tspan class="st11" v:langID="1033">register</tspan><tspan class="st22">注册</tspan><tspan
+						class="st22">，</tspan><tspan class="st22">监听安装包的变化</tspan><tspan class="st22">，</tspan><tspan class="st22">包含安装</tspan><tspan
+						class="st22">，</tspan><tspan class="st22">卸</tspan><tspan x="4" dy="1.215em" class="st22">载</tspan><tspan
+						class="st22">，</tspan><tspan class="st22">更新等<v:newlineChar/></tspan><tspan x="4" dy="1.215em" class="st11">2.</tspan><tspan
+						class="st11" v:langID="1033">SettingsObserver</tspan><tspan class="st22">注册</tspan><tspan class="st22">，</tspan><tspan
+						class="st22">监听当前用户的各种输入法相关的</tspan><tspan class="st11" v:langID="1033">settingprovider</tspan><tspan
+						class="st22">变</tspan><tspan x="4" dy="1.215em" class="st22">化</tspan><tspan class="st22">，</tspan><tspan
+						class="st22">例如</tspan><tspan class="st22">：</tspan><tspan class="st22">默认输入法</tspan><tspan class="st22">，</tspan><tspan
+						class="st22">输入法列表</tspan><tspan class="st22">，</tspan><tspan class="st22">输入法语言等<v:newlineChar/></tspan><tspan
+						x="4" dy="1.215em" class="st11">3.</tspan><tspan class="st11" v:langID="1033">getSelectedInputMethod</tspan><tspan
+						class="st22">获取用户设置的输入法</tspan><tspan class="st11" v:langID="1033">default_input_method</tspan><tspan
+						class="st22" v:langID="1033">，</tspan><tspan class="st22">此处</tspan><tspan x="4" dy="1.215em" class="st22">是查询</tspan><tspan
+						class="st11" v:langID="1033">settings</tspan><tspan class="st22">数据库的默认输入法</tspan><tspan class="st22">（</tspan><tspan
+						class="st11" v:langID="1033">frameworks/base/packages/</tspan><tspan x="4" dy="1.215em" class="st11"
+						v:langID="1033">SettingsProvider/src/com/android/providers/settings/DatabaseHelper.java</tspan><tspan
+						class="st22" v:langID="1033">）<v:newlineChar/></tspan><tspan x="4" dy="1.215em" class="st11">4. </tspan><tspan
+						class="st11" v:langID="1033">buildInputMethodListLocked</tspan><tspan class="st22" v:langID="1033">，</tspan><tspan
+						class="st22">如果没有默认输入法则入参</tspan><tspan class="st11" v:langID="1033">false</tspan><tspan class="st22"
+						v:langID="1033">，</tspan><tspan class="st22">该函数内容</tspan><tspan x="4" dy="1.215em" class="st22">如下</tspan><tspan
+						class="st22">：<v:newlineChar/></tspan><tspan x="4" dy="1.215em" class="st22">（</tspan>1<tspan class="st22">）</tspan><tspan
+						class="st22">查询输入法服务信息</tspan><tspan class="st22">，</tspan><tspan class="st22">然后将信息储存到</tspan><tspan x="4"
+						dy="1.215em" class="st11" v:langID="1033">mMethodList</tspan><tspan class="st22" v:langID="1033">，</tspan><tspan
+						class="st11" v:langID="1033">mMethodMap</tspan><tspan class="st22" v:langID="1033">，</tspan><tspan
+						class="st11" v:langID="1033">mMyPackageMonitor</tspan><tspan class="st22">中</tspan><tspan class="st22">；<v:newlineChar/></tspan><tspan
+						x="4" dy="1.215em" class="st22">（</tspan>2<tspan class="st22">）</tspan><tspan class="st22">调用</tspan><tspan
+						class="st11" v:langID="1033">chooseNewDefaultIMELocked</tspan><tspan class="st22">选择一个新的输入法</tspan><tspan
+						class="st22">；<v:newlineChar/></tspan><tspan x="4" dy="1.215em" class="st22">（</tspan>3<tspan class="st22">）</tspan><tspan
+						class="st11" v:langID="1033">updateInputMethodsFromSettingsLocked</tspan><tspan class="st22">遍历所有输入法</tspan><tspan
+						class="st22">，</tspan><tspan class="st22">如果输入法存</tspan><tspan x="4" dy="1.215em" class="st22">在被禁用的组件</tspan><tspan
+						class="st22">，</tspan><tspan class="st22">则重新启用调用</tspan><tspan class="st11" v:langID="1033">setInputMethodLocked</tspan><tspan
+						class="st22">方法完成对输入法设</tspan><tspan x="4" dy="1.215em" class="st22">置</tspan><tspan class="st22">，</tspan><tspan
+						class="st22">和输入法发生变化的广播</tspan><tspan class="st22">（</tspan><tspan class="st11" v:langID="1033">ACTION_INPUT_METHOD_CHANGED</tspan><tspan
+						class="st22" v:langID="1033">）</tspan><tspan class="st22">的发送</tspan><tspan x="4" dy="1.215em" class="st22">（</tspan><tspan
+						class="st22">该函数中调用</tspan><tspan class="st11" v:langID="1033">setInputMethodLocked</tspan><tspan
+						class="st22" v:langID="1033">）</tspan></text>		</g>
+	</g>
+</svg>

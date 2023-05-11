@@ -1,0 +1,1100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- 由 Microsoft Visio, SVG Export 生成 输入法点击弹出流程.svg Page-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="34.0787in" height="16.0354in"
+		viewBox="0 0 2453.67 1154.55" xml:space="preserve" color-interpolation-filters="sRGB" class="st43">
+	<v:documentProperties v:langID="2052" v:metric="true" v:viewMarkup="false">
+		<v:userDefs>
+			<v:ud v:nameU="msvNoAutoConnect" v:prompt="" v:val="VT0(1):26"/>
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#90aadb;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st2 {stroke:#9b9b9b;stroke-dasharray:3.5,2.5;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st3 {fill:#ffffff;font-family:Segoe UI;font-size:0.833336em;font-weight:bold}
+		.st4 {fill:#fee599;stroke:#a54d00;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st5 {fill:#ffff00;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st6 {fill:#ff0000;font-family:Calibri;font-size:0.666664em;font-weight:bold}
+		.st7 {font-family:宋体;font-size:1em}
+		.st8 {fill:#000000;font-family:微软雅黑;font-size:1em;font-weight:normal}
+		.st9 {fill:#000000;font-size:1em;font-weight:normal}
+		.st10 {marker-end:url(#mrkr4-50);stroke:#a54d00;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st11 {fill:#a54d00;fill-opacity:1;stroke:#a54d00;stroke-opacity:1;stroke-width:0.13368983957219}
+		.st12 {fill:#ffffff;stroke:none;stroke-linecap:butt;stroke-width:7.2}
+		.st13 {fill:#803a00;font-family:Segoe UI;font-size:0.666664em}
+		.st14 {fill:#000000;font-family:宋体;font-size:0.666664em}
+		.st15 {font-family:Calibri;font-size:1em}
+		.st16 {font-family:微软雅黑;font-size:1em}
+		.st17 {font-size:1em}
+		.st18 {font-family:微软雅黑;font-size:1em;font-weight:bold}
+		.st19 {fill:#ffffff;stroke:none;stroke-linecap:butt}
+		.st20 {fill:#803a00;font-family:Segoe UI;font-size:0.499992em}
+		.st21 {fill:#000000;font-family:Calibri;font-size:0.666664em}
+		.st22 {fill:#bfbfbf;stroke:#a54d00;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st23 {fill:#bfbfbf;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st24 {fill:#c55a11;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st25 {marker-end:url(#mrkr4-274);stroke:#2e75b5;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st26 {fill:#2e75b5;fill-opacity:1;stroke:#2e75b5;stroke-opacity:1;stroke-width:0.13368983957219}
+		.st27 {fill:#305497;font-family:黑体;font-size:0.666664em}
+		.st28 {font-family:Segoe UI;font-size:1em}
+		.st29 {fill:#fff2cc;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st30 {fill:#4bacc6;font-family:Calibri;font-size:0.666664em;font-weight:bold}
+		.st31 {marker-end:url(#mrkr3-292);stroke:#a54d00;stroke-dasharray:3.5,2.5;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st32 {marker-end:url(#mrkr4-367);stroke:#0070c0;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st33 {fill:#0070c0;fill-opacity:1;stroke:#0070c0;stroke-opacity:1;stroke-width:0.13368983957219}
+		.st34 {fill:#4bacc6;font-family:黑体;font-size:0.666664em}
+		.st35 {fill:#a8d08d;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st36 {fill:#9cc3e5;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st37 {fill:#ff0000;font-size:1em;font-weight:bold}
+		.st38 {fill:#ff0000;font-family:微软雅黑;font-size:1em;font-weight:bold}
+		.st39 {fill:#d8d8d8;stroke:#a54d00;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st40 {fill:#ff0000;font-family:Segoe UI;font-size:0.666664em;font-weight:bold}
+		.st41 {fill:#ff0000;font-family:微软雅黑;font-size:1em}
+		.st42 {fill:#ff0000;font-family:Calibri;font-size:1em}
+		.st43 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs id="Markers">
+		<g id="lend4">
+			<path d="M 2 1 L 0 0 L 2 -1 L 2 1 " style="stroke:none"/>
+		</g>
+		<marker id="mrkr4-50" class="st11" v:arrowType="4" v:arrowSize="3" v:setback="14.96" refX="-14.96" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-7.48,-7.48) "/>
+		</marker>
+		<marker id="mrkr4-274" class="st26" v:arrowType="4" v:arrowSize="3" v:setback="14.96" refX="-14.96" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-7.48,-7.48) "/>
+		</marker>
+		<g id="lend3">
+			<path d="M 2 1 L 0 0 L 2 -1 " style="stroke-linecap:round;stroke-linejoin:round;fill:none"/>
+		</g>
+		<marker id="mrkr3-292" class="st11" v:arrowType="3" v:arrowSize="3" orient="auto" markerUnits="strokeWidth"
+				overflow="visible">
+			<use xlink:href="#lend3" transform="scale(-7.48,-7.48) "/>
+		</marker>
+		<marker id="mrkr4-367" class="st33" v:arrowType="4" v:arrowSize="3" v:setback="14.96" refX="-14.96" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-7.48,-7.48) "/>
+		</marker>
+	</defs>
+	<g v:mID="6" v:index="1" v:groupContext="foregroundPage">
+		<v:userDefs>
+			<v:ud v:nameU="msvThemeOrder" v:val="VT0(0):26"/>
+			<v:ud v:nameU="visNavType" v:val="VT0(1):26"/>
+		</v:userDefs>
+		<title>页-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<v:layer v:name="连接线" v:index="0"/>
+		<g id="group1-1" transform="translate(238.89,-1035.5)" v:mID="1" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(1000):26"/>
+			</v:userDefs>
+			<title>Actor lifeline</title>
+			<desc>TextView.java</desc>
+			<g id="shape2-2" v:mID="2" v:groupContext="shape" transform="translate(26.9055,0)">
+				<title>工作表.2</title>
+				<rect x="0" y="1129.04" width="51.0236" height="25.5118" class="st1"/>
+			</g>
+			<g id="shape3-4" v:mID="3" v:groupContext="shape" transform="translate(34.9449,554.003)">
+				<title>工作表.3</title>
+			</g>
+			<g id="shape4-6" v:mID="4" v:groupContext="shape" transform="translate(1206.97,1154.55) rotate(90)">
+				<title>工作表.4</title>
+				<path d="M0 1154.55 L536.39 1154.55" class="st2"/>
+			</g>
+			<g id="shape1-9" v:mID="1" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="52.4173" cy="1141.8" width="104.84" height="25.5118"/>
+				<rect x="0" y="1129.04" width="104.835" height="25.5118" class="st1"/>
+				<text x="19.76" y="1144.8" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>TextView.java</text>			</g>
+		</g>
+		<g id="group5-12" transform="translate(447.898,-1035.5)" v:mID="5" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(3000):26"/>
+			</v:userDefs>
+			<title>Object lifeline</title>
+			<desc>InputMethodManager.java</desc>
+			<g id="shape6-13" v:mID="6" v:groupContext="shape" transform="translate(45.7087,0)">
+				<title>工作表.6</title>
+				<rect x="0" y="1129.04" width="51.0236" height="25.5118" class="st1"/>
+			</g>
+			<g id="shape7-15" v:mID="7" v:groupContext="shape" transform="translate(62.7165,-29.0551)">
+				<title>工作表.7</title>
+				<path d="M8.5 1154.55 a0 0 0 1 1 0 0 a0 0 0 1 1 0 0 Z" class="st1"/>
+			</g>
+			<g id="shape8-17" v:mID="8" v:groupContext="shape" transform="translate(47.4803,587.379)">
+				<title>工作表.8</title>
+			</g>
+			<g id="shape9-19" v:mID="9" v:groupContext="shape" transform="translate(1225.77,1154.55) rotate(90)">
+				<title>工作表.9</title>
+				<path d="M0 1154.55 L569.76 1154.55" class="st2"/>
+			</g>
+			<g id="shape5-22" v:mID="5" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="71.2205" cy="1141.8" width="142.45" height="25.5118"/>
+				<rect x="0" y="1129.04" width="142.441" height="25.5118" class="st1"/>
+				<text x="8.09" y="1144.8" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>InputMethodManager.java</text>			</g>
+		</g>
+		<g id="shape10-25" v:mID="10" v:groupContext="shape" transform="translate(-858.992,393.312) rotate(-90)">
+			<title>Activation</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(2000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="240.241" height="8.50394" class="st4"/>
+		</g>
+		<g id="shape11-27" v:mID="11" v:groupContext="shape" transform="translate(68.0315,-1035.5)">
+			<title>黄色便条</title>
+			<desc>Android 12 AOSP 点击弹出输入法流程 点击界面输入框应用然后弹出输入法在点击onTouchEvent事件后会...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(4000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="75.4724" cy="1131.52" width="150.95" height="46.063"/>
+			<rect x="0" y="1108.49" width="150.945" height="46.063" class="st5"/>
+			<text x="4" y="1120.48" class="st6" v:langID="2052"><v:paragraph/><v:tabList/>Android 12 AOSP <tspan class="st7">点击弹出输入法流程<v:newlineChar/></tspan><tspan
+						x="4" dy="1.233em" class="st8">点击界面输入框应用</tspan><tspan class="st8">，</tspan><tspan class="st8">然后弹出输入</tspan><tspan
+						x="4" dy="1.211em" class="st8">法</tspan><tspan class="st8">，</tspan><tspan class="st8">在点击</tspan><tspan
+						class="st9" v:langID="1033">onTouchEvent</tspan><tspan class="st8">事件后</tspan><tspan class="st8">，</tspan><tspan
+						class="st8">会调用</tspan><tspan x="4" dy="1.215em" class="st9">APP</tspan><tspan class="st8">应用继承的</tspan><tspan
+						class="st9">TextView</tspan><tspan class="st8">的同名方法</tspan></text>		</g>
+		<g id="shape13-45" v:mID="13" v:groupContext="shape" v:layerMember="0" transform="translate(156.331,-994.394)">
+			<title>Message.62</title>
+			<desc>onTouchEvent</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(6000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="65.1602" cy="1146.05" width="60.34" height="17.6036"/>
+			<path d="M0 1147.46 L123.24 1147.46" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="40.0884" y="1141.25" width="50.1438" height="9.59985" class="st12"/>
+			<text x="40.09" y="1148.45" class="st13" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>onTouchEvent</text>		</g>
+		<g id="shape14-53" v:mID="14" v:groupContext="shape" transform="translate(-631.181,657.638) rotate(-90)">
+			<title>Activation.59</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(7000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="504.567" height="8.50394" class="st4"/>
+		</g>
+		<g id="shape15-55" v:mID="15" v:groupContext="shape" transform="translate(-854.74,248.031) rotate(-90)">
+			<title>Activation.60</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(8000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="77.9528" height="8.50394" class="st4"/>
+		</g>
+		<g id="shape16-57" v:mID="16" v:groupContext="shape" v:layerMember="0" transform="translate(290.598,-1001.48)">
+			<title>Message.61</title>
+			<desc>viewClicked(imm)</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(9000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="31.1338" cy="1171.49" width="71.88" height="17.6036"/>
+			<path d="M4.96 1154.55 L27.21 1154.55 L27.21 1188.57 L16.69 1188.57" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="0.296262" y="1166.69" width="61.6753" height="9.59985" class="st12"/>
+			<text x="0.3" y="1173.89" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>viewClicked(imm)</text>		</g>
+		<g id="shape17-64" v:mID="17" v:groupContext="shape" transform="translate(328.819,-992.976)">
+			<title>黄色便条.62</title>
+			<desc>入参InputMethodManager对象如果IMM对象不为空则会调用IMM的同名函数</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(10000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="82.2047" cy="1141.8" width="164.41" height="25.5118"/>
+			<rect x="0" y="1129.04" width="164.409" height="25.5118" class="st5"/>
+			<text x="4" y="1141.03" class="st14" v:langID="2052"><v:paragraph/><v:tabList/>入参<tspan class="st15" v:langID="1033">InputMethodManager</tspan><tspan
+						class="st16">对象</tspan><tspan class="st16">，</tspan><tspan class="st16">如果</tspan><tspan class="st15"
+						v:langID="1033">IMM</tspan><tspan class="st16">对</tspan><tspan x="4" dy="1.244em" class="st16">象不为空</tspan><tspan
+						class="st16">，</tspan><tspan class="st16">则会调用</tspan><tspan class="st15" v:langID="1033">IMM</tspan><tspan
+						class="st16">的同名函数</tspan></text>		</g>
+		<g id="shape18-78" v:mID="18" v:groupContext="shape" v:layerMember="0" transform="translate(299.811,-957.543)">
+			<title>Message.63</title>
+			<desc>viewClicked(View view)</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(11000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="109.672" cy="1158.73" width="90.95" height="17.6036"/>
+			<path d="M0 1161.64 L207.58 1161.64" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="69.2953" y="1153.93" width="80.7536" height="9.59985" class="st12"/>
+			<text x="69.3" y="1161.13" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>viewClicked(<tspan
+						class="st17" v:langID="2052">View view</tspan>)</text>		</g>
+		<g id="shape21-86" v:mID="21" v:groupContext="shape" transform="translate(-626.929,266.457) rotate(-90)">
+			<title>Activation.21</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(12000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="49.6063" height="8.50394" class="st4"/>
+		</g>
+		<g id="shape23-88" v:mID="23" v:groupContext="shape" v:layerMember="0" transform="translate(518.409,-950.457)">
+			<title>Message.23</title>
+			<desc>checkFocus()</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(13000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="31.0782" cy="1168.59" width="55.32" height="17.6036"/>
+			<path d="M4.96 1154.55 L27.21 1154.55 L27.21 1184.31 L16.69 1184.31" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="8.52012" y="1163.79" width="45.1165" height="9.59985" class="st12"/>
+			<text x="8.52" y="1170.99" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>checkFocus()</text>		</g>
+		<g id="shape24-95" v:mID="24" v:groupContext="shape" transform="translate(335.906,-902.976)">
+			<title>黄色便条.24</title>
+			<desc>此处会判断服务的view是否相同当两次点击在同一个输入框时两者相同否则不同 此处以首次点击某个输入框为例</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(14000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="65.9055" cy="1131.52" width="131.82" height="46.063"/>
+			<rect x="0" y="1108.49" width="131.811" height="46.063" class="st5"/>
+			<text x="4" y="1120.48" class="st14" v:langID="2052"><v:paragraph/><v:tabList/>此处会判断服务的<tspan class="st15"
+						v:langID="1033">view</tspan><tspan class="st16">是否相同</tspan><tspan class="st16">，</tspan><tspan x="4"
+						dy="1.233em" class="st16">当两次点击在同一个输入框时</tspan><tspan class="st16">，</tspan><tspan class="st16">两</tspan><tspan
+						x="4" dy="1.211em" class="st16">者相同</tspan><tspan class="st16">；</tspan><tspan class="st16">否则不同<v:newlineChar/></tspan><tspan
+						x="4" dy="1.215em" class="st18">此处以首次点击某个输入框为例</tspan></text>		</g>
+		<g id="group25-108" transform="translate(623.622,-1035.5)" v:mID="25" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(15000):26"/>
+			</v:userDefs>
+			<title>Object lifeline.25</title>
+			<desc>ImeFocusController.java</desc>
+			<g id="shape26-109" v:mID="26" v:groupContext="shape" transform="translate(45.7087,0)">
+				<title>工作表.26</title>
+				<rect x="0" y="1129.04" width="51.0236" height="25.5118" class="st1"/>
+			</g>
+			<g id="shape27-111" v:mID="27" v:groupContext="shape" transform="translate(62.7165,-29.0551)">
+				<title>工作表.27</title>
+				<path d="M8.5 1154.55 a0 0 0 1 1 0 0 a0 0 0 1 1 0 0 Z" class="st1"/>
+			</g>
+			<g id="shape28-113" v:mID="28" v:groupContext="shape" transform="translate(47.4803,329.426)">
+				<title>工作表.28</title>
+			</g>
+			<g id="shape29-115" v:mID="29" v:groupContext="shape" transform="translate(1225.77,1154.55) rotate(90)">
+				<title>工作表.29</title>
+				<path d="M0 1154.55 L311.81 1154.55" class="st2"/>
+			</g>
+			<g id="shape25-118" v:mID="25" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="71.2205" cy="1141.8" width="142.45" height="25.5118"/>
+				<rect x="0" y="1129.04" width="142.441" height="25.5118" class="st1"/>
+				<text x="14.47" y="1144.8" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>ImeFocusController.java</text>			</g>
+		</g>
+		<g id="shape30-121" v:mID="30" v:groupContext="shape" transform="translate(-455.457,354.331) rotate(-90)">
+			<title>Activation.30</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(16000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="121.89" height="8.50394" class="st4"/>
+		</g>
+		<g id="shape31-123" v:mID="31" v:groupContext="shape" v:layerMember="0" transform="translate(527.622,-910.063)">
+			<title>Message.31</title>
+			<desc>checkFocus (false /* forceNewFocus */, true /* startInput */)</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(17000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="83.1346" cy="1158.75" width="134.36" height="22.4034"/>
+			<path d="M0 1160.93 L155.49 1162.28" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="20.7783" y="1151.55" width="124.712" height="14.4001" class="st19"/>
+			<text x="68.03" y="1156.95" class="st20" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>checkFocus<v:newlineChar/><tspan
+						x="20.78" dy="1.2em" class="st17">(false /* forceNewFocus */, true /* startInput */)</tspan></text>		</g>
+		<g id="shape32-131" v:mID="32" v:groupContext="shape" transform="translate(541.075,-846.283)">
+			<title>黄色便条.32</title>
+			<desc>checkFocus创建获取接口类InputMethodManagerDelegate对象其实就是IMM.java的内部类...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(18000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="86.628" cy="1131.52" width="173.26" height="46.063"/>
+			<rect x="0" y="1108.49" width="173.256" height="46.063" class="st5"/>
+			<text x="4" y="1119.78" class="st21" v:langID="1033"><v:paragraph/><v:tabList/>checkFocus<tspan class="st16"
+						v:langID="2052">创建获取接口类</tspan><tspan x="4" dy="1.215em" class="st17">InputMethodManagerDelegate</tspan><tspan
+						class="st16" v:langID="2052">对象</tspan><tspan class="st16" v:langID="2052">，</tspan><tspan class="st16"
+						v:langID="2052">其实就是</tspan><tspan x="4" dy="1.215em" class="st17">IMM.java</tspan><tspan class="st16"
+						v:langID="2052">的内部类</tspan>DelegateImpl<tspan class="st16">（</tspan><tspan class="st16" v:langID="2052">实现该接口</tspan><tspan
+						x="4" dy="1.215em" class="st16" v:langID="2052">类</tspan><tspan class="st16" v:langID="2052">）</tspan><tspan
+						class="st16" v:langID="2052">对象</tspan><tspan class="st16" v:langID="2052">，</tspan><tspan class="st16"
+						v:langID="2052">然后调用该类的</tspan>startInput<tspan class="st16" v:langID="2052">函数</tspan></text>		</g>
+		<g id="shape33-149" v:mID="33" v:groupContext="shape" transform="translate(-626.929,337.323) rotate(-90)">
+			<title>Activation.33</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(19000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="56.6929" height="8.50394" class="st22"/>
+		</g>
+		<g id="shape34-151" v:mID="34" v:groupContext="shape" v:layerMember="0" transform="translate(690.591,-844.157)">
+			<title>Message.34</title>
+			<desc>startInput</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(20000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="-83.9764" cy="1161.64" width="44.46" height="17.6036"/>
+			<path d="M0 1161.64 L-155.49 1161.64" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="-101.109" y="1156.84" width="34.2647" height="9.59985" class="st12"/>
+			<text x="-101.11" y="1164.04" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>startInput</text>		</g>
+		<g id="shape35-158" v:mID="35" v:groupContext="shape" transform="translate(371.339,-820.063)">
+			<title>黄色便条.35</title>
+			<desc>内部私有类DelegateImpl实现了ImeFocusController.InputMethodManagerDele...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(21000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="71.2205" cy="1137.54" width="142.45" height="34.0158"/>
+			<rect x="0" y="1120.54" width="142.441" height="34.0158" class="st23"/>
+			<text x="4" y="1132.52" class="st14" v:langID="2052"><v:paragraph/><v:tabList/>内部私有类<tspan class="st15" v:langID="1033">DelegateImpl</tspan><tspan
+						class="st16">，</tspan><tspan class="st16">实现了</tspan><tspan x="4" dy="1.233em" class="st15" v:langID="1033">ImeFocusController.InputMethodManag</tspan><tspan
+						x="4" dy="1.211em" class="st15" v:langID="1033">erDelegate</tspan><tspan class="st16">接口类</tspan></text>		</g>
+		<g id="shape36-167" v:mID="36" v:groupContext="shape" transform="translate(-626.929,459.213) rotate(-90)">
+			<title>Activation.36</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(22000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="107.717" height="8.50394" class="st4"/>
+		</g>
+		<g id="shape37-169" v:mID="37" v:groupContext="shape" v:layerMember="0" transform="translate(520.535,-822.898)">
+			<title>Message.37</title>
+			<desc>startInputInner</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(23000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="32.2205" cy="1177.23" width="62.61" height="17.6036"/>
+			<path d="M7.09 1154.55 L25.09 1154.55 L25.09 1191.4 L14.57 1191.4" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="6.01421" y="1172.43" width="52.4128" height="9.59985" class="st12"/>
+			<text x="6.01" y="1179.63" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>startInputInner</text>		</g>
+		<g id="shape38-176" v:mID="38" v:groupContext="shape" v:layerMember="0" transform="translate(520.535,-775.425)">
+			<title>Message.38</title>
+			<desc>new IInputConnectionWrapper</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(24000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="32.2205" cy="1172.28" width="118.74" height="17.6036"/>
+			<path d="M7.09 1154.55 L25.09 1154.55 L25.09 1191.4 L14.57 1191.4" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="-22.0501" y="1167.48" width="108.541" height="9.59985" class="st12"/>
+			<text x="-22.05" y="1174.68" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>new IInputConnectionWrapper</text>		</g>
+		<g id="group39-183" transform="translate(779.528,-1035.5)" v:mID="39" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(25000):26"/>
+			</v:userDefs>
+			<title>Object lifeline.39</title>
+			<desc>IInputMethodManager.aidl</desc>
+			<g id="shape40-184" v:mID="40" v:groupContext="shape" transform="translate(45.7087,0)">
+				<title>工作表.40</title>
+				<rect x="0" y="1129.04" width="51.0236" height="25.5118" class="st24"/>
+			</g>
+			<g id="shape41-186" v:mID="41" v:groupContext="shape" transform="translate(62.7165,-29.0551)">
+				<title>工作表.41</title>
+				<path d="M8.5 1154.55 a0 0 0 1 1 0 0 a0 0 0 1 1 0 0 Z" class="st24"/>
+			</g>
+			<g id="shape42-188" v:mID="42" v:groupContext="shape" transform="translate(47.4803,564.702)">
+				<title>工作表.42</title>
+			</g>
+			<g id="shape43-190" v:mID="43" v:groupContext="shape" transform="translate(1225.77,1154.55) rotate(90)">
+				<title>工作表.43</title>
+				<path d="M0 1154.55 L547.09 1154.55" class="st2"/>
+			</g>
+			<g id="shape39-193" v:mID="39" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="71.2205" cy="1141.8" width="142.45" height="25.5118"/>
+				<rect x="0" y="1129.04" width="142.441" height="25.5118" class="st24"/>
+				<text x="7.39" y="1144.8" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>IInputMethodManager.aidl</text>			</g>
+		</g>
+		<g id="shape44-196" v:mID="44" v:groupContext="shape" transform="translate(-299.551,640.63) rotate(-90)">
+			<title>Activation.44</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(26000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="252.283" height="8.50394" class="st4"/>
+		</g>
+		<g id="shape45-198" v:mID="45" v:groupContext="shape" v:layerMember="0" transform="translate(527.622,-725.102)">
+			<title>Message.45</title>
+			<desc>startInputOrWindowGainedFocus</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(27000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="159.754" cy="1163.06" width="127.52" height="17.6036"/>
+			<path d="M0 1161.64 L311.39 1161.64" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="101.093" y="1158.26" width="117.322" height="9.59985" class="st12"/>
+			<text x="101.09" y="1165.46" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>startInputOrWindowGainedFocus</text>		</g>
+		<g id="group47-205" transform="translate(935.433,-1035.5)" v:mID="47" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(28000):26"/>
+			</v:userDefs>
+			<title>Object lifeline.47</title>
+			<desc>InputMethodManagerService.java</desc>
+			<g id="shape48-206" v:mID="48" v:groupContext="shape" transform="translate(59.5276,0)">
+				<title>工作表.48</title>
+				<rect x="0" y="1129.04" width="51.0236" height="25.5118" class="st1"/>
+			</g>
+			<g id="shape49-208" v:mID="49" v:groupContext="shape" transform="translate(76.5355,-29.0551)">
+				<title>工作表.49</title>
+				<path d="M8.5 1154.55 a0 0 0 1 1 0 0 a0 0 0 1 1 0 0 Z" class="st1"/>
+			</g>
+			<g id="shape50-210" v:mID="50" v:groupContext="shape" transform="translate(56.6929,663.915)">
+				<title>工作表.50</title>
+			</g>
+			<g id="shape51-212" v:mID="51" v:groupContext="shape" transform="translate(1239.59,1154.55) rotate(90)">
+				<title>工作表.51</title>
+				<path d="M0 1154.55 L646.3 1154.55" class="st2"/>
+			</g>
+			<g id="shape47-215" v:mID="47" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="85.0394" cy="1141.8" width="170.08" height="25.5118"/>
+				<rect x="0" y="1129.04" width="170.079" height="25.5118" class="st1"/>
+				<text x="5.18" y="1144.8" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>InputMethodManagerService.java</text>			</g>
+		</g>
+		<g id="shape52-218" v:mID="52" v:groupContext="shape" transform="translate(935.433,-1067.03)">
+			<title>黄色便条.52</title>
+			<desc>继承IInputMethodManager.Stub作为服务端</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(29000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="85.0394" cy="1146.4" width="170.08" height="16.2992"/>
+			<rect x="0" y="1138.25" width="170.079" height="16.2992" class="st5"/>
+			<text x="4" y="1150.24" class="st14" v:langID="2052"><v:paragraph/><v:tabList/>继承<tspan class="st15" v:langID="1033">IInputMethodManager.Stub</tspan><tspan
+						class="st16">，</tspan><tspan class="st16">作为服务端</tspan></text>		</g>
+		<g id="shape53-224" v:mID="53" v:groupContext="shape" transform="translate(-129.827,714.331) rotate(-90)">
+			<title>Activation.53</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(30000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="311.811" height="8.50394" class="st4"/>
+		</g>
+		<g id="shape54-226" v:mID="54" v:groupContext="shape" v:layerMember="0" transform="translate(855,-710.929)">
+			<title>Message.54</title>
+			<desc>startInputOrWindowGainedFocus</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(31000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="80.7706" cy="1148.89" width="127.52" height="17.6036"/>
+			<path d="M0 1147.46 L153.74 1147.46" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="22.1095" y="1144.09" width="117.322" height="9.59985" class="st12"/>
+			<text x="22.11" y="1151.29" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>startInputOrWindowGainedFocus</text>		</g>
+		<g id="shape55-233" v:mID="55" v:groupContext="shape" transform="translate(-125.575,615.118) rotate(-90)">
+			<title>Activation.55</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(32000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="170.079" height="8.50394" class="st4"/>
+		</g>
+		<g id="shape56-235" v:mID="56" v:groupContext="shape" v:layerMember="0" transform="translate(1019.76,-718.016)">
+			<title>Message.56</title>
+			<desc>startInputOrWindowGainedFocusInternal</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(33000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="29.0551" cy="1167.31" width="154.39" height="17.6036"/>
+			<path d="M4.96 1154.55 L27.21 1154.55 L27.21 1180.06 L16.69 1180.06" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="-43.0392" y="1162.51" width="144.189" height="9.59985" class="st12"/>
+			<text x="-43.04" y="1169.71" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>startInputOrWindowGainedFocusInternal</text>		</g>
+		<g id="shape57-242" v:mID="57" v:groupContext="shape" transform="translate(-121.323,606.614) rotate(-90)">
+			<title>Activation.57</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(34000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="131.811" height="8.50394" class="st4"/>
+		</g>
+		<g id="shape58-244" v:mID="58" v:groupContext="shape" v:layerMember="0" transform="translate(1024.02,-688.252)">
+			<title>Message.58</title>
+			<desc>startInputOrWindowGainedFocusInternalLocked</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(35000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="29.0551" cy="1167.31" width="179.41" height="17.6036"/>
+			<path d="M4.96 1154.55 L27.21 1154.55 L27.21 1180.06 L16.69 1180.06" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="-55.549" y="1162.51" width="169.208" height="9.59985" class="st12"/>
+			<text x="-55.55" y="1169.71" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>startInputOrWindowGainedFocusInternalLocked</text>		</g>
+		<g id="shape59-251" v:mID="59" v:groupContext="shape" transform="translate(-117.071,602.362) rotate(-90)">
+			<title>激活.59</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(36000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="93.5433" height="8.50394" class="st4"/>
+		</g>
+		<g id="shape60-253" v:mID="60" v:groupContext="shape" v:layerMember="0" transform="translate(1028.27,-654.236)">
+			<title>Message.60</title>
+			<desc>startInputUncheckedLocked</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(37000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="29.0551" cy="1167.31" width="108.48" height="17.6036"/>
+			<path d="M4.96 1154.55 L27.21 1154.55 L27.21 1180.06 L16.69 1180.06" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="-20.0847" y="1162.51" width="98.2798" height="9.59985" class="st12"/>
+			<text x="-20.08" y="1169.71" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>startInputUncheckedLocked</text>		</g>
+		<g id="shape61-260" v:mID="61" v:groupContext="shape" transform="translate(-112.819,602.362) rotate(-90)">
+			<title>激活.61</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(38000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="59.5276" height="8.50394" class="st4"/>
+		</g>
+		<g id="shape62-262" v:mID="62" v:groupContext="shape" v:layerMember="0" transform="translate(1032.52,-620.22)">
+			<title>消息.21.62</title>
+			<desc>attachNewInputLocked</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(39000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="29.0551" cy="1167.31" width="91.55" height="17.6036"/>
+			<path d="M4.96 1154.55 L27.21 1154.55 L27.21 1180.06 L16.69 1180.06" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="-11.6198" y="1162.51" width="81.3502" height="9.59985" class="st12"/>
+			<text x="-11.62" y="1169.71" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>attachNewInputLocked</text>		</g>
+		<g id="shape64-269" v:mID="64" v:groupContext="shape" v:layerMember="0" transform="translate(1041.73,-577.701)">
+			<title>消息.64</title>
+			<desc>发送MSG_START_INPUT消息 调用handleMessage</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(40000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="35.4331" cy="1197.92" width="110.62" height="28.8093"/>
+			<path d="M0 1154.55 L43.29 1166.09 L26.17 1227.43 L-9.8 1217.49" class="st25"/>
+			<rect v:rectContext="textBkgnd" x="-14.7775" y="1187.52" width="100.421" height="20.8056" class="st12"/>
+			<text x="-14.78" y="1195.32" class="st27" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>发送<tspan
+						class="st28" v:langID="1033">MSG_START_INPUT</tspan>消息<v:newlineChar/><tspan x="-0.11" dy="1.3em"
+						class="st17">调用</tspan><tspan class="st28">handleMessage</tspan></text>		</g>
+		<g id="shape66-280" v:mID="66" v:groupContext="shape" transform="translate(1091.34,-547.937)">
+			<title>黄色便条.66</title>
+			<desc>Handler机制异步处理发送的消息调用handleMessage</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(41000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="63.7795" cy="1141.8" width="127.56" height="25.5118"/>
+			<rect x="0" y="1129.04" width="127.559" height="25.5118" class="st29"/>
+			<text x="4" y="1141.03" class="st30" v:langID="2052"><v:paragraph/><v:tabList/>Handler<tspan class="st7">机制异步处理发送的消</tspan><tspan
+						x="4" dy="1.331em" class="st7">息</tspan><tspan class="st7">，</tspan><tspan class="st7">调用</tspan>handleMessage</text>		</g>
+		<g id="shape67-287" v:mID="67" v:groupContext="shape" v:layerMember="0" transform="translate(1041.73,-567.78)">
+			<title>返回消息.22</title>
+			<desc>return InputBindResult</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(42000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="-93.3662" cy="1161.64" width="89.8" height="17.6036"/>
+			<path d="M0 1161.64 L-186.73 1161.64" class="st31"/>
+			<rect v:rectContext="textBkgnd" x="-133.166" y="1156.84" width="79.6001" height="9.59985" class="st12"/>
+			<text x="-133.17" y="1164.04" class="st13" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>return InputBindResult</text>		</g>
+		<g id="shape68-295" v:mID="68" v:groupContext="shape" v:layerMember="0" transform="translate(846.496,-553.606)">
+			<title>返回消息.68</title>
+			<desc>return InputBindResult</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(43000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="-161.563" cy="1147.46" width="89.8" height="17.6036"/>
+			<path d="M0 1147.46 L-323.13 1147.46" class="st31"/>
+			<rect v:rectContext="textBkgnd" x="-201.363" y="1142.66" width="79.6001" height="9.59985" class="st12"/>
+			<text x="-201.36" y="1149.86" class="st13" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>return InputBindResult</text>		</g>
+		<g id="group69-302" transform="translate(1218.9,-743.528)" v:mID="69" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(44000):26"/>
+			</v:userDefs>
+			<title>Object lifeline.69</title>
+			<desc>IInputMethod.aidl</desc>
+			<g id="shape70-303" v:mID="70" v:groupContext="shape" transform="translate(31.1811,0)">
+				<title>工作表.70</title>
+				<rect x="0" y="1129.04" width="51.0236" height="25.5118" class="st24"/>
+			</g>
+			<g id="shape71-305" v:mID="71" v:groupContext="shape" transform="translate(48.189,-29.0551)">
+				<title>工作表.71</title>
+				<path d="M8.5 1154.55 a0 0 0 1 1 0 0 a0 0 0 1 1 0 0 Z" class="st24"/>
+			</g>
+			<g id="shape72-307" v:mID="72" v:groupContext="shape" transform="translate(37.7953,471.159)">
+				<title>工作表.72</title>
+			</g>
+			<g id="shape73-309" v:mID="73" v:groupContext="shape" transform="translate(1211.24,1154.55) rotate(90)">
+				<title>工作表.73</title>
+				<path d="M0 1154.55 L453.54 1154.55" class="st2"/>
+			</g>
+			<g id="shape69-312" v:mID="69" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="56.6929" cy="1141.8" width="113.39" height="25.5118"/>
+				<rect x="0" y="1129.04" width="113.386" height="25.5118" class="st24"/>
+				<text x="13.85" y="1144.8" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>IInputMethod.aidl</text>			</g>
+		</g>
+		<g id="shape74-315" v:mID="74" v:groupContext="shape" transform="translate(125.291,751.181) rotate(-90)">
+			<title>Activation.74</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(45000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="164.409" height="8.50394" class="st4"/>
+		</g>
+		<g id="shape75-317" v:mID="75" v:groupContext="shape" v:layerMember="0" transform="translate(1024.72,-489.827)">
+			<title>消息.75</title>
+			<desc>session.method.startInput(...)</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(46000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="126.142" cy="1164.47" width="111.2" height="17.6036"/>
+			<path d="M0 1161.64 L239.13 1161.64" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="75.6443" y="1159.67" width="100.995" height="9.59985" class="st12"/>
+			<text x="75.64" y="1166.87" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>session.method.startInput<tspan
+						class="st17" v:langID="2052">(...)</tspan></text>		</g>
+		<g id="shape76-325" v:mID="76" v:groupContext="shape" transform="translate(1080,-445.89)">
+			<title>黄色便条.76</title>
+			<desc>session是SessionState静态类method是IInputMethod对象</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(47000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="65.9055" cy="1141.8" width="131.82" height="25.5118"/>
+			<rect x="0" y="1129.04" width="131.811" height="25.5118" class="st5"/>
+			<text x="4" y="1140.33" class="st21" v:langID="1033"><v:paragraph/><v:tabList/>session<tspan class="st16"
+						v:langID="2052">是</tspan>SessionState<tspan class="st16" v:langID="2052">静态类</tspan><tspan class="st16"
+						v:langID="2052">，</tspan><tspan x="4" dy="1.215em" class="st17">method</tspan><tspan class="st16"
+						v:langID="2052">是</tspan>IInputMethod<tspan class="st16" v:langID="2052">对象</tspan></text>		</g>
+		<g id="group77-334" transform="translate(1388.98,-743.528)" v:mID="77" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(48000):26"/>
+			</v:userDefs>
+			<title>Object lifeline.77</title>
+			<desc>IInputMethodWrapper.java</desc>
+			<g id="shape78-335" v:mID="78" v:groupContext="shape" transform="translate(45.7087,0)">
+				<title>工作表.78</title>
+				<rect x="0" y="1129.04" width="51.0236" height="25.5118" class="st1"/>
+			</g>
+			<g id="shape79-337" v:mID="79" v:groupContext="shape" transform="translate(62.7165,-29.0551)">
+				<title>工作表.79</title>
+				<path d="M8.5 1154.55 a0 0 0 1 1 0 0 a0 0 0 1 1 0 0 Z" class="st1"/>
+			</g>
+			<g id="shape80-339" v:mID="80" v:groupContext="shape" transform="translate(47.4803,485.332)">
+				<title>工作表.80</title>
+			</g>
+			<g id="shape81-341" v:mID="81" v:groupContext="shape" transform="translate(1225.77,1154.55) rotate(90)">
+				<title>工作表.81</title>
+				<path d="M0 1154.55 L467.72 1154.55" class="st2"/>
+			</g>
+			<g id="shape77-344" v:mID="77" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="71.2205" cy="1141.8" width="142.45" height="25.5118"/>
+				<rect x="0" y="1129.04" width="142.441" height="25.5118" class="st1"/>
+				<text x="6.89" y="1144.8" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>IInputMethodWrapper.java</text>			</g>
+		</g>
+		<g id="shape82-347" v:mID="82" v:groupContext="shape" transform="translate(1388.98,-775.063)">
+			<title>黄色便条.82</title>
+			<desc>继承IInputMethod.Stub作为服务端</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(49000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="71.2205" cy="1146.4" width="142.45" height="16.2992"/>
+			<rect x="0" y="1138.25" width="142.441" height="16.2992" class="st5"/>
+			<text x="4" y="1150.24" class="st14" v:langID="2052"><v:paragraph/><v:tabList/>继承<tspan class="st15" v:langID="1033">IInputMethod.Stub</tspan><tspan
+						class="st16">，</tspan><tspan class="st16">作为服务端</tspan></text>		</g>
+		<g id="shape83-353" v:mID="83" v:groupContext="shape" transform="translate(309.899,790.057) rotate(-90.1009)">
+			<title>Activation.83</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(50000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="201.26" height="8.50394" class="st4"/>
+		</g>
+		<g id="shape84-355" v:mID="84" v:groupContext="shape" v:layerMember="0" transform="translate(1279.84,-489.823)">
+			<title>消息.84</title>
+			<desc>startInput</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(51000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="87.7719" cy="1163.06" width="44.46" height="17.6036"/>
+			<path d="M0 1161.63 L168.42 1161.64" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="70.6396" y="1158.26" width="34.2647" height="9.59985" class="st12"/>
+			<text x="70.64" y="1165.46" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>startInput</text>		</g>
+		<g id="shape85-362" v:mID="85" v:groupContext="shape" v:layerMember="0" transform="translate(1457.2,-482.748)">
+			<title>消息.85</title>
+			<desc>发送MSG_START_INPUT消息 调用executeMessage</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(52000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="27.4277" cy="1177.19" width="110.62" height="28.8093"/>
+			<path d="M7.05 1154.55 L25.12 1154.55 L25.12 1197.07 L14.6 1197.07" class="st32"/>
+			<rect v:rectContext="textBkgnd" x="-22.7829" y="1166.79" width="100.421" height="20.8056" class="st12"/>
+			<text x="-22.78" y="1174.59" class="st27" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>发送<tspan
+						class="st28" v:langID="1033">MSG_START_INPUT</tspan>消息<v:newlineChar/><v:paragraph v:horizAlign="1"/><tspan
+						x="-9.71" dy="1.3em" class="st17">调用</tspan><tspan class="st28" v:langID="1033">executeMessage</tspan></text>		</g>
+		<g id="shape87-373" v:mID="87" v:groupContext="shape" transform="translate(1486.49,-469.984)">
+			<title>黄色便条.87</title>
+			<desc>Handler机制异步处理发送的消息调用executeMessage</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(53000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="56.6929" cy="1141.8" width="113.39" height="25.5118"/>
+			<rect x="0" y="1129.04" width="113.386" height="25.5118" class="st29"/>
+			<text x="4" y="1140.24" class="st34" v:langID="2052"><v:paragraph/><v:tabList/>Handler机制异步处理发送的<tspan x="4" dy="1.2em"
+						class="st17">消息</tspan>，调用<tspan class="st17" v:langID="1033">executeMessage</tspan></text>		</g>
+		<g id="group89-378" transform="translate(1586.69,-743.528)" v:mID="89" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(54000):26"/>
+			</v:userDefs>
+			<title>Object lifeline.89</title>
+			<desc>InputMethod.java</desc>
+			<g id="shape90-379" v:mID="90" v:groupContext="shape" transform="translate(45.7087,0)">
+				<title>工作表.90</title>
+				<rect x="0" y="1129.04" width="51.0236" height="25.5118" class="st35"/>
+			</g>
+			<g id="shape91-381" v:mID="91" v:groupContext="shape" transform="translate(62.7165,-29.0551)">
+				<title>工作表.91</title>
+				<path d="M8.5 1154.55 a0 0 0 1 1 0 0 a0 0 0 1 1 0 0 Z" class="st35"/>
+			</g>
+			<g id="shape92-383" v:mID="92" v:groupContext="shape" transform="translate(47.4803,493.269)">
+				<title>工作表.92</title>
+			</g>
+			<g id="shape93-385" v:mID="93" v:groupContext="shape" transform="translate(1225.77,1154.55) rotate(90)">
+				<title>工作表.93</title>
+				<path d="M0 1154.55 L475.65 1154.55" class="st2"/>
+			</g>
+			<g id="shape89-388" v:mID="89" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="71.2205" cy="1141.8" width="142.45" height="25.5118"/>
+				<rect x="0" y="1129.04" width="142.441" height="25.5118" class="st35"/>
+				<text x="29.07" y="1144.8" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>InputMethod.java</text>			</g>
+		</g>
+		<g id="shape94-391" v:mID="94" v:groupContext="shape" transform="translate(1592.01,-775.063)">
+			<title>黄色便条.94</title>
+			<desc>Interface接口类</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(55000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="65.9055" cy="1146.4" width="131.82" height="16.2992"/>
+			<rect x="0" y="1138.25" width="131.811" height="16.2992" class="st5"/>
+			<text x="4" y="1150.24" class="st21" v:langID="2052"><v:paragraph/><v:tabList/>Interface<tspan class="st7">接口类</tspan></text>		</g>
+		<g id="shape95-395" v:mID="95" v:groupContext="shape" transform="translate(507.614,807.874) rotate(-90)">
+			<title>Activation.95</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(56000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="141.732" height="8.50394" class="st4"/>
+		</g>
+		<g id="shape96-397" v:mID="96" v:groupContext="shape" v:layerMember="0" transform="translate(1464.38,-413.295)">
+			<title>消息.96</title>
+			<desc>dispatchStartInputWithToken</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(57000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="94.4508" cy="1163.06" width="113.28" height="17.6036"/>
+			<path d="M0 1161.63 L181.8 1161.64" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="42.909" y="1158.26" width="103.084" height="9.59985" class="st12"/>
+			<text x="42.91" y="1165.46" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>dispatchStartInputWithToken</text>		</g>
+		<g id="group97-404" transform="translate(1784.41,-743.528)" v:mID="97" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(58000):26"/>
+			</v:userDefs>
+			<title>Object lifeline.97</title>
+			<desc>InputMethodService.java</desc>
+			<g id="shape98-405" v:mID="98" v:groupContext="shape" transform="translate(57.4016,0)">
+				<title>工作表.98</title>
+				<rect x="0" y="1129.04" width="51.0236" height="25.5118" class="st36"/>
+			</g>
+			<g id="shape99-407" v:mID="99" v:groupContext="shape" transform="translate(74.4094,-29.0551)">
+				<title>工作表.99</title>
+				<path d="M8.5 1154.55 a0 0 0 1 1 0 0 a0 0 0 1 1 0 0 Z" class="st36"/>
+			</g>
+			<g id="shape100-409" v:mID="100" v:groupContext="shape" transform="translate(55.2756,560.166)">
+				<title>工作表.100</title>
+			</g>
+			<g id="shape101-411" v:mID="101" v:groupContext="shape" transform="translate(1237.46,1154.55) rotate(90)">
+				<title>工作表.101</title>
+				<path d="M0 1154.55 L542.55 1154.55" class="st2"/>
+			</g>
+			<g id="shape97-414" v:mID="97" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="82.9134" cy="1141.8" width="165.83" height="25.5118"/>
+				<rect x="0" y="1129.04" width="165.827" height="25.5118" class="st36"/>
+				<text x="24.03" y="1144.8" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>InputMethodService.java</text>			</g>
+		</g>
+		<g id="shape102-417" v:mID="102" v:groupContext="shape" transform="translate(1784.41,-775.063)">
+			<title>黄色便条.102</title>
+			<desc>1.AbstractInputMethodService.java文件中的抽象类AbstractInputMethodIm...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(59000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="99.9212" cy="1115.04" width="199.85" height="79.0157"/>
+			<rect x="0" y="1075.54" width="199.842" height="79.0157" class="st5"/>
+			<text x="4" y="1086.82" class="st21" v:langID="2052"><v:paragraph/><v:tabList/>1.<tspan class="st17" v:langID="1033">AbstractInputMethodService.java</tspan><tspan
+						class="st16">文件中的抽象类</tspan><tspan x="4" dy="1.215em" class="st17" v:langID="1033">AbstractInputMethodImpl</tspan><tspan
+						class="st16">实现了</tspan><tspan class="st17" v:langID="1033">InputMethod</tspan><tspan class="st16">接口类<v:newlineChar/></tspan><tspan
+						x="4" dy="1.215em" class="st17">2.</tspan><tspan class="st16">静态类</tspan><tspan class="st17"
+						v:langID="1033">InputMethodSessionCallbackWrapper</tspan><tspan class="st16">实现了</tspan><tspan x="4"
+						dy="1.215em" class="st17" v:langID="1033">InputMethod.SessionCallback</tspan><tspan class="st16">类</tspan><tspan
+						class="st16">，</tspan><tspan class="st16">主要实现</tspan><tspan x="4" dy="1.215em" class="st17"
+						v:langID="1033">sessionCreated</tspan><tspan class="st16">建立</tspan><tspan class="st17" v:langID="1033">session</tspan><tspan
+						class="st16">连接<v:newlineChar/></tspan><tspan x="4" dy="1.215em" class="st17">3. </tspan><tspan
+						class="st37" v:langID="1033">InputMethodService.java</tspan><tspan class="st38">中的类</tspan><tspan
+						class="st37" v:langID="1033">InputMethodImpl</tspan><tspan class="st38">继承</tspan><tspan x="4" dy="1.215em"
+						class="st38">了抽象类</tspan><tspan class="st37" v:langID="1033">AbstractInputMethodImpl</tspan></text>		</g>
+		<g id="shape103-445" v:mID="103" v:groupContext="shape" transform="translate(717.024,788.031) rotate(-90)">
+			<title>Activation.103</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(60000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="107.717" height="8.50394" class="st39"/>
+		</g>
+		<g id="shape104-447" v:mID="104" v:groupContext="shape" v:layerMember="0" transform="translate(1662.17,-396.283)">
+			<title>消息.104</title>
+			<desc>restartInput/startInput</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(61000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="100.251" cy="1148.88" width="88.81" height="17.6036"/>
+			<path d="M0 1147.46 L193.43 1147.46" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="60.9451" y="1144.08" width="78.6113" height="9.59985" class="st12"/>
+			<text x="60.95" y="1151.28" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>restartInput<tspan
+						class="st17" v:langID="2052">/</tspan>startInput</text>		</g>
+		<g id="shape105-455" v:mID="105" v:groupContext="shape" transform="translate(1693.28,-417.543)">
+			<title>黄色便条.105</title>
+			<desc>内部类InputMethodImpl继承AbstractInputMethodImpl抽象类然后实现了startInput...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(62000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="82.9134" cy="1129.04" width="165.83" height="51.0236"/>
+			<rect x="0" y="1103.53" width="165.827" height="51.0236" class="st23"/>
+			<text x="4" y="1115.52" class="st14" v:langID="2052"><v:paragraph/><v:tabList/>内部类<tspan class="st15" v:langID="1033">InputMethodImpl</tspan><tspan
+						class="st16">，</tspan><tspan class="st16">继承</tspan><tspan x="4" dy="1.244em" class="st15" v:langID="1033">AbstractInputMethodImpl</tspan><tspan
+						class="st16">抽象类</tspan><tspan class="st16">，</tspan><tspan class="st16">然后实现了</tspan><tspan x="4"
+						dy="1.204em" class="st15">startInput/restartInput/</tspan><tspan class="st15" v:langID="1033">showSoftInput</tspan><tspan
+						class="st15">/</tspan><tspan class="st15" v:langID="1033">hideSoftI</tspan><tspan x="4" dy="1.211em"
+						class="st15" v:langID="1033">nput</tspan><tspan class="st16">等方法</tspan></text>		</g>
+		<g id="shape106-471" v:mID="106" v:groupContext="shape" transform="translate(717.024,915.591) rotate(-90)">
+			<title>Activation.106</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(63000):26"/>
+			</v:userDefs>
+			<rect x="0" y="1146.05" width="107.717" height="8.50394" class="st4"/>
+		</g>
+		<g id="shape107-473" v:mID="107" v:groupContext="shape" v:layerMember="0" transform="translate(1864.49,-403.37)">
+			<title>消息.107</title>
+			<desc>doStartInput</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(64000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="30.7558" cy="1191.4" width="54.72" height="17.6036"/>
+			<path d="M7.09 1154.55 L25.09 1154.55 L25.09 1228.25 L14.57 1228.25" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="8.49654" y="1186.6" width="44.5188" height="9.59985" class="st12"/>
+			<text x="8.5" y="1193.8" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>doStartInput</text>		</g>
+		<g id="shape108-480" v:mID="108" v:groupContext="shape" v:layerMember="0" transform="translate(1864.49,-312.661)">
+			<title>消息.108</title>
+			<desc>onStartInput</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(65000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="30.7558" cy="1172.98" width="58.43" height="17.6036"/>
+			<path d="M7.09 1154.55 L25.09 1154.55 L25.09 1191.4 L14.57 1191.4" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="6.64671" y="1168.18" width="48.2182" height="9.59985" class="st12"/>
+			<text x="6.65" y="1175.38" class="st40" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>onStartInput</text>		</g>
+		<g id="shape109-487" v:mID="109" v:groupContext="shape" transform="translate(1924.02,-267.307)">
+			<title>黄色便条.109</title>
+			<desc>调用以通知输入方法文本输入已在编辑器中开始。您应该使用此回调来初始化输入的状态以匹配给定给它的编辑器的状态 此处由具体输入...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(66000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="105.591" cy="1095.02" width="211.19" height="119.055"/>
+			<rect x="0" y="1035.5" width="211.181" height="119.055" class="st5"/>
+			<text x="4" y="1046.7" class="st14" v:langID="2052"><v:paragraph/><v:tabList/>调用以通知输入方法文本输入已在编辑器中开始。您应该<tspan x="4"
+						dy="1.2em" class="st17">使用此回调来初始化输入的状态</tspan>，以匹配给定给它的编辑<tspan x="4" dy="1.298em" class="st17">器的状态<v:newlineChar/></tspan><tspan
+						x="4" dy="1.244em" class="st41">此处由具体输入法</tspan><tspan class="st42" v:langID="1033">APP</tspan><tspan
+						class="st41">继承</tspan><tspan class="st42" v:langID="1033">InputMethodService</tspan><tspan class="st41">类然后来实</tspan><tspan
+						x="4" dy="1.215em" class="st41">现<v:newlineChar/></tspan><tspan x="4" dy="1.215em" class="st42"
+						v:langID="1033">NOTE</tspan><tspan class="st41" v:langID="1033">：</tspan><tspan class="st41">比如</tspan><tspan
+						class="st42" v:langID="1033">packages/inputmethods/LatinIME/java/src/com/</tspan><tspan x="4" dy="1.204em"
+						class="st42" v:langID="1033">android/inputmethod/latin/LatinIME.java<v:newlineChar/></tspan><tspan x="4"
+						dy="1.211em" class="st15" v:langID="1033">        </tspan><tspan class="st15" v:langID="1033"># </tspan><tspan
+						class="st16">入参</tspan><tspan class="st15" v:langID="1033">attibute</tspan><tspan class="st16"
+						v:langID="1033">：</tspan><tspan class="st16">开始输入的编辑器的属性<v:newlineChar/></tspan><tspan x="4" dy="1.215em"
+						class="st15">        </tspan><tspan class="st15"># </tspan><tspan class="st16">入参</tspan><tspan
+						class="st15" v:langID="1033">restarting</tspan><tspan class="st16" v:langID="1033">：</tspan><tspan
+						class="st16">如果输入在同一编辑器中重新启</tspan><tspan x="4" dy="1.204em" class="st16">动</tspan><tspan class="st16">，</tspan><tspan
+						class="st16">例如因为应用程序更改了编辑器中的文本</tspan><tspan class="st16">，</tspan><tspan class="st16">则设置为</tspan><tspan
+						x="4" dy="1.211em" class="st15" v:langID="1033">true</tspan><tspan class="st16" v:langID="1033">。</tspan><tspan
+						class="st16">否则将为</tspan><tspan class="st15" v:langID="1033">false</tspan><tspan class="st16"
+						v:langID="1033">，</tspan><tspan class="st16">表示这是一个带有编辑的新会话</tspan></text>		</g>
+	</g>
+</svg>
