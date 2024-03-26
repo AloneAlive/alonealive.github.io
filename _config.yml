@@ -10,12 +10,15 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-# 隐藏production判断逻辑，直接使用bundle exec jekyll serve即可显示评论，否则需使用JEKYLL_ENV=production jekyll s
+# 网站构建方式：（和）
+# - 官网主页：https://www.jekyll.com.cn/
+# - 官网说明文档：https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+# - 构建命令：隐藏production判断逻辑，直接使用bundle exec jekyll serve即可显示评论，否则需使用JEKYLL_ENV=production jekyll s
 
 #theme                  : "minimal-mistakes-jekyll"
 remote_theme           : "mmistakes/minimal-mistakes"
 # 主题皮肤 参考：https://mmistakes.github.io/minimal-mistakes/docs/configuration/
-minimal_mistakes_skin    : "default" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "air" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 minimal_mistakes_skin_dark   : "dark" # 新增黑暗主题切换，对应主题需是default
 
 # Site Settings 站点语言
@@ -115,9 +118,9 @@ analytics:
 
 # Site Author 左侧边栏博主相关
 author:
-  name             : "sun wengang"
+  name             : "sunwengang"
   avatar           : /assets/images/touxiang.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "android automotive IVI. android framework developer, focus on upgrade/display/graphics."
+  bio              : "automotive, android framework developer."
   location         : "China"
   email            : "1332963488@qq.com"
   links:
@@ -127,21 +130,21 @@ author:
     - label: "NAV"
       icon: "fas fa-fw fa fa-archive"
       url: "/_pages/nav.html"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
-    # - label: "GitHub"
-    #   icon: "fab fa-fw fa-github"
-    #   url: "https://github.com/AloneAlive"
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   url: "https://twitter.com/"
+    # - label: "Facebook"
+    #   icon: "fab fa-fw fa-facebook-square"
+    #   url: "https://facebook.com/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/AloneAlive"
     - label: "cnblogs"
       icon: "fas fa-fw fa fa-book"
       url: "https://www.cnblogs.com/1996swg"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
+    #   url: "https://instagram.com/"
     # - label: "FriendLink"
     #   icon: "fas fa-fw fa fa-archive"
     #   url: "/_pages/friendLink/2111_pro_line/friend.html"
