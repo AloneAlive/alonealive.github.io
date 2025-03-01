@@ -1,0 +1,2343 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- 由 Microsoft Visio, SVG Export 生成 4-init进程启动第三阶段.svg Page-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="45.2717in" height="39.3386in"
+		viewBox="0 0 3259.56 2832.38" xml:space="preserve" color-interpolation-filters="sRGB" class="st42">
+	<v:documentProperties v:langID="2052" v:metric="true" v:viewMarkup="false">
+		<v:userDefs>
+			<v:ud v:nameU="msvNoAutoConnect" v:prompt="" v:val="VT0(1):26"/>
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#d8d8d8;fill-opacity:0.5;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.25}
+		.st2 {fill:#ff0000;font-family:Calibri;font-size:0.666664em;font-weight:bold}
+		.st3 {font-family:宋体;font-size:1em}
+		.st4 {font-size:1em}
+		.st5 {fill:#705c39;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st6 {stroke:#3d6abb;stroke-dasharray:3.5,2.5;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st7 {fill:#feffff;font-family:Calibri;font-size:0.666664em;font-weight:bold}
+		.st8 {fill:#ac4201;stroke:#5592c9;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st9 {marker-end:url(#mrkr4-94);stroke:#4271c6;stroke-linecap:round;stroke-linejoin:round;stroke-width:3}
+		.st10 {fill:#4271c6;fill-opacity:1;stroke:#4271c6;stroke-opacity:1;stroke-width:0.48076923076923}
+		.st11 {fill:#ffffff;stroke:none;stroke-linecap:butt;stroke-width:7.2}
+		.st12 {marker-end:url(#mrkr4-102);stroke:#5592c9;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st13 {fill:#5592c9;fill-opacity:1;stroke:#5592c9;stroke-opacity:1;stroke-width:0.13368983957219}
+		.st14 {fill:#4f87bb;fill-opacity:0;stroke:#4f87bb;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st15 {fill:#ffffff;stroke:#4f87bb;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st16 {fill:#4f88bb;font-family:Calibri;font-size:0.833336em}
+		.st17 {fill:#007f7f;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st18 {fill:#41719d;font-family:Calibri;font-size:0.666664em}
+		.st19 {fill:#ffffff;stroke:none;stroke-linecap:butt}
+		.st20 {fill:#41719d;font-family:Calibri;font-size:0.666664em;font-weight:bold}
+		.st21 {fill:#ffff00;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st22 {fill:#000000;font-family:宋体;font-size:0.666664em}
+		.st23 {font-family:Calibri;font-size:1em}
+		.st24 {fill:#92d050;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st25 {fill:#ff0000;font-family:宋体;font-size:0.666664em;font-weight:bold}
+		.st26 {font-family:微软雅黑;font-size:1em}
+		.st27 {fill:#ff0000;font-family:Calibri;font-size:1em;font-weight:bold}
+		.st28 {font-family:Microsoft Sans Serif;font-size:1em}
+		.st29 {fill:#5b9bd5;font-family:Calibri;font-size:0.666664em}
+		.st30 {fill:#000000;font-family:宋体;font-size:0.666664em;font-weight:bold}
+		.st31 {font-family:Calibri;font-size:1em;font-weight:normal}
+		.st32 {font-family:微软雅黑;font-size:1em;font-weight:normal}
+		.st33 {fill:#ff0000;font-family:Calibri;font-size:1em;font-weight:normal}
+		.st34 {fill:#ff0000;font-family:微软雅黑;font-size:1em;font-weight:normal}
+		.st35 {fill:#fd9759;stroke:#5592c9;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st36 {fill:#92cddc;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st37 {fill:#000000;font-family:Calibri;font-size:0.666664em}
+		.st38 {fill:#c00000;font-family:Calibri;font-size:0.666664em;font-weight:bold}
+		.st39 {fill:#3b372a;font-family:Calibri;font-size:0.666664em;font-weight:bold}
+		.st40 {fill:#c00000;font-family:Calibri;font-size:0.666664em}
+		.st41 {fill:#c00000;font-size:1em;font-weight:bold}
+		.st42 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs id="Markers">
+		<g id="lend4">
+			<path d="M 2 1 L 0 0 L 2 -1 L 2 1 " style="stroke:none"/>
+		</g>
+		<marker id="mrkr4-94" class="st10" v:arrowType="4" v:arrowSize="3" v:setback="4.16" refX="-4.16" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-2.08,-2.08) "/>
+		</marker>
+		<marker id="mrkr4-102" class="st13" v:arrowType="4" v:arrowSize="3" v:setback="14.96" refX="-14.96" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-7.48,-7.48) "/>
+		</marker>
+	</defs>
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<v:userDefs>
+			<v:ud v:nameU="msvThemeOrder" v:val="VT0(0):26"/>
+			<v:ud v:nameU="visNavType" v:val="VT0(1):26"/>
+		</v:userDefs>
+		<title>页-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<v:layer v:name="连接线" v:index="0"/>
+		<g id="group263-1" transform="translate(789.307,-403.654)" v:mID="263" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(171000):26"/>
+			</v:userDefs>
+			<title>其他片段.263</title>
+			<g id="shape263-2" v:mID="263" v:groupContext="groupContent">
+				<rect x="0" y="2536.16" width="953.575" height="296.22" class="st1"/>
+			</g>
+			<g id="shape265-4" v:mID="265" v:groupContext="shape" transform="translate(0,-266.917)">
+				<title>工作表.265</title>
+				<desc>5.解析init.rc等文件 &#38; action触发运行rc文件</desc>
+				<v:userDefs>
+					<v:ud v:nameU="FoldSize" v:prompt="" v:val="VT0(0.098425196850394):24"/>
+					<v:ud v:nameU="BackFillColor" v:prompt="" v:val="VT5(#96afcf)"/>
+					<v:ud v:nameU="BackLineColor" v:prompt="" v:val="VT5(#1f477d)"/>
+					<v:ud v:nameU="BackCharColor" v:prompt="" v:val="VT5(#000000)"/>
+					<v:ud v:nameU="DarkerColor" v:prompt="" v:val="VT5(#000000)"/>
+					<v:ud v:nameU="BackFillColor" v:prompt="" v:val="VT5(#a5a5a5)"/>
+					<v:ud v:nameU="BackLineColor" v:prompt="" v:val="VT5(#a5a5a5)"/>
+					<v:ud v:nameU="BackCharColor" v:prompt="" v:val="VT5(#ffffff)"/>
+					<v:ud v:nameU="DarkerColor" v:prompt="" v:val="VT5(#a5a5a5)"/>
+				</v:userDefs>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="42.4101" cy="2817.73" width="84.83" height="29.3037"/>
+				<path d="M0 2832.38 L77.73 2832.38 L84.82 2825.29 L84.82 2803.07 L0 2803.07 L0 2832.38 Z" class="st1"/>
+				<text x="4" y="2815.06" class="st2" v:langID="2052"><v:paragraph/><v:tabList/>5.<tspan class="st3">解析</tspan><tspan
+							class="st4" v:langID="1033">init.rc</tspan><tspan class="st3">等文件</tspan> &#38;<v:newlineChar/><tspan
+							x="4" dy="1.331em" class="st4" v:langID="1033">action</tspan><tspan class="st3">触发运行</tspan><tspan
+							class="st4" v:langID="1033">rc</tspan><tspan class="st3">文件</tspan></text>			</g>
+		</g>
+		<g id="group247-14" transform="translate(789.024,-699.874)" v:mID="247" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(161000):26"/>
+			</v:userDefs>
+			<title>其他片段.247</title>
+			<g id="shape247-15" v:mID="247" v:groupContext="groupContent">
+				<rect x="0" y="2013.17" width="953.575" height="819.213" class="st1"/>
+			</g>
+			<g id="shape248-17" v:mID="248" v:groupContext="shape" transform="translate(0,-789.909)">
+				<title>工作表.248</title>
+				<desc>4.加载属性 &#38; 启动属性服务监听属性请求</desc>
+				<v:userDefs>
+					<v:ud v:nameU="FoldSize" v:prompt="" v:val="VT0(0.098425196850394):24"/>
+					<v:ud v:nameU="BackFillColor" v:prompt="" v:val="VT5(#96afcf)"/>
+					<v:ud v:nameU="BackLineColor" v:prompt="" v:val="VT5(#1f477d)"/>
+					<v:ud v:nameU="BackCharColor" v:prompt="" v:val="VT5(#000000)"/>
+					<v:ud v:nameU="DarkerColor" v:prompt="" v:val="VT5(#000000)"/>
+					<v:ud v:nameU="BackFillColor" v:prompt="" v:val="VT5(#a5a5a5)"/>
+					<v:ud v:nameU="BackLineColor" v:prompt="" v:val="VT5(#a5a5a5)"/>
+					<v:ud v:nameU="BackCharColor" v:prompt="" v:val="VT5(#ffffff)"/>
+					<v:ud v:nameU="DarkerColor" v:prompt="" v:val="VT5(#a5a5a5)"/>
+				</v:userDefs>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="53.0938" cy="2817.73" width="106.19" height="29.3037"/>
+				<path d="M0 2832.38 L99.1 2832.38 L106.19 2825.29 L106.19 2803.07 L0 2803.07 L0 2832.38 Z" class="st1"/>
+				<text x="4" y="2815.06" class="st2" v:langID="2052"><v:paragraph/><v:tabList/>4.<tspan class="st3">加载属性</tspan> &#38;<v:newlineChar/><tspan
+							x="4" dy="1.331em" class="st3">启动属性服务监听属性请求</tspan></text>			</g>
+		</g>
+		<g id="group190-22" transform="translate(788.457,-1521.92)" v:mID="190" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(119000):26"/>
+			</v:userDefs>
+			<title>其他片段.190</title>
+			<g id="shape190-23" v:mID="190" v:groupContext="groupContent">
+				<rect x="0" y="2536.16" width="953.575" height="296.22" class="st1"/>
+			</g>
+			<g id="shape191-25" v:mID="191" v:groupContext="shape" transform="translate(0,-277.567)">
+				<title>工作表.191</title>
+				<desc>3.信号处理</desc>
+				<v:userDefs>
+					<v:ud v:nameU="FoldSize" v:prompt="" v:val="VT0(0.098425196850394):24"/>
+					<v:ud v:nameU="BackFillColor" v:prompt="" v:val="VT5(#96afcf)"/>
+					<v:ud v:nameU="BackLineColor" v:prompt="" v:val="VT5(#1f477d)"/>
+					<v:ud v:nameU="BackCharColor" v:prompt="" v:val="VT5(#000000)"/>
+					<v:ud v:nameU="DarkerColor" v:prompt="" v:val="VT5(#000000)"/>
+					<v:ud v:nameU="BackFillColor" v:prompt="" v:val="VT5(#a5a5a5)"/>
+					<v:ud v:nameU="BackLineColor" v:prompt="" v:val="VT5(#a5a5a5)"/>
+					<v:ud v:nameU="BackCharColor" v:prompt="" v:val="VT5(#ffffff)"/>
+					<v:ud v:nameU="DarkerColor" v:prompt="" v:val="VT5(#a5a5a5)"/>
+				</v:userDefs>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="32" cy="2823.05" width="64" height="18.6536"/>
+				<path d="M0 2832.38 L56.91 2832.38 L64 2825.29 L64 2813.72 L0 2813.72 L0 2832.38 Z" class="st1"/>
+				<text x="4" y="2825.71" class="st2" v:langID="2052"><v:paragraph/><v:tabList/>3.<tspan class="st3">信号处理</tspan></text>			</g>
+		</g>
+		<g id="group163-29" transform="translate(787.606,-1819.56)" v:mID="163" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(104000):26"/>
+			</v:userDefs>
+			<title>其他片段.163</title>
+			<g id="shape163-30" v:mID="163" v:groupContext="groupContent">
+				<rect x="0" y="2312.74" width="953.575" height="519.635" class="st1"/>
+			</g>
+			<g id="shape164-32" v:mID="164" v:groupContext="shape" transform="translate(0,-500.982)">
+				<title>工作表.164</title>
+				<desc>2.Selinux第二阶段初始化</desc>
+				<v:userDefs>
+					<v:ud v:nameU="FoldSize" v:prompt="" v:val="VT0(0.098425196850394):24"/>
+					<v:ud v:nameU="BackFillColor" v:prompt="" v:val="VT5(#96afcf)"/>
+					<v:ud v:nameU="BackLineColor" v:prompt="" v:val="VT5(#1f477d)"/>
+					<v:ud v:nameU="BackCharColor" v:prompt="" v:val="VT5(#000000)"/>
+					<v:ud v:nameU="DarkerColor" v:prompt="" v:val="VT5(#000000)"/>
+					<v:ud v:nameU="BackFillColor" v:prompt="" v:val="VT5(#a5a5a5)"/>
+					<v:ud v:nameU="BackLineColor" v:prompt="" v:val="VT5(#a5a5a5)"/>
+					<v:ud v:nameU="BackCharColor" v:prompt="" v:val="VT5(#ffffff)"/>
+					<v:ud v:nameU="DarkerColor" v:prompt="" v:val="VT5(#a5a5a5)"/>
+				</v:userDefs>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="48.1114" cy="2823.05" width="96.23" height="18.6536"/>
+				<path d="M0 2832.38 L89.14 2832.38 L96.22 2825.29 L96.22 2813.72 L0 2813.72 L0 2832.38 Z" class="st1"/>
+				<text x="4" y="2825.71" class="st2" v:langID="2052"><v:paragraph/><v:tabList/>2.Selinux<tspan class="st3">第二阶段初始化</tspan></text>			</g>
+		</g>
+		<g id="group131-36" transform="translate(787.606,-2338.3)" v:mID="131" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(75000):26"/>
+			</v:userDefs>
+			<title>其他片段.131</title>
+			<g id="shape131-37" v:mID="131" v:groupContext="groupContent">
+				<rect x="0" y="2500.72" width="953.575" height="331.654" class="st1"/>
+			</g>
+			<g id="shape132-39" v:mID="132" v:groupContext="shape" transform="translate(0,-313)">
+				<title>工作表.132</title>
+				<desc>1.初始化属性</desc>
+				<v:userDefs>
+					<v:ud v:nameU="FoldSize" v:prompt="" v:val="VT0(0.098425196850394):24"/>
+					<v:ud v:nameU="BackFillColor" v:prompt="" v:val="VT5(#96afcf)"/>
+					<v:ud v:nameU="BackLineColor" v:prompt="" v:val="VT5(#1f477d)"/>
+					<v:ud v:nameU="BackCharColor" v:prompt="" v:val="VT5(#000000)"/>
+					<v:ud v:nameU="DarkerColor" v:prompt="" v:val="VT5(#000000)"/>
+					<v:ud v:nameU="BackFillColor" v:prompt="" v:val="VT5(#a5a5a5)"/>
+					<v:ud v:nameU="BackLineColor" v:prompt="" v:val="VT5(#a5a5a5)"/>
+					<v:ud v:nameU="BackCharColor" v:prompt="" v:val="VT5(#ffffff)"/>
+					<v:ud v:nameU="DarkerColor" v:prompt="" v:val="VT5(#a5a5a5)"/>
+				</v:userDefs>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="32" cy="2823.05" width="64" height="18.6536"/>
+				<path d="M0 2832.38 L56.91 2832.38 L64 2825.29 L64 2813.72 L0 2813.72 L0 2832.38 Z" class="st1"/>
+				<text x="4" y="2825.71" class="st2" v:langID="2052"><v:paragraph/><v:tabList/>1.<tspan class="st3">初始化属性</tspan></text>			</g>
+		</g>
+		<g id="group1-43" transform="translate(611.858,-2611.07)" v:mID="1" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(1000):26"/>
+			</v:userDefs>
+			<title>Actor lifeline</title>
+			<desc>system/core/init/main.cpp</desc>
+			<g id="shape2-44" v:mID="2" v:groupContext="shape" transform="translate(19.8425,4.54747E-13)">
+				<title>工作表.2</title>
+				<rect x="0" y="2806.87" width="51.0236" height="25.5118" class="st5"/>
+			</g>
+			<g id="shape3-46" v:mID="3" v:groupContext="shape" transform="translate(30.2362,1135.11)">
+				<title>工作表.3</title>
+			</g>
+			<g id="shape4-48" v:mID="4" v:groupContext="shape" transform="translate(2877.73,2832.38) rotate(90)">
+				<title>工作表.4</title>
+				<path d="M0 2832.38 L1117.49 2832.38" class="st6"/>
+			</g>
+			<g id="shape1-51" v:mID="1" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="45.3543" cy="2819.62" width="90.71" height="25.5118"/>
+				<rect x="0" y="2806.87" width="90.7087" height="25.5118" class="st5"/>
+				<text x="15.7" y="2817.22" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>system/core/init/<tspan
+							x="29.96" dy="1.2em" class="st4">main.cpp</tspan></text>			</g>
+		</g>
+		<g id="group5-55" transform="translate(859.535,-2610.43)" v:mID="5" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(4000):26"/>
+			</v:userDefs>
+			<title>Object lifeline</title>
+			<desc>system/core/init/init.cpp</desc>
+			<g id="shape6-56" v:mID="6" v:groupContext="shape" transform="translate(15.9449,4.54747E-13)">
+				<title>工作表.6</title>
+				<rect x="0" y="2806.87" width="51.0236" height="25.5118" class="st5"/>
+			</g>
+			<g id="shape7-58" v:mID="7" v:groupContext="shape" transform="translate(32.9528,-29.0551)">
+				<title>工作表.7</title>
+				<path d="M8.5 2832.38 a0 0 0 1 1 0 0 a0 0 0 1 1 0 0 Z" class="st5"/>
+			</g>
+			<g id="shape8-60" v:mID="8" v:groupContext="shape" transform="translate(27.6378,2177.62)">
+				<title>工作表.8</title>
+			</g>
+			<g id="shape9-62" v:mID="9" v:groupContext="shape" transform="translate(2873.83,2832.38) rotate(90)">
+				<title>工作表.9</title>
+				<path d="M0 2832.38 L2160 2832.38" class="st6"/>
+			</g>
+			<g id="shape5-65" v:mID="5" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="41.4567" cy="2819.62" width="82.92" height="25.5118"/>
+				<rect x="0" y="2806.87" width="82.9134" height="25.5118" class="st5"/>
+				<text x="11.8" y="2817.22" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>system/core/init/<tspan
+							x="28.92" dy="1.2em" class="st4">init.cpp</tspan></text>			</g>
+		</g>
+		<g id="group10-69" transform="translate(1160.36,-2611.07)" v:mID="10" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(7000):26"/>
+			</v:userDefs>
+			<title>Object lifeline.54</title>
+			<desc>system/core/init/util.cpp</desc>
+			<g id="shape11-70" v:mID="11" v:groupContext="shape" transform="translate(15.9449,4.54747E-13)">
+				<title>工作表.11</title>
+				<rect x="0" y="2806.87" width="51.0236" height="25.5118" class="st5"/>
+			</g>
+			<g id="shape12-72" v:mID="12" v:groupContext="shape" transform="translate(32.9528,-29.0551)">
+				<title>工作表.12</title>
+				<path d="M8.5 2832.38 a0 0 0 1 1 0 0 a0 0 0 1 1 0 0 Z" class="st5"/>
+			</g>
+			<g id="shape13-74" v:mID="13" v:groupContext="shape" transform="translate(27.6378,298.885)">
+				<title>工作表.13</title>
+			</g>
+			<g id="shape14-76" v:mID="14" v:groupContext="shape" transform="translate(2873.83,2832.38) rotate(90)">
+				<title>工作表.14</title>
+				<path d="M0 2832.38 L281.27 2832.38" class="st6"/>
+			</g>
+			<g id="shape10-79" v:mID="10" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="41.4567" cy="2819.62" width="82.92" height="25.5118"/>
+				<rect x="0" y="2806.87" width="82.9134" height="25.5118" class="st5"/>
+				<text x="11.8" y="2817.22" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>system/core/init/<tspan
+							x="28.92" dy="1.2em" class="st4">util.cpp</tspan></text>			</g>
+		</g>
+		<g id="shape15-83" v:mID="15" v:groupContext="shape" transform="translate(-2170.91,1211.24) rotate(-90)">
+			<title>Activation</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(2000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="955.916" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape16-85" v:mID="16" v:groupContext="shape" transform="translate(-1927.13,2359.28) rotate(-90)">
+			<title>激活.16</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(5000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="2103.31" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape17-87" v:mID="17" v:groupContext="shape" transform="translate(-1626.31,476.431) rotate(-90)">
+			<title>激活.17</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(8000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="221.102" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape18-89" v:mID="18" v:groupContext="shape" v:layerMember="0" transform="translate(661.465,-2583.82)">
+			<title>Message.21</title>
+			<desc>SecondStageMain</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(3000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="117.638" cy="2839.46" width="69.38" height="17.6036"/>
+			<path d="M0 2839.14 L222.8 2839.75" class="st9"/>
+			<rect v:rectContext="textBkgnd" x="87.8547" y="2834.66" width="59.5665" height="9.59985" class="st11"/>
+			<text x="87.85" y="2841.86" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>SecondStageMain</text>		</g>
+		<g id="shape19-97" v:mID="19" v:groupContext="shape" v:layerMember="0" transform="translate(905.244,-2552.63)">
+			<title>消息.132</title>
+			<desc>property_init</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(6000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="57.5787" cy="2825.29" width="53.96" height="17.6036"/>
+			<path d="M0 2825.61 L107.68 2825.01" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="35.5063" y="2820.49" width="44.145" height="9.59985" class="st11"/>
+			<text x="35.51" y="2827.69" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>property_init</text>		</g>
+		<g id="group21-105" transform="translate(1347.91,-2611.07)" v:mID="21" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(10000):26"/>
+			</v:userDefs>
+			<title>Object lifeline.150</title>
+			<desc>bionic/libc/system_properties/system_properties.cpp</desc>
+			<g id="shape22-106" v:mID="22" v:groupContext="shape" transform="translate(19.8425,4.54747E-13)">
+				<title>工作表.22</title>
+				<rect x="0" y="2806.87" width="51.0236" height="25.5118" class="st5"/>
+			</g>
+			<g id="shape23-108" v:mID="23" v:groupContext="shape" transform="translate(36.8504,-29.0551)">
+				<title>工作表.23</title>
+				<path d="M8.5 2832.38 a0 0 0 1 1 0 0 a0 0 0 1 1 0 0 Z" class="st5"/>
+			</g>
+			<g id="shape24-110" v:mID="24" v:groupContext="shape" transform="translate(30.2362,284.712)">
+				<title>工作表.24</title>
+			</g>
+			<g id="shape25-112" v:mID="25" v:groupContext="shape" transform="translate(2877.73,2832.38) rotate(90)">
+				<title>工作表.25</title>
+				<path d="M0 2832.38 L267.1 2832.38" class="st6"/>
+			</g>
+			<g id="shape21-115" v:mID="21" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="45.3543" cy="2819.62" width="90.71" height="25.5118"/>
+				<rect x="0" y="2806.87" width="90.7087" height="25.5118" class="st5"/>
+				<text x="26.05" y="2812.42" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>bionic/libc/<tspan
+							x="12.62" dy="1.2em" class="st4">system_properties/</tspan><tspan x="7.31" dy="1.2em" class="st4">system_properties.cpp</tspan></text>			</g>
+		</g>
+		<g id="shape26-120" v:mID="26" v:groupContext="shape" transform="translate(-1434.86,476.431) rotate(-90)">
+			<title>激活.157</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(11000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="221.102" height="8.50394" class="st8"/>
+		</g>
+		<g id="group27-122" transform="translate(412.016,-345.543)" v:mID="27" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(12000):26"/>
+			</v:userDefs>
+			<title>其他片段</title>
+			<g id="shape27-123" v:mID="27" v:groupContext="groupContent">
+				<rect x="0" y="465.449" width="2116.06" height="2366.93" class="st14"/>
+			</g>
+			<g id="shape28-125" v:mID="28" v:groupContext="shape" transform="translate(0,-2345.61)">
+				<title>工作表.28</title>
+				<desc>init进程启动第三阶段 -- SecondStageMain</desc>
+				<v:userDefs>
+					<v:ud v:nameU="FoldSize" v:prompt="" v:val="VT0(0.098425196850394):24"/>
+					<v:ud v:nameU="BackFillColor" v:prompt="" v:val="VT5(#96afcf)"/>
+					<v:ud v:nameU="BackLineColor" v:prompt="" v:val="VT5(#1f477d)"/>
+					<v:ud v:nameU="BackCharColor" v:prompt="" v:val="VT5(#000000)"/>
+					<v:ud v:nameU="DarkerColor" v:prompt="" v:val="VT5(#000000)"/>
+					<v:ud v:nameU="BackFillColor" v:prompt="" v:val="VT5(#4f88bb)"/>
+					<v:ud v:nameU="BackLineColor" v:prompt="" v:val="VT5(#4f88bb)"/>
+					<v:ud v:nameU="BackCharColor" v:prompt="" v:val="VT5(#feffff)"/>
+					<v:ud v:nameU="DarkerColor" v:prompt="" v:val="VT5(#4f88bb)"/>
+				</v:userDefs>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="93.4948" cy="2821.72" width="186.99" height="21.3161"/>
+				<path d="M0 2832.38 L179.9 2832.38 L186.99 2825.29 L186.99 2811.06 L0 2811.06 L0 2832.38 Z" class="st15"/>
+				<text x="4" y="2825.05" class="st16" v:langID="2052"><v:paragraph/><v:tabList/>init<tspan class="st3">进程启动第三阶段</tspan> -- <tspan
+							class="st4" v:langID="1033">SecondStageMain</tspan></text>			</g>
+		</g>
+		<g id="group30-130" transform="translate(983.197,-2611.07)" v:mID="30" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(13000):26"/>
+			</v:userDefs>
+			<title>Object lifeline.42</title>
+			<desc>system/core/init/property_service.cpp</desc>
+			<g id="shape31-131" v:mID="31" v:groupContext="shape" transform="translate(15.9449,4.54747E-13)">
+				<title>工作表.31</title>
+				<rect x="0" y="2806.87" width="51.0236" height="25.5118" class="st17"/>
+			</g>
+			<g id="shape32-133" v:mID="32" v:groupContext="shape" transform="translate(32.9528,-29.0551)">
+				<title>工作表.32</title>
+				<path d="M8.5 2832.38 a0 0 0 1 1 0 0 a0 0 0 1 1 0 0 Z" class="st17"/>
+			</g>
+			<g id="shape33-135" v:mID="33" v:groupContext="shape" transform="translate(27.6378,264.87)">
+				<title>工作表.33</title>
+			</g>
+			<g id="shape34-137" v:mID="34" v:groupContext="shape" transform="translate(2873.83,2832.38) rotate(90)">
+				<title>工作表.34</title>
+				<path d="M0 2832.38 L247.25 2832.38" class="st6"/>
+			</g>
+			<g id="shape30-140" v:mID="30" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="41.4567" cy="2819.62" width="82.92" height="25.5118"/>
+				<rect x="0" y="2806.87" width="82.9134" height="25.5118" class="st17"/>
+				<text x="11.8" y="2817.22" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>system/core/init/<tspan
+							x="6.25" dy="1.2em" class="st4">property_service.cpp</tspan></text>			</g>
+		</g>
+		<g id="shape35-144" v:mID="35" v:groupContext="shape" transform="translate(-1803.47,423.213) rotate(-90)">
+			<title>激活.47</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(14000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="150.876" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape36-146" v:mID="36" v:groupContext="shape" v:layerMember="0" transform="translate(1023.94,-2560.04)">
+			<title>消息.48</title>
+			<desc>CreateSerializedPropertyInfo</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(15000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="54.6312" cy="2846.96" width="103.77" height="17.6036"/>
+			<path d="M4.96 2832.38 L27.21 2832.38 L27.21 2866.39 L16.69 2866.39" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="7.6571" y="2842.16" width="93.9485" height="9.59985" class="st11"/>
+			<text x="7.66" y="2849.36" class="st18" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>CreateSerializedPropertyInfo</text>		</g>
+		<g id="shape37-153" v:mID="37" v:groupContext="shape" transform="translate(-1799.22,399.895) rotate(-90)">
+			<title>激活.37</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(16000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="110.551" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape38-155" v:mID="38" v:groupContext="shape" v:layerMember="0" transform="translate(1033.16,-2478.93)">
+			<title>消息.38</title>
+			<desc>__system_property_area_init</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(17000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="128.869" cy="2839.77" width="106.14" height="17.6036"/>
+			<path d="M0 2839.14 L253.52 2839.77" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="80.707" y="2834.97" width="96.3237" height="9.59985" class="st11"/>
+			<text x="80.71" y="2842.17" class="st18" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>__system_property_area_init</text>		</g>
+		<g id="shape40-162" v:mID="40" v:groupContext="shape" v:layerMember="0" transform="translate(905.244,-2569.64)">
+			<title>消息.59</title>
+			<desc>InitKernelLogging</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(19000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="146.161" cy="2825.29" width="67.83" height="17.6036"/>
+			<path d="M0 2825.61 L284.84 2824.99" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="117.154" y="2820.49" width="58.0158" height="9.59985" class="st19"/>
+			<text x="117.15" y="2827.69" class="st20" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>InitKernelLogging</text>		</g>
+		<g id="shape41-169" v:mID="41" v:groupContext="shape" transform="translate(1031.39,-2584.91)">
+			<title>黄色便条.77</title>
+			<desc>初始化kernel日志系统不再赘述</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(20000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="68.7402" cy="2824.94" width="137.49" height="14.8819"/>
+			<rect x="0" y="2817.5" width="137.48" height="14.8819" class="st21"/>
+			<text x="4" y="2829.48" class="st22" v:langID="2052"><v:paragraph/><v:tabList/>初始化<tspan class="st23">kernel</tspan>日志系统（不再赘述）</text>		</g>
+		<g id="shape42-173" v:mID="42" v:groupContext="shape" transform="translate(792.768,-2273.1)">
+			<title>黄色便条.42</title>
+			<desc>第一阶段在上一步骤</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(21000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="48.6969" cy="2813.24" width="97.4" height="38.2677"/>
+			<rect x="0" y="2794.11" width="97.3937" height="38.2677" class="st24"/>
+			<text x="4" y="2806.1" class="st22" v:langID="2052"><v:paragraph/><v:tabList/>（第一阶段在上一步骤）</text>		</g>
+		<g id="group43-176" transform="translate(1448.8,-2611.07)" v:mID="43" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(22000):26"/>
+			</v:userDefs>
+			<title>Object lifeline.86</title>
+			<desc>bionic/libc/system_properties/contexts_serialized.cpp</desc>
+			<g id="shape44-177" v:mID="44" v:groupContext="shape" transform="translate(19.8425,4.54747E-13)">
+				<title>工作表.44</title>
+				<rect x="0" y="2806.87" width="51.0236" height="25.5118" class="st5"/>
+			</g>
+			<g id="shape45-179" v:mID="45" v:groupContext="shape" transform="translate(36.8504,-29.0551)">
+				<title>工作表.45</title>
+				<path d="M8.5 2832.38 a0 0 0 1 1 0 0 a0 0 0 1 1 0 0 Z" class="st5"/>
+			</g>
+			<g id="shape46-181" v:mID="46" v:groupContext="shape" transform="translate(30.2362,284.712)">
+				<title>工作表.46</title>
+			</g>
+			<g id="shape47-183" v:mID="47" v:groupContext="shape" transform="translate(2877.73,2832.38) rotate(90)">
+				<title>工作表.47</title>
+				<path d="M0 2832.38 L267.1 2832.38" class="st6"/>
+			</g>
+			<g id="shape43-186" v:mID="43" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="45.3543" cy="2819.62" width="90.71" height="25.5118"/>
+				<rect x="0" y="2806.87" width="90.7087" height="25.5118" class="st5"/>
+				<text x="26.05" y="2812.42" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>bionic/libc/<tspan
+							x="12.62" dy="1.2em" class="st4">system_properties/</tspan><tspan x="6.43" dy="1.2em" class="st4">contexts_serialized.cpp</tspan></text>			</g>
+		</g>
+		<g id="shape48-191" v:mID="48" v:groupContext="shape" transform="translate(-1333.97,476.431) rotate(-90)">
+			<title>激活.91</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(23000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="221.102" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape51-193" v:mID="51" v:groupContext="shape" transform="translate(-1922.88,383.528) rotate(-90)">
+			<title>激活.103</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(26000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="24.9449" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape52-195" v:mID="52" v:groupContext="shape" v:layerMember="0" transform="translate(900.283,-2485.7)">
+			<title>消息.104</title>
+			<desc>process_kernel_dt</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(27000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="45.3543" cy="2846.55" width="69.93" height="17.6036"/>
+			<path d="M4.96 2832.38 L27.21 2832.38 L27.21 2861.29 L16.69 2861.29" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="15.2999" y="2841.75" width="60.1089" height="9.59985" class="st11"/>
+			<text x="15.3" y="2848.95" class="st18" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>process_kernel_dt</text>		</g>
+		<g id="group55-202" transform="translate(1249.71,-2611.07)" v:mID="55" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(30000):26"/>
+			</v:userDefs>
+			<title>Object lifeline.107</title>
+			<desc>bionic/libc/bionic/system_property_api.cpp</desc>
+			<g id="shape56-203" v:mID="56" v:groupContext="shape" transform="translate(23.185,4.54747E-13)">
+				<title>工作表.56</title>
+				<rect x="0" y="2806.87" width="51.0236" height="25.5118" class="st5"/>
+			</g>
+			<g id="shape57-205" v:mID="57" v:groupContext="shape" transform="translate(40.1929,-29.0551)">
+				<title>工作表.57</title>
+				<path d="M8.5 2832.38 a0 0 0 1 1 0 0 a0 0 0 1 1 0 0 Z" class="st5"/>
+			</g>
+			<g id="shape58-207" v:mID="58" v:groupContext="shape" transform="translate(32.4646,284.712)">
+				<title>工作表.58</title>
+			</g>
+			<g id="shape59-209" v:mID="59" v:groupContext="shape" transform="translate(2881.07,2832.38) rotate(90)">
+				<title>工作表.59</title>
+				<path d="M0 2832.38 L267.1 2832.38" class="st6"/>
+			</g>
+			<g id="shape55-212" v:mID="55" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="48.6969" cy="2819.62" width="97.4" height="25.5118"/>
+				<rect x="0" y="2806.87" width="97.3937" height="25.5118" class="st5"/>
+				<text x="17.59" y="2817.22" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>bionic/libc/bionic/<tspan
+							x="6.25" dy="1.2em" class="st4">system_property_api.cpp</tspan></text>			</g>
+		</g>
+		<g id="shape60-216" v:mID="60" v:groupContext="shape" transform="translate(-1529.72,476.431) rotate(-90)">
+			<title>激活.112</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(31000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="221.102" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape62-218" v:mID="62" v:groupContext="shape" transform="translate(787.606,-2441.06)">
+			<title>黄色便条.114</title>
+			<desc>处理并赋值内核dt设备树、cmdline、boot的一些property属性ro属性</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(33000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="51.3573" cy="2813.24" width="102.72" height="38.2677"/>
+			<rect x="0" y="2794.11" width="102.715" height="38.2677" class="st21"/>
+			<text x="4" y="2806.1" class="st22" v:langID="2052"><v:paragraph/><v:tabList/>处理并赋值内核<tspan class="st23">dt</tspan>设备<tspan
+						x="4" dy="1.331em" class="st4">树</tspan>、<tspan class="st23">cmdline</tspan>、<tspan class="st23">boot</tspan>的一些<tspan
+						x="4" dy="1.331em" class="st23">property</tspan>属性（<tspan class="st23">ro</tspan>属性）</text>		</g>
+		<g id="shape64-227" v:mID="64" v:groupContext="shape" v:layerMember="0" transform="translate(905.244,-2226.33)">
+			<title>消息.117</title>
+			<desc>2SelabelInitialize</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(35000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="145.163" cy="2824.77" width="82.16" height="18.6536"/>
+			<path d="M0 2825.29 L281.65 2825.29" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="108.993" y="2819.44" width="72.3403" height="10.6501" class="st11"/>
+			<text x="108.99" y="2827.43" class="st25" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>（<tspan
+						class="st23">2</tspan>）<tspan class="st23" v:langID="1033">SelabelInitialize</tspan></text>		</g>
+		<g id="shape77-236" v:mID="77" v:groupContext="shape" transform="translate(906.667,-2528.22)">
+			<title>黄色便条.77</title>
+			<desc>首先通过mkdir创建&#34;/dev/__properties__&#34;目录</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(44000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="54.2067" cy="2819.62" width="108.42" height="25.5118"/>
+			<rect x="0" y="2806.87" width="108.413" height="25.5118" class="st21"/>
+			<text x="4" y="2818.85" class="st22" v:langID="2052"><v:paragraph/><v:tabList/>首先通过<tspan class="st23">mkdir</tspan>创建<tspan
+						class="st23">&#34;/</tspan><tspan class="st23" v:langID="1033">dev/</tspan><tspan x="4" dy="1.244em"
+						class="st23" v:langID="1033">__properties__&#34;</tspan><tspan class="st26">目录</tspan></text>		</g>
+		<g id="shape78-244" v:mID="78" v:groupContext="shape" v:layerMember="0" transform="translate(1302.66,-2464.44)">
+			<title>消息.78</title>
+			<desc>AreaInit</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(45000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="42.6358" cy="2825.6" width="40" height="17.6036"/>
+			<path d="M0 2825.29 L78.87 2825.29" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="29.6536" y="2820.8" width="25.9645" height="9.59985" class="st11"/>
+			<text x="29.65" y="2828" class="st18" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>AreaInit</text>		</g>
+		<g id="shape79-251" v:mID="79" v:groupContext="shape" v:layerMember="0" transform="translate(1397.52,-2464.44)">
+			<title>消息.79</title>
+			<desc>Initialize</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(46000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="45.6157" cy="2825.6" width="40" height="17.6036"/>
+			<path d="M0 2825.29 L84.91 2825.29" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="32.0087" y="2820.8" width="27.2142" height="9.59985" class="st11"/>
+			<text x="32.01" y="2828" class="st18" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Initialize</text>		</g>
+		<g id="shape80-258" v:mID="80" v:groupContext="shape" transform="translate(-1329.72,453.754) rotate(-90)">
+			<title>激活.80</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(47000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="85.0394" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape81-260" v:mID="81" v:groupContext="shape" v:layerMember="0" transform="translate(1493.79,-2471.53)">
+			<title>消息.81</title>
+			<desc>InitializeProperties()</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(48000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="42.1595" cy="2843.72" width="75.62" height="17.6036"/>
+			<path d="M5.31 2832.38 L26.86 2832.38 L26.86 2857.25 L16.34 2857.25" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="9.25771" y="2838.92" width="65.8037" height="9.59985" class="st11"/>
+			<text x="9.26" y="2846.12" class="st18" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>InitializeProperties()</text>		</g>
+		<g id="group82-267" transform="translate(1549.69,-2611.07)" v:mID="82" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(49000):26"/>
+			</v:userDefs>
+			<title>Object lifeline.82</title>
+			<desc>bionic/libc/system_properties/contexts_serialized.cpp</desc>
+			<g id="shape83-268" v:mID="83" v:groupContext="shape" transform="translate(28.6949,4.54747E-13)">
+				<title>工作表.83</title>
+				<rect x="0" y="2806.87" width="51.0236" height="25.5118" class="st5"/>
+			</g>
+			<g id="shape84-270" v:mID="84" v:groupContext="shape" transform="translate(45.7028,-29.0551)">
+				<title>工作表.84</title>
+				<path d="M8.5 2832.38 a0 0 0 1 1 0 0 a0 0 0 1 1 0 0 Z" class="st5"/>
+			</g>
+			<g id="shape85-272" v:mID="85" v:groupContext="shape" transform="translate(36.1378,284.712)">
+				<title>工作表.85</title>
+			</g>
+			<g id="shape86-274" v:mID="86" v:groupContext="shape" transform="translate(2886.58,2832.38) rotate(90)">
+				<title>工作表.86</title>
+				<path d="M0 2832.38 L267.1 2832.38" class="st6"/>
+			</g>
+			<g id="shape82-277" v:mID="82" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="54.2067" cy="2819.62" width="108.42" height="25.5118"/>
+				<rect x="0" y="2806.87" width="108.413" height="25.5118" class="st5"/>
+				<text x="34.9" y="2812.42" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>bionic/libc/<tspan
+							x="21.48" dy="1.2em" class="st4">system_properties/</tspan><tspan x="15.28" dy="1.2em" class="st4">contexts_serialized.cpp</tspan></text>			</g>
+		</g>
+		<g id="shape87-282" v:mID="87" v:groupContext="shape" transform="translate(-1224.23,476.431) rotate(-90)">
+			<title>激活.87</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(50000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="221.102" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape88-284" v:mID="88" v:groupContext="shape" v:layerMember="0" transform="translate(1502.66,-2442.79)">
+			<title>消息.88</title>
+			<desc>LoadDefaultPath()</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(51000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="47.8847" cy="2839.77" width="69.03" height="17.6036"/>
+			<path d="M0 2839.08 L89.51 2839.79" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="18.2797" y="2834.97" width="59.2103" height="9.59985" class="st11"/>
+			<text x="18.28" y="2842.17" class="st18" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>LoadDefaultPath()</text>		</g>
+		<g id="shape89-291" v:mID="89" v:groupContext="shape" transform="translate(-1219.98,467.927) rotate(-90)">
+			<title>激活.89</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(52000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="51.0236" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape90-293" v:mID="90" v:groupContext="shape" v:layerMember="0" transform="translate(1603.19,-2435.32)">
+			<title>消息.90</title>
+			<desc>LoadPath(&#34;/dev/__properties__/property_info&#34;)</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(53000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="50.6647" cy="2849.32" width="172.17" height="17.6036"/>
+			<path d="M4.96 2832.38 L27.21 2832.38 L27.21 2869.23 L16.69 2869.23" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="-30.5118" y="2844.52" width="162.353" height="9.59985" class="st11"/>
+			<text x="-30.51" y="2851.72" class="st20" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>LoadPath(&#34;/dev/__properties__/property_info&#34;)</text>		</g>
+		<g id="shape91-300" v:mID="91" v:groupContext="shape" transform="translate(1596.9,-2438.93)">
+			<title>黄色便条.91</title>
+			<desc>通过mmap将&#34;/dev/__properties__/property_info&#34;加载到共享内存</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(54000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="65.1969" cy="2819.62" width="130.4" height="25.5118"/>
+			<rect x="0" y="2806.87" width="130.394" height="25.5118" class="st21"/>
+			<text x="4" y="2818.85" class="st22" v:langID="2052"><v:paragraph/><v:tabList/>通过<tspan class="st27" v:langID="1033">mmap</tspan><tspan
+						class="st26">将</tspan><tspan class="st23">&#34;/</tspan><tspan class="st23" v:langID="1033">dev/__properties__/</tspan><tspan
+						x="4" dy="1.244em" class="st23" v:langID="1033">property_info&#34;</tspan><tspan class="st26">加载到共享内存</tspan></text>		</g>
+		<g id="shape92-309" v:mID="92" v:groupContext="shape" transform="translate(-1922.88,432.254) rotate(-90)">
+			<title>激活.92</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(55000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="27.4661" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape93-311" v:mID="93" v:groupContext="shape" v:layerMember="0" transform="translate(900.283,-2434.68)">
+			<title>消息.93</title>
+			<desc>process_kernel_cmdline</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(56000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="51.6511" cy="2843.31" width="88.87" height="17.6036"/>
+			<path d="M4.96 2832.38 L27.21 2832.38 L27.21 2856.47 L16.69 2856.47" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="12.1224" y="2838.51" width="79.0576" height="9.59985" class="st11"/>
+			<text x="12.12" y="2845.71" class="st18" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>process_kernel_cmdline</text>		</g>
+		<g id="shape94-318" v:mID="94" v:groupContext="shape" transform="translate(-1922.88,472.908) rotate(-90)">
+			<title>激活.94</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(57000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="28.3465" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape95-320" v:mID="95" v:groupContext="shape" v:layerMember="0" transform="translate(900.283,-2392.16)">
+			<title>消息.95</title>
+			<desc>export_kernel_boot_props</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(58000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="46.1104" cy="2843.6" width="97.4" height="17.6036"/>
+			<path d="M4.96 2832.38 L27.21 2832.38 L27.21 2853.73 L16.69 2853.73" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="2.32158" y="2838.8" width="87.5778" height="9.59985" class="st11"/>
+			<text x="2.32" y="2846" class="st18" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>export_kernel_boot_props</text>		</g>
+		<g id="shape96-327" v:mID="96" v:groupContext="shape" transform="translate(-1922.88,570.614) rotate(-90)">
+			<title>激活.96</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(59000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="22.6772" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape97-329" v:mID="97" v:groupContext="shape" v:layerMember="0" transform="translate(900.283,-2307.12)">
+			<title>消息.97</title>
+			<desc>1SelinuxSetupKernelLogging</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(60000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="45.3543" cy="2845.13" width="119.95" height="18.6536"/>
+			<path d="M4.96 2832.38 L27.21 2832.38 L27.21 2855.05 L16.69 2855.05" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="-9.71399" y="2839.81" width="110.137" height="10.6501" class="st11"/>
+			<text x="-9.71" y="2847.8" class="st25" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>（<tspan class="st23">1</tspan>）<tspan
+						class="st23" v:langID="1033">SelinuxSetupKernelLogging</tspan></text>		</g>
+		<g id="shape100-338" v:mID="100" v:groupContext="shape" transform="translate(959.446,-2249.01)">
+			<title>黄色便条.100</title>
+			<desc>参照InitKernelLogging此处就是将加载Selinux的日志在kernel内核中打印不再赘述</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(63000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="62.7106" cy="2813.24" width="125.43" height="38.2677"/>
+			<rect x="0" y="2794.11" width="125.421" height="38.2677" class="st21"/>
+			<text x="4" y="2806.1" class="st22" v:langID="2052"><v:paragraph/><v:tabList/>参照<tspan class="st23" v:langID="1033">InitKernelLogging</tspan><tspan
+						class="st26">，</tspan><tspan class="st26">此处就是</tspan><tspan x="4" dy="1.245em" class="st26">将加载</tspan><tspan
+						class="st28">Selinux</tspan><tspan class="st26">的日志在</tspan><tspan class="st28">kernel</tspan><tspan
+						class="st26">内</tspan><tspan x="4" dy="1.215em" class="st26">核中打印</tspan><tspan class="st26">（</tspan><tspan
+						class="st26">不再赘述</tspan><tspan class="st26">）</tspan></text>		</g>
+		<g id="group103-353" transform="translate(1153.28,-2292.94)" v:mID="103" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(64000):26"/>
+			</v:userDefs>
+			<title>Object lifeline.103</title>
+			<desc>system/core/init/selinux.cpp</desc>
+			<g id="shape104-354" v:mID="104" v:groupContext="shape" transform="translate(19.8425,4.54747E-13)">
+				<title>工作表.104</title>
+				<rect x="0" y="2806.87" width="51.0236" height="25.5118" class="st5"/>
+			</g>
+			<g id="shape105-356" v:mID="105" v:groupContext="shape" transform="translate(36.8504,-29.0551)">
+				<title>工作表.105</title>
+				<path d="M8.5 2832.38 a0 0 0 1 1 0 0 a0 0 0 1 1 0 0 Z" class="st5"/>
+			</g>
+			<g id="shape106-358" v:mID="106" v:groupContext="shape" transform="translate(30.2362,473.993)">
+				<title>工作表.106</title>
+			</g>
+			<g id="shape107-360" v:mID="107" v:groupContext="shape" transform="translate(2877.73,2832.38) rotate(90)">
+				<title>工作表.107</title>
+				<path d="M0 2832.38 L456.38 2832.38" class="st6"/>
+			</g>
+			<g id="shape103-363" v:mID="103" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+				<v:textRect cx="45.3543" cy="2819.62" width="90.71" height="25.5118"/>
+				<rect x="0" y="2806.87" width="90.7087" height="25.5118" class="st5"/>
+				<text x="15.7" y="2818.07" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>system/core/init/<tspan
+							x="26.61" dy="1.2em" class="st4">selinux.cpp</tspan><v:newlineChar/></text>			</g>
+		</g>
+		<g id="group109-367" transform="translate(1300.68,-2292.94)" v:mID="109" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(66000):26"/>
+			</v:userDefs>
+			<title>Object lifeline.109</title>
+			<desc>external/selinux/libselinux/src/android/android_platform.c</desc>
+			<g id="shape110-368" v:mID="110" v:groupContext="shape" transform="translate(28.6949,4.54747E-13)">
+				<title>工作表.110</title>
+				<rect x="0" y="2806.87" width="51.0236" height="25.5118" class="st5"/>
+			</g>
+			<g id="shape111-370" v:mID="111" v:groupContext="shape" transform="translate(45.7028,-29.0551)">
+				<title>工作表.111</title>
+				<path d="M8.5 2832.38 a0 0 0 1 1 0 0 a0 0 0 1 1 0 0 Z" class="st5"/>
+			</g>
+			<g id="shape112-372" v:mID="112" v:groupContext="shape" transform="translate(36.1378,485.332)">
+				<title>工作表.112</title>
+			</g>
+			<g id="shape113-374" v:mID="113" v:groupContext="shape" transform="translate(2886.58,2832.38) rotate(90)">
+				<title>工作表.113</title>
+				<path d="M0 2832.38 L467.72 2832.38" class="st6"/>
+			</g>
+			<g id="shape109-377" v:mID="109" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="54.2067" cy="2819.62" width="108.42" height="25.5118"/>
+				<rect x="0" y="2806.87" width="108.413" height="25.5118" class="st5"/>
+				<text x="7.75" y="2812.42" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>external/selinux/libselinux/<tspan
+							x="33.11" dy="1.2em" class="st4">src/android/</tspan><tspan x="21.92" dy="1.2em" class="st4">android_platform.c</tspan></text>			</g>
+		</g>
+		<g id="shape114-382" v:mID="114" v:groupContext="shape" transform="translate(-1629.5,842.74) rotate(-90)">
+			<title>激活.114</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(67000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="269.291" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape115-384" v:mID="115" v:groupContext="shape" transform="translate(-1473.24,973.134) rotate(-90)">
+			<title>激活.115</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(68000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="399.685" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape116-386" v:mID="116" v:groupContext="shape" v:layerMember="0" transform="translate(1202.88,-2226.33)">
+			<title>消息.116</title>
+			<desc>selinux_android_file_context_handle</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(69000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="72.952" cy="2825.6" width="130.65" height="17.6036"/>
+			<path d="M0 2825.29 L140.27 2825.29" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="12.5348" y="2820.8" width="120.835" height="9.59985" class="st11"/>
+			<text x="12.53" y="2828" class="st18" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>selinux_android_file_context_handle</text>		</g>
+		<g id="shape118-393" v:mID="118" v:groupContext="shape" transform="translate(1185.02,-2148.66)">
+			<title>黄色便条.118</title>
+			<desc>将四个目录下的file_contexts文件添加到seopts_file容器中 1./system/etc/selinux...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(70000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="77.6693" cy="2794.39" width="155.34" height="75.9685"/>
+			<rect x="0" y="2756.41" width="155.339" height="75.9685" class="st21"/>
+			<text x="4" y="2768.4" class="st22" v:langID="2052"><v:paragraph/><v:tabList/>将四个目录下的<tspan class="st23"
+						v:langID="1033">file_contexts</tspan><tspan class="st26">文件添加到</tspan><tspan x="4" dy="1.244em"
+						class="st23" v:langID="1033">seopts_file</tspan><tspan class="st26">容器中</tspan><tspan class="st26">：<v:newlineChar/></tspan><tspan
+						x="4" dy="1.204em" class="st23">1./</tspan><tspan class="st23" v:langID="1033">system/etc/selinux/plat_file_contexts<v:newlineChar/></tspan><tspan
+						x="4" dy="1.2em" class="st23">2.</tspan><tspan class="st23" v:langID="1033">/product/etc/selinux/</tspan><tspan
+						x="4" dy="1.2em" class="st23" v:langID="1033">product_file_contexts<v:newlineChar/></tspan><tspan x="4"
+						dy="1.2em" class="st23">3.</tspan><tspan class="st23" v:langID="1033">/vendor/etc/selinux/vendor_file_contexts<v:newlineChar/></tspan><tspan
+						x="4" dy="1.211em" class="st23">4.</tspan><tspan class="st23" v:langID="1033">/odm/etc/selinux/odm_file_contexts</tspan><tspan
+						class="st26" v:langID="1033">）</tspan></text>		</g>
+		<g id="shape119-411" v:mID="119" v:groupContext="shape" transform="translate(-1468.99,686.835) rotate(-90)">
+			<title>激活.119</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(71000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="62.3622" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape120-413" v:mID="120" v:groupContext="shape" v:layerMember="0" transform="translate(1354.18,-2233.42)">
+			<title>消息.120</title>
+			<desc>selinux_android_file_context</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(72000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="42.8799" cy="2848.25" width="104.41" height="17.6036"/>
+			<path d="M4.96 2832.38 L27.21 2832.38 L27.21 2874.9 L16.69 2874.9" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="-4.41626" y="2843.45" width="94.5926" height="9.59985" class="st11"/>
+			<text x="-4.42" y="2850.65" class="st18" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>selinux_android_file_context</text>		</g>
+		<g id="group121-420" transform="translate(1428.24,-2292.94)" v:mID="121" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(73000):26"/>
+			</v:userDefs>
+			<title>Object lifeline.121</title>
+			<desc>external/selinux/libselinux/src/label.c</desc>
+			<g id="shape122-421" v:mID="122" v:groupContext="shape" transform="translate(28.6949,4.54747E-13)">
+				<title>工作表.122</title>
+				<rect x="0" y="2806.87" width="51.0236" height="25.5118" class="st5"/>
+			</g>
+			<g id="shape123-423" v:mID="123" v:groupContext="shape" transform="translate(45.7028,-29.0551)">
+				<title>工作表.123</title>
+				<path d="M8.5 2832.38 a0 0 0 1 1 0 0 a0 0 0 1 1 0 0 Z" class="st5"/>
+			</g>
+			<g id="shape124-425" v:mID="124" v:groupContext="shape" transform="translate(36.1378,485.332)">
+				<title>工作表.124</title>
+			</g>
+			<g id="shape125-427" v:mID="125" v:groupContext="shape" transform="translate(2886.58,2832.38) rotate(90)">
+				<title>工作表.125</title>
+				<path d="M0 2832.38 L467.72 2832.38" class="st6"/>
+			</g>
+			<g id="shape121-430" v:mID="121" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="54.2067" cy="2819.62" width="108.42" height="25.5118"/>
+				<rect x="0" y="2806.87" width="108.413" height="25.5118" class="st5"/>
+				<text x="7.75" y="2817.22" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>external/selinux/libselinux/<tspan
+							x="36.95" dy="1.2em" class="st4">src/label.c</tspan></text>			</g>
+		</g>
+		<g id="group126-434" transform="translate(1555.8,-2292.94)" v:mID="126" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(74000):26"/>
+			</v:userDefs>
+			<title>Object lifeline.126</title>
+			<desc>external/selinux/libselinux/src/label_file.c</desc>
+			<g id="shape127-435" v:mID="127" v:groupContext="shape" transform="translate(28.6949,4.54747E-13)">
+				<title>工作表.127</title>
+				<rect x="0" y="2806.87" width="51.0236" height="25.5118" class="st5"/>
+			</g>
+			<g id="shape128-437" v:mID="128" v:groupContext="shape" transform="translate(45.7028,-29.0551)">
+				<title>工作表.128</title>
+				<path d="M8.5 2832.38 a0 0 0 1 1 0 0 a0 0 0 1 1 0 0 Z" class="st5"/>
+			</g>
+			<g id="shape129-439" v:mID="129" v:groupContext="shape" transform="translate(36.1378,476.828)">
+				<title>工作表.129</title>
+			</g>
+			<g id="shape130-441" v:mID="130" v:groupContext="shape" transform="translate(2886.58,2832.38) rotate(90)">
+				<title>工作表.130</title>
+				<path d="M0 2832.38 L459.21 2832.38" class="st6"/>
+			</g>
+			<g id="shape126-444" v:mID="126" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="54.2067" cy="2819.62" width="108.42" height="25.5118"/>
+				<rect x="0" y="2806.87" width="108.413" height="25.5118" class="st5"/>
+				<text x="7.75" y="2817.22" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>external/selinux/libselinux/<tspan
+							x="29.72" dy="1.2em" class="st4">src/label_file.c</tspan></text>			</g>
+		</g>
+		<g id="shape20-448" v:mID="20" v:groupContext="shape" transform="translate(1127.42,-2499.87)">
+			<title>黄色便条</title>
+			<desc>读取几个目录下的属性上下文文件写入到&#34;/dev/__properties__/property_info&#34; 1./syst...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(9000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="90.8829" cy="2800.49" width="181.77" height="63.7795"/>
+			<rect x="0" y="2768.6" width="181.766" height="63.7795" class="st21"/>
+			<text x="4" y="2780.59" class="st22" v:langID="2052"><v:paragraph/><v:tabList/>读取几个目录下的属性上下文文件写入到<tspan class="st23">&#34;/</tspan><tspan
+						class="st23" v:langID="1033">dev/</tspan><tspan x="4" dy="1.244em" class="st23" v:langID="1033">__properties__/property_info&#34;</tspan><tspan
+						class="st26">：<v:newlineChar/></tspan><tspan x="4" dy="1.204em" class="st23">1.</tspan><tspan class="st23"
+						v:langID="1033">/system/etc/selinux/plat_property_contexts<v:newlineChar/></tspan><tspan x="4" dy="1.2em"
+						class="st23">2.</tspan><tspan class="st23" v:langID="1033">/vendor/etc/selinux/vendor_property_contexts<v:newlineChar/></tspan><tspan
+						x="4" dy="1.2em" class="st23">3.</tspan><tspan class="st23" v:langID="1033">/product/etc/selinux/product_property_contexts<v:newlineChar/></tspan><tspan
+						x="4" dy="1.2em" class="st23">4.</tspan><tspan class="st23" v:langID="1033">/odm/etc/selinux/odm_property_contexts</tspan></text>		</g>
+		<g id="shape134-463" v:mID="134" v:groupContext="shape" transform="translate(-1345.68,794.551) rotate(-90)">
+			<title>激活.134</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(76000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="221.102" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape135-465" v:mID="135" v:groupContext="shape" v:layerMember="0" transform="translate(1363.39,-2166.8)">
+			<title>消息.135</title>
+			<desc>selabel_open</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(77000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="56.6844" cy="2825.6" width="53.2" height="17.6036"/>
+			<path d="M0 2825.29 L107.32 2825.29" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="34.9914" y="2820.8" width="43.3861" height="9.59985" class="st11"/>
+			<text x="34.99" y="2828" class="st18" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>selabel_open</text>		</g>
+		<g id="shape136-472" v:mID="136" v:groupContext="shape" transform="translate(1389.12,-2186.65)">
+			<title>黄色便条.136</title>
+			<desc>分配一块内存将入参即file_context文件列表内容写到这块内存中</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(78000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="69.1653" cy="2819.62" width="138.34" height="25.5118"/>
+			<rect x="0" y="2806.87" width="138.331" height="25.5118" class="st21"/>
+			<text x="4" y="2818.85" class="st22" v:langID="2052"><v:paragraph/><v:tabList/>分配一块内存，将入参即<tspan class="st23"
+						v:langID="1033">file_context</tspan><tspan x="4" dy="1.244em" class="st26">文件列表内容写到这块内存中</tspan></text>		</g>
+		<g id="shape137-477" v:mID="137" v:groupContext="shape" transform="translate(-1341.43,771.874) rotate(-90)">
+			<title>激活.137</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(79000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="110.551" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape138-479" v:mID="138" v:groupContext="shape" v:layerMember="0" transform="translate(1481.73,-2173.89)">
+			<title>消息.138</title>
+			<desc>initfuncs</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(80000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="30.1639" cy="2836.66" width="40" height="17.6036"/>
+			<path d="M4.96 2832.38 L27.21 2832.38 L27.21 2852.22 L16.69 2852.22" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="16.2072" y="2831.86" width="27.9135" height="9.59985" class="st11"/>
+			<text x="16.21" y="2839.06" class="st18" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>initfuncs</text>		</g>
+		<g id="shape140-486" v:mID="140" v:groupContext="shape" transform="translate(-1218.12,829.984) rotate(-90)">
+			<title>激活.140</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(82000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="177.165" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape139-488" v:mID="139" v:groupContext="shape" transform="translate(1531.72,-2161.13)">
+			<title>黄色便条.139</title>
+			<desc>调用到第一个方法CONFIG_FILE_BACKEND(selabel_file_init)</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(81000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="77.6693" cy="2819.62" width="155.34" height="25.5118"/>
+			<rect x="0" y="2806.87" width="155.339" height="25.5118" class="st21"/>
+			<text x="4" y="2818.07" class="st22" v:langID="2052"><v:paragraph/><v:tabList/>调用到第一个方法<tspan x="4" dy="1.2em"
+						class="st23" v:langID="1033">CONFIG_FILE_BACKEND(selabel_file_init)</tspan></text>		</g>
+		<g id="shape141-492" v:mID="141" v:groupContext="shape" v:layerMember="0" transform="translate(1490.95,-2144.13)">
+			<title>消息.141</title>
+			<desc>selabel_file_init</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(83000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="56.6844" cy="2839.77" width="61.23" height="17.6036"/>
+			<path d="M0 2839.46 L107.32 2839.46" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="30.978" y="2834.97" width="51.413" height="9.59985" class="st11"/>
+			<text x="30.98" y="2842.17" class="st18" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>selabel_file_init</text>		</g>
+		<g id="shape142-499" v:mID="142" v:groupContext="shape" transform="translate(-1213.87,822.898) rotate(-90)">
+			<title>激活.142</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(84000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="116.22" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape143-501" v:mID="143" v:groupContext="shape" v:layerMember="0" transform="translate(1609.29,-2137.04)">
+			<title>消息.143</title>
+			<desc>init</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(85000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="25.8721" cy="2849.39" width="40" height="17.6036"/>
+			<path d="M4.96 2832.38 L27.21 2832.38 L27.21 2860.72 L16.69 2860.72" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="20.5948" y="2844.59" width="10.5543" height="9.59985" class="st11"/>
+			<text x="20.59" y="2851.79" class="st18" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>init</text>		</g>
+		<g id="shape144-508" v:mID="144" v:groupContext="shape" transform="translate(-1209.62,815.811) rotate(-90)">
+			<title>激活.144</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(86000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="75.1181" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape145-510" v:mID="145" v:groupContext="shape" v:layerMember="0" transform="translate(1613.55,-2103.02)">
+			<title>消息.145</title>
+			<desc>process_file</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(87000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="32.9587" cy="2843.72" width="48.73" height="17.6036"/>
+			<path d="M4.96 2832.38 L27.21 2832.38 L27.21 2860.72 L16.69 2860.72" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="13.5039" y="2838.92" width="38.9097" height="9.59985" class="st11"/>
+			<text x="13.5" y="2846.12" class="st18" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>process_file</text>		</g>
+		<g id="shape146-517" v:mID="146" v:groupContext="shape" transform="translate(-1205.37,801.638) rotate(-90)">
+			<title>激活.146</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(88000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="26.9291" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape147-519" v:mID="147" v:groupContext="shape" v:layerMember="0" transform="translate(1617.8,-2069.01)">
+			<title>消息.147</title>
+			<desc>process_text_file</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(89000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="32.9587" cy="2843.72" width="65.52" height="17.6036"/>
+			<path d="M4.96 2832.38 L27.21 2832.38 L27.21 2860.72 L16.69 2860.72" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="5.10955" y="2838.92" width="55.6985" height="9.59985" class="st11"/>
+			<text x="5.11" y="2846.12" class="st18" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>process_text_file</text>		</g>
+		<g id="shape148-526" v:mID="148" v:groupContext="shape" transform="translate(1653.87,-2065.46)">
+			<title>黄色便条.148</title>
+			<desc>解析每行data内容</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(90000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="36" cy="2823.17" width="72" height="18.4252"/>
+			<rect x="0" y="2813.95" width="72" height="18.4252" class="st21"/>
+			<text x="4" y="2825.94" class="st22" v:langID="2052"><v:paragraph/><v:tabList/>解析每行<tspan class="st23">data</tspan>内容</text>		</g>
+		<g id="shape149-530" v:mID="149" v:groupContext="shape" v:layerMember="0" transform="translate(1202.88,-2016.57)">
+			<title>消息.149</title>
+			<desc>selinux_android_restorecon</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(91000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="72.952" cy="2825.6" width="101.09" height="17.6036"/>
+			<path d="M0 2825.29 L140.27 2825.29" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="27.3138" y="2820.8" width="91.2766" height="9.59985" class="st11"/>
+			<text x="27.31" y="2828" class="st18" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>selinux_android_restorecon</text>		</g>
+		<g id="shape150-537" v:mID="150" v:groupContext="shape" v:layerMember="0" transform="translate(905.244,-2016.57)">
+			<title>消息.150</title>
+			<desc>3SelinuxRestoreContext</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(92000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="145.163" cy="2824.77" width="105.68" height="18.6536"/>
+			<path d="M0 2825.29 L281.65 2825.29" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="97.2315" y="2819.44" width="95.8637" height="10.6501" class="st11"/>
+			<text x="97.23" y="2827.43" class="st25" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>（<tspan
+						class="st23">3</tspan>）<tspan class="st23" v:langID="1033">SelinuxRestoreContext</tspan></text>		</g>
+		<g id="shape151-546" v:mID="151" v:groupContext="shape" transform="translate(-1468.99,964.63) rotate(-90)">
+			<title>激活.151</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(93000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="148.819" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape152-548" v:mID="152" v:groupContext="shape" v:layerMember="0" transform="translate(1354.18,-2023.65)">
+			<title>消息.152</title>
+			<desc>selinux_android_restorecon_common</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(94000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="38.628" cy="2846.55" width="133.88" height="17.6036"/>
+			<path d="M4.96 2832.38 L27.21 2832.38 L27.21 2856.47 L16.69 2856.47" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="-23.4046" y="2841.75" width="124.065" height="9.59985" class="st11"/>
+			<text x="-23.4" y="2848.95" class="st18" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>selinux_android_restorecon_common</text>		</g>
+		<g id="shape153-555" v:mID="153" v:groupContext="shape" transform="translate(-1464.74,957.543) rotate(-90)">
+			<title>激活.153</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(95000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="107.717" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape154-557" v:mID="154" v:groupContext="shape" v:layerMember="0" transform="translate(1358.43,-1989.64)">
+			<title>消息.154</title>
+			<desc>restorecon_sb</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(96000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="34.376" cy="2840.88" width="58.31" height="17.6036"/>
+			<path d="M4.96 2832.38 L27.21 2832.38 L27.21 2847.97 L16.69 2847.97" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="11.0324" y="2836.08" width="46.6872" height="9.59985" class="st11"/>
+			<text x="11.03" y="2843.28" class="st18" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>restorecon_sb  </text>		</g>
+		<g id="shape156-564" v:mID="156" v:groupContext="shape" transform="translate(-1460.49,950.457) rotate(-90)">
+			<title>激活.156</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(97000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="74.8214" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape157-566" v:mID="157" v:groupContext="shape" v:layerMember="0" transform="translate(1362.68,-1965.54)">
+			<title>消息.157</title>
+			<desc>pkgdir_selabel_lookup</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(98000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="38.4137" cy="2842.01" width="85.14" height="17.6036"/>
+			<path d="M4.96 2832.38 L27.21 2832.38 L27.21 2852.22 L16.69 2852.22" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="1.65616" y="2837.21" width="73.515" height="9.59985" class="st11"/>
+			<text x="1.66" y="2844.41" class="st18" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>pkgdir_selabel_lookup  </text>		</g>
+		<g id="shape158-573" v:mID="158" v:groupContext="shape" transform="translate(-1456.23,940.787) rotate(-90)">
+			<title>激活.158</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(99000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="39.937" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape159-575" v:mID="159" v:groupContext="shape" v:layerMember="0" transform="translate(1366.93,-1939.73)">
+			<title>消息.159</title>
+			<desc>seapp_context_lookup</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(100000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="38.6677" cy="2847.69" width="85.87" height="17.6036"/>
+			<path d="M4.96 2832.38 L27.21 2832.38 L27.21 2857.59 L16.69 2857.59" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="1.54694" y="2842.89" width="74.2415" height="9.59985" class="st11"/>
+			<text x="1.55" y="2850.09" class="st18" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>seapp_context_lookup  </text>		</g>
+		<g id="shape160-582" v:mID="160" v:groupContext="shape" transform="translate(1448.36,-1903.18)">
+			<title>黄色便条.160</title>
+			<desc>根据UIDisSystemServerseinfo,pkgname等信息匹配/seapp_contexts的规则完全符合的...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(101000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="78.5197" cy="2798.36" width="157.04" height="68.0315"/>
+			<rect x="0" y="2764.35" width="157.039" height="68.0315" class="st21"/>
+			<text x="4" y="2776.33" class="st22" v:langID="2052"><v:paragraph/><v:tabList/>根据<tspan class="st23" v:langID="1033">UID</tspan><tspan
+						class="st26" v:langID="1033">，</tspan><tspan class="st23" v:langID="1033">isSystemServer</tspan><tspan
+						class="st26" v:langID="1033">，</tspan><tspan class="st23" v:langID="1033">seinfo,pkgname</tspan><tspan
+						x="4" dy="1.244em" class="st26">等信息匹配</tspan><tspan class="st23">/</tspan><tspan class="st23"
+						v:langID="1033">seapp_contexts</tspan><tspan class="st26">的规则</tspan><tspan class="st26">，</tspan><tspan
+						class="st26">完全</tspan><tspan x="4" dy="1.215em" class="st26">符合的项会被用来设置新的</tspan><tspan class="st23"
+						v:langID="1033">context_t</tspan><tspan class="st26" v:langID="1033">，</tspan><tspan class="st26">保</tspan><tspan
+						x="4" dy="1.215em" class="st26">存在最后一个入参</tspan><tspan class="st23" v:langID="1033">ctx</tspan><tspan
+						class="st26">中</tspan><tspan class="st26">。</tspan><tspan class="st23" v:langID="1033">seinfo</tspan><tspan
+						class="st26">就是</tspan><tspan x="4" dy="1.215em" class="st23">“</tspan><tspan class="st23" v:langID="1033">platform</tspan><tspan
+						class="st23" v:langID="1033">”</tspan><tspan class="st26">或</tspan><tspan class="st23">“</tspan><tspan
+						class="st23" v:langID="1033">android</tspan><tspan class="st23" v:langID="1033">”,</tspan><tspan
+						class="st26">根据</tspan><tspan class="st23" v:langID="1033">apk</tspan><tspan class="st26">是否拥有系</tspan><tspan
+						x="4" dy="1.215em" class="st26">统签名而定</tspan></text>		</g>
+		<g id="shape161-617" v:mID="161" v:groupContext="shape" transform="translate(1291.48,-2195.15)">
+			<title>黄色便条.161</title>
+			<desc>第二段初始化解析所有file_contexts</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(102000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="48.6969" cy="2819.62" width="97.4" height="25.5118"/>
+			<rect x="0" y="2806.87" width="97.3937" height="25.5118" class="st21"/>
+			<text x="4" y="2818.07" class="st22" v:langID="2052"><v:paragraph/><v:tabList/>第二段初始化，解析所有<tspan x="4" dy="1.2em"
+						class="st23" v:langID="1033">file_contexts</tspan></text>		</g>
+		<g id="shape162-621" v:mID="162" v:groupContext="shape" transform="translate(1314.85,-2029.32)">
+			<title>黄色便条.162</title>
+			<desc>恢复安全上下文</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(103000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="40.1929" cy="2819.62" width="80.39" height="25.5118"/>
+			<rect x="0" y="2806.87" width="80.3858" height="25.5118" class="st21"/>
+			<text x="4" y="2818.85" class="st22" v:langID="2052"><v:paragraph/><v:tabList/>恢复安全上下文</text>		</g>
+		<g id="group168-624" transform="translate(985.323,-1751.53)" v:mID="168" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(105000):26"/>
+			</v:userDefs>
+			<title>Object lifeline.168</title>
+			<desc>system/core/init/epoll.cpp</desc>
+			<g id="shape169-625" v:mID="169" v:groupContext="shape" transform="translate(15.9449,4.54747E-13)">
+				<title>工作表.169</title>
+				<rect x="0" y="2806.87" width="51.0236" height="25.5118" class="st5"/>
+			</g>
+			<g id="shape170-627" v:mID="170" v:groupContext="shape" transform="translate(32.9528,-29.0551)">
+				<title>工作表.170</title>
+				<path d="M8.5 2832.38 a0 0 0 1 1 0 0 a0 0 0 1 1 0 0 Z" class="st5"/>
+			</g>
+			<g id="shape171-629" v:mID="171" v:groupContext="shape" transform="translate(27.6378,233.048)">
+				<title>工作表.171</title>
+			</g>
+			<g id="shape172-631" v:mID="172" v:groupContext="shape" transform="translate(2873.83,2832.38) rotate(90)">
+				<title>工作表.172</title>
+				<path d="M0 2832.38 L215.43 2832.38" class="st6"/>
+			</g>
+			<g id="shape168-634" v:mID="168" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="41.4567" cy="2819.62" width="82.92" height="25.5118"/>
+				<rect x="0" y="2806.87" width="82.9134" height="25.5118" class="st5"/>
+				<text x="11.8" y="2817.22" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>system/core/init/<tspan
+							x="26.15" dy="1.2em" class="st4">epoll.cpp</tspan></text>			</g>
+		</g>
+		<g id="group173-638" transform="translate(1161.23,-1751.53)" v:mID="173" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(106000):26"/>
+			</v:userDefs>
+			<title>Object lifeline.173</title>
+			<desc>system/core/init/sigchld_handler.cpp</desc>
+			<g id="shape174-639" v:mID="174" v:groupContext="shape" transform="translate(15.9449,4.54747E-13)">
+				<title>工作表.174</title>
+				<rect x="0" y="2806.87" width="51.0236" height="25.5118" class="st5"/>
+			</g>
+			<g id="shape175-641" v:mID="175" v:groupContext="shape" transform="translate(32.9528,-29.0551)">
+				<title>工作表.175</title>
+				<path d="M8.5 2832.38 a0 0 0 1 1 0 0 a0 0 0 1 1 0 0 Z" class="st5"/>
+			</g>
+			<g id="shape176-643" v:mID="176" v:groupContext="shape" transform="translate(27.6378,238.718)">
+				<title>工作表.176</title>
+			</g>
+			<g id="shape177-645" v:mID="177" v:groupContext="shape" transform="translate(2873.83,2832.38) rotate(90)">
+				<title>工作表.177</title>
+				<path d="M0 2832.38 L221.1 2832.38" class="st6"/>
+			</g>
+			<g id="shape173-648" v:mID="173" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="41.4567" cy="2819.62" width="82.92" height="25.5118"/>
+				<rect x="0" y="2806.87" width="82.9134" height="25.5118" class="st5"/>
+				<text x="11.8" y="2817.22" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>system/core/init/<tspan
+							x="8.17" dy="1.2em" class="st4">sigchld_handler.cpp</tspan></text>			</g>
+		</g>
+		<g id="shape178-652" v:mID="178" v:groupContext="shape" transform="translate(-1801.35,1199.91) rotate(-90)">
+			<title>激活.178</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(107000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="102.047" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape179-654" v:mID="179" v:groupContext="shape" v:layerMember="0" transform="translate(897.449,-1717.51)">
+			<title>消息.179</title>
+			<desc>InstallSignalFdHandler</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(108000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="31.8898" cy="2843.72" width="84.22" height="17.6036"/>
+			<path d="M6.02 2832.38 L26.15 2832.38 L26.15 2860.72 L15.63 2860.72" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="-5.30956" y="2838.92" width="74.3989" height="9.59985" class="st11"/>
+			<text x="-5.31" y="2846.12" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>InstallSignalFdHandler</text>		</g>
+		<g id="shape181-661" v:mID="181" v:groupContext="shape" v:layerMember="0" transform="translate(905.598,-1679.24)">
+			<title>消息.181</title>
+			<desc>RegisterHandler</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(110000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="57.7559" cy="2839.46" width="62.15" height="17.6036"/>
+			<path d="M0 2839.46 L109.45 2839.46" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="31.5904" y="2834.66" width="52.3312" height="9.59985" class="st11"/>
+			<text x="31.59" y="2841.86" class="st29" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>RegisterHandler</text>		</g>
+		<g id="shape183-668" v:mID="183" v:groupContext="shape" transform="translate(-1922.53,1217.17) rotate(-90)">
+			<title>激活.183</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(112000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="39.937" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape182-670" v:mID="182" v:groupContext="shape" v:layerMember="0" transform="translate(900.638,-1663.65)">
+			<title>消息.182</title>
+			<desc>InstallSignalFdHandler</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(111000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.4173" cy="2843.72" width="82.2" height="17.6036"/>
+			<path d="M4.96 2832.38 L27.21 2832.38 L27.21 2857.89 L16.69 2857.89" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="-7.77537" y="2838.92" width="72.3856" height="9.59985" class="st11"/>
+			<text x="-7.78" y="2846.12" class="st29" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>InstallSignalFdHandler</text>		</g>
+		<g id="shape184-677" v:mID="184" v:groupContext="shape" transform="translate(797.929,-1694.83)">
+			<title>黄色便条.184</title>
+			<desc>通过epoll机制监听SIGHLD信号处理子进程防止僵尸进程</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(113000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="40.1929" cy="2813.95" width="80.39" height="36.8504"/>
+			<rect x="0" y="2795.53" width="80.3858" height="36.8504" class="st21"/>
+			<text x="4" y="2807.52" class="st22" v:langID="2052"><v:paragraph/><v:tabList/>通过<tspan class="st23">epoll</tspan>机制监听<tspan
+						x="4" dy="1.331em" class="st23">SIGHLD</tspan>信号，处理子<tspan x="4" dy="1.331em" class="st4">进程防止僵尸进程</tspan></text>		</g>
+		<g id="shape185-683" v:mID="185" v:groupContext="shape" transform="translate(-1625.44,1284.94) rotate(-90)">
+			<title>激活.185</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(114000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="187.087" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape186-685" v:mID="186" v:groupContext="shape" v:layerMember="0" transform="translate(909.85,-1628.37)">
+			<title>消息.186</title>
+			<desc>ReapAnyOutstandingChildren</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(115000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="142.542" cy="2839.46" width="105.98" height="17.6036"/>
+			<path d="M0 2839.32 L281.1 2839.6" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="94.4626" y="2834.66" width="96.1589" height="9.59985" class="st11"/>
+			<text x="94.46" y="2841.86" class="st29" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>ReapAnyOutstandingChildren</text>		</g>
+		<g id="shape187-692" v:mID="187" v:groupContext="shape" transform="translate(-1621.19,1282.11) rotate(-90)">
+			<title>激活.187</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(116000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="56.6929" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape188-694" v:mID="188" v:groupContext="shape" v:layerMember="0" transform="translate(1201.98,-1621.13)">
+			<title>消息.188</title>
+			<desc>ReapOneProcess</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(117000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.5117" cy="2847.64" width="64.42" height="17.6036"/>
+			<path d="M4.96 2832.38 L27.21 2832.38 L27.21 2863.56 L16.69 2863.56" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="1.21134" y="2842.84" width="54.601" height="9.59985" class="st11"/>
+			<text x="1.21" y="2850.04" class="st29" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>ReapOneProcess</text>		</g>
+		<g id="shape189-701" v:mID="189" v:groupContext="shape" transform="translate(1217.46,-1626.09)">
+			<title>黄色便条.189</title>
+			<desc>处理出现问题的子进程 1.用waitpid找出挂掉进程的Pid 2.根据pid找到对应Service 3.调用Servic...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(118000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="82.7126" cy="2803.32" width="165.43" height="58.1102"/>
+			<rect x="0" y="2774.27" width="165.425" height="58.1102" class="st21"/>
+			<text x="4" y="2786.26" class="st30" v:langID="2052"><v:paragraph/><v:tabList/>处理出现问题的子进程：<v:newlineChar/><tspan x="4"
+						dy="1.244em" class="st31">1.</tspan><tspan class="st32">用</tspan><tspan class="st31" v:langID="1033">waitpid</tspan><tspan
+						class="st32">找出挂掉进程的</tspan><tspan class="st31" v:langID="1033">Pid<v:newlineChar/></tspan><tspan x="4"
+						dy="1.215em" class="st31">2.</tspan><tspan class="st32">根据</tspan><tspan class="st31" v:langID="1033">pid</tspan><tspan
+						class="st32">找到对应</tspan><tspan class="st31" v:langID="1033">Service<v:newlineChar/></tspan><tspan x="4"
+						dy="1.215em" class="st31">3.</tspan><tspan class="st32">调用</tspan><tspan class="st31" v:langID="1033">Service</tspan><tspan
+						class="st32">的</tspan><tspan class="st33" v:langID="1033">Reap</tspan><tspan class="st34">方法</tspan><tspan
+						class="st32">清除资源</tspan><tspan class="st31">,</tspan><tspan class="st32">根据进程</tspan><tspan x="4"
+						dy="1.215em" class="st32">对应的类型</tspan><tspan class="st32">，</tspan><tspan class="st32">决定是否重启机器或重启进程</tspan></text>		</g>
+		<g id="group193-726" transform="translate(1002.14,-1485.07)" v:mID="193" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(120000):26"/>
+			</v:userDefs>
+			<title>Object lifeline.193</title>
+			<desc>system/core/init/property_service.cpp</desc>
+			<g id="shape194-727" v:mID="194" v:groupContext="shape" transform="translate(15.9449,4.54747E-13)">
+				<title>工作表.194</title>
+				<rect x="0" y="2806.87" width="51.0236" height="25.5118" class="st17"/>
+			</g>
+			<g id="shape195-729" v:mID="195" v:groupContext="shape" transform="translate(32.9528,-29.0551)">
+				<title>工作表.195</title>
+				<path d="M8.5 2832.38 a0 0 0 1 1 0 0 a0 0 0 1 1 0 0 Z" class="st17"/>
+			</g>
+			<g id="shape196-731" v:mID="196" v:groupContext="shape" transform="translate(27.6378,782.97)">
+				<title>工作表.196</title>
+			</g>
+			<g id="shape197-733" v:mID="197" v:groupContext="shape" transform="translate(2873.83,2832.38) rotate(90)">
+				<title>工作表.197</title>
+				<path d="M0 2832.38 L765.35 2832.38" class="st6"/>
+			</g>
+			<g id="shape193-736" v:mID="193" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="41.4567" cy="2819.62" width="82.92" height="25.5118"/>
+				<rect x="0" y="2806.87" width="82.9134" height="25.5118" class="st17"/>
+				<text x="11.8" y="2817.22" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>system/core/init/<tspan
+							x="6.25" dy="1.2em" class="st4">property_service.cpp</tspan></text>			</g>
+		</g>
+		<g id="shape198-740" v:mID="198" v:groupContext="shape" transform="translate(-1784.53,2078.65) rotate(-90)">
+			<title>激活.198</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(121000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="714.331" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape199-742" v:mID="199" v:groupContext="shape" v:layerMember="0" transform="translate(905.244,-1475.86)">
+			<title>消息.199</title>
+			<desc>(1)property_load_boot_defaults</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(122000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="66.2358" cy="2839.46" width="117.17" height="17.6036"/>
+			<path d="M0 2838.76 L126.62 2840.09" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="12.5576" y="2834.66" width="107.357" height="9.59985" class="st11"/>
+			<text x="12.56" y="2841.86" class="st2" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>(1)<tspan
+						class="st4" v:langID="1033">property_load_boot_defaults</tspan></text>		</g>
+		<g id="shape201-750" v:mID="201" v:groupContext="shape" transform="translate(-1780.28,1460.69) rotate(-90)">
+			<title>激活.201</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(123000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="79.3701" height="8.50394" class="st35"/>
+		</g>
+		<g id="shape202-752" v:mID="202" v:groupContext="shape" v:layerMember="0" transform="translate(1042.88,-1468.06)">
+			<title>消息.202</title>
+			<desc>load_properties_from_file</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(124000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="37.0853" cy="2849.39" width="95.6" height="17.6036"/>
+			<path d="M4.96 2832.38 L27.21 2832.38 L27.21 2866.39 L16.69 2866.39" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="-5.80683" y="2844.59" width="85.7845" height="9.59985" class="st11"/>
+			<text x="-5.81" y="2851.79" class="st29" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>load_properties_from_file</text>		</g>
+		<g id="shape203-759" v:mID="203" v:groupContext="shape" transform="translate(-1776.03,1452.19) rotate(-90)">
+			<title>激活.203</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(125000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="36.8504" height="8.50394" class="st35"/>
+		</g>
+		<g id="shape204-761" v:mID="204" v:groupContext="shape" v:layerMember="0" transform="translate(1047.14,-1426.96)">
+			<title>消息.204</title>
+			<desc>LoadProperties</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(126000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="37.0853" cy="2849.39" width="59.17" height="17.6036"/>
+			<path d="M4.96 2832.38 L27.21 2832.38 L27.21 2866.39 L16.69 2866.39" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="12.408" y="2844.59" width="49.355" height="9.59985" class="st11"/>
+			<text x="12.41" y="2851.79" class="st29" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>LoadProperties</text>		</g>
+		<g id="shape205-768" v:mID="205" v:groupContext="shape" transform="translate(1096.47,-1417.04)">
+			<title>黄色便条.205</title>
+			<desc>Step 1 加载各个目录的.prop文件将prop文件的属性遍历写到properties键值对变量中</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(127000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="82.7126" cy="2819.62" width="165.43" height="25.5118"/>
+			<rect x="0" y="2806.87" width="165.425" height="25.5118" class="st36"/>
+			<text x="4" y="2818.85" class="st37" v:langID="2052"><v:paragraph/><v:tabList/>Step 1<tspan class="st3">：</tspan> <tspan
+						class="st3">加载各个目录的</tspan>.prop<tspan class="st3">文件</tspan><tspan class="st3">，</tspan><tspan class="st3">将</tspan><tspan
+						class="st4" v:langID="1033">prop</tspan><tspan x="4" dy="1.244em" class="st26">文件的属性遍历写到</tspan><tspan
+						class="st4" v:langID="1033">properties</tspan><tspan class="st26">键值对变量中</tspan></text>		</g>
+		<g id="shape206-780" v:mID="206" v:groupContext="shape" transform="translate(-1780.28,1531.56) rotate(-90)">
+			<title>激活.206</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(128000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="39.685" height="8.50394" class="st35"/>
+		</g>
+		<g id="shape207-782" v:mID="207" v:groupContext="shape" v:layerMember="0" transform="translate(1042.88,-1354.68)">
+			<title>消息.207</title>
+			<desc>PropertySet</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(129000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="37.0422" cy="2847.33" width="49.53" height="17.6036"/>
+			<path d="M4.96 2832.38 L27.21 2832.38 L27.21 2863.56 L16.69 2863.56" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="17.1868" y="2842.53" width="39.7112" height="9.59985" class="st11"/>
+			<text x="17.19" y="2849.73" class="st38" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>PropertySet</text>		</g>
+		<g id="shape208-789" v:mID="208" v:groupContext="shape" transform="translate(1094.14,-1344.76)">
+			<title>黄色便条.208</title>
+			<desc>Step 2 遍历properties对每个属性调用PropertySet方法存入属性到系统中</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(130000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="82.7126" cy="2819.62" width="165.43" height="25.5118"/>
+			<rect x="0" y="2806.87" width="165.425" height="25.5118" class="st36"/>
+			<text x="4" y="2818.85" class="st37" v:langID="2052"><v:paragraph/><v:tabList/>Step 2<tspan class="st3">：</tspan> <tspan
+						class="st3">遍历</tspan><tspan class="st4" v:langID="1033">properties</tspan><tspan class="st26"
+						v:langID="1033">，</tspan><tspan class="st26">对每个属性调用</tspan><tspan x="4" dy="1.244em" class="st4"
+						v:langID="1033">PropertySet</tspan><tspan class="st26">方法存入属性到系统中</tspan></text>		</g>
+		<g id="group210-799" transform="translate(1288.79,-1485.07)" v:mID="210" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="ShowActor" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="ShowDestruction" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(131000):26"/>
+			</v:userDefs>
+			<title>Object lifeline.210</title>
+			<desc>bionic/libc/bionic/system_property_api.cpp</desc>
+			<g id="shape211-800" v:mID="211" v:groupContext="shape" transform="translate(27.2051,4.54747E-13)">
+				<title>工作表.211</title>
+				<rect x="0" y="2806.87" width="51.0236" height="25.5118" class="st5"/>
+			</g>
+			<g id="shape212-802" v:mID="212" v:groupContext="shape" transform="translate(44.213,-29.0551)">
+				<title>工作表.212</title>
+				<path d="M8.5 2832.38 a0 0 0 1 1 0 0 a0 0 0 1 1 0 0 Z" class="st5"/>
+			</g>
+			<g id="shape213-804" v:mID="213" v:groupContext="shape" transform="translate(35.1446,371.946)">
+				<title>工作表.213</title>
+			</g>
+			<g id="shape214-806" v:mID="214" v:groupContext="shape" transform="translate(2885.09,2832.38) rotate(90)">
+				<title>工作表.214</title>
+				<path d="M0 2832.38 L354.33 2832.38" class="st6"/>
+			</g>
+			<g id="shape210-809" v:mID="210" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="52.7169" cy="2819.62" width="105.44" height="25.5118"/>
+				<rect x="0" y="2806.87" width="105.434" height="25.5118" class="st5"/>
+				<text x="21.61" y="2817.22" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>bionic/libc/bionic/<tspan
+							x="10.27" dy="1.2em" class="st4">system_property_api.cpp</tspan></text>			</g>
+		</g>
+		<g id="shape215-813" v:mID="215" v:groupContext="shape" v:layerMember="0" transform="translate(1052.1,-1313.83)">
+			<title>消息.215</title>
+			<desc>__system_property_update更新/__system_property_add新增</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(132000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="143.698" cy="2839.72" width="218.71" height="18.6536"/>
+			<path d="M0 2839.21 L277.67 2839.7" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="39.252" y="2834.39" width="208.893" height="10.6501" class="st11"/>
+			<text x="39.25" y="2842.38" class="st38" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>__system_property_update<tspan
+						class="st3" v:langID="2052">更新</tspan><tspan class="st4" v:langID="2052">/__</tspan>system_property_add<tspan
+						class="st3" v:langID="2052">新增</tspan></text>		</g>
+		<g id="shape216-823" v:mID="216" v:groupContext="shape" transform="translate(-1486.62,1673.29) rotate(-90)">
+			<title>激活.216</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(133000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="291.969" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape217-825" v:mID="217" v:groupContext="shape" transform="translate(-1780.28,1619.43) rotate(-90)">
+			<title>激活.217</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(134000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="56.6929" height="8.50394" class="st35"/>
+		</g>
+		<g id="shape218-827" v:mID="218" v:groupContext="shape" v:layerMember="0" transform="translate(1042.88,-1283.81)">
+			<title>消息.218</title>
+			<desc>property_initialize_ro_product_props</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(135000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="62.2021" cy="2846.55" width="132.5" height="17.6036"/>
+			<path d="M4.96 2832.38 L27.21 2832.38 L27.21 2863.56 L16.69 2863.56" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="0.858825" y="2841.75" width="122.687" height="9.59985" class="st11"/>
+			<text x="0.86" y="2848.95" class="st29" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>property_initialize_ro_product_props</text>		</g>
+		<g id="shape219-834" v:mID="219" v:groupContext="shape" transform="translate(-1776.03,1613.76) rotate(-90)">
+			<title>激活.219</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(136000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="17.0079" height="8.50394" class="st35"/>
+		</g>
+		<g id="shape220-836" v:mID="220" v:groupContext="shape" v:layerMember="0" transform="translate(1047.14,-1241.29)">
+			<title>消息.220</title>
+			<desc>PropertySet</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(137000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="29.6037" cy="2843.72" width="49.53" height="17.6036"/>
+			<path d="M4.96 2832.38 L27.21 2832.38 L27.21 2855.06 L16.69 2855.06" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="9.74821" y="2838.92" width="39.7112" height="9.59985" class="st11"/>
+			<text x="9.75" y="2846.12" class="st39" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>PropertySet</text>		</g>
+		<g id="shape223-843" v:mID="223" v:groupContext="shape" transform="translate(-1779.73,1698.8) rotate(-90)">
+			<title>激活.223</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(138000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="56.6929" height="8.50394" class="st35"/>
+		</g>
+		<g id="shape224-845" v:mID="224" v:groupContext="shape" v:layerMember="0" transform="translate(1043.43,-1204.44)">
+			<title>消息.224</title>
+			<desc>property_derive_build_fingerprint</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(139000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="62.2021" cy="2846.55" width="121.66" height="17.6036"/>
+			<path d="M4.96 2832.38 L27.21 2832.38 L27.21 2863.56 L16.69 2863.56" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="6.27879" y="2841.75" width="111.847" height="9.59985" class="st11"/>
+			<text x="6.28" y="2848.95" class="st29" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>property_derive_build_fingerprint</text>		</g>
+		<g id="shape225-852" v:mID="225" v:groupContext="shape" transform="translate(-1775.48,1693.13) rotate(-90)">
+			<title>激活.225</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(140000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="17.0079" height="8.50394" class="st35"/>
+		</g>
+		<g id="shape226-854" v:mID="226" v:groupContext="shape" v:layerMember="0" transform="translate(1047.69,-1161.92)">
+			<title>消息.226</title>
+			<desc>PropertySet</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(141000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="29.6037" cy="2843.72" width="49.53" height="17.6036"/>
+			<path d="M4.96 2832.38 L27.21 2832.38 L27.21 2855.06 L16.69 2855.06" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="9.74821" y="2838.92" width="39.7112" height="9.59985" class="st11"/>
+			<text x="9.75" y="2846.12" class="st38" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>PropertySet</text>		</g>
+		<g id="shape227-861" v:mID="227" v:groupContext="shape" transform="translate(1096.07,-1238.46)">
+			<title>黄色便条.227</title>
+			<desc>Step 3 初始化ro.product.***属性遍历调用PropertySet</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(142000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="82.7126" cy="2819.62" width="165.43" height="25.5118"/>
+			<rect x="0" y="2806.87" width="165.425" height="25.5118" class="st36"/>
+			<text x="4" y="2818.85" class="st37" v:langID="2052"><v:paragraph/><v:tabList/>Step 3<tspan class="st3">：</tspan> <tspan
+						class="st3">初始化</tspan>ro.product.***<tspan class="st3">属性</tspan><tspan class="st3">（</tspan><tspan
+						class="st3">遍历调</tspan><tspan x="4" dy="1.331em" class="st3">用</tspan><tspan class="st4" v:langID="1033">PropertySet</tspan><tspan
+						class="st26" v:langID="1033">）</tspan></text>		</g>
+		<g id="shape228-872" v:mID="228" v:groupContext="shape" transform="translate(1098.4,-1156.25)">
+			<title>黄色便条.228</title>
+			<desc>Step 4 设置编译相关属性遍历调用PropertySet</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(143000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="82.7126" cy="2819.62" width="165.43" height="25.5118"/>
+			<rect x="0" y="2806.87" width="165.425" height="25.5118" class="st36"/>
+			<text x="4" y="2818.85" class="st37" v:langID="2052"><v:paragraph/><v:tabList/>Step 4<tspan class="st3">：</tspan> <tspan
+						class="st3">设置编译相关属性</tspan><tspan class="st3">（</tspan><tspan class="st3">遍历调用</tspan><tspan x="4"
+						dy="1.244em" class="st4" v:langID="1033">PropertySet</tspan><tspan class="st26" v:langID="1033">）</tspan></text>		</g>
+		<g id="shape229-881" v:mID="229" v:groupContext="shape" transform="translate(-1778.31,1785.26) rotate(-90)">
+			<title>激活.229</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(144000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="56.6929" height="8.50394" class="st35"/>
+		</g>
+		<g id="shape230-883" v:mID="230" v:groupContext="shape" v:layerMember="0" transform="translate(1043.87,-1117.98)">
+			<title>消息.230</title>
+			<desc>update_sys_usb_config</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(145000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="62.024" cy="2843.24" width="86.13" height="17.6036"/>
+			<path d="M3.98 2832.38 L28.2 2832.38 L28.2 2863.56 L17.68 2863.56" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="23.8661" y="2838.44" width="76.316" height="9.59985" class="st11"/>
+			<text x="23.87" y="2845.64" class="st29" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>update_sys_usb_config</text>		</g>
+		<g id="shape231-890" v:mID="231" v:groupContext="shape" transform="translate(-1774.06,1779.59) rotate(-90)">
+			<title>激活.231</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(146000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="17.0079" height="8.50394" class="st35"/>
+		</g>
+		<g id="shape232-892" v:mID="232" v:groupContext="shape" v:layerMember="0" transform="translate(1049.1,-1075.46)">
+			<title>消息.232</title>
+			<desc>property_set</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(147000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="29.6037" cy="2843.72" width="52.07" height="17.6036"/>
+			<path d="M4.96 2832.38 L27.21 2832.38 L27.21 2855.06 L16.69 2855.06" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="8.47503" y="2838.92" width="42.2575" height="9.59985" class="st11"/>
+			<text x="8.48" y="2846.12" class="st40" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>property_set</text>		</g>
+		<g id="shape233-899" v:mID="233" v:groupContext="shape" transform="translate(1096.58,-1075.46)">
+			<title>黄色便条.233</title>
+			<desc>Step 4 设置usb属性persist.sys.usb.config</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(148000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="82.7126" cy="2819.62" width="165.43" height="25.5118"/>
+			<rect x="0" y="2806.87" width="165.425" height="25.5118" class="st36"/>
+			<text x="4" y="2818.85" class="st37" v:langID="2052"><v:paragraph/><v:tabList/>Step 4<tspan class="st3">：</tspan> <tspan
+						class="st3">设置</tspan><tspan class="st4" v:langID="1033">usb</tspan><tspan class="st26">属性</tspan><tspan
+						class="st4" v:langID="1033">persist.sys.usb.config</tspan></text>		</g>
+		<g id="shape234-907" v:mID="234" v:groupContext="shape" v:layerMember="0" transform="translate(901.346,-1011.69)">
+			<title>消息.234</title>
+			<desc>(2)StartPropertyService</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(149000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="68.161" cy="2825.29" width="87.88" height="17.6036"/>
+			<path d="M0 2825.29 L130.51 2825.29" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="29.1277" y="2820.49" width="78.0669" height="9.59985" class="st11"/>
+			<text x="29.13" y="2827.69" class="st2" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>(2)<tspan
+						class="st4" v:langID="1033">StartPropertyService</tspan></text>		</g>
+		<g id="shape235-915" v:mID="235" v:groupContext="shape" transform="translate(-1780.28,1863.21) rotate(-90)">
+			<title>激活.235</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(150000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="34.0157" height="8.50394" class="st35"/>
+		</g>
+		<g id="shape236-917" v:mID="236" v:groupContext="shape" v:layerMember="0" transform="translate(1041.9,-1017.35)">
+			<title>消息.236</title>
+			<desc>CreateSocket</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(151000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="29.1693" cy="2846.55" width="52.92" height="17.6036"/>
+			<path d="M3.98 2832.38 L28.2 2832.38 L28.2 2863.56 L17.68 2863.56" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="7.61892" y="2841.75" width="43.101" height="9.59985" class="st11"/>
+			<text x="7.62" y="2848.95" class="st29" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>CreateSocket</text>		</g>
+		<g id="shape237-924" v:mID="237" v:groupContext="shape" transform="translate(-1778.31,1919.91) rotate(-90)">
+			<title>激活.237</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(152000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="34.0157" height="8.50394" class="st35"/>
+		</g>
+		<g id="shape238-926" v:mID="238" v:groupContext="shape" v:layerMember="0" transform="translate(1043.87,-960.661)">
+			<title>消息.238</title>
+			<desc>listen</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(153000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="29.1693" cy="2846.55" width="40" height="17.6036"/>
+			<path d="M3.98 2832.38 L28.2 2832.38 L28.2 2863.56 L17.68 2863.56" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="20.3375" y="2841.75" width="17.6635" height="9.59985" class="st11"/>
+			<text x="20.34" y="2848.95" class="st29" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>listen</text>		</g>
+		<g id="shape239-933" v:mID="239" v:groupContext="shape" transform="translate(-1780.28,2055.97) rotate(-90)">
+			<title>激活.239</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(154000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="110.551" height="8.50394" class="st35"/>
+		</g>
+		<g id="shape240-935" v:mID="240" v:groupContext="shape" v:layerMember="0" transform="translate(1044.44,-903.968)">
+			<title>消息.240</title>
+			<desc>epoll-&#62;RegisterHandler(..., handle_property_set_fd)</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(155000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="29.113" cy="2851.78" width="180.13" height="17.6036"/>
+			<path d="M6.52 2832.38 L25.66 2832.38 L25.66 2866.39 L15.14 2866.39" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="-56.0409" y="2846.98" width="170.308" height="9.59985" class="st11"/>
+			<text x="-56.04" y="2854.18" class="st29" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>epoll-&#62;RegisterHandler(<tspan
+						class="st4" v:langID="2052">...</tspan>, <tspan class="st41">handle_property_set_fd</tspan>)</text>		</g>
+		<g id="shape241-944" v:mID="241" v:groupContext="shape" transform="translate(-1776.02,2056.44) rotate(-90.1245)">
+			<title>激活.241</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(156000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="73.701" height="8.50394" class="st35"/>
+		</g>
+		<g id="shape242-946" v:mID="242" v:groupContext="shape" v:layerMember="0" transform="translate(1046.99,-861.449)">
+			<title>消息.242</title>
+			<desc>HandlePropertySet</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(157000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="41.0839" cy="2843.72" width="71.61" height="17.6036"/>
+			<path d="M4.94 2832.38 L27.23 2832.38 L27.23 2855.05 L16.71 2855.05" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="10.1899" y="2838.92" width="61.7882" height="9.59985" class="st11"/>
+			<text x="10.19" y="2846.12" class="st40" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>HandlePropertySet</text>		</g>
+		<g id="shape243-953" v:mID="243" v:groupContext="shape" transform="translate(1096.58,-895.465)">
+			<title>黄色便条.243</title>
+			<desc>1.创建socket监听系统属性请求 2.注册epoll handler处理机制收到属性请求调用handle_proper...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(158000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="82.7126" cy="2802.61" width="165.43" height="59.5276"/>
+			<rect x="0" y="2772.85" width="165.425" height="59.5276" class="st36"/>
+			<text x="4" y="2784.84" class="st37" v:langID="2052"><v:paragraph/><v:tabList/>1.<tspan class="st3">创建</tspan>socket<tspan
+						class="st3">监听系统属性请求<v:newlineChar/></tspan><tspan x="4" dy="1.331em" class="st4">2.</tspan><tspan
+						class="st3">注册</tspan>epoll handler<tspan class="st3">处理机制</tspan><tspan class="st3">，</tspan><tspan
+						class="st3">收到属性请求</tspan><tspan x="4" dy="1.331em" class="st3">调用</tspan><tspan class="st4"
+						v:langID="1033">handle_property_set_fd<v:newlineChar/></tspan><tspan x="4" dy="1.256em" class="st4">3.</tspan><tspan
+						class="st26">最终也是调用</tspan><tspan class="st26">到</tspan><tspan class="st4" v:langID="1033">property_set</tspan><tspan
+						class="st26">处理属性新增</tspan><tspan class="st28">/</tspan><tspan x="4" dy="1.219em" class="st26">更新请求</tspan></text>		</g>
+		<g id="shape244-972" v:mID="244" v:groupContext="shape" transform="translate(-1770.93,2109.24) rotate(-91.4267)">
+			<title>激活.244</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(159000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="33.891" height="8.50394" class="st35"/>
+		</g>
+		<g id="shape245-974" v:mID="245" v:groupContext="shape" v:layerMember="0" transform="translate(1050.73,-833.102)">
+			<title>消息.245</title>
+			<desc>property_set</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(160000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="29.5987" cy="2843.23" width="52.07" height="17.6036"/>
+			<path d="M4.75 2832.38 L27.42 2832.38 L27.42 2854.94 L16.9 2854.94" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="8.47001" y="2838.43" width="42.2575" height="9.59985" class="st11"/>
+			<text x="8.47" y="2845.63" class="st40" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>property_set</text>		</g>
+		<g id="shape255-981" v:mID="255" v:groupContext="shape" transform="translate(-1922.17,2196.28) rotate(-90)">
+			<title>激活.255</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(163000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="35.4331" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape257-983" v:mID="257" v:groupContext="shape" v:layerMember="0" transform="translate(900.992,-685.701)">
+			<title>消息.257</title>
+			<desc>LoadBootScripts</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(165000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="35.0982" cy="2848.23" width="62.6" height="17.6036"/>
+			<path d="M4.96 2832.38 L27.21 2832.38 L27.21 2863.56 L16.69 2863.56" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="8.70805" y="2843.43" width="52.7805" height="9.59985" class="st11"/>
+			<text x="8.71" y="2850.63" class="st29" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>LoadBootScripts</text>		</g>
+		<g id="shape258-990" v:mID="258" v:groupContext="shape" transform="translate(-1922.17,2260.06) rotate(-90)">
+			<title>激活.258</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(166000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="35.4331" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape259-992" v:mID="259" v:groupContext="shape" v:layerMember="0" transform="translate(900.992,-621.921)">
+			<title>消息.259</title>
+			<desc>QueueEventTrigger</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(167000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="35.0982" cy="2848.23" width="72.77" height="17.6036"/>
+			<path d="M4.96 2832.38 L27.21 2832.38 L27.21 2863.56 L16.69 2863.56" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="3.62014" y="2843.43" width="62.9563" height="9.59985" class="st11"/>
+			<text x="3.62" y="2850.63" class="st29" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>QueueEventTrigger</text>		</g>
+		<g id="shape260-999" v:mID="260" v:groupContext="shape" transform="translate(-1922.17,2330.93) rotate(-90)">
+			<title>激活.260</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(168000):26"/>
+			</v:userDefs>
+			<rect x="0" y="2823.87" width="35.4331" height="8.50394" class="st8"/>
+		</g>
+		<g id="shape261-1001" v:mID="261" v:groupContext="shape" v:layerMember="0" transform="translate(900.992,-551.055)">
+			<title>消息.261</title>
+			<desc>ExecuteOneCommand</desc>
+			<v:userDefs>
+				<v:ud v:nameU="IsReturn" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="IsAsync" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="IsSelfMessage" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(169000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="35.0982" cy="2848.23" width="82.4" height="17.6036"/>
+			<path d="M4.96 2832.38 L27.21 2832.38 L27.21 2863.56 L16.69 2863.56" class="st12"/>
+			<rect v:rectContext="textBkgnd" x="-1.19215" y="2843.43" width="72.5809" height="9.59985" class="st11"/>
+			<text x="-1.19" y="2850.63" class="st29" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>ExecuteOneCommand</text>		</g>
+		<g id="shape262-1008" v:mID="262" v:groupContext="shape" transform="translate(973.677,-558.142)">
+			<title>黄色便条.262</title>
+			<desc>Step 1. 依次解析/init.rc、/system/etc/init、/Vendor/etc/init的rc文件 S...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				<v:ud v:nameU="visNavOrder" v:val="VT0(170000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197" v:verticalAlign="0"/>
+			<v:textRect cx="82.7126" cy="2796.94" width="165.43" height="70.8661"/>
+			<rect x="0" y="2761.51" width="165.425" height="70.8661" class="st36"/>
+			<text x="4" y="2773.5" class="st37" v:langID="2052"><v:paragraph/><v:tabList/>Step 1. <tspan class="st3">依次解析</tspan>/init.rc<tspan
+						class="st3">、</tspan><tspan class="st4" v:langID="1033">/system/etc/init</tspan><tspan class="st26">、</tspan><tspan
+						class="st4" v:langID="1033">/</tspan><tspan x="4" dy="1.244em" class="st4">Vendor</tspan><tspan class="st4"
+						v:langID="1033">/etc/init</tspan><tspan class="st26">的</tspan>rc<tspan class="st26">文件<v:newlineChar/></tspan><tspan
+						x="4" dy="1.215em" class="st4">Step 2. </tspan><tspan class="st26">执行</tspan>rc<tspan class="st26">文件的触发器</tspan><tspan
+						class="st4" v:langID="1033">&#34;on early</tspan><tspan class="st4" v:langID="1033">-</tspan><tspan
+						class="st4" v:langID="1033">init&#34; </tspan><tspan class="st4" v:langID="1033">-</tspan><tspan
+						class="st4" v:langID="1033">&#62; </tspan><tspan x="4" dy="1.204em" class="st4" v:langID="1033">&#34;on init&#34; </tspan><tspan
+						class="st4" v:langID="1033">-</tspan><tspan class="st4" v:langID="1033">&#62; &#34;on late</tspan><tspan
+						class="st4" v:langID="1033">-</tspan><tspan class="st4" v:langID="1033">init&#34;<v:newlineChar/></tspan><tspan
+						x="4" dy="1.211em" class="st4">Step 3. </tspan><tspan class="st26">依次执行每个</tspan><tspan class="st4"
+						v:langID="1033">action</tspan><tspan class="st26">中携带</tspan><tspan class="st4" v:langID="1033">command</tspan><tspan
+						class="st26">对</tspan><tspan x="4" dy="1.215em" class="st26">应的执行函数</tspan></text>		</g>
+	</g>
+</svg>
