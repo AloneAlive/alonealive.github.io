@@ -128,7 +128,7 @@ status_t EventThread::registerDisplayEventConnection(const sp<EventThreadConnect
 
 **两条请求vsync的流程：**
 
-1. 参考[signalLayerUpdate通知Layer更新信息](https://wizzie.top/Blog/2020/10/15/2020/201015_android_SurfaceFlinger1/#signalLayerUpdate%E9%80%9A%E7%9F%A5Layer%E6%9B%B4%E6%96%B0%E4%BF%A1%E6%81%AF)开始，SF触发合成开始请求VSYNC
+1. 参考[signalLayerUpdate通知Layer更新信息](https://sunwengang.top/Blog/2020/10/15/2020/201015_android_SurfaceFlinger1/#signalLayerUpdate%E9%80%9A%E7%9F%A5Layer%E6%9B%B4%E6%96%B0%E4%BF%A1%E6%81%AF)开始，SF触发合成开始请求VSYNC
 
 2. **当显示屏准备完毕，SF EventThread connection开始监听Vsync信号，相关流程：**
 
@@ -181,7 +181,7 @@ status_t EventThreadConnection::stealReceiveChannel(gui::BitTube* outChannel) {
 
 ## 2.2. BitTube
 
-参考：[setEventThread变更](https://wizzie.top/Blog/2020/10/15/2020/201015_android_SurfaceFlinger1/#setEventThread%E5%8F%98%E6%9B%B4)
+参考：[setEventThread变更](https://sunwengang.top/Blog/2020/10/15/2020/201015_android_SurfaceFlinger1/#setEventThread%E5%8F%98%E6%9B%B4)
 
 BitTube，其实现是socketpairt套接字，用于传递消息。Buffer大小是4K
 

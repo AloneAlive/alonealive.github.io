@@ -2246,10 +2246,10 @@ Parser CreateParser(ActionManager& action_manager, ServiceList& service_list) {
 
 # 5. 参考
 
-+ [Android init进程](https://wizzie.top/android/android_init_service/)
++ [Android init进程](https://sunwengang.top/android/android_init_service/)
 + [Android 9(P)之init进程启动源码分析指南之一](https://blog.csdn.net/tkwxty/article/details/106020050)
 + [init进程启动过程](https://cloud.tencent.com/developer/article/2357443)
-+ [Android zygote和SystemServer进程](https://wizzie.top/android/android_zygote_systemserver/)
++ [Android zygote和SystemServer进程](https://sunwengang.top/android/android_zygote_systemserver/)
 + [安卓11 init初始化以及init.rc的解析执行过程详解](https://blog.csdn.net/w346665682/article/details/112205539)
 + [Android init 启动进程分析](https://blog.csdn.net/u010783226/article/details/119810208)
 + [Kernel怎么跳转到Android：linux与安卓的交界](https://zhuanlan.zhihu.com/p/631104181)

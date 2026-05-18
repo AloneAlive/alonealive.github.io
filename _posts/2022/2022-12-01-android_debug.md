@@ -928,7 +928,7 @@ optional的意思是该模块不主动参与编译，需要开发者⾃⾏在对
 > 
 > 参考：[性能问题分析方法（1） — RAM](https://blog.csdn.net/yun_hen/article/details/116604034)
 > 
-> 参考：[Android Display/Graphics调试技巧（六月份更新）](https://wizzie.top/Blog/2021/06/07/2021/210607_android_debug3/)
+> 参考：[Android Display/Graphics调试技巧（六月份更新）](https://sunwengang.top/Blog/2021/06/07/2021/210607_android_debug3/)
 
 1.物理内存泄漏
 

@@ -1095,7 +1095,7 @@ on boot
 
 + [Android 9 (P)之init进程启动源码分析指南之三](https://blog.csdn.net/tkwxty/article/details/106339987)
 + [Android init 启动进程分析](https://blog.csdn.net/u010783226/article/details/119810208)
-+ [Android RC文件分析](https://wizzie.top/android/android_rcFile_study/)
++ [Android RC文件分析](https://sunwengang.top/android/android_rcFile_study/)
 + [Android启动过程 - init.rc处理过程](https://blog.csdn.net/temp7695/article/details/135542202)
 + [Android13 系统启动流程-3 init.rc解析](https://www.jianshu.com/p/446682d2c482)
 + [AndroidP之Ueventd](https://www.jianshu.com/p/8a34ba82ac1f)

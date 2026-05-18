@@ -16,7 +16,7 @@ toc: true
 
 1. 上面的frameAvailableListener对象类型是`sp<IConsumerListener> frameAvailableListener;`
 
-参考[Android 图形显示框架](https://wizzie.top/Blog/2020/07/30/2020/200730_android_GraphicsFramework/)中的《Surface创建流程》，在该流程中会创建BufferQueue，调用`BufferQueue::createBufferQueue`函数。
+参考[Android 图形显示框架](https://sunwengang.top/Blog/2020/07/30/2020/200730_android_GraphicsFramework/)中的《Surface创建流程》，在该流程中会创建BufferQueue，调用`BufferQueue::createBufferQueue`函数。
 
 2. 而`class ProxyConsumerListener : public BnConsumerListener...`是IConsumerListener接口的Bn端，所以会调用到下面代码：
 
@@ -129,7 +129,7 @@ void BufferQueueLayer::onFrameAvailable(const BufferItem& item) {
 
 # 2. MessageQueue消息队列
 
-> Android的消息处理机制请参考：[Android Handler消息循环处理机制(例ActivityThread)](https://wizzie.top/Blog/2019/09/22/2019/190922-android-handler-cpp/#SurfaceFlinger%E7%9A%84%E6%B6%88%E6%81%AF%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6)
+> Android的消息处理机制请参考：[Android Handler消息循环处理机制(例ActivityThread)](https://sunwengang.top/Blog/2019/09/22/2019/190922-android-handler-cpp/#SurfaceFlinger%E7%9A%84%E6%B6%88%E6%81%AF%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6)
 
 在SurfaceFlinger模块有单独的MessageQueue处理流程。在SF创建的时候，构造函数会创建`meventqueue`对象。在其onFirstRef函数中调用`mEventQueue->init(this);`进行初始化。
 
@@ -562,7 +562,7 @@ void SurfaceFlinger::waitForEvent() {
 
 waitMessage，通过采用一个死循环，处理Looper的pollOnce。Looper内部的主要是采用epoll_wait对fd进行监听，BitTube发送Event对象后，epoll_wait结束，调用callback，处理事件。
 
-可参考Handler文章：[Android Handler消息循环处理机制](https://wizzie.top/Blog/2019/09/22/2019/190922-android-handler-cpp/#%E6%B6%88%E6%81%AF%E5%8F%91%E9%80%81)
+可参考Handler文章：[Android Handler消息循环处理机制](https://sunwengang.top/Blog/2019/09/22/2019/190922-android-handler-cpp/#%E6%B6%88%E6%81%AF%E5%8F%91%E9%80%81)
 
 ```cpp
 //MessageQueue.cpp
@@ -790,7 +790,7 @@ void SurfaceFlinger::commitTransaction()
 
 ### 4.2.1. mCurrentState和mDrawingState
 
-> 可参考：[Android SurfaceFlinger和HWC2概述 - mCurrentState和mDrawingState](https://wizzie.top/Blog/2019/12/22/2019/191222_android_HWC2/#mCurrentState%E5%92%8CmDrawingState)
+> 可参考：[Android SurfaceFlinger和HWC2概述 - mCurrentState和mDrawingState](https://sunwengang.top/Blog/2019/12/22/2019/191222_android_HWC2/#mCurrentState%E5%92%8CmDrawingState)
 
 + mCurrentState状态：准备数据，应用传过来的数据保存在mCurrentState中。
 + mDrawingState状态：进程合成状态，需要进行合成的数据保存在mDrawingState中。
@@ -1159,7 +1159,7 @@ bool SurfaceFlinger::handlePageFlip()
 
 ### 4.4.2. latchBuffer->updateTexImage->acquireBuffer
 
-> 详细流程可参考：[Android 图形显示框架之BufferQueue-acquire&release](https://wizzie.top/Blog/2020/07/30/2020/200730_android_GraphicsFramework/#BufferQueue)
+> 详细流程可参考：[Android 图形显示框架之BufferQueue-acquire&release](https://sunwengang.top/Blog/2020/07/30/2020/200730_android_GraphicsFramework/#BufferQueue)
 
 该函数中调用`updateTexImage`，而这个关键函数回去获取Buffer。
 
@@ -1317,10 +1317,10 @@ void SurfaceFlinger::onMessageReceived(int32_t what) NO_THREAD_SAFETY_ANALYSIS {
 
 + [SurfaceFlinger合成流程(一)](https://www.jianshu.com/p/fa115146949f)
 + [SurfaceFlinger合成流程(二)](https://www.jianshu.com/p/fd16dcb4dfb6)
-+ [Android Handler消息循环处理机制](https://wizzie.top/Blog/2019/09/22/2019/190922-android-handler-cpp/#SurfaceFlinger%E7%9A%84%E6%B6%88%E6%81%AF%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6)
-+ [Android 图形显示框架](https://wizzie.top/Blog/2020/07/30/2020/200730_android_GraphicsFramework/)
++ [Android Handler消息循环处理机制](https://sunwengang.top/Blog/2019/09/22/2019/190922-android-handler-cpp/#SurfaceFlinger%E7%9A%84%E6%B6%88%E6%81%AF%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6)
++ [Android 图形显示框架](https://sunwengang.top/Blog/2020/07/30/2020/200730_android_GraphicsFramework/)
 + [Android BitTube](https://blog.csdn.net/u013686019/article/details/51614774)
 + [Android之BitTube](https://blog.csdn.net/dabenxiong666/article/details/80629316)
 + [基于Android Q分析SurfaceFlinger启动过程](https://blog.csdn.net/weixin_41054077/article/details/105735639)
-+ [Android SurfaceFlinger和HWC2概述 - mCurrentState和mDrawingState](https://wizzie.top/Blog/2019/12/22/2019/191222_android_HWC2/#mCurrentState%E5%92%8CmDrawingState)
++ [Android SurfaceFlinger和HWC2概述 - mCurrentState和mDrawingState](https://sunwengang.top/Blog/2019/12/22/2019/191222_android_HWC2/#mCurrentState%E5%92%8CmDrawingState)
 + [SurfaceFlinger图像合成[1]](https://www.jianshu.com/p/b0928eaaeb1c)

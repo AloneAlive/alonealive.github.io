@@ -95,7 +95,7 @@ PhoneWindow是Android中最基本的窗口系统，每个Activity都会创建一
 
 > Activity onResume添加窗口
 
-onCreate方法中调用setContentView来设置布局，此时只是完成了View Tree的创建。[此处参考HWUI绘制文章](https://wizzie.top/Blog/2020/07/07/2020/200707_android_HWUI_Draw/#%E7%BB%98%E5%88%B6%E5%BA%8F%E5%88%97%E5%9B%BE)
+onCreate方法中调用setContentView来设置布局，此时只是完成了View Tree的创建。[此处参考HWUI绘制文章](https://sunwengang.top/Blog/2020/07/07/2020/200707_android_HWUI_Draw/#%E7%BB%98%E5%88%B6%E5%BA%8F%E5%88%97%E5%9B%BE)
 
 真正通知WMS添加窗口，是在回调onResume完成的。
 

@@ -8,7 +8,7 @@ tags: graphics display android
 toc: true
 ---
 
-> ANR（Application Not Responding），字面意思是应用无响应，即用户的一些操作无法从应用中获取反馈。关于发生ANR的trace.txt文件的请参考[Android ANR traces.txt文件分析](https://wizzie.top/Blog/2020/06/11/2020/200611_android_tracetxt/)
+> ANR（Application Not Responding），字面意思是应用无响应，即用户的一些操作无法从应用中获取反馈。关于发生ANR的trace.txt文件的请参考[Android ANR traces.txt文件分析](https://sunwengang.top/Blog/2020/06/11/2020/200611_android_tracetxt/)
 
 <!--more-->
 

@@ -200,6 +200,6 @@ int Surface::queueBuffer(android_native_buffer_t* buffer, int fenceFd) {
 
 # 8. 参考
 
-+ [Android Systrace如何抓取分析问题](https://wizzie.top/Blog/2020/02/22/2020/200222_android_systrace_study/)
++ [Android Systrace如何抓取分析问题](https://sunwengang.top/Blog/2020/02/22/2020/200222_android_systrace_study/)
 + [Systrace 中的这些 tag 究竟是什么意思（一）](https://mp.weixin.qq.com/s/xgnXjhjPpJo27bbcDPW5RQ)
 + [如何通过 Systrace 查看 GPU 渲染花费的时间](https://mp.weixin.qq.com/s/dFAVVXUu1FkY7taZbNKCjQ)

@@ -39,7 +39,7 @@ toc: true
 # 2. systrace分析
 
 抓取Systrace可以查看到触屏的整个事件，从InputReader开始，然后到deliverInputEvent触发APP绘制。关于报点可以重点关注inputflinger模块的log打印，会打印input的坐标。
-(参考：http://wizzie.top/2020/03/17/2020/200317_adnroid_touchEvent/)
+(参考：http://sunwengang.top/2020/03/17/2020/200317_adnroid_touchEvent/)
 
 # 3. input debug开关打开抓取日志分析
 
@@ -183,7 +183,7 @@ bool InputDispatcher::enqueueInboundEventLocked(EventEntry* entry) {
 
 ## 4.3. InputDispatcherThread分发线程被唤醒
 
-> 参考：http://wizzie.top/2020/05/10/2020/200510_android_inputANR/
+> 参考：http://sunwengang.top/2020/05/10/2020/200510_android_inputANR/
 
 1. 在InputDispatcherThread线程threadLoop循环中，触发InputDispatcher的dispatchOnce方法。然后调用dispatchOnce方法。
 
